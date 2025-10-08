@@ -1,0 +1,92 @@
+:нко_монета_ооо_02 rdf:type comcore:Agent ;
+    rdfs:label "НКО «МОНЕТА» (ООО)"@ru ;
+    comcore:mentionedIn 30 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn 30 .
+
+:физические_лица rdf:type comcore:Agent ;
+    rdfs:label "физические лица"@ru ;
+    comcore:mentionedIn 30 .
+
+:система_монетару rdf:type comcore:Agent ;
+    rdfs:label "Система МОНЕТА.РУ"@ru ;
+    comcore:mentionedIn 30 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:mentionedIn 30 .
+
+:тарифы rdf:type comcore:Resource ;
+    rdfs:label "Тарифы"@ru ;
+    comcore:mentionedIn 30 .
+
+:тариф rdf:type comcore:Resource ;
+    rdfs:label "Тариф"@ru ;
+    comcore:mentionedIn 30 .
+
+:набор_платежных_инструментов rdf:type comcore:Resource ;
+    rdfs:label "набор платежных инструментов"@ru ;
+    comcore:mentionedIn 30 .
+
+:информация_о_переводах rdf:type comcore:Resource ;
+    rdfs:label "информация о переводах"@ru ;
+    comcore:mentionedIn 30 .
+
+:сообщение rdf:type comcore:Resource ;
+    rdfs:label "сообщение"@ru ;
+    comcore:mentionedIn 30 .
+
+:уведомление_о_согласии_с_исполнением_тр rdf:type comcore:Resource ;
+    rdfs:label "уведомление о согласии с исполнением Требования"@ru ;
+    comcore:mentionedIn 30 .
+
+:мотивированный_отказ_от_исполнения_требовани rdf:type comcore:Resource ;
+    rdfs:label "мотивированный отказ от исполнения Требования"@ru ;
+    comcore:mentionedIn 30 .
+
+:требование rdf:type comcore:Resource ;
+    rdfs:label "Требование"@ru ;
+    comcore:mentionedIn 30 .
+
+:переводы rdf:type comcore:Resource ;
+    rdfs:label "переводы"@ru ;
+    comcore:mentionedIn 30 .
+
+:открыть_прием_переводов rdf:type comcore:Process ;
+    rdfs:label "открыть прием переводов"@ru ;
+    comcore:mentionedIn 30 .
+
+:установить_тариф rdf:type comcore:Process ;
+    rdfs:label "установить Тариф"@ru ;
+    comcore:mentionedIn 30 .
+
+:установить_набор_платежных_инструментов rdf:type comcore:Process ;
+    rdfs:label "установить набор платежных инструментов"@ru ;
+    comcore:mentionedIn 30 .
+
+:предоставить_возможность_получения_и_пе rdf:type comcore:Process ;
+    rdfs:label "предоставить возможность получения и передачи информации"@ru ;
+    comcore:mentionedIn 30 .
+
+:нко_монета_ооо_02 comcore:isActorOf :открыть_прием_переводов ;
+    comcore:isActorOf :установить_тариф ;
+    comcore:isActorOf :установить_набор_платежных_инструментов ;
+    comcore:isActorOf :предоставить_возможность_получения_и_пе .
+
+:получатель comcore:isResponsibleFor :сообщение .
+
+:физические_лица comcore:isResponsibleFor :переводы .
+
+:система_монетару comcore:isActorOf :предоставить_возможность_получения_и_пе .
+
+:переводы comcore:isResourceOf :открыть_прием_переводов .
+
+:тариф comcore:isResourceOf :установить_тариф .
+
+:набор_платежных_инструментов comcore:isResourceOf :установить_набор_платежных_инструментов .
+
+:уведомление_о_согласии_с_исполнением_тр comcore:isPartOf :сообщение .
+
+:мотивированный_отказ_от_исполнения_требовани comcore:isPartOf :сообщение .

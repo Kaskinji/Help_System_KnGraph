@@ -1,0 +1,82 @@
+:информационный_обмен rdf:type comcore:Process ;
+    rdfs:label "Информационный обмен"@ru ;
+    comcore:mentionedIn :chunk_17 .
+
+:информационно_технологическое_взаимод rdf:type comcore:Process ;
+    rdfs:label "информационно-технологическое взаимодействие"@ru ;
+    comcore:isPartOf :информационный_обмен ;
+    comcore:mentionedIn :chunk_17 .
+
+:регламент rdf:type comcore:Resource ;
+    rdfs:label "Регламент"@ru ;
+    comcore:mentionedIn :chunk_17 .
+
+:договор_о_переводах_без_открытия_с rdf:type comcore:Resource ;
+    rdfs:label "Договор о переводах без открытия счета в Системе МОНЕТА.РУ"@ru ;
+    comcore:mentionedIn :chunk_17 .
+
+:аутентификационные_данные rdf:type comcore:Resource ;
+    rdfs:label "Аутентификационные данные"@ru ;
+    comcore:mentionedIn :chunk_17 .
+
+:заявление rdf:type comcore:Resource ;
+    rdfs:label "заявление"@ru ;
+    comcore:mentionedIn :chunk_17 .
+
+:заявление_получателя rdf:type comcore:Resource ;
+    rdfs:label "Заявление Получателя"@ru ;
+    comcore:mentionedIn :chunk_17 .
+
+:отдел_информационной_безопасности_нко rdf:type comcore:Agent ;
+    rdfs:label "Отдел информационной безопасности НКО"@ru ;
+    comcore:mentionedIn :chunk_17 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :chunk_17 .
+
+:плательщик rdf:type comcore:Agent ;
+    rdfs:label "Плательщик"@ru ;
+    comcore:mentionedIn :chunk_17 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:mentionedIn :chunk_17 .
+
+:сторона rdf:type comcore:Agent ;
+    rdfs:label "Стороны"@ru ;
+    comcore:mentionedIn :chunk_17 .
+
+:окончание_срока_действия_аутентифик rdf:type comcore:Event ;
+    rdfs:label "Окончание срока действия Аутентификационных данных"@ru ;
+    comcore:relation :аутентификационные_данные ;
+    comcore:mentionedIn :chunk_17 .
+
+:получение_заявления rdf:type comcore:Event ;
+    rdfs:label "Получение заявления"@ru ;
+    comcore:relation :заявление ;
+    comcore:relation :сторона ;
+    comcore:mentionedIn :chunk_17 .
+
+:компрометация_аутентификационных_данн rdf:type comcore:Event ;
+    rdfs:label "Компрометация Аутентификационных данных"@ru ;
+    comcore:relation :аутентификационные_данные ;
+    comcore:mentionedIn :chunk_17 .
+
+:подозрение_нко rdf:type comcore:Event ;
+    rdfs:label "подозрение НКО"@ru ;
+    comcore:relation :нко ;
+    comcore:mentionedIn :chunk_17 .
+
+:подозрение_отдела_информационной_безопас rdf:type comcore:Event ;
+    rdfs:label "Подозрения Отдела информационной безопасности НКО о том, что Получатель ведет противоправную деятельность, либо деятельность, влекущую за собой финансовые, правовые, репутационные или иные риски для НКО или Плательщика"@ru ;
+    comcore:relation :отдел_информационной_безопасности_нко ;
+    comcore:relation :получатель ;
+    comcore:relation :нко ;
+    comcore:relation :плательщик ;
+    comcore:mentionedIn :chunk_17 .
+
+:приостановление_информационного_обм rdf:type comcore:Event ;
+    rdfs:label "Приостановление Информационного обмена"@ru ;
+    comcore:relation :информационный_обмен ;
+    comcore:mentionedIn :chunk_17 .

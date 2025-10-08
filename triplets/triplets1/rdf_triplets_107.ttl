@@ -1,0 +1,35 @@
+:операция_возврата_перевода rdf:type comcore:Process ;
+    rdfs:label "Операция возврата Перевода"@ru ;
+    comcore:mentionedIn :107 .
+
+:средство_платежа rdf:type comcore:Resource ;
+    rdfs:label "Средство платежа"@ru ;
+    comcore:isResourceOf :операция_возврата_перевода ;
+    comcore:mentionedIn :107 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isResponsibleFor :информационно-технологическое_взаимод ;
+    comcore:mentionedIn :107 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :информационно-технологическое_взаимод ;
+    comcore:mentionedIn :107 .
+
+:эмитент rdf:type comcore:Agent ;
+    rdfs:label "Эмитент"@ru ;
+    comcore:isActorOf :информационно-технологическое_взаимод ;
+    comcore:mentionedIn :107 .
+
+:информационно-технологическое_взаимод rdf:type comcore:Process ;
+    rdfs:label "информационно-технологическое взаимодействие"@ru ;
+    comcore:isPartOf :операция_возврата_перевода ;
+    comcore:mentionedIn :107 .
+
+:порядок_взаимодействия_сторон rdf:type comcore:Resource ;
+    rdfs:label "Порядок взаимодействия Сторон"@ru ;
+    comcore:relation :операция_возврата_перевода ;
+    comcore:relation :нко ;
+    comcore:relation :получатель ;
+    comcore:mentionedIn :107 .

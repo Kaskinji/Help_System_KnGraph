@@ -1,0 +1,52 @@
+:регистрация_получателя_в_системе_монетару rdf:type comcore:Process ;
+    rdfs:label "регистрация Получателя в Системе МОНЕТА.РУ"@ru ;
+    comcore:mentionedIn :122 .
+
+:предоставление_нко_данных_о_получателе rdf:type comcore:Process ;
+    rdfs:label "предоставление НКО данных о Получателе"@ru ;
+    comcore:mentionedIn :122 .
+
+:создание_бизнес_счета_для_получателя rdf:type comcore:Process ;
+    rdfs:label "создание Бизнес - счета для Получателя"@ru ;
+    comcore:mentionedIn :122 .
+
+:распоряжение_денежными_средствами_получател rdf:type comcore:Process ;
+    rdfs:label "Распоряжение денежными средствами Получателя"@ru ;
+    comcore:mentionedIn :122 .
+
+:данные_о_получателе rdf:type comcore:Resource ;
+    rdfs:label "данные о Получателе"@ru ;
+    comcore:isResourceOf :предоставление_нко_данных_о_получателе ;
+    comcore:mentionedIn :122 .
+
+:бизнес_счет rdf:type comcore:Resource ;
+    rdfs:label "Бизнес - счет"@ru ;
+    comcore:isResultOf :создание_бизнес_счета_для_получателя ;
+    comcore:mentionedIn :122 .
+
+:авторизационные_данные rdf:type comcore:Resource ;
+    rdfs:label "Авторизационные данные"@ru ;
+    comcore:mentionedIn :122 .
+
+:платежный_пароль rdf:type comcore:Resource ;
+    rdfs:label "Платежный пароль"@ru ;
+    comcore:mentionedIn :122 .
+
+:денежные_средства_получателя rdf:type comcore:Resource ;
+    rdfs:label "денежные средства Получателя"@ru ;
+    comcore:isResourceOf :распоряжение_денежными_средствами_получател ;
+    comcore:mentionedIn :122 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :122 .
+
+:торговая_площадка rdf:type comcore:Agent ;
+    rdfs:label "Торговая площадка"@ru ;
+    comcore:isActorOf :регистрация_получателя_в_системе_монетару , :предоставление_нко_данных_о_получателе , :создание_бизнес_счета_для_получателя , :распоряжение_денежными_средствами_получател ;
+    comcore:isResponsibleFor :распоряжение_денежными_средствами_получател ;
+    comcore:mentionedIn :122 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:mentionedIn :122 .

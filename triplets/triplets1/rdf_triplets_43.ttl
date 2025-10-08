@@ -1,0 +1,40 @@
+:возмещения_денежных_средств rdf:type comcore:Resource ;
+    rdfs:label "возмещения денежных средств"@ru ;
+    comcore:mentionedIn :43 .
+
+:недействительный_перевод rdf:type comcore:Process ;
+    rdfs:label "Недействительный перевод"@ru ;
+    comcore:mentionedIn :43 .
+
+:получение_претензии rdf:type comcore:Event ;
+    rdfs:label "получение претензии"@ru ;
+    comcore:isResultOf :недействительный_перевод ;
+    comcore:mentionedIn :43 .
+
+:претензия rdf:type comcore:Resource ;
+    rdfs:label "претензия"@ru ;
+    comcore:isResourceOf :рассмотрение_претензий_третьих_лиц ;
+    comcore:mentionedIn :43 .
+
+:расходы_нко rdf:type comcore:Resource ;
+    rdfs:label "расходы НКО"@ru ;
+    comcore:isResourceOf :рассмотрение_претензий_третьих_лиц ;
+    comcore:mentionedIn :43 .
+
+:рассмотрение_претензий_третьих_лиц rdf:type comcore:Process ;
+    rdfs:label "рассмотрение претензий третьих лиц"@ru ;
+    comcore:mentionedIn :43 .
+
+:третьи_лица rdf:type comcore:Agent ;
+    rdfs:label "третьи лица"@ru ;
+    comcore:mentionedIn :43 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isResponsibleFor :расходы_нко ;
+    comcore:mentionedIn :43 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isResponsibleFor :возмещения_денежных_средств ;
+    comcore:mentionedIn :43 .

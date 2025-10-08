@@ -1,0 +1,58 @@
+:операция_возврата_перевода rdf:type comcore:Process ;
+    rdfs:label "Операция возврата Перевода"@ru ;
+    comcore:mentionedIn :108 ;
+    comcore:relation :получатель ;
+    comcore:relation :личный_кабинет ;
+    comcore:relation :возврат_денежных_средств .
+
+:личный_кабинет rdf:type comcore:Resource ;
+    rdfs:label "Личный кабинет"@ru ;
+    comcore:mentionedIn :108 ;
+    comcore:isResourceOf :операция_возврата_перевода .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:mentionedIn :108 ;
+    comcore:isActorOf :информационно_технологическое_взаимодей ;
+    comcore:isActorOf :возврат_денежных_средств .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :108 ;
+    comcore:isActorOf :операция_возврата_перевода ;
+    comcore:isActorOf :информационно_технологическое_взаимодей .
+
+:эмитент rdf:type comcore:Agent ;
+    rdfs:label "Эмитент"@ru ;
+    comcore:mentionedIn :108 ;
+    comcore:isActorOf :информационно_технологическое_взаимодей .
+
+:плательщик rdf:type comcore:Agent ;
+    rdfs:label "Плательщик"@ru ;
+    comcore:mentionedIn :108 ;
+    comcore:isActorOf :возврат_денежных_средств .
+
+:информационно_технологическое_взаимодей rdf:type comcore:Process ;
+    rdfs:label "Информационно-технологическое взаимодействие"@ru ;
+    comcore:mentionedIn :108 ;
+    comcore:relation :нко ;
+    comcore:relation :получатель ;
+    comcore:relation :эмитент .
+
+:возврат_денежных_средств rdf:type comcore:Process ;
+    rdfs:label "Возврат денежных средств"@ru ;
+    comcore:mentionedIn :108 ;
+    comcore:relation :нко ;
+    comcore:relation :плательщик ;
+    comcore:relation :денежные_средства .
+
+:денежные_средства rdf:type comcore:Resource ;
+    rdfs:label "Денежные средства"@ru ;
+    comcore:mentionedIn :108 ;
+    comcore:isResourceOf :возврат_денежных_средств ;
+    comcore:isPartOf :сумма_перечисления .
+
+:сумма_перечисления rdf:type comcore:Resource ;
+    rdfs:label "Сумма Перечисления"@ru ;
+    comcore:mentionedIn :108 ;
+    comcore:relation :денежные_средства .

@@ -1,0 +1,18 @@
+:документооборот_в_электронном_виде rdf:type comcore:Process ;
+    rdfs:label "документооборот в электронном виде"@ru ;
+    comcore:mentionedIn :67 .
+
+:телекоммуникационные_каналы_связи rdf:type comcore:Resource ;
+    rdfs:label "телекоммуникационные каналы связи"@ru ;
+    comcore:isResourceOf :документооборот_в_электронном_виде ;
+    comcore:mentionedIn :67 .
+
+:кэп rdf:type comcore:Resource ;
+    rdfs:label "КЭП"@ru ;
+    comcore:isResourceOf :документооборот_в_электронном_виде ;
+    comcore:mentionedIn :67 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:isResourceOf :документооборот_в_электронном_виде ;
+    comcore:mentionedIn :67 .

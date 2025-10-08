@@ -1,0 +1,36 @@
+:информация rdf:type comcore:Resource ;
+    rdfs:label "Информация"@ru ;
+    comcore:isResourceOf :разглашение_информации ;
+    comcore:isResourceOf :использование_информации ;
+    comcore:mentionedIn :86 .
+
+:третьи_лица rdf:type comcore:Agent ;
+    rdfs:label "Третьи лица"@ru ;
+    comcore:mentionedIn :86 .
+
+:законодательство_российской_федерации rdf:type comcore:Resource ;
+    rdfs:label "Законодательство Российской Федерации"@ru ;
+    comcore:mentionedIn :86 .
+
+:письменное_согласование rdf:type comcore:Process ;
+    rdfs:label "Письменное согласование"@ru ;
+    comcore:mentionedIn :86 .
+
+:сторона_договора rdf:type comcore:Agent ;
+    rdfs:label "Сторона договора"@ru ;
+    comcore:isActorOf :разглашение_информации ;
+    comcore:isActorOf :использование_информации ;
+    comcore:Initiates :письменное_согласование ;
+    comcore:mentionedIn :86 .
+
+:разглашение_информации rdf:type comcore:Process ;
+    rdfs:label "Разглашение информации"@ru ;
+    comcore:mentionedIn :86 .
+
+:прекращение_действия_договора rdf:type comcore:Event ;
+    rdfs:label "Прекращение действия Договора"@ru ;
+    comcore:mentionedIn :86 .
+
+:использование_информации rdf:type comcore:Process ;
+    rdfs:label "Использование информации"@ru ;
+    comcore:mentionedIn :86 .

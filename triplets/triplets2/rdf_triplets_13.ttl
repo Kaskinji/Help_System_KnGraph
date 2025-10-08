@@ -1,0 +1,45 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:перечисление rdf:type comcore:Process ;
+    rdfs:label "Перечисление"@ru ;
+    comcore:mentionedIn :13 ;
+    dc:definition "действия НКО по безналичному перечислению денежных средств в валюте Российской Федерации, полученных в результате оплаты Плательщиком Услуг Получателя, на банковский счет Получателя на основании Заявления на перечисление." .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:mentionedIn :13 ;
+    comcore:isActorOf :перечисление, :перевод .
+
+:заявление_на_перечисление rdf:type comcore:Resource ;
+    rdfs:label "Заявление на перечисление"@ru ;
+    comcore:mentionedIn :13 ;
+    comcore:isResourceOf :перечисление .
+
+:перевод rdf:type comcore:Process ;
+    rdfs:label "Перевод"@ru ;
+    comcore:mentionedIn :13 ;
+    dc:definition "действия НКО по исполнению Распоряжения Плательщика в оплату Услуг (или предоплаты Услуг) в пользу Получателя или Распоряжения Получателя в пользу Плательщика, включая действия НКО и Получателя, направленные на передачу и обработку Сообщений." .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :13 ;
+    comcore:isActorOf :перевод .
+
+:распоряжение_плательщика rdf:type comcore:Resource ;
+    rdfs:label "Распоряжение Плательщика"@ru ;
+    comcore:mentionedIn :13 ;
+    comcore:isResourceOf :перевод .
+
+:распоряжение_получателя rdf:type comcore:Resource ;
+    rdfs:label "Распоряжение Получателя"@ru ;
+    comcore:mentionedIn :13 ;
+    comcore:isResourceOf :перевод .
+
+:сообщения rdf:type comcore:Resource ;
+    rdfs:label "Сообщения"@ru ;
+    comcore:mentionedIn :13 ;
+    comcore:isResourceOf :перевод .

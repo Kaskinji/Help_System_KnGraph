@@ -1,0 +1,71 @@
+:интернет_магазин rdf:type comcore:Resource ;
+  rdfs:label "Интернет-магазин" ;
+  comcore:mentionedIn :chunk_7 .
+
+:получатель rdf:type comcore:Agent ;
+  rdfs:label "Получатель" ;
+  comcore:mentionedIn :chunk_7 .
+
+:торговая_площадка rdf:type comcore:Agent ;
+  rdfs:label "Торговая площадка" ;
+  comcore:mentionedIn :chunk_7 .
+
+:плательщик rdf:type comcore:Agent ;
+  rdfs:label "Плательщик" ;
+  comcore:mentionedIn :chunk_7 .
+
+:услуга rdf:type comcore:Resource ;
+  rdfs:label "Услуга" ;
+  comcore:mentionedIn :chunk_7 .
+
+:заказ rdf:type comcore:Resource ;
+  rdfs:label "заказ" ;
+  comcore:mentionedIn :chunk_7 .
+
+:способ_оплаты rdf:type comcore:Resource ;
+  rdfs:label "способ оплаты" ;
+  comcore:mentionedIn :chunk_7 .
+
+:способ_доставки rdf:type comcore:Resource ;
+  rdfs:label "способ доставки" ;
+  comcore:mentionedIn :chunk_7 .
+
+:требования_к_интернет_магазину rdf:type comcore:Resource ;
+  rdfs:label "Требования к Интернет-магазину" ;
+  comcore:mentionedIn :chunk_7 .
+
+:приложение_6_к_договору rdf:type comcore:Resource ;
+  rdfs:label "Приложение №6 к Договору" ;
+  comcore:mentionedIn :chunk_7 .
+
+:квалифицированная_электронная_подпись rdf:type comcore:Resource ;
+  rdfs:label "Квалифицированная электронная подпись" ;
+  comcore:mentionedIn :chunk_7 .
+
+:ключ_электронной_подписи rdf:type comcore:Resource ;
+  rdfs:label "ключ электронной подписи" ;
+  comcore:mentionedIn :chunk_7 .
+
+:квалифицированный_сертификат_ключа_пр rdf:type comcore:Resource ;
+  rdfs:label "квалифицированный сертификат ключа проверки электронной подписи" ;
+  comcore:mentionedIn :chunk_7 .
+
+:аккредитованный_удостоверяющий_це rdf:type comcore:Agent ;
+  rdfs:label "аккредитованный удостоверяющий центр" ;
+  comcore:mentionedIn :chunk_7 .
+
+:федеральное_законодательство rdf:type comcore:Resource ;
+  rdfs:label "федеральное законодательство" ;
+  comcore:mentionedIn :chunk_7 .
+
+:получатель comcore:isResponsibleFor :интернет_магазин .
+
+:торговая_площадка comcore:isResponsibleFor :интернет_магазин .
+
+:требования_к_интернет_магазину comcore:isPartOf :приложение_6_к_договору .
+
+:ключ_электронной_подписи comcore:relation :квалифицированный_сертификат_ключа_пр .
+
+:аккредитованный_удостоверяющий_це comcore:relation :квалифицированный_сертификат_ключа_пр .
+
+:квалифицированная_электронная_подпись comcore:relation :федеральное_законодательство .

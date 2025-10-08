@@ -1,0 +1,43 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:права_требования_к_нко rdf:type comcore:Resource ;
+    rdfs:label "Права требования к НКО"@ru ;
+    comcore:canBeResourceFor :передача_прав_требования ;
+    comcore:isResultOf :заключение_договора ;
+    comcore:mentionedIn :36 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :передача_прав_требования ;
+    comcore:Initiates :передача_прав_требования ;
+    comcore:mentionedIn :36 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:mentionedIn :36 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:isResultOf :заключение_договора ;
+    comcore:mentionedIn :36 .
+
+:третьи_лица rdf:type comcore:Agent ;
+    rdfs:label "Третьи лица"@ru ;
+    comcore:mentionedIn :36 .
+
+:письменное_согласие_нко rdf:type comcore:Resource ;
+    rdfs:label "Письменное согласие НКО"@ru ;
+    comcore:isResourceOf :передача_прав_требования ;
+    comcore:mentionedIn :36 .
+
+:передача_прав_требования rdf:type comcore:Process ;
+    rdfs:label "Передача прав требования"@ru ;
+    comcore:mentionedIn :36 .
+
+:заключение_договора rdf:type comcore:Process ;
+    rdfs:label "Заключение договора"@ru ;
+    comcore:mentionedIn :36 .

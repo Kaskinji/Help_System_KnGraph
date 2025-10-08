@@ -1,0 +1,62 @@
+:информационный_обмен rdf:type comcore:Process ;
+    rdfs:label "Информационный обмен"@ru ;
+    comcore:mentionedIn :106 .
+
+:регламент rdf:type comcore:Resource ;
+    rdfs:label "Регламент"@ru ;
+    comcore:isResourceOf :информационный_обмен ;
+    comcore:mentionedIn :106 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:isResourceOf :информационный_обмен ;
+    comcore:mentionedIn :106 .
+
+:аутентификационные_данные rdf:type comcore:Resource ;
+    rdfs:label "Аутентификационные данные"@ru ;
+    comcore:mentionedIn :106 .
+
+:заявление rdf:type comcore:Resource ;
+    rdfs:label "Заявление"@ru ;
+    comcore:mentionedIn :106 .
+
+:отдел_информационной_безопасности_нко rdf:type comcore:Agent ;
+    rdfs:label "Отдел информационной безопасности НКО"@ru ;
+    comcore:mentionedIn :106 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isResponsibleFor :заявление ;
+    comcore:mentionedIn :106 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:mentionedIn :106 .
+
+:плательщик rdf:type comcore:Agent ;
+    rdfs:label "Плательщик"@ru ;
+    comcore:mentionedIn :106 .
+
+:сторона rdf:type comcore:Agent ;
+    rdfs:label "Сторона"@ru ;
+    comcore:mentionedIn :106 .
+
+:окончание_срока_действия_аутентификацио rdf:type comcore:Event ;
+    rdfs:label "Окончание срока действия Аутентификационных данных"@ru ;
+    comcore:mentionedIn :106 .
+
+:компрометация_аутентификационных_данных rdf:type comcore:Event ;
+    rdfs:label "Компрометация Аутентификационных данных"@ru ;
+    comcore:mentionedIn :106 .
+
+:получение_заявления rdf:type comcore:Event ;
+    rdfs:label "Получение заявления"@ru ;
+    comcore:mentionedIn :106 .
+
+:подозрения_отдела_информационной_безопасности rdf:type comcore:Event ;
+    rdfs:label "Подозрения Отдела информационной безопасности НКО"@ru ;
+    comcore:mentionedIn :106 .
+
+:подозрение_нко_о_компрометации_аутенти rdf:type comcore:Event ;
+    rdfs:label "подозрение НКО о Компрометации Аутентификационных данных"@ru ;
+    comcore:mentionedIn :106 .

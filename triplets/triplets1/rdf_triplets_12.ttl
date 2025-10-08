@@ -1,0 +1,34 @@
+:акт_об_оказании_услуг rdf:type comcore:Resource ;
+rdfs:label "Акт об оказании услуг"@ru ;
+comcore:isResultOf :составление_акта ;
+comcore:mentionedIn :chunk_12 .
+
+:небанковская_кредитная_организация_монета rdf:type comcore:Agent ;
+rdfs:label "Небанковская кредитная организация МОНЕТА"@ru ;
+comcore:isActorOf :составление_акта ;
+comcore:mentionedIn :chunk_12 .
+
+:кугуелова_ирина_александровна rdf:type comcore:Agent ;
+rdfs:label "Кугуелова Ирина Александровна"@ru ;
+comcore:isActorOf :составление_акта ;
+comcore:relation :небанковская_кредитная_организация_монета ;
+comcore:mentionedIn :chunk_12 .
+
+:устав rdf:type comcore:Resource ;
+rdfs:label "Устав"@ru ;
+comcore:isResourceOf :составление_акта ;
+comcore:mentionedIn :chunk_12 .
+
+:получатель rdf:type comcore:Agent ;
+rdfs:label "Получатель"@ru ;
+comcore:isActorOf :составление_акта ;
+comcore:mentionedIn :chunk_12 .
+
+:договор_ rdf:type comcore:Resource ;
+rdfs:label "Договор"@ru ;
+comcore:isResourceOf :составление_акта ;
+comcore:mentionedIn :chunk_12 .
+
+:составление_акта rdf:type comcore:Process ;
+rdfs:label "составление акта"@ru ;
+comcore:mentionedIn :chunk_12 .

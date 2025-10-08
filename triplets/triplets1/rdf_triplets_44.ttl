@@ -1,0 +1,49 @@
+:отложить_перечисление_получателю_сумм rdf:type comcore:Process ;
+    rdfs:label "Отложить перечисление Получателю сумм Переводов"@ru ;
+    comcore:mentionedIn :44 .
+
+:переводы rdf:type comcore:Resource ;
+    rdfs:label "Переводы"@ru ;
+    comcore:isResourceOf :отложить_перечисление_получателю_сумм ;
+    comcore:mentionedIn :44 .
+
+:решение_суда rdf:type comcore:Resource ;
+    rdfs:label "решение суда"@ru ;
+    comcore:mentionedIn :44 .
+
+:определение_суда rdf:type comcore:Resource ;
+    rdfs:label "определение суда"@ru ;
+    comcore:mentionedIn :44 .
+
+:подозрение_относительно_правоме rdf:type comcore:Event ;
+    rdfs:label "подозрение относительно правомерности"@ru ;
+    comcore:Initiates :отложить_перечисление_получателю_сумм ;
+    comcore:mentionedIn :44 .
+
+:запросы_от_правоохранительных_о rdf:type comcore:Resource ;
+    rdfs:label "запросы от правоохранительных органов"@ru ;
+    comcore:mentionedIn :44 .
+
+:уведомления_от_эквайреров rdf:type comcore:Resource ;
+    rdfs:label "уведомления от Эквайреров"@ru ;
+    comcore:mentionedIn :44 .
+
+:операции_являются_мошенническ rdf:type comcore:Event ;
+    rdfs:label "проведенные операции являются мошенническими"@ru ;
+    comcore:Initiates :отложить_перечисление_получателю_сумм ;
+    comcore:mentionedIn :44 .
+
+:уведомление_о_приостановлении rdf:type comcore:Resource ;
+    rdfs:label "Уведомление о приостановлении"@ru ;
+    comcore:mentionedIn :44 .
+
+:осуществление_перечисления rdf:type comcore:Process ;
+    rdfs:label "осуществление Перечисления"@ru ;
+    comcore:mentionedIn :44 .
+
+:эквайреры rdf:type comcore:Agent ;
+    rdfs:label "Эквайреры"@ru ;
+    comcore:isResponsibleFor :уведомления_от_эквайреров ;
+    comcore:mentionedIn :44 .
+
+:отложить_перечисление_получателю_сумм comcore:relation :осуществление_перечисления .

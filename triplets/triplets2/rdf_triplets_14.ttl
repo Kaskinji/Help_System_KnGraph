@@ -1,0 +1,44 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:подключение_к_системе_монетару rdf:type comcore:Process ;
+    rdfs:label "Подключение к Системе МОНЕТА.РУ"@ru ;
+    comcore:mentionedIn :14 ;
+    comcore:relation :получатель , :торговая_площадка ;
+    dc:definition "Подключение к Системе МОНЕТА.РУ - совокупность действий Получателя и/или Торговой площадки, в целях последующего осуществления Перевода" .
+:регистрация_получателя_в_системе_монетару rdf:type comcore:Process ;
+    rdfs:label "регистрация Получателя в Системе МОНЕТА.РУ"@ru ;
+    comcore:mentionedIn :14 ;
+    comcore:isPartOf :подключение_к_системе_монетару .
+:предоставление_в_нко_данных_о_п rdf:type comcore:Process ;
+    rdfs:label "предоставление в НКО данных о Получателе"@ru ;
+    comcore:mentionedIn :14 ;
+    comcore:isPartOf :подключение_к_системе_монетару .
+:создание_бизнес-счета_для_получа rdf:type comcore:Process ;
+    rdfs:label "создание Бизнес-счета для Получателя в Системе МОНЕТА.РУ"@ru ;
+    comcore:mentionedIn :14 ;
+    comcore:isPartOf :подключение_к_системе_монетару .
+:платежный_пароль rdf:type comcore:Resource ;
+    rdfs:label "Платежный пароль"@ru ;
+    comcore:mentionedIn :14 ;
+    comcore:relation :бизнес-счет ;
+    dc:definition "Платежный пароль - цифровая комбинация, используемая для подтверждения каждого Перевода денежных средств или Перевода денежных средств в определенную дату и (или) период и (или) при Перечислении. Платежный пароль устанавливается для совершения операций по Бизнес-счету." .
+:бизнес-счет rdf:type comcore:Resource ;
+    rdfs:label "Бизнес-счет"@ru ;
+    comcore:mentionedIn :14 ;
+    comcore:isResultOf :создание_бизнес-счета_для_получа .
+:данные_о_получателе rdf:type comcore:Resource ;
+    rdfs:label "данные о Получателе"@ru ;
+    comcore:mentionedIn :14 ;
+    comcore:isResourceOf :предоставление_в_нко_данных_о_п .
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :14 ;
+    comcore:isActorOf :подключение_к_системе_монетару .
+:торговая_площадка rdf:type comcore:Agent ;
+    rdfs:label "Торговая площадка"@ru ;
+    comcore:mentionedIn :14 ;
+    comcore:isActorOf :подключение_к_системе_монетару .

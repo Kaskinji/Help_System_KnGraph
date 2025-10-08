@@ -1,0 +1,80 @@
+:личный_кабинет rdf:type comcore:Resource ;
+    rdfs:label "Личный кабинет"@ru ;
+    comcore:isResourceOf :доступ_в_личный_кабинет ;
+    comcore:isResourceOf :обмен_информацией_документами_и_расп ;
+    comcore:mentionedIn :8 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :доступ_в_личный_кабинет ;
+    comcore:isActorOf :обмен_информацией_документами_и_расп ;
+    comcore:mentionedIn :8 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :обмен_информацией_документами_и_расп ;
+    comcore:mentionedIn :8 .
+
+:интернет_магазин rdf:type comcore:Resource ;
+    rdfs:label "Интернет-магазин"@ru ;
+    comcore:mentionedIn :8 .
+
+:переводы rdf:type comcore:Resource ;
+    rdfs:label "Переводы"@ru ;
+    comcore:isResourceOf :обмен_информацией_документами_и_расп ;
+    comcore:mentionedIn :8 .
+
+:акты rdf:type comcore:Resource ;
+    rdfs:label "Акты"@ru ;
+    comcore:isResourceOf :обмен_информацией_документами_и_расп ;
+    comcore:mentionedIn :8 .
+
+:заявление_на_перечисление rdf:type comcore:Resource ;
+    rdfs:label "Заявление на перечисление"@ru ;
+    comcore:isResourceOf :обмен_информацией_документами_и_расп ;
+    comcore:mentionedIn :8 .
+
+:заявление_на_перечисление_по_операции_воз rdf:type comcore:Resource ;
+    rdfs:label "Заявление на перечисление по Операции возврата Перевода"@ru ;
+    comcore:isResourceOf :обмен_информацией_документами_и_расп ;
+    comcore:mentionedIn :8 .
+
+:распоряжения rdf:type comcore:Resource ;
+    rdfs:label "Распоряжения"@ru ;
+    comcore:isResourceOf :обмен_информацией_документами_и_расп ;
+    comcore:mentionedIn :8 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:mentionedIn :8 .
+
+:доступ_в_личный_кабинет rdf:type comcore:Process ;
+    rdfs:label "Доступ в Личный кабинет"@ru ;
+    comcore:mentionedIn :8 .
+
+:настройка_двухфакторной_аутентификации rdf:type comcore:Process ;
+    rdfs:label "Настройка двухфакторной аутентификации"@ru ;
+    comcore:isPartOf :доступ_в_личный_кабинет ;
+    comcore:mentionedIn :8 .
+
+:обмен_информацией_документами_и_расп rdf:type comcore:Process ;
+    rdfs:label "Обмен информацией, документами и распоряжениями"@ru ;
+    comcore:relation :регламент_информационного_обмена_электро ;
+    comcore:mentionedIn :8 .
+
+:регламент_информационного_обмена_электро rdf:type comcore:Resource ;
+    rdfs:label "Регламент информационного обмена электронными документами"@ru ;
+    comcore:isPartOf :приложение_№2_к_договору ;
+    comcore:relation :стороны ;
+    comcore:mentionedIn :8 .
+
+:приложение_№2_к_договору rdf:type comcore:Resource ;
+    rdfs:label "Приложение №2 к Договору"@ru ;
+    comcore:isPartOf :договор ;
+    comcore:mentionedIn :8 .
+
+:стороны rdf:type comcore:Agent ;
+    rdfs:label "Стороны"@ru ;
+    comcore:isActorOf :обмен_информацией_документами_и_расп ;
+    comcore:relation :регламент_информационного_обмена_электро ;
+    comcore:mentionedIn :8 .

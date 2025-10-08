@@ -1,0 +1,42 @@
+:стороны rdf:type comcore:Agent ;
+    rdfs:label "Стороны"@ru ;
+    comcore:isActorOf :исполнение_договора ;
+    comcore:mentionedIn :85 .
+
+:ответственные_лица_сторон rdf:type comcore:Agent ;
+    rdfs:label "Ответственные лица Сторон"@ru ;
+    comcore:isResponsibleFor :конфиденциальная_информация ;
+    comcore:mentionedIn :85 .
+
+:конфиденциальная_информация rdf:type comcore:Resource ;
+    rdfs:label "Конфиденциальная информация"@ru ;
+    comcore:isResultOf :исполнение_договора ;
+    comcore:mentionedIn :85 .
+
+:информация_о_плательщиках_и_пе rdf:type comcore:Resource ;
+    rdfs:label "Информация о Плательщиках и Переводах"@ru ;
+    comcore:isPartOf :конфиденциальная_информация ;
+    comcore:mentionedIn :85 .
+
+:информация_о_тарифной_политике rdf:type comcore:Resource ;
+    rdfs:label "Информация о тарифной политике Сторон"@ru ;
+    comcore:isPartOf :конфиденциальная_информация ;
+    comcore:mentionedIn :85 .
+
+:исполнение_договора rdf:type comcore:Process ;
+    rdfs:label "Исполнение Договора"@ru ;
+    comcore:mentionedIn :85 .
+
+:разглашение_сведений rdf:type comcore:Process ;
+    rdfs:label "Разглашение сведений"@ru ;
+    comcore:mentionedIn :85 .
+
+:возникновение_убытков rdf:type comcore:Event ;
+    rdfs:label "Возникновение убытков"@ru ;
+    comcore:isResultOf :разглашение_сведений ;
+    comcore:mentionedIn :85 .
+
+:влияние_на_деловую_репутац rdf:type comcore:Event ;
+    rdfs:label "Влияние на деловую репутацию"@ru ;
+    comcore:isResultOf :разглашение_сведений ;
+    comcore:mentionedIn :85 .

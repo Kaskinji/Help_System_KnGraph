@@ -1,0 +1,17 @@
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :76 .
+
+:зачет_встречных_требований rdf:type comcore:Process ;
+    rdfs:label "зачет встречных требований"@ru ;
+    comcore:mentionedIn :76 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :зачет_встречных_требований ;
+    comcore:mentionedIn :76 .
+
+:встречные_требования rdf:type comcore:Resource ;
+    rdfs:label "встречные требования"@ru ;
+    comcore:isResourceOf :зачет_встречных_требований ;
+    comcore:mentionedIn :76 .

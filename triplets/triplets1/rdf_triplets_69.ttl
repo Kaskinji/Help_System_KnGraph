@@ -1,0 +1,54 @@
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :возмещение ;
+    comcore:mentionedIn :69 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :возмещение ;
+    comcore:isResponsibleFor :документы ;
+    comcore:mentionedIn :69 .
+
+:эквайрер rdf:type comcore:Agent ;
+    rdfs:label "Эквайрер"@ru ;
+    comcore:isResponsibleFor :штрафы ;
+    comcore:mentionedIn :69 .
+
+:эмитенты rdf:type comcore:Agent ;
+    rdfs:label "Эмитенты"@ru ;
+    comcore:mentionedIn :69 .
+
+:недействительный_перевод rdf:type comcore:Resource ;
+    rdfs:label "Недействительный перевод"@ru ;
+    comcore:isResourceOf :возмещение ;
+    comcore:isResourceOf :зачет ;
+    comcore:mentionedIn :69 .
+
+:штрафы rdf:type comcore:Resource ;
+    rdfs:label "Штрафы"@ru ;
+    comcore:isResourceOf :возмещение ;
+    comcore:isResourceOf :зачет ;
+    comcore:mentionedIn :69 .
+
+:документы rdf:type comcore:Resource ;
+    rdfs:label "документы"@ru ;
+    comcore:isResourceOf :возмещение ;
+    comcore:mentionedIn :69 .
+
+:расходы rdf:type comcore:Resource ;
+    rdfs:label "расходы"@ru ;
+    comcore:mentionedIn :69 .
+
+:возмещение rdf:type comcore:Process ;
+    rdfs:label "Возмещение"@ru ;
+    comcore:mentionedIn :69 .
+
+:зачет rdf:type comcore:Process ;
+    rdfs:label "зачет"@ru ;
+    comcore:isPartOf :возмещение ;
+    comcore:mentionedIn :69 .
+
+:перечисление rdf:type comcore:Resource ;
+    rdfs:label "Перечисление"@ru ;
+    comcore:isResourceOf :зачет ;
+    comcore:mentionedIn :69 .

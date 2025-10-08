@@ -1,0 +1,153 @@
+[
+    {
+        "label": "Плательщик",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Agent",
+        "hasStatement": [],
+        "chunk_id": "38"
+    },
+    {
+        "label": "Эмитент",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Agent",
+        "hasStatement": [],
+        "chunk_id": "38"
+    },
+    {
+        "label": "Получатель",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Agent",
+        "hasStatement": [
+            "получатель isActorOf информационно-технологическое взаимодей",
+            "получатель isActorOf операция возврата перевода"
+        ],
+        "chunk_id": "38"
+    },
+    {
+        "label": "информационно-технологическое взаимодействие",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "информационно-технологическое взаимодей hasActor получатель",
+            "информационно-технологическое взаимодей relation операция возврата перевода"
+        ],
+        "chunk_id": "38"
+    },
+    {
+        "label": "Операция возврата Перевода",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "операция возврата перевода hasActor получатель",
+            "операция возврата перевода relation информационно-технологическое взаимодей",
+            "операция возврата перевода hasPart перечисление по операции возврата"
+        ],
+        "chunk_id": "38"
+    },
+    {
+        "label": "Распоряжение",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [],
+        "chunk_id": "38"
+    },
+    {
+        "label": "ответ на авторизацию",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [],
+        "chunk_id": "38"
+    },
+    {
+        "label": "Сообщение о приеме Перевода",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [],
+        "chunk_id": "38"
+    },
+    {
+        "label": "Перевод",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [],
+        "chunk_id": "38"
+    },
+    {
+        "label": "Заявление на перечисление",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "заявление на перечисление isResourceOf перечисление"
+        ],
+        "chunk_id": "38"
+    },
+    {
+        "label": "Перечисление",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "перечисление hasResource заявление на перечисление"
+        ],
+        "chunk_id": "38"
+    },
+    {
+        "label": "Заявление на перечисление по Операции возврата Перевода",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "заявление на перечисление по опера isResourceOf перечисление по операции возврата"
+        ],
+        "chunk_id": "38"
+    },
+    {
+        "label": "перечисление денежных средств по Операции возврата Перевода",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "перечисление по операции возврата hasResource заявление на перечисление по опера",
+            "перечисление по операции возврата isPartOf операция возврата перевода"
+        ],
+        "chunk_id": "38"
+    },
+    {
+        "label": "Отказ в приеме Распоряжения",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [],
+        "chunk_id": "38"
+    },
+    {
+        "label": "получение отрицательного ответа на авторизацию",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Event",
+        "hasStatement": [
+            "получение отрицательного ответа на ав Initiates отказ в приеме распоряжения"
+        ],
+        "chunk_id": "38"
+    },
+    {
+        "label": "неполучение положительного Сообщения о приеме Перевода",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Event",
+        "hasStatement": [
+            "неполучение положительного сообщения Initiates отказ в приеме распоряжения"
+        ],
+        "chunk_id": "38"
+    }
+]

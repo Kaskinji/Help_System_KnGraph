@@ -1,0 +1,64 @@
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :формирование_акта ;
+    comcore:isActorOf :размещение_акта ;
+    comcore:mentionedIn :78 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :сверка_данных ;
+    comcore:isActorOf :обращение_в_нко ;
+    comcore:mentionedIn :78 .
+
+:акт rdf:type comcore:Resource ;
+    rdfs:label "Акт"@ru ;
+    comcore:isResultOf :формирование_акта ;
+    comcore:isResourceOf :размещение_акта ;
+    comcore:mentionedIn :78 .
+
+:интернет_магазин rdf:type comcore:Resource ;
+    rdfs:label "Интернет-магазин"@ru ;
+    comcore:isResourceOf :формирование_акта ;
+    comcore:mentionedIn :78 .
+
+:личный_кабинет rdf:type comcore:Resource ;
+    rdfs:label "Личный кабинет"@ru ;
+    comcore:isResourceOf :размещение_акта ;
+    comcore:mentionedIn :78 .
+
+:данные rdf:type comcore:Resource ;
+    rdfs:label "данные"@ru ;
+    comcore:isPartOf :акт ;
+    comcore:isResourceOf :сверка_данных ;
+    comcore:mentionedIn :78 .
+
+:электронная_почта rdf:type comcore:Resource ;
+    rdfs:label "электронная почта"@ru ;
+    comcore:isResourceOf :обращение_в_нко ;
+    comcore:mentionedIn :78 .
+
+:формирование_акта rdf:type comcore:Process ;
+    rdfs:label "формирование Акта"@ru ;
+    comcore:hasResult :акт ;
+    comcore:mentionedIn :78 .
+
+:размещение_акта rdf:type comcore:Process ;
+    rdfs:label "размещение Акта"@ru ;
+    comcore:hasResource :акт ;
+    comcore:hasResource :личный_кабинет ;
+    comcore:mentionedIn :78 .
+
+:сверка_данных rdf:type comcore:Process ;
+    rdfs:label "сверка данных"@ru ;
+    comcore:hasResource :данные ;
+    comcore:mentionedIn :78 .
+
+:обращение_в_нко rdf:type comcore:Process ;
+    rdfs:label "обращение в НКО"@ru ;
+    comcore:hasResource :электронная_почта ;
+    comcore:mentionedIn :78 .
+
+:несогласие_с_данными_в_акте rdf:type comcore:Event ;
+    rdfs:label "несогласие с данными в Акте"@ru ;
+    comcore:Initiates :обращение_в_нко ;
+    comcore:mentionedIn :78 .

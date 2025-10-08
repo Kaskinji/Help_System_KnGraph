@@ -1,0 +1,83 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :35 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :передача_информации_о_реквизитах ;
+    comcore:mentionedIn :35 .
+
+:третьи_лица rdf:type comcore:Agent ;
+    rdfs:label "третьи лица"@ru ;
+    comcore:isActorOf :информационно_технологическое_взаимодейств ;
+    comcore:mentionedIn :35 .
+
+:стороны rdf:type comcore:Agent ;
+    rdfs:label "Стороны"@ru ;
+    comcore:isActorOf :хранение_электронных_документов ;
+    comcore:isActorOf :представление_копий ;
+    comcore:mentionedIn :35 .
+
+:информационно_технологическое_взаимодейств rdf:type comcore:Process ;
+    rdfs:label "информационно-технологическое взаимодействие"@ru ;
+    comcore:isPartOf :переводы ;
+    comcore:mentionedIn :35 .
+
+:переводы rdf:type comcore:Process ;
+    rdfs:label "Переводы"@ru ;
+    comcore:mentionedIn :35 .
+
+:передача_информации_о_реквизитах rdf:type comcore:Process ;
+    rdfs:label "передача информации о реквизитах"@ru ;
+    comcore:isPartOf :переводы ;
+    comcore:mentionedIn :35 .
+
+:хранение_электронных_документов rdf:type comcore:Process ;
+    rdfs:label "хранение электронных документов"@ru ;
+    comcore:mentionedIn :35 .
+
+:представление_копий rdf:type comcore:Process ;
+    rdfs:label "представление копий"@ru ;
+    comcore:mentionedIn :35 .
+
+:расчеты rdf:type comcore:Process ;
+    rdfs:label "расчеты"@ru ;
+    comcore:mentionedIn :35 .
+
+:реквизиты_переводов rdf:type comcore:Resource ;
+    rdfs:label "реквизиты Переводов"@ru ;
+    comcore:isResourceOf :передача_информации_о_реквизитах ;
+    comcore:mentionedIn :35 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "договор"@ru ;
+    comcore:relation :нко ;
+    comcore:relation :третьи_лица ;
+    comcore:mentionedIn :35 .
+
+:договор_между_сторонами rdf:type comcore:Resource ;
+    rdfs:label "Договор между Сторонами"@ru ;
+    comcore:canBeResourceFor :расчеты ;
+    comcore:mentionedIn :35 .
+
+:электронные_документы_по_переводам rdf:type comcore:Resource ;
+    rdfs:label "электронные документы по Переводам"@ru ;
+    comcore:isResourceOf :хранение_электронных_документов ;
+    comcore:isResultOf :переводы ;
+    comcore:mentionedIn :35 .
+
+:копии_электронных_документов rdf:type comcore:Resource ;
+    rdfs:label "копии указанных электронных документов"@ru ;
+    comcore:isResourceOf :представление_копий ;
+    comcore:mentionedIn :35 .
+
+:валюта_российской_федерации rdf:type comcore:Resource ;
+    rdfs:label "валюта Российской Федерации"@ru ;
+    comcore:isResourceOf :расчеты ;
+    comcore:mentionedIn :35 .

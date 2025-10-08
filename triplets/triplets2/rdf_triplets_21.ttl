@@ -1,0 +1,62 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:mentionedIn :21 ;
+    comcore:isResultOf :заключение_договора .
+
+:заключение_договора rdf:type comcore:Process ;
+    rdfs:label "Заключение Договора"@ru ;
+    comcore:mentionedIn :21 ;
+    comcore:hasResult :договор ;
+    comcore:hasPart :регистрация .
+
+:регистрация rdf:type comcore:Process ;
+    rdfs:label "Регистрация"@ru ;
+    comcore:mentionedIn :21 ;
+    comcore:isPartOf :заключение_договора ;
+    comcore:isResourceOf :данные_для_регистрации , :отдельный_договор , :сайт_нко .
+
+:данные_для_регистрации rdf:type comcore:Resource ;
+    rdfs:label "Данные для регистрации"@ru ;
+    comcore:mentionedIn :21 ;
+    comcore:isResourceOf :регистрация .
+
+:личный_кабинет rdf:type comcore:Resource ;
+    rdfs:label "Личный кабинет"@ru ;
+    comcore:mentionedIn :21 ;
+    comcore:isResultOf :предоставление_личного_кабинета .
+
+:предоставление_личного_кабинета rdf:type comcore:Process ;
+    rdfs:label "Предоставление Личного кабинета"@ru ;
+    comcore:mentionedIn :21 ;
+    comcore:hasResult :личный_кабинет ;
+    comcore:isActorOf :нко .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:mentionedIn :21 ;
+    comcore:isActorOf :предоставление_личного_кабинета .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :21 ;
+    comcore:Initiates :заключение_договора .
+
+:сайт_нко rdf:type comcore:Resource ;
+    rdfs:label "Сайт НКО"@ru ;
+    comcore:mentionedIn :21 ;
+    comcore:isResourceOf :регистрация .
+
+:отдельный_договор rdf:type comcore:Resource ;
+    rdfs:label "Отдельный договор"@ru ;
+    comcore:mentionedIn :21 ;
+    comcore:isResourceOf :регистрация .
+
+:заявление rdf:type comcore:Resource ;
+    rdfs:label "Заявление"@ru ;
+    comcore:mentionedIn :21 .

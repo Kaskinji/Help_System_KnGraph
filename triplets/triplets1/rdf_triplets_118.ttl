@@ -1,0 +1,52 @@
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:mentionedIn :118 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :118 .
+
+:нко_монета_ооо rdf:type comcore:Agent ;
+    rdfs:label "НКО «МОНЕТА» (ООО)"@ru ;
+    comcore:isResponsibleFor :тарифы ;
+    comcore:mentionedIn :118 .
+
+:требование rdf:type comcore:Resource ;
+    rdfs:label "Требование"@ru ;
+    comcore:mentionedIn :118 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:mentionedIn :118 .
+
+:тарифы rdf:type comcore:Resource ;
+    rdfs:label "Тарифы"@ru ;
+    comcore:mentionedIn :118 .
+
+:интернет_ресурс rdf:type comcore:Resource ;
+    rdfs:label "интернет-ресурс"@ru ;
+    comcore:isResourceOf :прием_переводов_от_физических_лиц ;
+    comcore:mentionedIn :118 .
+
+:тариф rdf:type comcore:Resource ;
+    rdfs:label "Тариф"@ru ;
+    comcore:isResourceOf :прием_переводов_от_физических_лиц ;
+    comcore:mentionedIn :118 .
+
+:набор_платежных_инструментов rdf:type comcore:Resource ;
+    rdfs:label "набор платежных инструментов"@ru ;
+    comcore:isResourceOf :прием_переводов_от_физических_лиц ;
+    comcore:mentionedIn :118 .
+
+:система_монетару rdf:type comcore:Resource ;
+    rdfs:label "Система МОНЕТА.РУ"@ru ;
+    comcore:isResourceOf :получение_и_передача_информации_о ;
+    comcore:mentionedIn :118 .
+
+:прием_переводов_от_физических_лиц rdf:type comcore:Process ;
+    rdfs:label "прием переводов от физических лиц"@ru ;
+    comcore:mentionedIn :118 .
+
+:получение_и_передача_информации_о rdf:type comcore:Process ;
+    rdfs:label "получение и передача информации о переводах"@ru ;
+    comcore:mentionedIn :118 .

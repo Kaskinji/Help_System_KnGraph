@@ -1,0 +1,56 @@
+:обработка_обращения_потенциального_клиента rdf:type comcore:Process ;
+rdfs:label "Обработка обращения потенциального клиента"@ru ;
+comcore:isPartOf :бизнес_процесс ;
+comcore:hasResult :регистрация_клиента .
+
+:регистрация_клиента rdf:type comcore:Event ;
+rdfs:label "Регистрация клиента"@ru ;
+comcore:isResultOf :обработка_обращения_потенциального_клиента ;
+comcore:initiates :подключение_к_системе .
+
+:подключение_к_системе rdf:type comcore:Process ;
+rdfs:label "Подключение к системе"@ru ;
+comcore:isPartOf :обработка_обращения_потенциального_клиента ;
+comcore:hasActor :руководитель_отдела_по_работе_с_им .
+
+:руководитель_отдела_по_работе_с_им rdf:type comcore:Agent ;
+rdfs:label "Руководитель отдела по работе с ИМ"@ru ;
+comcore:isActorOf :обработка_обращения_потенциального_клиента ;
+comcore:isResponsibleFor :подключение_к_системе .
+
+:клиент rdf:type comcore:Agent ;
+rdfs:label "Клиент"@ru ;
+comcore:isActorOf :обработка_обращения_потенциального_клиента ;
+comcore:isResponsibleFor :регистрация_клиента .
+
+:система_монета rdf:type comcore:Resource ;
+rdfs:label "Система МОНЕТА"@ru ;
+comcore:isResourceOf :обработка_обращения_потенциального_клиента ;
+comcore:canBeResourceFor :подключение_к_системе .
+
+:интернет_магазин rdf:type comcore:Agent ;
+rdfs:label "Интернет-магазин"@ru ;
+comcore:isActorOf :обработка_обращения_потенциального_клиента ;
+comcore:isResponsibleFor :подключение_к_системе .
+
+:договор_о_переводах rdf:type comcore:Resource ;
+rdfs:label "Договор о переводах"@ru ;
+comcore:isResourceOf :обработка_обращения_потенциального_клиента ;
+comcore:canBeResourceFor :регистрация_клиента .
+
+:подключение_к_системе_монета rdf:type comcore:Process ;
+rdfs:label "Подключение к системе МОНЕТА"@ru ;
+comcore:isPartOf :обработка_обращения_потенциального_клиента ;
+comcore:hasResult :регистрация_клиента .
+
+:сотрудник_отдела_по_работе_с_клиентами rdf:type comcore:Agent ;
+rdfs:label "Сотрудник отдела по работе с клиентами"@ru ;
+comcore:isActorOf :обработка_обращения_потенциального_клиента ;
+comcore:isResponsibleFor :подключение_к_системе .
+
+:отдел_обр rdf:type comcore:Agent ;
+rdfs:label "Отдел ОБР"@ru ;
+comcore:isActorOf :обработка_обращения_потенциального_клиента ;
+comcore:isResponsibleFor :регистрация_клиента .
+
+Process finished with exit code 0

@@ -1,0 +1,97 @@
+ЗАПРОС:
+ Что должен сделать сотрудник при проверке в ЛК блока "Контакты"?
+
+ОТВЕТ:
+ Сотрудник отдела сопровождения проверяет открытие Клиентом счета. Если клиент не открыл счет после автоматического уведомления, напишите еще одно письмо. Для этого в OTRS выбираете шаблон «КО-Включил". Если клиент не открыл счет после повторного письма, то связываетесь с клиентом по контактному телефону, указанному в ЛК. Необходимо представиться, указать, что требуется и напомнить, что интеграцию с платежной системой можно провести только после открытия бизнес-счета.
+
+ТРИПЛЕТЫ:
+ :сотрудник_отдела_сопровождения rdf:type comcore:Agent ;
+    rdfs:label "Сотрудник отдела сопровождения"@ru ;
+    comcore:isActorOf :проверка_открытия_счета ;
+    comcore:isActorOf :написание_письма ;
+    comcore:isActorOf :связывание_с_клиентом ;
+    comcore:mentionedIn :0 .
+
+:клиент rdf:type comcore:Agent ;
+    rdfs:label "Клиент"@ru ;
+    comcore:isActorOf :открытие_счета ;
+    comcore:isActorOf :связывание_с_клиентом ;
+    comcore:isActorOf :открытие_бизнес_счета ;
+    comcore:mentionedIn :0 .
+
+:проверка_открытия_счета rdf:type comcore:Process ;
+    rdfs:label "Проверка открытия счета"@ru ;
+    comcore:hasResult :открытие_счета_не_произошло ;
+    comcore:mentionedIn :0 .
+
+:автоматическое_уведомление rdf:type comcore:Event ;
+    rdfs:label "Автоматическое уведомление"@ru ;
+    comcore:Initiates :открытие_счета ;
+    comcore:mentionedIn :0 .
+
+:повторное_письмо rdf:type comcore:Resource ;
+    rdfs:label "Повторное письмо"@ru ;
+    comcore:isResultOf :написание_письма ;
+    comcore:mentionedIn :0 .
+
+:открытие_счета rdf:type comcore:Process ;
+    rdfs:label "Открытие счета"@ru ;
+    comcore:mentionedIn :0 .
+
+:написание_письма rdf:type comcore:Process ;
+    rdfs:label "Написание письма"@ru ;
+    comcore:isResourceOf :шаблон_ко_включил ;
+    comcore:mentionedIn :0 .
+
+:связывание_с_клиентом rdf:type comcore:Process ;
+    rdfs:label "Связывание с клиентом"@ru ;
+    comcore:isResourceOf :контактный_телефон ;
+    comcore:hasPart :представление ;
+    comcore:hasPart :указание ;
+    comcore:hasPart :напоминание ;
+    comcore:mentionedIn :0 .
+
+:контактный_телефон rdf:type comcore:Resource ;
+    rdfs:label "Контактный телефон"@ru ;
+    comcore:isPartOf :личный_кабинет ;
+    comcore:mentionedIn :0 .
+
+:личный_кабинет rdf:type comcore:Resource ;
+    rdfs:label "Личный кабинет"@ru ;
+    comcore:mentionedIn :0 .
+
+:открытие_счета_не_произошло rdf:type comcore:Event ;
+    rdfs:label "Открытие счета не произошло"@ru ;
+    comcore:Initiates :написание_письма ;
+    comcore:mentionedIn :0 .
+
+:счет_не_открыт_повторно rdf:type comcore:Event ;
+    rdfs:label "Счет не открыт повторно"@ru ;
+    comcore:Initiates :связывание_с_клиентом ;
+    comcore:mentionedIn :0 .
+
+:открытие_бизнес_счета rdf:type comcore:Process ;
+    rdfs:label "Открытие бизнес счета"@ru ;
+    comcore:mentionedIn :0 .
+
+:представление rdf:type comcore:Process ;
+    rdfs:label "Представление"@ru ;
+    comcore:mentionedIn :0 .
+
+:указание rdf:type comcore:Process ;
+    rdfs:label "Указание"@ru ;
+    comcore:mentionedIn :0 .
+
+:напоминание rdf:type comcore:Process ;
+    rdfs:label "Напоминание"@ru ;
+    comcore:relation :открытие_бизнес_счета ;
+    comcore:mentionedIn :0 .
+
+:шаблон_ко_включил rdf:type comcore:Resource ;
+    rdfs:label "Шаблон КО-Включил"@ru ;
+    comcore:mentionedIn :0 .
+
+ОТВЕТ2:
+ Связывание с клиентом(Недействительный перевод) - Перевод, связанный с оплатой Запрещенных услуг, реализуемых Получателем, а также Перевод, совершенный Плательщиком в пользу Получателя с нарушением правил платежных систем, или Перевод, ставший или который может стать предметом споров и разногласий в соответствии с правилами платежных систем (score: 0.72)
+Личный кабинет(Личный кабинет) - раздел в Системе МОНЕТА.РУ, который содержит данные о Получателе и его Интернет-магазине, позволяет Получателю получать от НКО информацию о состоянии Переводов, реестры успешно осуществленных Переводов, Акты, формировать и направлять в НКО Заявление на перечисление, Заявление на перечисление по Операции возврата Перевода, Распоряжения и другие документы, необходимые для исполнения Договора. (score: 1.00)
+Счет не открыт повторно(Уведомление о приостановлении) - уведомление от оператора по переводу денежных средств, обслуживающего Плательщика, о приостановлении зачисления денежных средств на банковский счет Получателя. (score: 1.00)

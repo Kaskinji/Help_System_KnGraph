@@ -1,0 +1,29 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:операция_возврата_перевода rdf:type comcore:Process ;
+    rdfs:label "Операция возврата Перевода"@ru ;
+    comcore:mentionedIn :11 ;
+    dc:definition "Операция возврата Перевода - действия Получателя по возврату суммы Перевода/части суммы Перевода Плательщику в связи с отменой (возвратом) Плательщиком Услуги, или непредоставлением (неоказанием) Услуги Получателем Плательщику по основаниям, предусмотренным договором, заключенным между Плательщиком и Получателем в соответствии с законодательством Российской Федерации. Возврат перевода осуществляется Получателем в порядке и на условиях, установленных в Приложении №3 к Договору." .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :операция_возврата_перевода ;
+    comcore:mentionedIn :11 .
+
+:плательщик rdf:type comcore:Agent ;
+    rdfs:label "Плательщик"@ru ;
+    comcore:mentionedIn :11 .
+
+:сумма_перевода rdf:type comcore:Resource ;
+    rdfs:label "сумма Перевода"@ru ;
+    comcore:isResourceOf :операция_возврата_перевода ;
+    comcore:mentionedIn :11 .
+
+:приложение_№3_к_договору rdf:type comcore:Resource ;
+    rdfs:label "Приложение №3 к Договору"@ru ;
+    comcore:isResourceOf :операция_возврата_перевода ;
+    comcore:mentionedIn :11 .

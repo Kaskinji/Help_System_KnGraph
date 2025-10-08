@@ -1,0 +1,29 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    dc:definition "Небанковская кредитная организация «МОНЕТА» (общество с ограниченной ответственностью) - оператор по переводу денежных средств, в том числе электронных денежных средств. Лицензия Банка России № 3508-К от 29 ноября 2017 года." ;
+    comcore:relation :банк_россии ;
+    comcore:mentionedIn :3 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    dc:definition "настоящий Договор о переводах без открытия банковского счета в Системе МОНЕТА.РУ и осуществлении информационно-технологического взаимодействия для юридических лиц и индивидуальных предпринимателей - резидентов РФ. Текст Договора размещается на Сайте НКО." ;
+    comcore:relation :сайт_нко , :система_монетару ;
+    comcore:mentionedIn :3 .
+
+:сайт_нко rdf:type comcore:Resource ;
+    rdfs:label "Сайт НКО"@ru ;
+    comcore:mentionedIn :3 .
+
+:система_монетару rdf:type comcore:Resource ;
+    rdfs:label "Система МОНЕТА.РУ"@ru ;
+    comcore:mentionedIn :3 .
+
+:банк_россии rdf:type comcore:Agent ;
+    rdfs:label "Банк России"@ru ;
+    comcore:mentionedIn :3 .

@@ -1,0 +1,86 @@
+[
+    {
+        "label": "Перечисление",
+        "abbreviation": [],
+        "definition": "действия НКО по безналичному перечислению денежных средств в валюте Российской Федерации, полученных в результате оплаты Плательщиком Услуг Получателя, на банковский счет Получателя на основании Заявления на перечисление.",
+        "type": "Process",
+        "hasStatement": [
+            "перечисление hasActor нко",
+            "перечисление hasResource заявление на перечисление"
+        ],
+        "chunk_id": "13"
+    },
+    {
+        "label": "НКО",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Agent",
+        "hasStatement": [
+            "нко isActorOf перечисление"
+        ],
+        "chunk_id": "13"
+    },
+    {
+        "label": "Заявление на перечисление",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "заявление на перечисление isResourceOf перечисление"
+        ],
+        "chunk_id": "13"
+    },
+    {
+        "label": "Перевод",
+        "abbreviation": [],
+        "definition": "действия НКО по исполнению Распоряжения Плательщика в оплату Услуг (или предоплаты Услуг) в пользу Получателя или Распоряжения Получателя в пользу Плательщика, включая действия НКО и Получателя, направленные на передачу и обработку Сообщений.",
+        "type": "Process",
+        "hasStatement": [
+            "перевод hasActor получатель",
+            "перевод hasResource распоряжение плательщика",
+            "перевод hasResource распоряжение получателя",
+            "перевод hasResource сообщения"
+        ],
+        "chunk_id": "13"
+    },
+    {
+        "label": "Получатель",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Agent",
+        "hasStatement": [
+            "получатель isActorOf перевод"
+        ],
+        "chunk_id": "13"
+    },
+    {
+        "label": "Распоряжение Плательщика",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "распоряжение плательщика isResourceOf перевод"
+        ],
+        "chunk_id": "13"
+    },
+    {
+        "label": "Распоряжение Получателя",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "распоряжение получателя isResourceOf перевод"
+        ],
+        "chunk_id": "13"
+    },
+    {
+        "label": "Сообщения",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "сообщения isResourceOf перевод"
+        ],
+        "chunk_id": "13"
+    }
+]

@@ -1,0 +1,83 @@
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :15 ;
+    comcore:relation :некоммерческая_организация .
+
+:юридическое_лицо rdf:type comcore:Agent ;
+    rdfs:label "юридическое лицо"@ru ;
+    comcore:mentionedIn :15 ;
+    comcore:isActorOf :реализация_услуг .
+
+:физическое_лицо rdf:type comcore:Agent ;
+    rdfs:label "физическое лицо"@ru ;
+    comcore:mentionedIn :15 ;
+    comcore:isActorOf :реализация_услуг .
+
+:индивидуальный_предприниматель rdf:type comcore:Agent ;
+    rdfs:label "индивидуальный предприниматель"@ru ;
+    comcore:mentionedIn :15 ;
+    comcore:isActorOf :реализация_услуг .
+
+:некоммерческая_организация rdf:type comcore:Agent ;
+    rdfs:label "некоммерческая организация"@ru ;
+    comcore:mentionedIn :15 ;
+    comcore:isActorOf :принятие_распоряжений .
+
+:кредитная_организация rdf:type comcore:Agent ;
+    rdfs:label "кредитная организация"@ru ;
+    comcore:mentionedIn :15 ;
+    comcore:isActorOf :реализация_услуг .
+
+:небанковская_кредитная_организац rdf:type comcore:Agent ;
+    rdfs:label "небанковская кредитная организация"@ru ;
+    comcore:mentionedIn :15 ;
+    comcore:isActorOf :реализация_услуг .
+
+:уполномоченное_юридическое_лицо rdf:type comcore:Agent ;
+    rdfs:label "уполномоченное юридическое лицо"@ru ;
+    comcore:mentionedIn :15 ;
+    comcore:isActorOf :аккумулирование_денежных_средств ;
+    comcore:isActorOf :реализация_услуг .
+
+:услуги rdf:type comcore:Resource ;
+    rdfs:label "Услуги"@ru ;
+    comcore:mentionedIn :15 .
+
+:сеть_интернет rdf:type comcore:Resource ;
+    rdfs:label "сеть Интернет"@ru ;
+    comcore:mentionedIn :15 ;
+    comcore:isResourceOf :реализация_услуг .
+
+:распоряжения rdf:type comcore:Resource ;
+    rdfs:label "Распоряжения"@ru ;
+    comcore:mentionedIn :15 ;
+    comcore:isResourceOf :принятие_распоряжений .
+
+:денежные_средства rdf:type comcore:Resource ;
+    rdfs:label "денежные средства"@ru ;
+    comcore:mentionedIn :15 ;
+    comcore:isResourceOf :аккумулирование_денежных_средств ;
+    comcore:isResourceOf :перечисление_денежных_средств ;
+    comcore:isResourceOf :осуществление_переводов .
+
+:реализация_услуг rdf:type comcore:Process ;
+    rdfs:label "реализация Услуг"@ru ;
+    comcore:mentionedIn :15 .
+
+:аккумулирование_денежных_средств rdf:type comcore:Process ;
+    rdfs:label "аккумулирование денежных средств"@ru ;
+    comcore:mentionedIn :15 ;
+    comcore:relation :перечисление_денежных_средств .
+
+:перечисление_денежных_средств rdf:type comcore:Process ;
+    rdfs:label "перечисление денежных средств"@ru ;
+    comcore:mentionedIn :15 .
+
+:принятие_распоряжений rdf:type comcore:Process ;
+    rdfs:label "принятие Распоряжений"@ru ;
+    comcore:mentionedIn :15 ;
+    comcore:relation :осуществление_переводов .
+
+:осуществление_переводов rdf:type comcore:Process ;
+    rdfs:label "осуществление Переводов"@ru ;
+    comcore:mentionedIn :15 .

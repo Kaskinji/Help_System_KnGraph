@@ -1,0 +1,64 @@
+:сверка rdf:type comcore:Process ;
+    rdfs:label "сверка"@ru ;
+    comcore:mentionedIn :79 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :повторная_сверка ;
+    comcore:mentionedIn :79 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :сверка , :размещение_исправленной_версии_акта , :направление_уведомления ;
+    comcore:mentionedIn :79 .
+
+:расхождения rdf:type comcore:Resource ;
+    rdfs:label "расхождения"@ru ;
+    comcore:isResourceOf :сверка ;
+    comcore:mentionedIn :79 .
+
+:обращение rdf:type comcore:Resource ;
+    rdfs:label "обращение"@ru ;
+    comcore:mentionedIn :79 .
+
+:акт rdf:type comcore:Resource ;
+    rdfs:label "Акт"@ru ;
+    comcore:isResourceOf :размещение_исправленной_версии_акта ;
+    comcore:mentionedIn :79 .
+
+:личный_кабинет rdf:type comcore:Resource ;
+    rdfs:label "Личный кабинет"@ru ;
+    comcore:isResourceOf :размещение_исправленной_версии_акта ;
+    comcore:mentionedIn :79 .
+
+:уведомление rdf:type comcore:Resource ;
+    rdfs:label "уведомление"@ru ;
+    comcore:isResourceOf :направление_уведомления ;
+    comcore:mentionedIn :79 .
+
+:электронная_почта rdf:type comcore:Resource ;
+    rdfs:label "электронная почта"@ru ;
+    comcore:isResourceOf :направление_уведомления ;
+    comcore:mentionedIn :79 .
+
+:размещение_исправленной_версии_акта rdf:type comcore:Process ;
+    rdfs:label "размещение исправленной версии Акта"@ru ;
+    comcore:mentionedIn :79 .
+
+:направление_уведомления rdf:type comcore:Process ;
+    rdfs:label "направление уведомления"@ru ;
+    comcore:mentionedIn :79 .
+
+:повторная_сверка rdf:type comcore:Process ;
+    rdfs:label "повторная сверка"@ru ;
+    comcore:mentionedIn :79 .
+
+:подтверждение_расхождений rdf:type comcore:Event ;
+    rdfs:label "подтверждение расхождений"@ru ;
+    comcore:Initiates :размещение_исправленной_версии_акта ;
+    comcore:mentionedIn :79 .
+
+:отклонение_расхождений rdf:type comcore:Event ;
+    rdfs:label "отклонение расхождений"@ru ;
+    comcore:Initiates :направление_уведомления ;
+    comcore:mentionedIn :79 .

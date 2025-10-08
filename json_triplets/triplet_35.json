@@ -1,0 +1,172 @@
+[
+    {
+        "label": "Получатель",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Agent",
+        "hasStatement": [],
+        "chunk_id": "35"
+    },
+    {
+        "label": "НКО",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Agent",
+        "hasStatement": [
+            "нко isActorOf передача информации о реквизитах",
+            "нко relation договор"
+        ],
+        "chunk_id": "35"
+    },
+    {
+        "label": "передача информации о реквизитах",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "передача информации о реквизитах hasActor нко",
+            "передача информации о реквизитах isPartOf переводы",
+            "передача информации о реквизитах hasResource реквизиты переводов"
+        ],
+        "chunk_id": "35"
+    },
+    {
+        "label": "третьи лица",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Agent",
+        "hasStatement": [
+            "третьи лица isActorOf информационно технологическое взаимодейств",
+            "третьи лица relation договор"
+        ],
+        "chunk_id": "35"
+    },
+    {
+        "label": "информационно-технологическое взаимодействие",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "информационно технологическое взаимодейств hasActor третьи лица",
+            "информационно технологическое взаимодейств isPartOf переводы"
+        ],
+        "chunk_id": "35"
+    },
+    {
+        "label": "Стороны",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Agent",
+        "hasStatement": [
+            "стороны isActorOf хранение электронных документов",
+            "стороны isActorOf представление копий"
+        ],
+        "chunk_id": "35"
+    },
+    {
+        "label": "хранение электронных документов",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "хранение электронных документов hasActor стороны",
+            "хранение электронных документов hasResource электронные документы по переводам"
+        ],
+        "chunk_id": "35"
+    },
+    {
+        "label": "представление копий",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "представление копий hasActor стороны",
+            "представление копий hasResource копии электронных документов"
+        ],
+        "chunk_id": "35"
+    },
+    {
+        "label": "Переводы",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "переводы hasPart информационно технологическое взаимодейств",
+            "переводы hasPart передача информации о реквизитах",
+            "переводы hasResult электронные документы по переводам"
+        ],
+        "chunk_id": "35"
+    },
+    {
+        "label": "расчеты",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "расчеты hasResource валюта российской федерации"
+        ],
+        "chunk_id": "35"
+    },
+    {
+        "label": "реквизиты Переводов",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "реквизиты переводов isResourceOf передача информации о реквизитах"
+        ],
+        "chunk_id": "35"
+    },
+    {
+        "label": "договор",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "договор relation нко",
+            "договор relation третьи лица"
+        ],
+        "chunk_id": "35"
+    },
+    {
+        "label": "Договор между Сторонами",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "договор между сторонами canBeResourceFor расчеты"
+        ],
+        "chunk_id": "35"
+    },
+    {
+        "label": "электронные документы по Переводам",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "электронные документы по переводам isResourceOf хранение электронных документов",
+            "электронные документы по переводам isResultOf переводы"
+        ],
+        "chunk_id": "35"
+    },
+    {
+        "label": "копии указанных электронных документов",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "копии электронных документов isResourceOf представление копий"
+        ],
+        "chunk_id": "35"
+    },
+    {
+        "label": "валюта Российской Федерации",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "валюта российской федерации isResourceOf расчеты"
+        ],
+        "chunk_id": "35"
+    }
+]

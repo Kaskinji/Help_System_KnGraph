@@ -1,0 +1,74 @@
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:mentionedIn :47 .
+
+:изменение_единоличного_исполнительного rdf:type comcore:Resource ;
+    rdfs:label "изменение единоличного исполнительного органа"@ru ;
+    comcore:mentionedIn :47 .
+
+:изменение_бенефициарного_владельца rdf:type comcore:Resource ;
+    rdfs:label "изменение бенефициарного владельца"@ru ;
+    comcore:mentionedIn :47 .
+
+:изменение_данных_документа rdf:type comcore:Resource ;
+    rdfs:label "изменение данных документа"@ru ;
+    comcore:mentionedIn :47 .
+
+:отсутствие_уведомления rdf:type comcore:Resource ;
+    rdfs:label "отсутствие уведомления"@ru ;
+    comcore:mentionedIn :47 .
+
+:прекращение_исполнения_обязательств rdf:type comcore:Process ;
+    rdfs:label "прекращение исполнения обязательств"@ru ;
+    comcore:mentionedIn :47 .
+
+:расторжение_договора rdf:type comcore:Process ;
+    rdfs:label "расторжение договора"@ru ;
+    comcore:mentionedIn :47 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :47 .
+
+:прекращение_договорных_отношений rdf:type comcore:Event ;
+    rdfs:label "прекращение договорных отношений"@ru ;
+    comcore:mentionedIn :47 .
+
+:уведомление rdf:type comcore:Resource ;
+    rdfs:label "уведомление"@ru ;
+    comcore:mentionedIn :47 .
+
+:личный_кабинет rdf:type comcore:Resource ;
+    rdfs:label "Личный кабинет"@ru ;
+    comcore:mentionedIn :47 .
+
+:адрес_электронной_почты rdf:type comcore:Resource ;
+    rdfs:label "адрес электронной почты"@ru ;
+    comcore:mentionedIn :47 .
+
+:заявление rdf:type comcore:Resource ;
+    rdfs:label "Заявление"@ru ;
+    comcore:mentionedIn :47 .
+
+:торговая_площадка rdf:type comcore:Agent ;
+    rdfs:label "Торговая площадка"@ru ;
+    comcore:mentionedIn :47 .
+
+:нко comcore:Initiates :прекращение_исполнения_обязательств .
+:нко comcore:Initiates :расторжение_договора .
+:отсутствие_уведомления comcore:relation :прекращение_исполнения_обязательств .
+:отсутствие_уведомления comcore:relation :расторжение_договора .
+:изменение_единоличного_исполнительного comcore:relation :прекращение_исполнения_обязательств .
+:изменение_единоличного_исполнительного comcore:relation :расторжение_договора .
+:изменение_бенефициарного_владельца comcore:relation :прекращение_исполнения_обязательств .
+:изменение_бенефициарного_владельца comcore:relation :расторжение_договора .
+:изменение_данных_документа comcore:relation :прекращение_исполнения_обязательств .
+:изменение_данных_документа comcore:relation :расторжение_договора .
+:прекращение_договорных_отношений comcore:Initiates :расторжение_договора .
+:уведомление comcore:isResultOf :расторжение_договора .
+:уведомление comcore:relation :личный_кабинет .
+:уведомление comcore:relation :адрес_электронной_почты .
+:адрес_электронной_почты comcore:isPartOf :заявление .
+:прекращение_договорных_отношений comcore:relation :торговая_площадка .
+:прекращение_договорных_отношений comcore:relation :получатель .
+:торговая_площадка comcore:relation :получатель .

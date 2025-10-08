@@ -1,0 +1,21 @@
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:relation :вознаграждение ;
+    comcore:relation :тариф ;
+    comcore:mentionedIn :71 .
+
+:вознаграждение rdf:type comcore:Resource ;
+    rdfs:label "вознаграждение"@ru ;
+    comcore:relation :тариф ;
+    comcore:relation :получатель ;
+    comcore:mentionedIn :71 .
+
+:тариф rdf:type comcore:Resource ;
+    rdfs:label "Тариф"@ru ;
+    comcore:relation :нко ;
+    comcore:mentionedIn :71 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:relation :вознаграждение ;
+    comcore:mentionedIn :71 .

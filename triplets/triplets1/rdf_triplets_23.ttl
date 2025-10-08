@@ -1,0 +1,68 @@
+:нко rdf:type comcore:Agent ;
+  rdfs:label "НКО"@ru ;
+  comcore:isActorOf :отправка_запроса ;
+  comcore:mentionedIn :23 . 
+
+:получатель rdf:type comcore:Agent ;
+  rdfs:label "Получатель"@ru ;
+  comcore:isActorOf :направление_сообщения , :предоставление_документов_и_информации , :выполнение_обязанности_получателя ;
+  comcore:mentionedIn :23 . 
+
+:уполномоченный_представитель_получателя rdf:type comcore:Agent ;
+  rdfs:label "уполномоченный представитель Получателя"@ru ;
+  comcore:isActorOf :предоставление_документов_и_информации ;
+  comcore:mentionedIn :23 . 
+
+:запрос rdf:type comcore:Resource ;
+  rdfs:label "Запрос"@ru ;
+  comcore:isResultOf :отправка_запроса ;
+  comcore:relation :документы_и_информация ;
+  comcore:mentionedIn :23 . 
+
+:сообщение rdf:type comcore:Resource ;
+  rdfs:label "сообщение"@ru ;
+  comcore:mentionedIn :23 . 
+
+:копии_документов_и_информации rdf:type comcore:Resource ;
+  rdfs:label "отсканированные копии запрашиваемых НКО документов и информации"@ru ;
+  comcore:isPartOf :сообщение ;
+  comcore:mentionedIn :23 . 
+
+:документы_и_информация rdf:type comcore:Resource ;
+  rdfs:label "документы и информация"@ru ;
+  comcore:isResourceOf :предоставление_документов_и_информации ;
+  comcore:mentionedIn :23 . 
+
+:адрес_электронной_почты rdf:type comcore:Resource ;
+  rdfs:label "адрес электронной почты"@ru ;
+  comcore:isResourceOf :направление_сообщения ;
+  comcore:mentionedIn :23 . 
+
+:бумажный_носитель rdf:type comcore:Resource ;
+  rdfs:label "бумажный носитель"@ru ;
+  comcore:isResourceOf :предоставление_документов_и_информации ;
+  comcore:mentionedIn :23 . 
+
+:отправка_запроса rdf:type comcore:Process ;
+  rdfs:label "отправка Запроса"@ru ;
+  comcore:mentionedIn :23 . 
+
+:направление_сообщения rdf:type comcore:Process ;
+  rdfs:label "направление сообщения"@ru ;
+  comcore:isPartOf :выполнение_обязанности_получателя ;
+  comcore:mentionedIn :23 . 
+
+:предоставление_документов_и_информации rdf:type comcore:Process ;
+  rdfs:label "предоставление документов и информации"@ru ;
+  comcore:isPartOf :выполнение_обязанности_получателя ;
+  comcore:mentionedIn :23 . 
+
+:выполнение_обязанности_получателя rdf:type comcore:Process ;
+  rdfs:label "выполнение обязанности Получателя"@ru ;
+  comcore:mentionedIn :23 . 
+
+:завершение_отправки_запроса rdf:type comcore:Event ;
+  rdfs:label "завершение отправки Запроса"@ru ;
+  comcore:isResultOf :отправка_запроса ;
+  comcore:Initiates :выполнение_обязанности_получателя ;
+  comcore:mentionedIn :23 .

@@ -1,0 +1,126 @@
+[
+    {
+        "label": "Личный кабинет",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "```turtle isResourceOf действия",
+            "```turtle isResourceOf размещение нко информации в личном ка"
+        ],
+        "chunk_id": "23"
+    },
+    {
+        "label": "действия",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "действия hasResource ```turtle",
+            "действия hasActor получатель"
+        ],
+        "chunk_id": "23"
+    },
+    {
+        "label": "Размещение НКО информации в Личном кабинете",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "размещение нко информации в личном ка hasResource ```turtle",
+            "размещение нко информации в личном ка hasResource информация",
+            "размещение нко информации в личном ка hasResult уведомление получателя"
+        ],
+        "chunk_id": "23"
+    },
+    {
+        "label": "документы/уведомления",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "документы уведомления isPartOf личный кабинет"
+        ],
+        "chunk_id": "23"
+    },
+    {
+        "label": "личный кабинет",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Unknown",
+        "hasStatement": [
+            "личный кабинет hasPart документы уведомления"
+        ],
+        "chunk_id": "23"
+    },
+    {
+        "label": "информация",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "информация isResourceOf размещение нко информации в личном ка"
+        ],
+        "chunk_id": "23"
+    },
+    {
+        "label": "Стороны",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Agent",
+        "hasStatement": [],
+        "chunk_id": "23"
+    },
+    {
+        "label": "Получатель",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Agent",
+        "hasStatement": [
+            "получатель isActorOf действия"
+        ],
+        "chunk_id": "23"
+    },
+    {
+        "label": "НКО",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Agent",
+        "hasStatement": [
+            "нко Initiates размещение нко информации в личном ка"
+        ],
+        "chunk_id": "23"
+    },
+    {
+        "label": "юридически значимые действия",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "юридически значимые действия relation уведомление получателя"
+        ],
+        "chunk_id": "23"
+    },
+    {
+        "label": "уведомление Получателя",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Event",
+        "hasStatement": [
+            "уведомление получателя isResultOf размещение нко информации в личном ка",
+            "уведомление получателя relation юридически значимые действия",
+            "уведомление получателя relation юридически значимые события"
+        ],
+        "chunk_id": "23"
+    },
+    {
+        "label": "юридически значимые события",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Event",
+        "hasStatement": [
+            "юридически значимые события relation уведомление получателя"
+        ],
+        "chunk_id": "23"
+    }
+]

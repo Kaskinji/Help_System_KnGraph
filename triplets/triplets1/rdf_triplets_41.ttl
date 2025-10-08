@@ -1,0 +1,107 @@
+:установка_ограничений_и_лимитов rdf:type comcore:Process ;
+    rdfs:label "установка ограничений и лимитов"@ru ;
+    comcore:mentionedIn :41 .
+
+:ограничения_и_лимиты_на_осуществление rdf:type comcore:Resource ;
+    rdfs:label "ограничения и лимиты на осуществление Переводов"@ru ;
+    comcore:isResultOf :установка_ограничений_и_лимитов ;
+    comcore:mentionedIn :41 .
+
+:внесение_изменений_в_ограничения rdf:type comcore:Process ;
+    rdfs:label "внесение изменений в ограничения"@ru ;
+    comcore:mentionedIn :41 .
+
+:переводы rdf:type comcore:Process ;
+    rdfs:label "Переводы"@ru ;
+    comcore:mentionedIn :41 .
+
+:формирование_акта rdf:type comcore:Process ;
+    rdfs:label "формирование Акта"@ru ;
+    comcore:mentionedIn :41 .
+
+:предоставление_акта rdf:type comcore:Process ;
+    rdfs:label "предоставление Акта"@ru ;
+    comcore:mentionedIn :41 .
+
+:акт rdf:type comcore:Resource ;
+    rdfs:label "Акт"@ru ;
+    comcore:isResultOf :формирование_акта ;
+    comcore:isResourceOf :предоставление_акта ;
+    comcore:mentionedIn :41 .
+
+:отчетный_период rdf:type comcore:Resource ;
+    rdfs:label "Отчетный период"@ru ;
+    comcore:mentionedIn :41 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :предоставление_акта ;
+    comcore:mentionedIn :41 .
+
+:отсутствие_переводов rdf:type comcore:Event ;
+    rdfs:label "отсутствие Переводов"@ru ;
+    comcore:relation :переводы ;
+    comcore:relation :отчетный_период ;
+    comcore:mentionedIn :41 .
+
+:третьи_лица rdf:type comcore:Agent ;
+    rdfs:label "третьи лица"@ru ;
+    comcore:mentionedIn :41 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:mentionedIn :41 .
+
+:право_исполнения_обязательств rdf:type comcore:Resource ;
+    rdfs:label "право исполнения обязательств"@ru ;
+    comcore:isResultOf :предоставление_права ;
+    comcore:mentionedIn :41 .
+
+:обязательства_нко rdf:type comcore:Resource ;
+    rdfs:label "обязательства НКО"@ru ;
+    comcore:mentionedIn :41 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:mentionedIn :41 .
+
+:договоры rdf:type comcore:Resource ;
+    rdfs:label "договоры"@ru ;
+    comcore:isResourceOf :предоставление_права ;
+    comcore:mentionedIn :41 .
+
+:предоставление_права rdf:type comcore:Process ;
+    rdfs:label "предоставление права"@ru ;
+    comcore:mentionedIn :41 .
+
+:исполнение_обязательств rdf:type comcore:Process ;
+    rdfs:label "исполнение обязательств"@ru ;
+    comcore:isPartOf :выполнение_обязательств_по_договору ;
+    comcore:mentionedIn :41 .
+
+:выполнение_обязательств_по_договору rdf:type comcore:Process ;
+    rdfs:label "выполнение обязательств по Договору"@ru ;
+    comcore:mentionedIn :41 .
+
+:действия_третьих_лиц rdf:type comcore:Event ;
+    rdfs:label "действия третьих лиц"@ru ;
+    comcore:relation :третьи_лица ;
+    comcore:relation :исполнение_обязательств ;
+    comcore:mentionedIn :41 .
+
+:бездействия_третьих_лиц rdf:type comcore:Event ;
+    rdfs:label "бездействия третьих лиц"@ru ;
+    comcore:relation :третьи_лица ;
+    comcore:relation :исполнение_обязательств ;
+    comcore:mentionedIn :41 .
+
+:ограничения_и_лимиты_на_осуществление comcore:isResourceOf :внесение_изменений_в_ограничения .
+:ограничения_и_лимиты_на_осуществление comcore:relation :переводы .
+:третьи_лица comcore:isActorOf :предоставление_права .
+:нко comcore:isActorOf :предоставление_права .
+:третьи_лица comcore:isActorOf :исполнение_обязательств .
+:обязательства_нко comcore:isResourceOf :исполнение_обязательств .
+:нко comcore:isResponsibleFor :выполнение_обязательств_по_договору .
+:получатель comcore:isActorOf :выполнение_обязательств_по_договору .
+:договор comcore:isResourceOf :выполнение_обязательств_по_договору .
+:обязательства_нко comcore:isResourceOf :выполнение_обязательств_по_договору .

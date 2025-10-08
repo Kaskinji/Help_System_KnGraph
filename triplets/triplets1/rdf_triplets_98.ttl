@@ -1,0 +1,92 @@
+```ttl
+
+
+
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:hasPart :приложения_к_договору ;
+    comcore:mentionedIn :98 .
+
+:стороны rdf:type comcore:Agent ;
+    rdfs:label "Стороны"@ru ;
+    comcore:isActorOf :соглашение ;
+    comcore:mentionedIn :98 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:Initiates :передача_сведений ;
+    comcore:mentionedIn :98 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :передача_сведений ;
+    comcore:mentionedIn :98 .
+
+:сведения_о_получателе rdf:type comcore:Resource ;
+    rdfs:label "сведения о Получателе"@ru ;
+    comcore:isResourceOf :передача_сведений ;
+    comcore:isResourceOf :передача_информации_в_международные_пла ;
+    comcore:mentionedIn :98 .
+
+:передача_сведений rdf:type comcore:Process ;
+    rdfs:label "передача сведений"@ru ;
+    comcore:hasActor :нко ;
+    comcore:hasResource :сведения_о_получателе ;
+    comcore:mentionedIn :98 .
+
+:передача_информации_в_международные_пла rdf:type comcore:Process ;
+    rdfs:label "передача информации в международные платежные системы"@ru ;
+    comcore:hasResource :сведения_о_получателе ;
+    comcore:mentionedIn :98 .
+
+:соглашение rdf:type comcore:Process ;
+    rdfs:label "соглашение"@ru ;
+    comcore:hasActor :стороны ;
+    comcore:mentionedIn :98 .
+
+:приложения_к_договору rdf:type comcore:Resource ;
+    rdfs:label "приложения к Договору"@ru ;
+    comcore:isPartOf :договор ;
+    comcore:mentionedIn :98 .
+
+:форма_акта_об_оказании_услуг rdf:type comcore:Resource ;
+    rdfs:label "Форма Акта об оказании услуг"@ru ;
+    comcore:isPartOf :договор ;
+    comcore:mentionedIn :98 .
+
+:регламент_информационного_обмена_электронн rdf:type comcore:Resource ;
+    rdfs:label "Регламент информационного обмена электронными документами"@ru ;
+    comcore:isPartOf :договор ;
+    comcore:mentionedIn :98 .
+
+:порядок_взаимодействия_сторон_при_осу rdf:type comcore:Resource ;
+    rdfs:label "Порядок взаимодействия Сторон при осуществлении Операции возврата Перевода"@ru ;
+    comcore:isPartOf :договор ;
+    comcore:mentionedIn :98 .
+
+:порядок_взаимодействия_сторон_при_по rdf:type comcore:Resource ;
+    rdfs:label "Порядок взаимодействия Сторон при поступлении в НКО информации о реализации Получателем Запрещенных услуг"@ru ;
+    comcore:isPartOf :договор ;
+    comcore:mentionedIn :98 .
+
+:порядок_взаимодействия_сторон_при_ра rdf:type comcore:Resource ;
+    rdfs:label "Порядок взаимодействия Сторон при рассмотрении заявлений Эмитента о совершении Недействительного перевода"@ru ;
+    comcore:isPartOf :договор ;
+    comcore:mentionedIn :98 .
+
+:требования_к_интернет-магазину_получателя rdf:type comcore:Resource ;
+    rdfs:label "Требования к Интернет-магазину Получателя"@ru ;
+    comcore:isPartOf :договор ;
+    comcore:mentionedIn :98 .
+
+:заявление_о_заключении_договора_о_пере rdf:type comcore:Resource ;
+    rdfs:label "Заявление о заключении Договора о переводах без открытия банковского счета в Системе МОНЕТА.РУ и осуществлении информационно-технологического взаимодействия с привлечением Торговой площадки (Платформы)"@ru ;
+    comcore:isPartOf :договор ;
+    comcore:mentionedIn :98 .
+
+:варианты_подключения_получателя_к_сист rdf:type comcore:Resource ;
+    rdfs:label "Варианты Подключения Получателя к Системе МОНЕТА.РУ"@ru ;
+    comcore:isPartOf :договор ;
+    comcore:mentionedIn :98 .
+```

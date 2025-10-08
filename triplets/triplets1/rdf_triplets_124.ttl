@@ -1,0 +1,56 @@
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:Initiates :регистрация_получателя_в_системе_мо ;
+    comcore:Initiates :предоставление_нко_данных_о_получател ;
+    comcore:isActorOf :регистрация_получателя_в_системе_мо ;
+    comcore:isActorOf :предоставление_нко_данных_о_получател ;
+    comcore:mentionedIn :124 .
+
+:торговая_площадка rdf:type comcore:Agent ;
+    rdfs:label "Торговая площадка"@ru ;
+    comcore:Initiates :создание_бизнес_счета_для_получателя ;
+    comcore:Initiates :распоряжение_денежными_средствами_п ;
+    comcore:isActorOf :создание_бизнес_счета_для_получателя ;
+    comcore:isActorOf :распоряжение_денежными_средствами_п ;
+    comcore:isResponsibleFor :распоряжение_денежными_средствами_п ;
+    comcore:mentionedIn :124 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:Initiates :предоставление_авторизационных_дан ;
+    comcore:isActorOf :предоставление_авторизационных_дан ;
+    comcore:isResponsibleFor :предоставление_авторизационных_дан ;
+    comcore:mentionedIn :124 .
+
+:регистрация_получателя_в_системе_мо rdf:type comcore:Process ;
+    rdfs:label "регистрация Получателя в Системе МОНЕТА.РУ"@ru ;
+    comcore:mentionedIn :124 .
+
+:предоставление_нко_данных_о_получател rdf:type comcore:Process ;
+    rdfs:label "предоставление НКО данных о Получателе"@ru ;
+    comcore:mentionedIn :124 .
+
+:создание_бизнес_счета_для_получателя rdf:type comcore:Process ;
+    rdfs:label "создание Бизнес – счета для Получателя в Системе МОНЕТА.РУ"@ru ;
+    comcore:mentionedIn :124 .
+
+:предоставление_авторизационных_дан rdf:type comcore:Process ;
+    rdfs:label "предоставление Авторизационных данных"@ru ;
+    comcore:mentionedIn :124 .
+
+:распоряжение_денежными_средствами_п rdf:type comcore:Process ;
+    rdfs:label "распоряжение денежными средствами Получателя"@ru ;
+    comcore:mentionedIn :124 .
+
+:авторизационные_данные rdf:type comcore:Resource ;
+    rdfs:label "Авторизационные данные"@ru ;
+    comcore:isResultOf :предоставление_авторизационных_дан ;
+    comcore:mentionedIn :124 .
+
+:платежный_пароль rdf:type comcore:Resource ;
+    rdfs:label "Платежный пароль"@ru ;
+    comcore:mentionedIn :124 .
+
+:данные_о_получателе rdf:type comcore:Resource ;
+    rdfs:label "данные о Получателе"@ru ;
+    comcore:isResultOf

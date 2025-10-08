@@ -1,0 +1,53 @@
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:Initiates :приостановление_действия_договора ;
+    comcore:mentionedIn :94 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:relation :нарушения ;
+    comcore:mentionedIn :94 .
+
+:приостановление_действия_договора rdf:type comcore:Process ;
+    rdfs:label "приостановление действия Договора"@ru ;
+    comcore:hasPart :уведомление_получателя ;
+    comcore:mentionedIn :94 .
+
+:устранение_нарушений rdf:type comcore:Process ;
+    rdfs:label "устранение нарушений"@ru ;
+    comcore:mentionedIn :94 .
+
+:размещение_уведомления rdf:type comcore:Process ;
+    rdfs:label "размещение уведомления"@ru ;
+    comcore:mentionedIn :94 .
+
+:уведомление_получателя rdf:type comcore:Process ;
+    rdfs:label "уведомление Получателя"@ru ;
+    comcore:hasPart :размещение_уведомления ;
+    comcore:mentionedIn :94 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:isResourceOf :приостановление_действия_договора ;
+    comcore:mentionedIn :94 .
+
+:электронный_адрес rdf:type comcore:Resource ;
+    rdfs:label "электронный адрес"@ru ;
+    comcore:isResourceOf :уведомление_получателя ;
+    comcore:mentionedIn :94 .
+
+:личный_кабинет rdf:type comcore:Resource ;
+    rdfs:label "Личный кабинет"@ru ;
+    comcore:isResourceOf :размещение_уведомления ;
+    comcore:mentionedIn :94 .
+
+:уведомление rdf:type comcore:Resource ;
+    rdfs:label "уведомление"@ru ;
+    comcore:isResourceOf :размещение_уведомления ;
+    comcore:mentionedIn :94 .
+
+:нарушения rdf:type comcore:Resource ;
+    rdfs:label "нарушения"@ru ;
+    comcore:isResourceOf :устранение_нарушений ;
+    comcore:relation :получатель ;
+    comcore:mentionedIn :94 .

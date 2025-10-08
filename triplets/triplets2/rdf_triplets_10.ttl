@@ -1,0 +1,38 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:окончательность_перевода_исполнение_рас rdf:type comcore:Process ;
+    rdfs:label "Окончательность перевода (исполнение Распоряжения)"@ru ;
+    comcore:mentionedIn :10 ;
+    comcore:hasResource :денежные_средства ;
+    comcore:hasResource :система_учета_денежных_средств_получателя ;
+    comcore:hasActor :плательщик ;
+    comcore:hasActor :получатель .
+
+:денежные_средства rdf:type comcore:Resource ;
+    rdfs:label "денежные средства"@ru ;
+    comcore:mentionedIn :10 ;
+    comcore:isResourceOf :окончательность_перевода_исполнение_рас .
+
+:система_учета_денежных_средств_получателя rdf:type comcore:Resource ;
+    rdfs:label "система учета денежных средств Получателя"@ru ;
+    comcore:mentionedIn :10 ;
+    comcore:isResourceOf :окончательность_перевода_исполнение_рас .
+
+:плательщик rdf:type comcore:Agent ;
+    rdfs:label "Плательщик"@ru ;
+    comcore:mentionedIn :10 ;
+    comcore:isActorOf :окончательность_перевода_исполнение_рас .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :10 ;
+    comcore:isActorOf :окончательность_перевода_исполнение_рас .
+
+:торговая_площадка rdf:type comcore:Agent ;
+    rdfs:label "Торговая площадка"@ru ;
+    comcore:mentionedIn :10 ;
+    comcore:isResponsibleFor :система_учета_денежных_средств_получателя .

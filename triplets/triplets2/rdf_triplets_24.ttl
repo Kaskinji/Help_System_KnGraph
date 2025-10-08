@@ -1,0 +1,73 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:авторизационные_данные rdf:type comcore:Resource ;
+    rdfs:label "Авторизационные данные"@ru ;
+    comcore:mentionedIn :24 .
+
+:аутентификационные_данные rdf:type comcore:Resource ;
+    rdfs:label "Аутентификационные данные"@ru ;
+    comcore:mentionedIn :24 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :24 ;
+    comcore:isResponsibleFor :авторизационные_данные ;
+    comcore:isResponsibleFor :аутентификационные_данные .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:mentionedIn :24 ;
+    comcore:isActorOf :восстановление_доступа_к_личному_кабинету .
+
+:личный_кабинет rdf:type comcore:Resource ;
+    rdfs:label "Личный кабинет"@ru ;
+    comcore:mentionedIn :24 ;
+    comcore:relation :доступ_третьих_лиц_к_личному_кабинету .
+
+:восстановление_доступа_к_личному_кабинету rdf:type comcore:Process ;
+    rdfs:label "восстановление доступа к Личному кабинету"@ru ;
+    comcore:mentionedIn :24 .
+
+:инструкция rdf:type comcore:Resource ;
+    rdfs:label "инструкция"@ru ;
+    comcore:mentionedIn :24 ;
+    comcore:isResourceOf :восстановление_доступа_к_личному_кабинету .
+
+:третьи_лица rdf:type comcore:Agent ;
+    rdfs:label "третьи лица"@ru ;
+    comcore:mentionedIn :24 ;
+    comcore:relation :доступ_третьих_лиц_к_личному_кабинету .
+
+:доступ_третьих_лиц_к_личному_кабинету rdf:type comcore:Event ;
+    rdfs:label "доступ третьих лиц к Личному кабинету"@ru ;
+    comcore:mentionedIn :24 ;
+    comcore:relation :разглашение ;
+    comcore:relation :утрата_авторизационных_данных ;
+    comcore:relation :компрометация .
+
+:утрата_авторизационных_данных rdf:type comcore:Event ;
+    rdfs:label "утрата Авторизационных данных"@ru ;
+    comcore:mentionedIn :24 ;
+    comcore:Initiates :восстановление_доступа_к_личному_кабинету .
+
+:разглашение rdf:type comcore:Event ;
+    rdfs:label "разглашение"@ru ;
+    comcore:mentionedIn :24 ;
+    comcore:relation :авторизационные_данные ;
+    comcore:relation :аутентификационные_данные .
+
+:компрометация rdf:type comcore:Event ;
+    rdfs:label "компрометация"@ru ;
+    comcore:mentionedIn :24 ;
+    comcore:relation :авторизационные_данные ;
+    comcore:relation :аутентификационные_данные .

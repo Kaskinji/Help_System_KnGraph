@@ -1,0 +1,46 @@
+:небанковская_кредитная_организация_монета rdf:type comcore:Agent ;
+  rdfs:label "Небанковская кредитная организация «МОНЕТА»"@ru ;
+  comcore:mentionedIn :chunk_11 .
+
+:договор_о_переводах_без_открытия_с rdf:type comcore:Resource ;
+  rdfs:label "Договор о переводах без открытия банковского счета"@ru ;
+  comcore:mentionedIn :chunk_11 .
+
+:приложение_1 rdf:type comcore:Resource ;
+  rdfs:label "Приложение №1"@ru ;
+  comcore:isPartOf :договор_о_переводах_без_открытия_с ;
+  comcore:mentionedIn :chunk_11 .
+
+:акт_об_оказании_услуг rdf:type comcore:Resource ;
+  rdfs:label "ФОРМА АКТА ОБ ОКАЗАНИИ УСЛУГ"@ru ;
+  comcore:mentionedIn :chunk_11 .
+
+:иннкпп_1215192632_121501001 rdf:type comcore:Resource ;
+  rdfs:label "ИНН/КПП 1215192632 / 121501001"@ru ;
+  comcore:mentionedIn :chunk_11 .
+
+:оквэдокпо_64.19_38024380 rdf:type comcore:Resource ;
+  rdfs:label "ОКВЭД/ОКПО 64.19 / 38024380"@ru ;
+  comcore:mentionedIn :chunk_11 .
+
+:юридический_адрес_йошкар-ола_ул_г rdf:type comcore:Resource ;
+  rdfs:label "Юридический адрес 424000, Российская Федерация, Республика Марий Эл, г. Йошкар-Ола, ул. Гоголя, д.2, строение «А»"@ru ;
+  comcore:mentionedIn :chunk_11 .
+
+:почтовый_адрес_йошкар-ола_ул_гог rdf:type comcore:Resource ;
+  rdfs:label "Почтовый адрес 424000, Российская Федерация, Республика Марий Эл, г. Йошкар-Ола, ул. Гоголя, д.2, строение «А»"@ru ;
+  comcore:mentionedIn :chunk_11 .
+
+:email_documents@support.moneta.ru rdf:type comcore:Resource ;
+  rdfs:label "e-mail: documents@support.moneta.ru"@ru ;
+  comcore:mentionedIn :chunk_11 .
+
+:небанковская_кредитная_организация_монета comcore:isResponsibleFor :иннкпп_1215192632_121501001 .
+
+:небанковская_кредитная_организация_монета comcore:isResponsibleFor :оквэдокпо_64.19_38024380 .
+
+:небанковская_кредитная_организация_монета comcore:isResponsibleFor :юридический_адрес_йошкар-ола_ул_г .
+
+:небанковская_кредитная_организация_монета comcore:isResponsibleFor :почтовый_адрес_йошкар-ола_ул_гог .
+
+:небанковская_кредитная_организация_монета comcore:isResponsibleFor :email_documents@support.moneta.ru .

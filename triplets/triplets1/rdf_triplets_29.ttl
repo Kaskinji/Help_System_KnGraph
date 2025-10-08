@@ -1,0 +1,33 @@
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isResponsibleFor :рассмотрение_требования , :направление_уведомления_или_отказа , :уведомление_о_согласии_с_исполнением , :мотивированный_отказ_от_исполнения_требований ;
+    comcore:mentionedIn :29 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isResponsibleFor :требование ;
+    comcore:mentionedIn :29 .
+
+:требование rdf:type comcore:Resource ;
+    rdfs:label "Требование"@ru ;
+    comcore:isResourceOf :рассмотрение_требования ;
+    comcore:mentionedIn :29 .
+
+:уведомление_о_согласии_с_исполнением rdf:type comcore:Resource ;
+    rdfs:label "уведомление о согласии с исполнением Требования"@ru ;
+    comcore:isResultOf :направление_уведомления_или_отказа ;
+    comcore:mentionedIn :29 .
+
+:мотивированный_отказ_от_исполнения_требований rdf:type comcore:Resource ;
+    rdfs:label "мотивированный отказ от исполнения Требования"@ru ;
+    comcore:isResultOf :направление_уведомления_или_отказа ;
+    comcore:mentionedIn :29 .
+
+:рассмотрение_требования rdf:type comcore:Process ;
+    rdfs:label "рассмотрение Требования"@ru ;
+    comcore:isResponsibleFor :нко ;
+    comcore:mentionedIn :29 .
+
+:направление_уведомления_или_отказа rdf:type comcore:Process ;
+    rdfs:label "направление уведомления о согласии с исполнением Требования либо мотивированного отказа"@ru ;
+    comcore:mentionedIn :29 .

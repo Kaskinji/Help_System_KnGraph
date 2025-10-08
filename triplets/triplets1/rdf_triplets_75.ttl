@@ -1,0 +1,79 @@
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :зачет ;
+    comcore:mentionedIn :75 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :75 .
+
+:эмитент_эквайрер rdf:type comcore:Agent ;
+    rdfs:label "Эмитент/Эквайрер"@ru ;
+    comcore:mentionedIn :75 .
+
+:зачет rdf:type comcore:Process ;
+    rdfs:label "зачет"@ru ;
+    comcore:mentionedIn :75 .
+
+:учет_требований rdf:type comcore:Process ;
+    rdfs:label "учет требований"@ru ;
+    comcore:mentionedIn :75 .
+
+:операция_возврата_перевода rdf:type comcore:Process ;
+    rdfs:label "Операция возврата Перевода"@ru ;
+    comcore:mentionedIn :75 .
+
+:первоначальное_обязательство rdf:type comcore:Resource ;
+    rdfs:label "первоначальное обязательство"@ru ;
+    comcore:isResourceOf :зачет ;
+    comcore:mentionedIn :75 .
+
+:встречное_обязательство rdf:type comcore:Resource ;
+    rdfs:label "встречное обязательство"@ru ;
+    comcore:isResourceOf :зачет ;
+    comcore:mentionedIn :75 .
+
+:требование rdf:type comcore:Resource ;
+    rdfs:label "требование"@ru ;
+    comcore:mentionedIn :75 .
+
+:бизнес-счет rdf:type comcore:Resource ;
+    rdfs:label "Бизнес-счет"@ru ;
+    comcore:isResourceOf :учет_требований ;
+    comcore:mentionedIn :75 .
+
+:вознаграждение_нко rdf:type comcore:Resource ;
+    rdfs:label "вознаграждение НКО"@ru ;
+    comcore:isResourceOf :зачет ;
+    comcore:mentionedIn :75 .
+
+:недействительный_перевод rdf:type comcore:Resource ;
+    rdfs:label "Недействительный перевод"@ru ;
+    comcore:isResourceOf :зачет ;
+    comcore:mentionedIn :75 .
+
+:штраф rdf:type comcore:Resource ;
+    rdfs:label "Штраф"@ru ;
+    comcore:isResourceOf :зачет ;
+    comcore:mentionedIn :75 .
+
+:комиссия_эмитента_эквайрера rdf:type comcore:Resource ;
+    rdfs:label "комиссия Эмитента/Эквайрера"@ru ;
+    comcore:isResourceOf :зачет ;
+    comcore:mentionedIn :75 .
+
+:денежные_средства rdf:type comcore:Resource ;
+    rdfs:label "денежные средства"@ru ;
+    comcore:isResourceOf :зачет ;
+    comcore:mentionedIn :75 .
+
+:сумма_операции_возврата_перевода rdf:type comcore:Resource ;
+    rdfs:label "сумма Операции возврата Перевода"@ru ;
+    comcore:isResultOf :операция_возврата_перевода ;
+    comcore:isResourceOf :зачет ;
+    comcore:mentionedIn :75 .
+
+:возникновение_встречных_обязательств rdf:type comcore:Event ;
+    rdfs:label "возникновение встречных обязательств"@ru ;
+    comcore:Initiates :зачет ;
+    comcore:mentionedIn :75 .

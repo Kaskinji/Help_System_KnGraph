@@ -1,0 +1,38 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:подключение_получателя_к_системе_мон rdf:type comcore:Process ;
+    rdfs:label "подключение Получателя к Системе МОНЕТА.РУ"@ru ;
+    comcore:mentionedIn :33 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :подключение_получателя_к_системе_мон ;
+    comcore:mentionedIn :33 .
+
+:информационный_обмен rdf:type comcore:Process ;
+    rdfs:label "информационный обмен"@ru ;
+    comcore:mentionedIn :33 .
+
+:сообщения rdf:type comcore:Resource ;
+    rdfs:label "Сообщения"@ru ;
+    comcore:isResourceOf :информационный_обмен ;
+    comcore:mentionedIn :33 .
+
+:электронные_документы rdf:type comcore:Resource ;
+    rdfs:label "электронные документы"@ru ;
+    comcore:isResourceOf :информационный_обмен ;
+    comcore:mentionedIn :33 .
+
+:информация_о_переводах rdf:type comcore:Resource ;
+    rdfs:label "информация о Переводах"@ru ;
+    comcore:isPartOf :электронные_документы ;
+    comcore:relation :переводы ;
+    comcore:mentionedIn :33 .
+
+:переводы rdf:type comcore:Process ;
+    rdfs:label "Переводы"@ru ;
+    comcore:mentionedIn :33 .

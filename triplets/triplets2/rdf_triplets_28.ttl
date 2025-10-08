@@ -1,0 +1,36 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:стороны rdf:type comcore:Agent ;
+    rdfs:label "Стороны"@ru ;
+    comcore:isActorOf :заключение_договора , :исполнение_договора , :прекращение_договора ;
+    comcore:mentionedIn :28 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:isResourceOf :заключение_договора , :исполнение_договора , :прекращение_договора ;
+    comcore:mentionedIn :28 .
+
+:заверение rdf:type comcore:Resource ;
+    rdfs:label "Заверение"@ru ;
+    comcore:isResourceOf :заключение_договора , :исполнение_договора , :прекращение_договора ;
+    dc:definition "все согласия, необходимые для заключения Сторонами Договора, предусмотренные законодательством Российской Федерации, уставом, внутренними документами и отдельными решениями органов управления Сторон были получены, вступили в действие и соответствуют законодательству Российской Федерации, уставу, внутренним документам и отдельным решениям органов управления Сторон"@ru ;
+    comcore:mentionedIn :28 .
+
+:заключение_договора rdf:type comcore:Process ;
+    rdfs:label "заключение Договора"@ru ;
+    comcore:hasResource :договор , :заверение ;
+    comcore:mentionedIn :28 .
+
+:исполнение_договора rdf:type comcore:Process ;
+    rdfs:label "исполнение Договора"@ru ;
+    comcore:hasResource :договор , :заверение ;
+    comcore:mentionedIn :28 .
+
+:прекращение_договора rdf:type comcore:Process ;
+    rdfs:label "прекращение Договора"@ru ;
+    comcore:hasResource :договор , :заверение ;
+    comcore:mentionedIn :28 .

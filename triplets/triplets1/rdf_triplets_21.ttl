@@ -1,0 +1,42 @@
+:операция_возврата_перевода rdf:type comcore:Process ;
+    rdfs:label "Операция возврата Перевода"@ru ;
+    comcore:mentionedIn :chunk_21 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :операция_возврата_перевода ;
+    comcore:mentionedIn :chunk_21 .
+
+:плательщик rdf:type comcore:Agent ;
+    rdfs:label "Плательщик"@ru ;
+    comcore:mentionedIn :chunk_21 .
+
+:сумма_перевода rdf:type comcore:Resource ;
+    rdfs:label "сумма Перевода"@ru ;
+    comcore:isResourceOf :операция_возврата_перевода ;
+    comcore:mentionedIn :chunk_21 .
+
+:часть_суммы_перевода rdf:type comcore:Resource ;
+    rdfs:label "часть суммы Перевода"@ru ;
+    comcore:isResourceOf :операция_возврата_перевода ;
+    comcore:mentionedIn :chunk_21 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:isResourceOf :операция_возврата_перевода ;
+    comcore:mentionedIn :chunk_21 .
+
+:приложение_№3_к_договору rdf:type comcore:Resource ;
+    rdfs:label "Приложение №3 к Договору"@ru ;
+    comcore:isResourceOf :операция_возврата_перевода ;
+    comcore:mentionedIn :chunk_21 .
+
+:отмена_услуги_плательщиком rdf:type comcore:Event ;
+    rdfs:label "Отмена Плательщиком Услуги"@ru ;
+    comcore:Initiates :операция_возврата_перевода ;
+    comcore:mentionedIn :chunk_21 .
+
+:непредоставление_услуг rdf:type comcore:Event ;
+    rdfs:label "Непредоставление Услуги Получателем"@ru ;
+    comcore:Initiates :операция_возврата_перевода ;
+    comcore:mentionedIn :chunk_21 .

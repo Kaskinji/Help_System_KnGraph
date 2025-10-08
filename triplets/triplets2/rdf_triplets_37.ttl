@@ -1,0 +1,97 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:регистрация_получателя rdf:type comcore:Process ;
+    rdfs:label "регистрация Получателя"@ru ;
+    comcore:mentionedIn :37 .
+
+:настройка_системы_монетару rdf:type comcore:Process ;
+    rdfs:label "настройка Системы МОНЕТА.РУ"@ru ;
+    comcore:mentionedIn :37 .
+
+:работа_системы_монетару rdf:type comcore:Process ;
+    rdfs:label "работа Системы МОНЕТА.РУ"@ru ;
+    comcore:mentionedIn :37 .
+
+:прием_распоряжений_от_плательщиков rdf:type comcore:Process ;
+    rdfs:label "прием Распоряжений от Плательщиков"@ru ;
+    comcore:mentionedIn :37 .
+
+:информационный_обмен_сообщениями rdf:type comcore:Process ;
+    rdfs:label "информационный обмен Сообщениями"@ru ;
+    comcore:mentionedIn :37 .
+
+:осуществление_переводов rdf:type comcore:Process ;
+    rdfs:label "осуществление Переводов"@ru ;
+    comcore:mentionedIn :37 .
+
+:передача_сообщений rdf:type comcore:Process ;
+    rdfs:label "передача Сообщений"@ru ;
+    comcore:mentionedIn :37 .
+
+:авторизация rdf:type comcore:Process ;
+    rdfs:label "авторизация"@ru ;
+    comcore:mentionedIn :37 .
+
+:настройки_системы_монетару rdf:type comcore:Resource ;
+    rdfs:label "настройки Системы МОНЕТА.РУ"@ru ;
+    comcore:isResultOf :настройка_системы_монетару ;
+    comcore:isResourceOf :работа_системы_монетару ;
+    comcore:mentionedIn :37 .
+
+:распоряжения rdf:type comcore:Resource ;
+    rdfs:label "Распоряжения"@ru ;
+    comcore:isResourceOf :прием_распоряжений_от_плательщиков ;
+    comcore:mentionedIn :37 .
+
+:сообщения rdf:type comcore:Resource ;
+    rdfs:label "Сообщения"@ru ;
+    comcore:isResourceOf :передача_сообщений ;
+    comcore:mentionedIn :37 .
+
+:информация_и_данные rdf:type comcore:Resource ;
+    rdfs:label "информация и данные"@ru ;
+    comcore:isResourceOf :настройка_системы_монетару ;
+    comcore:mentionedIn :37 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:isResourceOf :настройка_системы_монетару ;
+    comcore:mentionedIn :37 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :информационный_обмен_сообщениями ;
+    comcore:isActorOf :передача_сообщений ;
+    comcore:mentionedIn :37 .
+
+:плательщик rdf:type comcore:Agent ;
+    rdfs:label "Плательщик"@ru ;
+    comcore:mentionedIn :37 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :настройка_системы_монетару ;
+    comcore:isActorOf :прием_распоряжений_от_плательщиков ;
+    comcore:isActorOf :осуществление_переводов ;
+    comcore:isActorOf :передача_сообщений ;
+    comcore:isResponsibleFor :настройка_системы_монетару ;
+    comcore:isResponsibleFor :работа_системы_монетару ;
+    comcore:mentionedIn :37 .
+
+:система_монетару rdf:type comcore:Agent ;
+    rdfs:label "Система МОНЕТА.РУ"@ru ;
+    comcore:isActorOf :авторизация ;
+    comcore:mentionedIn :37 .
+
+:положительный_ответ_на_авторизацию rdf:type comcore:Event ;
+    rdfs:label "положительный ответ на авторизацию"@ru ;
+    comcore:Initiates :осуществление_переводов ;
+    comcore:isResultOf :авторизация ;
+    comcore:mentionedIn :37 .
+
+:прием_распоряжений_от_плательщиков comcore:isPartOf :работа_системы_монетару .
+:информационный_обмен_сообщениями comcore:isPartOf :работа_системы_монетару .

@@ -1,0 +1,74 @@
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :выплата_вознаграждения ;
+    comcore:isActorOf :согласование_акта ;
+    comcore:isActorOf :размещение_логотипа_и_ссылки ;
+    comcore:mentionedIn :51 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :согласование_акта ;
+    comcore:isActorOf :отключение_интернет-магазина ;
+    comcore:isActorOf :приостановка_исполнения_договора ;
+    comcore:mentionedIn :51 .
+
+:вознаграждение rdf:type comcore:Resource ;
+    rdfs:label "вознаграждение"@ru ;
+    comcore:isResourceOf :выплата_вознаграждения ;
+    comcore:mentionedIn :51 .
+
+:акт rdf:type comcore:Resource ;
+    rdfs:label "Акт"@ru ;
+    comcore:isResourceOf :согласование_акта ;
+    comcore:mentionedIn :51 .
+
+:логотип rdf:type comcore:Resource ;
+    rdfs:label "логотип"@ru ;
+    comcore:isResourceOf :размещение_логотипа_и_ссылки ;
+    comcore:mentionedIn :51 .
+
+:гипертекстовая_ссылка rdf:type comcore:Resource ;
+    rdfs:label "гипертекстовая ссылка"@ru ;
+    comcore:isResourceOf :размещение_логотипа_и_ссылки ;
+    comcore:mentionedIn :51 .
+
+:интернет-магазин rdf:type comcore:Resource ;
+    rdfs:label "Интернет-магазин"@ru ;
+    comcore:isResourceOf :размещение_логотипа_и_ссылки ;
+    comcore:mentionedIn :51 .
+
+:выплата_вознаграждения rdf:type comcore:Process ;
+    rdfs:label "Выплата вознаграждения"@ru ;
+    comcore:hasActor :получатель ;
+    comcore:mentionedIn :51 .
+
+:согласование_акта rdf:type comcore:Process ;
+    rdfs:label "Согласование Акта"@ru ;
+    comcore:hasActor :получатель ;
+    comcore:hasActor :нко ;
+    comcore:hasResource :акт ;
+    comcore:mentionedIn :51 .
+
+:размещение_логотипа_и_ссылки rdf:type comcore:Process ;
+    rdfs:label "Размещение логотипа и ссылки"@ru ;
+    comcore:hasActor :получатель ;
+    comcore:hasResource :логотип ;
+    comcore:hasResource :гипертекстовая_ссылка ;
+    comcore:hasResource :интернет-магазин ;
+    comcore:mentionedIn :51 .
+
+:отключение_интернет-магазина rdf:type comcore:Process ;
+    rdfs:label "Отключение Интернет-магазина"@ru ;
+    comcore:hasActor :нко ;
+    comcore:mentionedIn :51 .
+
+:приостановка_исполнения_договора rdf:type comcore:Process ;
+    rdfs:label "Приостановка исполнения Договора"@ru ;
+    comcore:hasActor :нко ;
+    comcore:mentionedIn :51 .
+
+:нарушение_требований rdf:type comcore:Event ;
+    rdfs:label "нарушение требований"@ru ;
+    comcore:Initiates :отключение_интернет-магазина ;
+    comcore:Initiates :приостановка_исполнения_договора ;
+    comcore:mentionedIn :51 .

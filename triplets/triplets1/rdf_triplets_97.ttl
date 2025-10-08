@@ -1,0 +1,17 @@
+:сторона rdf:type comcore:Agent ;
+    rdfs:label "Сторона"@ru ;
+    comcore:isActorOf :освобождение_от_ответственности ;
+    comcore:mentionedIn :97 .
+
+:неисполнение_обязательств rdf:type comcore:Event ;
+    rdfs:label "неисполнение обязательств"@ru ;
+    comcore:Initiates :освобождение_от_ответственности ;
+    comcore:mentionedIn :97 .
+
+:обстоятельства_непреодолимой_силы rdf:type comcore:Event ;
+    rdfs:label "обстоятельства непреодолимой силы"@ru ;
+    comcore:mentionedIn :97 .
+
+:освобождение_от_ответственности rdf:type comcore:Process ;
+    rdfs:label "освобождение от ответственности"@ru ;
+    comcore:mentionedIn :97 .

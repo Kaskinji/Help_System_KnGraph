@@ -1,0 +1,67 @@
+:информационный_обмен rdf:type comcore:Process ;
+  rdfs:label "Информационный обмен"@ru ;
+  comcore:mentionedIn :chunk_14 .
+
+:контроль rdf:type comcore:Process ;
+  rdfs:label "контроль"@ru ;
+  comcore:mentionedIn :chunk_14 .
+
+:аутентификационные_данные rdf:type comcore:Resource ;
+  rdfs:label "Аутентификационные данные"@ru ;
+  comcore:isResourceOf :информационный_обмен ;
+  comcore:mentionedIn :chunk_14 .
+
+:электронные_сообщения rdf:type comcore:Resource ;
+  rdfs:label "Электронные сообщения"@ru ;
+  comcore:isResourceOf :информационный_обмен ;
+  comcore:isResourceOf :контроль ;
+  comcore:mentionedIn :chunk_14 .
+
+:подтверждение_приема_эс_или_отказ rdf:type comcore:Resource ;
+  rdfs:label "подтверждение о приеме либо отказе в приеме ЭС"@ru ;
+  comcore:mentionedIn :chunk_14 .
+
+:статус_переданных_сообщений rdf:type comcore:Resource ;
+  rdfs:label "статус переданных сообщений"@ru ;
+  comcore:mentionedIn :chunk_14 .
+
+:журнальные_файлы rdf:type comcore:Resource ;
+  rdfs:label "журнальные файлы"@ru ;
+  comcore:mentionedIn :chunk_14 .
+
+:формы rdf:type comcore:Resource ;
+  rdfs:label "формы"@ru ;
+  comcore:mentionedIn :chunk_14 .
+
+:договор_между_сторонами rdf:type comcore:Resource ;
+  rdfs:label "Договор между Сторонами"@ru ;
+  comcore:mentionedIn :chunk_14 .
+
+:договор_о_переводах_без_открытия_сче rdf:type comcore:Resource ;
+  rdfs:label "Договор о переводах без открытия счета"@ru ;
+  comcore:relation :информационный_обмен ;
+  comcore:mentionedIn :chunk_14 .
+
+:стороны rdf:type comcore:Agent ;
+  rdfs:label "Стороны"@ru ;
+  comcore:isActorOf :информационный_обмен ;
+  comcore:isActorOf :контроль ;
+  comcore:mentionedIn :chunk_14 .
+
+:нко rdf:type comcore:Agent ;
+  rdfs:label "НКО"@ru ;
+  comcore:isResponsibleFor :формы ;
+  comcore:mentionedIn :chunk_14 .
+
+:обнаруженная_ошибка rdf:type comcore:Event ;
+  rdfs:label "обнаруженные ошибки"@ru ;
+  comcore:isResultOf :контроль ;
+  comcore:mentionedIn :chunk_14 .
+
+:прием_эс rdf:type comcore:Event ;
+  rdfs:label "прием ЭС"@ru ;
+  comcore:mentionedIn :chunk_14 .
+
+:отказ_в_приеме_эс rdf:type comcore:Event ;
+  rdfs:label "отказ в приеме ЭС"@ru ;
+  comcore:mentionedIn :chunk_14 .

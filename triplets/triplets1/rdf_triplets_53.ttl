@@ -1,0 +1,37 @@
+:переводы rdf:type comcore:Resource ;
+    rdfs:label "Переводы"@ru ;
+    comcore:isResourceOf :операции_возврата_перевода ;
+    comcore:mentionedIn :53 .
+
+:недействительные_переводы rdf:type comcore:Resource ;
+    rdfs:label "Недействительные переводы"@ru ;
+    comcore:mentionedIn :53 .
+
+:суммы_части_суммы_недействительных rdf:type comcore:Resource ;
+    rdfs:label "Суммы/части суммы Недействительных переводов"@ru ;
+    comcore:isResourceOf :возмещение ;
+    comcore:relation :недействительные_переводы ;
+    comcore:mentionedIn :53 .
+
+:убытки rdf:type comcore:Resource ;
+    rdfs:label "Убытки"@ru ;
+    comcore:isResourceOf :возмещение ;
+    comcore:relation :недействительные_переводы ;
+    comcore:mentionedIn :53 .
+
+:возмещение rdf:type comcore:Process ;
+    rdfs:label "Возмещение"@ru ;
+    comcore:mentionedIn :53 .
+
+:операции_возврата_перевода rdf:type comcore:Process ;
+    rdfs:label "Операции возврата Перевода"@ru ;
+    comcore:mentionedIn :53 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :возмещение ;
+    comcore:mentionedIn :53 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:mentionedIn :53 .

@@ -1,0 +1,52 @@
+:принятие_решения_об_отказе rdf:type comcore:Process ;
+    rdfs:label "принятие решения об отказе от совершения операций"@ru ;
+    comcore:mentionedIn :42 .
+
+:расторжение_договора rdf:type comcore:Process ;
+    rdfs:label "расторжение договора в одностороннем порядке"@ru ;
+    comcore:mentionedIn :42 .
+
+:предположение_о_подпадении_под_fatca rdf:type comcore:Resource ;
+    rdfs:label "предположение о подпадении под FATCA"@ru ;
+    comcore:isResourceOf :принятие_решения_об_отказе ;
+    comcore:mentionedIn :42 .
+
+:признаки_выявления_персон_сша rdf:type comcore:Resource ;
+    rdfs:label "признаки выявления персон США"@ru ;
+    comcore:relation :предположение_о_подпадении_под_fatca ;
+    comcore:mentionedIn :42 .
+
+:запрашиваемая_информация rdf:type comcore:Resource ;
+    rdfs:label "запрашиваемая информация"@ru ;
+    comcore:relation :предположение_о_подпадении_под_fatca ;
+    comcore:mentionedIn :42 .
+
+:согласие_на_передачу_информации rdf:type comcore:Resource ;
+    rdfs:label "согласие на передачу информации"@ru ;
+    comcore:relation :налоговый_орган_сша ;
+    comcore:mentionedIn :42 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:isResourceOf :расторжение_договора ;
+    comcore:mentionedIn :42 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isResponsibleFor :запрашиваемая_информация ;
+    comcore:isResponsibleFor :согласие_на_передачу_информации ;
+    comcore:mentionedIn :42 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :принятие_решения_об_отказе ;
+    comcore:isActorOf :расторжение_договора ;
+    comcore:isResponsibleFor :принятие_решения_об_отказе ;
+    comcore:isResponsibleFor :расторжение_договора ;
+    comcore:isResponsibleFor :предположение_о_подпадении_под_fatca ;
+    comcore:mentionedIn :42 .
+
+:налоговый_орган_сша rdf:type comcore:Agent ;
+    rdfs:label "налоговый орган США"@ru ;
+    comcore:relation :согласие_на_передачу_информации ;
+    comcore:mentionedIn :42 .

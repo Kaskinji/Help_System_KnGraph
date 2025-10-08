@@ -1,0 +1,51 @@
+:небанковская_кредитная_организация rdf:type comcore:Agent ;
+    rdfs:label "Небанковская кредитная организация «МОНЕТА» (общество с ограниченной ответственностью)"@ru ;
+    comcore:isResponsibleFor :инн ;
+    comcore:isResponsibleFor :кпп ;
+    comcore:isResponsibleFor :оквэд ;
+    comcore:isResponsibleFor :окпо ;
+    comcore:isResponsibleFor :юридический_адрес ;
+    comcore:isResponsibleFor :почтовый_адрес ;
+    comcore:isResponsibleFor :e_mail ;
+    comcore:mentionedIn :100 .
+
+:договор_о_переводах_без_открытия rdf:type comcore:Resource ;
+    rdfs:label "Договор о переводах без открытия банковского счета"@ru ;
+    comcore:mentionedIn :100 .
+
+:приложение_1 rdf:type comcore:Resource ;
+    rdfs:label "Приложение №1"@ru ;
+    comcore:isPartOf :договор_о_переводах_без_открытия ;
+    comcore:mentionedIn :100 .
+
+:форма_акта_об_оказании_услуг rdf:type comcore:Resource ;
+    rdfs:label "ФОРМА АКТА ОБ ОКАЗАНИИ УСЛУГ"@ru ;
+    comcore:mentionedIn :100 .
+
+:инн rdf:type comcore:Resource ;
+    rdfs:label "ИНН"@ru ;
+    comcore:mentionedIn :100 .
+
+:кпп rdf:type comcore:Resource ;
+    rdfs:label "КПП"@ru ;
+    comcore:mentionedIn :100 .
+
+:оквэд rdf:type comcore:Resource ;
+    rdfs:label "ОКВЭД"@ru ;
+    comcore:mentionedIn :100 .
+
+:окпо rdf:type comcore:Resource ;
+    rdfs:label "ОКПО"@ru ;
+    comcore:mentionedIn :100 .
+
+:юридический_адрес rdf:type comcore:Resource ;
+    rdfs:label "Юридический адрес"@ru ;
+    comcore:mentionedIn :100 .
+
+:почтовый_адрес rdf:type comcore:Resource ;
+    rdfs:label "Почтовый адрес"@ru ;
+    comcore:mentionedIn :100 .
+
+:e_mail rdf:type comcore:Resource ;
+    rdfs:label "e-mail"@ru ;
+    comcore:mentionedIn :100 .

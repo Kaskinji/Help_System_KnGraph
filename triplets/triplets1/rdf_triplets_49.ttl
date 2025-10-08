@@ -1,0 +1,41 @@
+:обработка_персональных_данных rdf:type comcore:Process ;
+    rdfs:label "обработка персональных данных"@ru ;
+    comcore:mentionedIn :49 .
+
+:персональные_данные_получателя rdf:type comcore:Resource ;
+    rdfs:label "персональные данные Получателя"@ru ;
+    comcore:isResourceOf :обработка_персональных_данных ;
+    comcore:isResourceOf :передача_персональных_данных ;
+    comcore:mentionedIn :49 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:Initiates :передача_персональных_данных ;
+    comcore:mentionedIn :49 .
+
+:торговая_площадка rdf:type comcore:Agent ;
+    rdfs:label "Торговая площадка"@ru ;
+    comcore:isActorOf :передача_персональных_данных ;
+    comcore:mentionedIn :49 .
+
+:передача_персональных_данных rdf:type comcore:Process ;
+    rdfs:label "передача персональных данных"@ru ;
+    comcore:mentionedIn :49 .
+
+:техническое_сопровождение rdf:type comcore:Process ;
+    rdfs:label "техническое сопровождение"@ru ;
+    comcore:mentionedIn :49 .
+
+:интернет_магазин rdf:type comcore:Resource ;
+    rdfs:label "Интернет-магазин"@ru ;
+    comcore:isResourceOf :техническое_сопровождение ;
+    comcore:mentionedIn :49 .
+
+:запрос_информации_и_документов rdf:type comcore:Process ;
+    rdfs:label "запрос информации и документов"@ru ;
+    comcore:mentionedIn :49 .
+
+:информация_и_документы rdf:type comcore:Resource ;
+    rdfs:label "информация и документы"@ru ;
+    comcore:isResultOf :запрос_информации_и_документов ;
+    comcore:mentionedIn :49 .

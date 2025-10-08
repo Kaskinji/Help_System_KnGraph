@@ -1,0 +1,6 @@
+{
+    "id": 34,
+    "source": "sex.pdf",
+    "content": "Если банк не согласовал проект, то информацию об отказе прописываем в CRM заявке в Jira в комментарии: «Тинькофф отказ» Ticket … В Монете в настройке счета из настройки assistantpriority исключаем Тинькофф: assistantpriority=tcs,mdm,psbcard меняем: assistantpriority=mdm,psbcard.  \n\n",
+    "size": 283
+}

@@ -1,0 +1,56 @@
+:разрешение_споров rdf:type comcore:Process ;
+    rdfs:label "разрешение споров"@ru ;
+    comcore:mentionedIn :87 .
+
+:переговоры rdf:type comcore:Process ;
+    rdfs:label "переговоры"@ru ;
+    comcore:isPartOf :разрешение_споров ;
+    comcore:mentionedIn :87 .
+
+:рассмотрение_претензий rdf:type comcore:Process ;
+    rdfs:label "рассмотрение претензий"@ru ;
+    comcore:mentionedIn :87 .
+
+:осуществление_переводов rdf:type comcore:Process ;
+    rdfs:label "осуществление Переводов"@ru ;
+    comcore:mentionedIn :87 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:mentionedIn :87 .
+
+:претензии rdf:type comcore:Resource ;
+    rdfs:label "Претензии"@ru ;
+    comcore:isResourceOf :рассмотрение_претензий ;
+    comcore:mentionedIn :87 .
+
+:суммы_причитающихся_денежных_сред rdf:type comcore:Resource ;
+    rdfs:label "суммы причитающихся денежных средств"@ru ;
+    comcore:isPartOf :претензии ;
+    comcore:mentionedIn :87 .
+
+:сроки_их_перечисления rdf:type comcore:Resource ;
+    rdfs:label "сроки их перечисления"@ru ;
+    comcore:isPartOf :претензии ;
+    comcore:mentionedIn :87 .
+
+:письменные_заявления rdf:type comcore:Resource ;
+    rdfs:label "письменные заявления"@ru ;
+    comcore:isResourceOf :рассмотрение_претензий ;
+    comcore:mentionedIn :87 .
+
+:стороны rdf:type comcore:Agent ;
+    rdfs:label "Стороны"@ru ;
+    comcore:isActorOf :разрешение_споров ;
+    comcore:isActorOf :рассмотрение_претензий ;
+    comcore:mentionedIn :87 .
+
+:возникновение_споров rdf:type comcore:Event ;
+    rdfs:label "возникновение споров"@ru ;
+    comcore:Initiates :разрешение_споров ;
+    comcore:mentionedIn :87 .
+
+:разногласия rdf:type comcore:Event ;
+    rdfs:label "разногласия"@ru ;
+    comcore:isResultOf :осуществление_переводов ;
+    comcore:mentionedIn :87 .

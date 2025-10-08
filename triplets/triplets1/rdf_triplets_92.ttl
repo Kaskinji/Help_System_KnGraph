@@ -1,0 +1,87 @@
+:сверка_расчетов rdf:type comcore:Process ;
+    rdfs:label "сверка расчетов"@ru ;
+    comcore:hasResult :денежные_обязательства ;
+    comcore:mentionedIn :92 .
+
+:погашение_денежных_обязательств rdf:type comcore:Process ;
+    rdfs:label "погашение денежных обязательств"@ru ;
+    comcore:mentionedIn :92 .
+
+:расторжение_договора rdf:type comcore:Event ;
+    rdfs:label "расторжение Договора"@ru ;
+    comcore:mentionedIn :92 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :сверка_расчетов ;
+    comcore:isActorOf :погашение_денежных_обязательств ;
+    comcore:isActorOf :окончательный_расчет ;
+    comcore:isActorOf :расчеты ;
+    comcore:mentionedIn :92 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :возврат_переводов ;
+    comcore:mentionedIn :92 .
+
+:плательщики rdf:type comcore:Agent ;
+    rdfs:label "Плательщики"@ru ;
+    comcore:isActorOf :сверка_расчетов ;
+    comcore:isActorOf :погашение_денежных_обязательств ;
+    comcore:mentionedIn :92 .
+
+:окончательный_расчет rdf:type comcore:Process ;
+    rdfs:label "окончательный расчет"@ru ;
+    comcore:mentionedIn :92 .
+
+:признание_переводов_недействитель rdf:type comcore:Process ;
+    rdfs:label "признание Переводов Недействительными"@ru ;
+    comcore:mentionedIn :92 .
+
+:возврат_переводов rdf:type comcore:Process ;
+    rdfs:label "возврат Переводов"@ru ;
+    comcore:mentionedIn :92 .
+
+:недействительные_переводы rdf:type comcore:Resource ;
+    rdfs:label "Недействительные переводы"@ru ;
+    comcore:mentionedIn :92 .
+
+:перечисление rdf:type comcore:Resource ;
+    rdfs:label "Перечисление"@ru ;
+    comcore:mentionedIn :92 .
+
+:правила_мпс rdf:type comcore:Resource ;
+    rdfs:label "Правила МПС"@ru ;
+    comcore:mentionedIn :92 .
+
+:расчеты rdf:type comcore:Process ;
+    rdfs:label "расчеты"@ru ;
+    comcore:mentionedIn :92 .
+
+:удержание_переводов rdf:type comcore:Process ;
+    rdfs:label "удержание Переводов"@ru ;
+    comcore:isPartOf :расчеты ;
+    comcore:mentionedIn :92 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:isResourceOf :сверка_расчетов ;
+    comcore:isResourceOf :погашение_денежных_обязательств ;
+    comcore:isResourceOf :окончательный_расчет ;
+    comcore:isResourceOf :расчеты ;
+    comcore:mentionedIn :92 .
+
+:уведомление_о_расторжении_договора rdf:type comcore:Resource ;
+    rdfs:label "уведомление о расторжении Договора"@ru ;
+    comcore:isResourceOf :сверка_расчетов ;
+    comcore:isResourceOf :погашение_денежных_обязательств ;
+    comcore:mentionedIn :92 .
+
+:денежные_обязательства rdf:type comcore:Resource ;
+    rdfs:label "денежные обязательства"@ru ;
+    comcore:isResourceOf :погашение_денежных_обязательств ;
+    comcore:mentionedIn :92 .
+
+:недействительные_переводы comcore:isResourceOf :удержание_переводов .
+:перечисление comcore:isResourceOf :удержание_переводов .
+:правила_мпс comcore:isResourceOf :признание_переводов_недействитель .

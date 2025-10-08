@@ -1,0 +1,35 @@
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :подписание_и_направление_акта ;
+    comcore:mentionedIn :81 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :подписание_и_отправка_акта ;
+    comcore:mentionedIn :81 .
+
+:акт_подписанный_получателем rdf:type comcore:Resource ;
+    rdfs:label "Акт подписанный Получателем"@ru ;
+    comcore:isResultOf :подписание_и_направление_акта ;
+    comcore:isResourceOf :подписание_и_отправка_акта ;
+    comcore:mentionedIn :81 .
+
+:акт_подписанный_сторонами rdf:type comcore:Resource ;
+    rdfs:label "Акт подписанный Сторонами"@ru ;
+    comcore:isResultOf :подписание_и_отправка_акта ;
+    comcore:mentionedIn :81 .
+
+:подписание_и_направление_акта rdf:type comcore:Process ;
+    rdfs:label "подписание и направление акта"@ru ;
+    comcore:hasResult :акт_подписанный_получателем ;
+    comcore:mentionedIn :81 .
+
+:подписание_и_отправка_акта rdf:type comcore:Process ;
+    rdfs:label "подписание и отправка акта"@ru ;
+    comcore:hasResult :акт_подписанный_сторонами ;
+    comcore:mentionedIn :81 .
+
+:получение_от_получателя_акта rdf:type comcore:Event ;
+    rdfs:label "получение от Получателя Акта"@ru ;
+    comcore:Initiates :подписание_и_отправка_акта ;
+    comcore:mentionedIn :81 .

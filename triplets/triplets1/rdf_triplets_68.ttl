@@ -1,0 +1,92 @@
+:недействительный_перевод rdf:type comcore:Event ;
+    rdfs:label "недействительный перевод"@ru ;
+    comcore:mentionedIn :68 .
+
+:основание rdf:type comcore:Event ;
+    rdfs:label "основание"@ru ;
+    comcore:mentionedIn :68 .
+
+:признание_перевода rdf:type comcore:Process ;
+    rdfs:label "признание перевода"@ru ;
+    comcore:mentionedIn :68 .
+
+:поступление_информации rdf:type comcore:Event ;
+    rdfs:label "поступление информации"@ru ;
+    comcore:Initiates :взаимодействие ;
+    comcore:mentionedIn :68 .
+
+:реализация_запрещенных_услуг rdf:type comcore:Resource ;
+    rdfs:label "реализация запрещенных услуг"@ru ;
+    comcore:mentionedIn :68 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "нко"@ru ;
+    comcore:mentionedIn :68 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "получатель"@ru ;
+    comcore:mentionedIn :68 .
+
+:стороны rdf:type comcore:Agent ;
+    rdfs:label "стороны"@ru ;
+    comcore:isActorOf :взаимодействие ;
+    comcore:mentionedIn :68 .
+
+:взаимодействие rdf:type comcore:Process ;
+    rdfs:label "взаимодействие"@ru ;
+    comcore:isPartOf :приложение_4 ;
+    comcore:mentionedIn :68 .
+
+:приложение_4 rdf:type comcore:Resource ;
+    rdfs:label "приложение 4"@ru ;
+    comcore:isPartOf :договор ;
+    comcore:mentionedIn :68 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "договор"@ru ;
+    comcore:mentionedIn :68 .
+
+:поступление_сведений rdf:type comcore:Event ;
+    rdfs:label "поступление сведений"@ru ;
+    comcore:Initiates :взаимодействие_02 ;
+    comcore:mentionedIn :68 .
+
+:эквайрер rdf:type comcore:Agent ;
+    rdfs:label "эквайрер"@ru ;
+    comcore:mentionedIn :68 .
+
+:документы rdf:type comcore:Resource ;
+    rdfs:label "документы"@ru ;
+    comcore:mentionedIn :68 .
+
+:нарушение_правил rdf:type comcore:Event ;
+    rdfs:label "нарушение правил"@ru ;
+    comcore:mentionedIn :68 .
+
+:плательщик rdf:type comcore:Agent ;
+    rdfs:label "плательщик"@ru ;
+    comcore:mentionedIn :68 .
+
+:взаимодействие_02 rdf:type comcore:Process ;
+    rdfs:label "взаимодействие"@ru ;
+    comcore:isPartOf :приложение_5 ;
+    comcore:mentionedIn :68 .
+
+:приложение_5 rdf:type comcore:Resource ;
+    rdfs:label "приложение 5"@ru ;
+    comcore:isPartOf :договор ;
+    comcore:mentionedIn :68 .
+
+:недействительный_перевод comcore:isResultOf :признание_перевода .
+:основание comcore:Initiates :признание_перевода .
+:поступление_информации comcore:relation :реализация_запрещенных_услуг .
+:поступление_информации comcore:relation :нко .
+:поступление_информации comcore:relation :получатель .
+:взаимодействие comcore:isResourceOf :приложение_4 .
+:поступление_сведений comcore:relation :эквайрер .
+:поступление_сведений comcore:relation :нко .
+:поступление_сведений comcore:relation :документы .
+:поступление_сведений comcore:relation :нарушение_правил .
+:поступление_сведений comcore:relation :плательщик .
+:поступление_сведений comcore:relation :получатель .
+:взаимодействие_02 comcore:isResourceOf :приложение_5 .

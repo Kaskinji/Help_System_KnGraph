@@ -1,0 +1,12 @@
+:юридическое_лицо rdf:type comcore:Agent ;
+    rdfs:label "юридическое лицо"@ru ;
+    comcore:isActorOf :перевод ;
+    comcore:mentionedIn :70 .
+
+:физическое_лицо rdf:type comcore:Agent ;
+    rdfs:label "физическое лицо"@ru ;
+    comcore:mentionedIn :70 .
+
+:перевод rdf:type comcore:Process ;
+    rdfs:label "Перевод"@ru ;
+    comcore:mentionedIn :70 .

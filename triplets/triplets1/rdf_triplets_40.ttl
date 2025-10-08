@@ -1,0 +1,86 @@
+:прекращение_исполнения_обязательств a comcore:Process ;
+    rdfs:label "Прекращение исполнения обязательств"@ru ;
+    comcore:relation :расторжение_договора ;
+    comcore:mentionedIn :40 .
+
+:расторжение_договора a comcore:Process ;
+    rdfs:label "Расторжение договора"@ru ;
+    comcore:relation :получение_информации ;
+    comcore:mentionedIn :40 .
+
+:договор a comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:isResourceOf :расторжение_договора ;
+    comcore:relation :получатель ;
+    comcore:mentionedIn :40 .
+
+:получатель a comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:relation :подключение_к_системе_монета_ру ;
+    comcore:relation :установление_тарифа ;
+    comcore:mentionedIn :40 .
+
+:нко a comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:relation :информация ;
+    comcore:mentionedIn :40 .
+
+:банк_россии a comcore:Agent ;
+    rdfs:label "Банк России"@ru ;
+    comcore:relation :информация ;
+    comcore:mentionedIn :40 .
+
+:информация a comcore:Resource ;
+    rdfs:label "Информация"@ru ;
+    comcore:isResourceOf :расторжение_договора ;
+    comcore:relation :база_данных ;
+    comcore:mentionedIn :40 .
+
+:база_данных a comcore:Resource ;
+    rdfs:label "База данных"@ru ;
+    comcore:mentionedIn :40 .
+
+:получение_информации a comcore:Event ;
+    rdfs:label "Получение информации"@ru ;
+    comcore:Initiates :расторжение_договора ;
+    comcore:relation :информация ;
+    comcore:mentionedIn :40 .
+
+:расчеты a comcore:Resource ;
+    rdfs:label "Расчеты"@ru ;
+    comcore:relation :переводы ;
+    comcore:mentionedIn :40 .
+
+:переводы a comcore:Resource ;
+    rdfs:label "Переводы"@ru ;
+    comcore:relation :недействительные_переводы ;
+    comcore:mentionedIn :40 .
+
+:недействительные_переводы a comcore:Resource ;
+    rdfs:label "Недействительные переводы"@ru ;
+    comcore:relation :договор ;
+    comcore:mentionedIn :40 .
+
+:подключение_к_системе_монета_ру a comcore:Process ;
+    rdfs:label "Подключение к системе МОНЕТА РУ"@ru ;
+    comcore:mentionedIn :40 .
+
+:установление_тарифа a comcore:Process ;
+    rdfs:label "Установление тарифа"@ru ;
+    comcore:hasResult :тариф ;
+    comcore:mentionedIn :40 .
+
+:изменение_тарифа a comcore:Process ;
+    rdfs:label "Изменение тарифа"@ru ;
+    comcore:hasResult :тариф ;
+    comcore:mentionedIn :40 .
+
+:система_монета_ру a comcore:Resource ;
+    rdfs:label "Система МОНЕТА РУ"@ru ;
+    comcore:isResourceOf :подключение_к_системе_монета_ру ;
+    comcore:mentionedIn :40 .
+
+:тариф a comcore:Resource ;
+    rdfs:label "Тариф"@ru ;
+    comcore:relation :получатель ;
+    comcore:mentionedIn :40 .

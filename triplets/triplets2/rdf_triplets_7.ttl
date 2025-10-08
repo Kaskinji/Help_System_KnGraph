@@ -1,0 +1,77 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:интернет-магазин rdf:type comcore:Agent ;
+    rdfs:label "Интернет-магазин"@ru ;
+    comcore:mentionedIn :7 ;
+    dc:definition "Интернет-магазин - программный продукт, под управлением Получателя и/или Торговой площадки, который позволяет Плательщику дистанционно выбрать Услугу, оформить заказ и выбрать способ оплаты и доставки заказа. Требования к Интернет-магазину устанавливаются в соответствии с Приложением №6 к Договору."@ru .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :7 ;
+    comcore:relation :интернет-магазин .
+
+:торговая_площадка rdf:type comcore:Agent ;
+    rdfs:label "Торговая площадка"@ru ;
+    comcore:mentionedIn :7 ;
+    comcore:relation :интернет-магазин .
+
+:плательщик rdf:type comcore:Agent ;
+    rdfs:label "Плательщик"@ru ;
+    comcore:mentionedIn :7 ;
+    comcore:relation :интернет-магазин .
+
+:услуга rdf:type comcore:Resource ;
+    rdfs:label "Услуга"@ru ;
+    comcore:mentionedIn :7 ;
+    comcore:relation :интернет-магазин .
+
+:заказ rdf:type comcore:Resource ;
+    rdfs:label "заказ"@ru ;
+    comcore:mentionedIn :7 ;
+    comcore:relation :интернет-магазин .
+
+:способ_оплаты rdf:type comcore:Resource ;
+    rdfs:label "способ оплаты"@ru ;
+    comcore:mentionedIn :7 ;
+    comcore:relation :интернет-магазин .
+
+:способ_доставки rdf:type comcore:Resource ;
+    rdfs:label "способ доставки"@ru ;
+    comcore:mentionedIn :7 ;
+    comcore:relation :интернет-магазин .
+
+:приложение_№6_к_договору rdf:type comcore:Resource ;
+    rdfs:label "Приложение №6 к Договору"@ru ;
+    comcore:mentionedIn :7 ;
+    comcore:isPartOf :договор ;
+    comcore:relation :интернет-магазин .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:mentionedIn :7 ;
+    comcore:relation :интернет-магазин .
+
+:квалифицированная_электронная_подпись rdf:type comcore:Resource ;
+    rdfs:label "Квалифицированная электронная подпись"@ru ;
+    comcore:mentionedIn :7 ;
+    dc:definition "Квалифицированная электронная подпись (КЭП) – электронная подпись, созданная с использованием ключа электронной подписи, соответствующего квалифицированному сертификату ключа проверки электронной подписи, выданного аккредитованным удостоверяющим центром и полностью соответствующая требованиям федерального законодательства."@ru ;
+    comcore:relation :ключ_электронной_подписи .
+
+:ключ_электронной_подписи rdf:type comcore:Resource ;
+    rdfs:label "ключ электронной подписи"@ru ;
+    comcore:mentionedIn :7 ;
+    comcore:relation :квалифицированный_сертификат_ключа_проверк .
+
+:квалифицированный_сертификат_ключа_проверк rdf:type comcore:Resource ;
+    rdfs:label "квалифицированный сертификат ключа проверки электронной подписи"@ru ;
+    comcore:mentionedIn :7 ;
+    comcore:relation :квалифицированная_электронная_подпись .
+
+:аккредитованный_удостоверяющий_центр rdf:type comcore:Agent ;
+    rdfs:label "аккредитованный удостоверяющий центр"@ru ;
+    comcore:mentionedIn :7 ;
+    comcore:isResponsibleFor :квалифицированный_сертификат_ключа_проверк .

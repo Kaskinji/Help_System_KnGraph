@@ -1,0 +1,28 @@
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :предоставление_информации_и_документов ;
+    comcore:mentionedIn :chunk_24 .
+
+:информация rdf:type comcore:Resource ;
+    rdfs:label "информация"@ru ;
+    comcore:isResourceOf :предоставление_информации_и_документов ;
+    comcore:mentionedIn :chunk_24 .
+
+:документы rdf:type comcore:Resource ;
+    rdfs:label "документы"@ru ;
+    comcore:isResourceOf :предоставление_информации_и_документов ;
+    comcore:relation :запрещенные_услуги ;
+    comcore:mentionedIn :chunk_24 .
+
+:запрещенные_услуги rdf:type comcore:Resource ;
+    rdfs:label "Запрещенные услуги"@ru ;
+    comcore:mentionedIn :chunk_24 .
+
+:услуги_реализуемые_получателем rdf:type comcore:Resource ;
+    rdfs:label "Услуги, реализуемые Получателем"@ru ;
+    comcore:relation :запрещенные_услуги ;
+    comcore:mentionedIn :chunk_24 .
+
+:предоставление_информации_и_документов rdf:type comcore:Process ;
+    rdfs:label "предоставление информации и документов"@ru ;
+    comcore:mentionedIn :chunk_24 .

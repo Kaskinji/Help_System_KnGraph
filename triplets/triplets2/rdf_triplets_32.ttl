@@ -1,0 +1,60 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :обмен_информацией_и_электронными_доку ;
+    comcore:mentionedIn :32 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :обмен_информацией_и_электронными_доку ;
+    comcore:mentionedIn :32 .
+
+:информация rdf:type comcore:Resource ;
+    rdfs:label "Информация"@ru ;
+    comcore:isResourceOf :обмен_информацией_и_электронными_доку ;
+    comcore:mentionedIn :32 .
+
+:электронные_документы rdf:type comcore:Resource ;
+    rdfs:label "Электронные документы"@ru ;
+    comcore:isResourceOf :обмен_информацией_и_электронными_доку ;
+    comcore:mentionedIn :32 .
+
+:сообщение rdf:type comcore:Resource ;
+    rdfs:label "Сообщение"@ru ;
+    comcore:isResourceOf :направление_сообщения ;
+    comcore:mentionedIn :32 .
+
+:информация_о_результатах_приема_и_обрабо rdf:type comcore:Resource ;
+    rdfs:label "Информация о результатах приема и обработки"@ru ;
+    comcore:isResourceOf :направление_информации_о_результатах ;
+    comcore:mentionedIn :32 .
+
+:обмен_информацией_и_электронными_доку rdf:type comcore:Process ;
+    rdfs:label "Обмен информацией и электронными документами"@ru ;
+    comcore:relation :информационно_технологическое_взаимодейст ;
+    comcore:mentionedIn :32 .
+
+:направление_сообщения rdf:type comcore:Process ;
+    rdfs:label "Направление сообщения"@ru ;
+    comcore:isPartOf :обмен_информацией_и_электронными_доку ;
+    comcore:mentionedIn :32 .
+
+:направление_информации_о_результатах rdf:type comcore:Process ;
+    rdfs:label "Направление информации о результатах"@ru ;
+    comcore:isPartOf :обмен_информацией_и_электронными_доку ;
+    comcore:mentionedIn :32 .
+
+:прием_и_обработка_сообщения rdf:type comcore:Process ;
+    rdfs:label "Прием и обработка сообщения"@ru ;
+    comcore:isPartOf :обмен_информацией_и_электронными_доку ;
+    comcore:mentionedIn :32 .
+
+:информационно_технологическое_взаимодейст rdf:type comcore:Process ;
+    rdfs:label "Информационно-технологическое взаимодействие"@ru ;
+    comcore:relation :обмен_информацией_и_электронными_доку ;
+    comcore:mentionedIn :32 .

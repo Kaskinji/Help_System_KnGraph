@@ -1,0 +1,113 @@
+:эквайрер rdf:type comcore:Agent ;
+    rdfs:label "Эквайрер"@ru ;
+    comcore:isActorOf :взыскание_эквайрером ;
+    comcore:mentionedIn :84 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:mentionedIn :84 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :возмещение ;
+    comcore:isActorOf :привлечение_торговой_площадки ;
+    comcore:mentionedIn :84 .
+
+:торговая_площадка rdf:type comcore:Agent ;
+    rdfs:label "Торговая площадка"@ru ;
+    comcore:isActorOf :информационно_технологическое_взаим ;
+    comcore:isResponsibleFor :действия_или_бездействие ;
+    comcore:mentionedIn :84 .
+
+:третья_сторона rdf:type comcore:Agent ;
+    rdfs:label "третья сторона"@ru ;
+    comcore:isActorOf :информационно_технологическое_взаим ;
+    comcore:isResponsibleFor :действия_или_бездействие ;
+    comcore:mentionedIn :84 .
+
+:штрафы rdf:type comcore:Resource ;
+    rdfs:label "штрафы"@ru ;
+    comcore:isResourceOf :взыскание_эквайрером ;
+    comcore:mentionedIn :84 .
+
+:комиссии rdf:type comcore:Resource ;
+    rdfs:label "комиссии"@ru ;
+    comcore:isResourceOf :взыскание_эквайрером ;
+    comcore:mentionedIn :84 .
+
+:платежи rdf:type comcore:Resource ;
+    rdfs:label "платежи"@ru ;
+    comcore:isResourceOf :взыскание_эквайрером ;
+    comcore:mentionedIn :84 .
+
+:банковские_карты rdf:type comcore:Resource ;
+    rdfs:label "банковские карты"@ru ;
+    comcore:isResourceOf :совершение_переводов ;
+    comcore:mentionedIn :84 .
+
+:документы rdf:type comcore:Resource ;
+    rdfs:label "документы"@ru ;
+    comcore:isResourceOf :возмещение ;
+    comcore:relation :взыскание_с_нко_штрафов ;
+    comcore:mentionedIn :84 .
+
+:сумма_уплаченных_штрафов_комиссий rdf:type comcore:Resource ;
+    rdfs:label "сумма уплаченных штрафов комиссий"@ru ;
+    comcore:isResourceOf :возмещение ;
+    comcore:mentionedIn :84 .
+
+:прямые_и_косвенные_риски rdf:type comcore:Resource ;
+    rdfs:label "прямые и косвенные риски"@ru ;
+    comcore:mentionedIn :84 .
+
+:действия_или_бездействие rdf:type comcore:Resource ;
+    rdfs:label "действия или бездействие"@ru ;
+    comcore:mentionedIn :84 .
+
+:взыскание_эквайрером rdf:type comcore:Process ;
+    rdfs:label "взыскание Эквайрером"@ru ;
+    comcore:relation :взыскание_с_нко_штрафов ;
+    comcore:mentionedIn :84 .
+
+:совершение_переводов rdf:type comcore:Process ;
+    rdfs:label "совершение Переводов"@ru ;
+    comcore:relation :банковские_карты ;
+    comcore:mentionedIn :84 .
+
+:возмещение rdf:type comcore:Process ;
+    rdfs:label "возмещение"@ru ;
+    comcore:relation :сумма_уплаченных_штрафов_комиссий ;
+    comcore:relation :документы ;
+    comcore:mentionedIn :84 .
+
+:предоставление_документов rdf:type comcore:Process ;
+    rdfs:label "предоставление документов"@ru ;
+    comcore:relation :документы ;
+    comcore:mentionedIn :84 .
+
+:информационно_технологическое_взаим rdf:type comcore:Process ;
+    rdfs:label "информационно-технологическое взаимодей"@ru ;
+    comcore:relation :привлечение_торговой_площадки ;
+    comcore:mentionedIn :84 .
+
+:привлечение_торговой_площадки rdf:type comcore:Process ;
+    rdfs:label "привлечение Торговой площадки"@ru ;
+    comcore:relation :получатель ;
+    comcore:mentionedIn :84 .
+
+:взыскание_с_нко_штрафов rdf:type comcore:Event ;
+    rdfs:label "взыскание с НКО штрафов"@ru ;
+    comcore:isResultOf :взыскание_эквайрером ;
+    comcore:Initiates :возмещение ;
+    comcore:mentionedIn :84 .
+
+:возникновение_прямых_и_косвенных_ри rdf:type comcore:Event ;
+    rdfs:label "возникновение прямых и косвенных рис"@ru ;
+    comcore:isResultOf :привлечение_торговой_площадки ;
+    comcore:relation :прямые_и_косвенные_риски ;
+    comcore:mentionedIn :84 .
+
+:негативные_последствия rdf:type comcore:Event ;
+    rdfs:label "негативные последствия"@ru ;
+    comcore:relation :действия_или_бездействие ;
+    comcore:mentionedIn :84 .

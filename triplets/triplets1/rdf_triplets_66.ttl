@@ -1,0 +1,41 @@
+:сторона rdf:type comcore:Agent ;
+    rdfs:label "Сторона"@ru ;
+    comcore:isActorOf :расчеты_по_договору ;
+    comcore:mentionedIn :66 .
+
+:информация_о_переводах_и_перечисл rdf:type comcore:Resource ;
+    rdfs:label "информация о Переводах и Перечислениях"@ru ;
+    comcore:isResourceOf :расчеты_по_договору ;
+    comcore:mentionedIn :66 .
+
+:расчеты_по_договору rdf:type comcore:Process ;
+    rdfs:label "расчеты по Договору"@ru ;
+    comcore:mentionedIn :66 .
+
+:рекламные_и_информационные_матери rdf:type comcore:Resource ;
+    rdfs:label "рекламные и информационные материалы"@ru ;
+    comcore:mentionedIn :66 .
+
+:сайты_в_сети_интернет rdf:type comcore:Resource ;
+    rdfs:label "сайты в сети Интернет"@ru ;
+    comcore:mentionedIn :66 .
+
+:фирменное_наименование rdf:type comcore:Resource ;
+    rdfs:label "фирменное наименование"@ru ;
+    comcore:mentionedIn :66 .
+
+:логотип rdf:type comcore:Resource ;
+    rdfs:label "логотип"@ru ;
+    comcore:mentionedIn :66 .
+
+:средства_индивидуализации rdf:type comcore:Resource ;
+    rdfs:label "средства индивидуализации"@ru ;
+    comcore:mentionedIn :66 .
+
+:информация_о_договорных_правоотноше rdf:type comcore:Resource ;
+    rdfs:label "информация о том, что Стороны состоят в договорных правоотношениях"@ru ;
+    comcore:mentionedIn :66 .
+
+:публично_доступная_информация rdf:type comcore:Resource ;
+    rdfs:label "публично доступная информация"@ru ;
+    comcore:mentionedIn :66 .

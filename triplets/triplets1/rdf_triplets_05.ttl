@@ -1,0 +1,39 @@
+:заявление rdf:type comcore:Resource ;
+    rdfs:label "Заявление"@ru ;
+    comcore:isResourceOf :заключение_договора ;
+    comcore:isResourceOf :принятие_заявления ;
+    comcore:mentionedIn :5 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :информационно-техноло ;
+    comcore:mentionedIn :5 .
+
+:торговая_площадка rdf:type comcore:Agent ;
+    rdfs:label "Торговая площадка"@ru ;
+    comcore:isActorOf :информационно-техноло ;
+    comcore:mentionedIn :5 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :информационно-техноло ;
+    comcore:isActorOf :принятие_заявления ;
+    comcore:mentionedIn :5 .
+
+:информационно-техноло rdf:type comcore:Process ;
+    rdfs:label "информационно-технологическое взаимодействие"@ru ;
+    comcore:mentionedIn :5 .
+
+:заключение_договора rdf:type comcore:Process ;
+    rdfs:label "заключение договора"@ru ;
+    comcore:mentionedIn :5 .
+
+:отметка_нко rdf:type comcore:Resource ;
+    rdfs:label "Отметка НКО"@ru ;
+    comcore:isPartOf :заявление ;
+    comcore:isResultOf :принятие_заявления ;
+    comcore:mentionedIn :5 .
+
+:принятие_заявления rdf:type comcore:Process ;
+    rdfs:label "принятие заявления"@ru ;
+    comcore:mentionedIn :5 .

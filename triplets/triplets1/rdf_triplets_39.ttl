@@ -1,0 +1,42 @@
+:отказ_в_исполнении_распоряжения rdf:type comcore:Process ;
+    rdfs:label "Отказ в исполнении распоряжения"@ru ;
+    comcore:hasResource :распоряжение_плательщика ;
+    comcore:hasResource :правила_внутреннего_контроля ;
+    comcore:hasResult :решение_об_отказе ;
+    comcore:mentionedIn :39 .
+
+:распоряжение_плательщика rdf:type comcore:Resource ;
+    rdfs:label "Распоряжение плательщика"@ru ;
+    comcore:isResourceOf :отказ_в_исполнении_распоряжения ;
+    comcore:mentionedIn :39 .
+
+:правила_внутреннего_контроля rdf:type comcore:Resource ;
+    rdfs:label "Правила внутреннего контроля"@ru ;
+    comcore:isResourceOf :отказ_в_исполнении_распоряжения ;
+    comcore:mentionedIn :39 .
+
+:информация_о_дате_и_причинах rdf:type comcore:Resource ;
+    rdfs:label "Информация о дате и причинах"@ru ;
+    comcore:isResultOf :отказ_в_исполнении_распоряжения ;
+    comcore:mentionedIn :39 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :отказ_в_исполнении_распоряжения ;
+    comcore:isResponsibleFor :информация_о_дате_и_причинах ;
+    comcore:mentionedIn :39 .
+
+:плательщик rdf:type comcore:Agent ;
+    rdfs:label "Плательщик"@ru ;
+    comcore:isResponsibleFor :распоряжение_плательщика ;
+    comcore:mentionedIn :39 .
+
+:подозрение_легализации rdf:type comcore:Event ;
+    rdfs:label "Подозрение легализации"@ru ;
+    comcore:Initiates :отказ_в_исполнении_распоряжения ;
+    comcore:mentionedIn :39 .
+
+:решение_об_отказе rdf:type comcore:Event ;
+    rdfs:label "Решение об отказе"@ru ;
+    comcore:isResultOf :отказ_в_исполнении_распоряжения ;
+    comcore:mentionedIn :39 .

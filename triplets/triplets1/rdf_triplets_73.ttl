@@ -1,0 +1,67 @@
+:индивидуальное_изменение_тарифа_полу rdf:type comcore:Process ;
+    rdfs:label "Индивидуальное изменение Тарифа Получателя"@ru ;
+    comcore:mentionedIn :73 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:Initiates :индивидуальное_изменение_тарифа_полу ;
+    comcore:mentionedIn :73 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :73 .
+
+:решение rdf:type comcore:Resource ;
+    rdfs:label "Решение"@ru ;
+    comcore:isResultOf :индивидуальное_изменение_тарифа_полу ;
+    comcore:mentionedIn :73 .
+
+:личный_кабинет rdf:type comcore:Resource ;
+    rdfs:label "Личный кабинет"@ru ;
+    comcore:isResourceOf :уведомление_получателя ;
+    comcore:mentionedIn :73 .
+
+:электронная_почта rdf:type comcore:Resource ;
+    rdfs:label "Электронная почта"@ru ;
+    comcore:isResourceOf :уведомление_получателя ;
+    comcore:mentionedIn :73 .
+
+:уведомление_получателя rdf:type comcore:Process ;
+    rdfs:label "Уведомление Получателя"@ru ;
+    comcore:isPartOf :индивидуальное_изменение_тарифа_полу ;
+    comcore:mentionedIn :73 .
+
+:изменения_вступают_в_силу rdf:type comcore:Event ;
+    rdfs:label "Изменения вступают в силу"@ru ;
+    comcore:isResultOf :индивидуальное_изменение_тарифа_полу ;
+    comcore:Initiates :использование_системы_монетару ;
+    comcore:Initiates :осуществление_переводов ;
+    comcore:mentionedIn :73 .
+
+:использование_системы_монетару rdf:type comcore:Process ;
+    rdfs:label "Использование Системы МОНЕТА.РУ"@ru ;
+    comcore:mentionedIn :73 .
+
+:осуществление_переводов rdf:type comcore:Process ;
+    rdfs:label "Осуществление Переводов"@ru ;
+    comcore:mentionedIn :73 .
+
+:безусловное_согласие rdf:type comcore:Event ;
+    rdfs:label "Безусловное согласие"@ru ;
+    comcore:isResultOf :использование_системы_монетару ;
+    comcore:isResultOf :осуществление_переводов ;
+    comcore:mentionedIn :73 .
+
+:система_монетару rdf:type comcore:Resource ;
+    rdfs:label "Система МОНЕТА.РУ"@ru ;
+    comcore:isResourceOf :использование_системы_монетару ;
+    comcore:mentionedIn :73 .
+
+:переводы rdf:type comcore:Resource ;
+    rdfs:label "Переводы"@ru ;
+    comcore:isResourceOf :осуществление_переводов ;
+    comcore:mentionedIn :73 .
+
+:нко comcore:isActorOf :уведомление_получателя .
+:получатель comcore:isActorOf :использование_системы_монетару .
+:получатель comcore:isActorOf :осуществление_переводов .

@@ -1,0 +1,72 @@
+:принятие_переводов a comcore:Process ;
+  rdfs:label "Принятие переводов"@ru ;
+  comcore:mentionedIn :chunk_13 .
+
+:перечисление_получателем a comcore:Process ;
+  rdfs:label "Перечисление Получателем"@ru ;
+  comcore:mentionedIn :chunk_13 .
+
+:удержание_вознаграждения a comcore:Process ;
+  rdfs:label "Удержание вознаграждения"@ru ;
+  comcore:mentionedIn :chunk_13 .
+
+:возвраты_переводов a comcore:Process ;
+  rdfs:label "Возвраты Переводов"@ru ;
+  comcore:mentionedIn :chunk_13 .
+
+:перечисление_нко a comcore:Process ;
+  rdfs:label "Перечисление НКО"@ru ;
+  comcore:mentionedIn :chunk_13 .
+
+:нко a comcore:Agent ;
+  rdfs:label "НКО"@ru ;
+  comcore:isActorOf :перечисление_нко ;
+  comcore:mentionedIn :chunk_13 .
+
+:получатель a comcore:Agent ;
+  rdfs:label "Получатель"@ru ;
+  comcore:isActorOf :перечисление_получателем ;
+  comcore:mentionedIn :chunk_13 .
+
+:сумма_задолженности_нко_перед_получателем a comcore:Resource ;
+  rdfs:label "Сумма задолженности НКО перед Получателем на начало отчетного периода по переводам, принятым в предыдущих отчетных периодах"@ru ;
+  comcore:mentionedIn :chunk_13 .
+
+:сумма_переводов a comcore:Resource ;
+  rdfs:label "Сумма Переводов, принятых в адрес Получателя за отчетный период"@ru ;
+  comcore:isResultOf :принятие_переводов ;
+  comcore:mentionedIn :chunk_13 .
+
+:количество_принятых_переводов a comcore:Resource ;
+  rdfs:label "Количество принятых Переводов, шт."@ru ;
+  comcore:isResultOf :принятие_переводов ;
+  comcore:mentionedIn :chunk_13 .
+
+:перечислено_получателем a comcore:Resource ;
+  rdfs:label "Перечислено Получателем в пользу НКО за отчетный период"@ru ;
+  comcore:isResultOf :перечисление_получателем ;
+  comcore:mentionedIn :chunk_13 .
+
+:сумма_вознаграждения_нко a comcore:Resource ;
+  rdfs:label "Сумма вознаграждения НКО за исполнение обязательств по Договору, удержанная за отчетный период (без НДС)"@ru ;
+  comcore:isResultOf :удержание_вознаграждения ;
+  comcore:mentionedIn :chunk_13 .
+
+:сумма_возвратов_переводов a comcore:Resource ;
+  rdfs:label "Сумма возвратов Переводов"@ru ;
+  comcore:isResultOf :возвраты_переводов ;
+  comcore:mentionedIn :chunk_13 .
+
+:количество_возвратов_переводов a comcore:Resource ;
+  rdfs:label "Количество возвратов Переводов, шт."@ru ;
+  comcore:isResultOf :возвраты_переводов ;
+  comcore:mentionedIn :chunk_13 .
+
+:перечислено_денежных_средств_нко a comcore:Resource ;
+  rdfs:label "Перечислено денежных средств НКО в пользу Получателя за отчетный период"@ru ;
+  comcore:isResultOf :перечисление_нко ;
+  comcore:mentionedIn :chunk_13 .
+
+:сумма_задолженности_нко_перед_полу a comcore:Resource ;
+  rdfs:label "Сумма задолженности НКО перед Получателем на конец отчетного периода, подлежащая перечислению в следующем отчетном периоде"@ru ;
+  comcore:mentionedIn :chunk_13 .

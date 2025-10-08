@@ -1,0 +1,27 @@
+:запрещенные_услуги rdf:type comcore:Resource ;
+  rdfs:label "Запрещенные услуги"@ru ;
+  comcore:relation :получатель ;
+  comcore:mentionedIn :4 .
+
+:получатель rdf:type comcore:Agent ;
+  rdfs:label "Получатель"@ru ;
+  comcore:isResponsibleFor :запрещенные_услуги ;
+  comcore:mentionedIn :4 .
+
+:nko rdf:type comcore:Agent ;
+  rdfs:label "НКО"@ru ;
+  comcore:isActorOf :порядок_взаимодействия_сторон ;
+  comcore:mentionedIn :4 .
+
+:порядок_взаимодействия_сторон rdf:type comcore:Process ;
+  rdfs:label "Порядок взаимодействия Сторон"@ru ;
+  comcore:isPartOf :приложение_4_к_договору ;
+  comcore:mentionedIn :4 .
+
+:приложение_4_к_договору rdf:type comcore:Resource ;
+  rdfs:label "Приложение №4 к Договору"@ru ;
+  comcore:mentionedIn :4 .
+
+:плательщик rdf:type comcore:Agent ;
+  rdfs:label "Плательщик"@ru ;
+  comcore:mentionedIn :4 .

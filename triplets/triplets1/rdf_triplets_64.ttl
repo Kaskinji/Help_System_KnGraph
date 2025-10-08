@@ -1,0 +1,47 @@
+:изменение_организационно-правовой_фо rdf:type comcore:Event ;
+    rdfs:label "изменение организационно-правовой формы"@ru ;
+    comcore:Initiates :уведомление_другой_стороны ;
+    comcore:Initiates :переход_прав_и_обязанностей ;
+    comcore:mentionedIn :64 .
+
+:ликвидация rdf:type comcore:Event ;
+    rdfs:label "ликвидация"@ru ;
+    comcore:Initiates :уведомление_другой_стороны ;
+    comcore:mentionedIn :64 .
+
+:реорганизация rdf:type comcore:Event ;
+    rdfs:label "реорганизация"@ru ;
+    comcore:Initiates :переход_прав_и_обязанностей ;
+    comcore:mentionedIn :64 .
+
+:уведомление_другой_стороны rdf:type comcore:Process ;
+    rdfs:label "уведомление другой стороны"@ru ;
+    comcore:mentionedIn :64 .
+
+:переход_прав_и_обязанностей rdf:type comcore:Process ;
+    rdfs:label "переход прав и обязанностей"@ru ;
+    comcore:mentionedIn :64 .
+
+:сторона rdf:type comcore:Agent ;
+    rdfs:label "сторона"@ru ;
+    comcore:isActorOf :уведомление_другой_стороны ;
+    comcore:mentionedIn :64 .
+
+:правопреемник rdf:type comcore:Agent ;
+    rdfs:label "правопреемник"@ru ;
+    comcore:mentionedIn :64 .
+
+:права_и_обязанности_по_договору rdf:type comcore:Resource ;
+    rdfs:label "права и обязанности по договору"@ru ;
+    comcore:isResourceOf :переход_прав_и_обязанностей ;
+    comcore:isPartOf :договор ;
+    comcore:mentionedIn :64 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "договор"@ru ;
+    comcore:mentionedIn :64 .
+
+:решение rdf:type comcore:Resource ;
+    rdfs:label "решение"@ru ;
+    comcore:isResourceOf :уведомление_другой_стороны ;
+    comcore:mentionedIn :64 .

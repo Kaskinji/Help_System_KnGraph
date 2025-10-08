@@ -1,0 +1,52 @@
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isResponsibleFor :информация_и_документы ;
+    comcore:mentionedIn :114 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :повторное_подключение_получателя ;
+    comcore:isActorOf :возобновление_расчетов_по_переводам ;
+    comcore:isActorOf :направление_уведомления ;
+    comcore:mentionedIn :114 .
+
+:информация_и_документы rdf:type comcore:Resource ;
+    rdfs:label "информация и документы"@ru ;
+    comcore:mentionedIn :114 .
+
+:система_монета_ру rdf:type comcore:Resource ;
+    rdfs:label "Система МОНЕТА.РУ"@ru ;
+    comcore:isResourceOf :повторное_подключение_получателя ;
+    comcore:mentionedIn :114 .
+
+:переводы rdf:type comcore:Resource ;
+    rdfs:label "Переводы"@ru ;
+    comcore:isResourceOf :возобновление_расчетов_по_переводам ;
+    comcore:mentionedIn :114 .
+
+:уведомление rdf:type comcore:Resource ;
+    rdfs:label "уведомление"@ru ;
+    comcore:isResourceOf :направление_уведомления ;
+    comcore:mentionedIn :114 .
+
+:адрес_электронной_почты rdf:type comcore:Resource ;
+    rdfs:label "адрес электронной почты"@ru ;
+    comcore:isResourceOf :направление_уведомления ;
+    comcore:isPartOf :личный_кабинет ;
+    comcore:mentionedIn :114 .
+
+:личный_кабинет rdf:type comcore:Resource ;
+    rdfs:label "Личный кабинет"@ru ;
+    comcore:mentionedIn :114 .
+
+:повторное_подключение_получателя rdf:type comcore:Process ;
+    rdfs:label "повторное подключение Получателя/Интернет-магазина"@ru ;
+    comcore:mentionedIn :114 .
+
+:возобновление_расчетов_по_переводам rdf:type comcore:Process ;
+    rdfs:label "возобновление расчетов по Переводам"@ru ;
+    comcore:mentionedIn :114 .
+
+:направление_уведомления rdf:type comcore:Process ;
+    rdfs:label "направление уведомления"@ru ;
+    comcore:mentionedIn :114 .

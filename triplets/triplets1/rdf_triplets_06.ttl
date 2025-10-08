@@ -1,0 +1,39 @@
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isResponsibleFor :заявление_на_перечисление ;
+    comcore:isResponsibleFor :заявление_на_перечисление_по_операц ;
+    comcore:mentionedIn :6 .
+
+:заявление_на_перечисление rdf:type comcore:Resource ;
+    rdfs:label "Заявление на перечисление"@ru ;
+    comcore:mentionedIn :6 ;
+    comcore:relation :личный_кабинет ;
+    comcore:relation :договор .
+
+:интернет-магазин rdf:type comcore:Agent ;
+    rdfs:label "Интернет-магазин"@ru ;
+    comcore:mentionedIn :6 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:mentionedIn :6 .
+
+:заявление_на_перечисление_по_операц rdf:type comcore:Resource ;
+    rdfs:label "Заявление на перечисление по Операции возврата Перевода"@ru ;
+    comcore:mentionedIn :6 ;
+    comcore:isResourceOf :операция_возврата_перевода ;
+    comcore:relation :приложение_№3_к_договору ;
+    comcore:relation :личный_кабинет .
+
+:операция_возврата_перевода rdf:type comcore:Process ;
+    rdfs:label "Операция возврата Перевода"@ru ;
+    comcore:mentionedIn :6 .
+
+:приложение_№3_к_договору rdf:type comcore:Resource ;
+    rdfs:label "Приложение №3 к Договору"@ru ;
+    comcore:mentionedIn :6 ;
+    comcore:isPartOf :договор .
+
+:личный_кабинет rdf:type comcore:Resource ;
+    rdfs:label "Личный кабинет"@ru ;
+    comcore:mentionedIn :6 .
