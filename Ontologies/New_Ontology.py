@@ -95,4 +95,5 @@ comcore:System rdfs:subClassOf comcore:Agent;
   rdfs:label "System"@en;
   rdfs:comment "Программная система или сервис, выступающий в роли Агента".
   
+  блянах
 '''
