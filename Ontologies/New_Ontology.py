@@ -6,7 +6,7 @@ comcore_E_ontology = '''
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .zqw
 
 <https://kb.moneta.ru/terms/common/coreontology#> a owl:Ontology;
      dc:title "Самая общая онтология суперклассов для описания бизнес-процессов сервисов компании" ;
@@ -24,6 +24,7 @@ comcore:Process a rdfs:Class;
   rdfs:comment "Процесс, который является подпроцессом Бизнес-процессов";
   dc:description """
 Процесс-это продолжительное взаимодействие или работа, выполняемая или инициируемая Акторами (Агентами в роли Акторов) в зависимости от происходящих Событий (сигналов для Акторов, Процессов или других Событий) с использованием Ресурсов с целью создания других Ресурсов и формирования исходов, условий наступления Событий, которые могут стать сигналом для инициации очередного Процесса; """.
+
 
 comcore:Resource rdfs:subClassOf rdfs:Resource;
   rdfs:label "Ресурс"@ru;
@@ -56,14 +57,6 @@ comcore:Event rdfs:subClassOf dcmtype:Event;
 Пример: Проверка MRM задачи может иметь три статуса (Согласовано, Отказано, Нет решения), при отсутствии решения отправляется запрос дополнительных документов.
 События: Статус Согласовано, Статус Отказано, Статус Нет решения, Отправка запроса дополнительных документов.""".
 
-comcore:Status a rdfs:Class;
-  rdfs:subClassOf comcore:Process;
-  rdfs:label "Статус"@ru, "Status"@en;
-  rdfs:comment "Статус процесса или задачи";
-  dc:description """
-Статус процесса или задачи, например успешно или неуспешно.
-"""
-
 comcore:Statement rdfs:subClassOf rdf:Statement;
     rdfs:label "Триплет"@ru;
     rdfs:label "Triple"@en;
@@ -78,8 +71,25 @@ comcore:Document a rdfs:Class;
    rdfs:label "Документ"@ru;
    rdfs:label "Document"@en;
    rdfs:comment "Документ с информацией".
+   
+comcore:Status a rdfs:Class;
+  rdfs:subClassOf comcore:Process;
+  rdfs:label "Статус"@ru, "Status"@en;
+  rdfs:comment "Статус процесса или задачи";
+  dc:description """
+Статус процесса или задачи, например успешно или неуспешно.
 '''
+
+###//конкретно различать класс Resource
 extra = '''
+comcore:Status a rdfs:Class;
+  rdfs:subClassOf comcore:Process;
+  rdfs:label "Статус"@ru, "Status"@en;
+  rdfs:comment "Статус процесса или задачи";
+  dc:description """
+Статус процесса или задачи, например успешно или неуспешно.
+"""
+
 comcore:Client rdfs:subClassOf comcore:Agent;
   rdfs:label "Клиент"@ru;
   rdfs:label "Client"@en;

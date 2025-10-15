@@ -1,5 +1,13 @@
 comcore_R_ontology = '''
 
+comcore:hasSubProcess a owl:ObjectProperty;
+  owl:inverseOf comcore:isSubProcess;
+  rdf:type owl:IrreflexiveProperty;
+  rdfs:label "имеет подпроцесс"@ru;
+  rdfs:domain comcore:Process;
+  rdfs:range comcore:Process;
+  rdfs:comment "Связывает процесс с его подпроцессами".
+  
 comcore:isStatementOf rdf:type owl:ObjectProperty;
   owl:inverseOf comcore:hasStatement;
   rdf:type owl:IrreflexiveProperty;
@@ -10,7 +18,7 @@ comcore:isStatementOf rdf:type owl:ObjectProperty;
   rdfs:comment """
   Указывает, что Утверждение (субъект) принадлежит данному Чанку (объект).
   """
-  
+
 comcore:hasSource rdf:type owl:ObjectProperty;
   owl:inverseOf comcore:isSourseOf;
   rdf:type owl:IrreflexiveProperty;
@@ -21,15 +29,13 @@ comcore:hasSource rdf:type owl:ObjectProperty;
   rdfs:comment """
   """
   
-
 comcore:isResultOf rdf:type owl:ObjectProperty;
   owl:inverseOf comcore:hasResult;
   rdf:type owl:IrreflexiveProperty;
   rdfs:label "результат"@ru;
   rdfs:label "result"@en;
-  rdfs:domain comcore:Resource;
-  rdfs:domain comcore:Event;
-  rdfs:range comcore:Process;
+   rdfs:domain [ owl:unionOf (comcore:Resource comcore:Process) ];
+  rdfs:range comcore:Event;
   rdfs:comment """
 Указывает что Событие или Ресурс (субъект) является результатом Процесса (объект).
 Пример: Регистрация в форме может закончиться неуспешно если ИНН или Email уже зарегистрирован.
@@ -62,8 +68,7 @@ comcore:Initiates rdfs:subPropertyOf comcore:;
   rdfs:label "инициирует"@ru;
   rdfs:label "initiates"@en;
   rdfs:comment "Указывает что субъект инициирует данный Процесс.";
-  rdfs:domain comcore:Event;
-  rdfs:domain comcore:Agent;
+   rdfs:domain [ owl:unionOf (comcore:Agent comcore:Event) ];
   rdfs:range comcore:Process.
 
 comcore:isPartOf rdfs:subPropertyOf dcterms:isPartOf;
@@ -85,12 +90,25 @@ comcore:isResponsibleFor rdfs:subPropertyOf dcterms:contributor;
   rdfs:domain comcore:Agent;
   rdfs:range comcore:Resource;
   rdfs:range comcore:Process.
-  
-comcore:extractedFrom a owl:ObjectProperty;
-  rdfs:label "извлечен из"@ru;
-  rdfs:label "extracted from"@en;
-  rdfs:domain comcore:Triple;
-  rdfs:range comcore:TextChunk;
-  rdfs:comment "Связывает триплет с фрагментом текста, из которого он был извлечен".
+'''
 
+
+'''
+:chunk_1 rd:type ccomcore:TextChunk;
+text
+dock
+
+:сотрудник rdf:type comcore:Agent ;
+  rdfs:label "Сотрудник" ;
+  comcore:validates :личные_данные ;
+  comcore:isActorOf :проверка_личных_данных ;
+  comcore:fillsField :псевдоним ;
+  comcore:fillsField :вид_деятельности ;
+  comcore:fillsField :сайт .
+
+:сотрудник_validates_личныеДанн rdf:type comcore:Statement;
+    rdf:subject :сотрудник;
+    rdf:predicate comcore:validates;
+    rdf:object  :личные_данные;
+    comcore:isStatementOf :chunk_1
 '''
