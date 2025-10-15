@@ -1,0 +1,84 @@
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :предоставление_возможности_получ , :выполнение_требований ;
+    comcore:mentionedIn :56 .
+
+:информация_об_объеме_и_видах_ус rdf:type comcore:Resource ;
+    rdfs:label "информация об объеме и видах услуг"@ru ;
+    comcore:isResourceOf :предоставление_возможности_получ , :исполнение_обязательств ;
+    comcore:relation :перевод ;
+    comcore:isResultOf :получение_информации ;
+    comcore:mentionedIn :56 .
+
+:плательщик rdf:type comcore:Agent ;
+    rdfs:label "Плательщик"@ru ;
+    comcore:mentionedIn :56 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :56 .
+
+:перевод rdf:type comcore:Resource ;
+    rdfs:label "Перевод"@ru ;
+    comcore:mentionedIn :56 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:isResourceOf :исполнение_обязательств ;
+    comcore:mentionedIn :56 .
+
+:требования_законодательства_рф rdf:type comcore:Resource ;
+    rdfs:label "требования законодательства Российской Федерации"@ru ;
+    comcore:isResourceOf :соблюдение_требований ;
+    comcore:mentionedIn :56 .
+
+:предоставление_возможности_получ rdf:type comcore:Process ;
+    rdfs:label "предоставление возможности получения"@ru ;
+    comcore:mentionedIn :56 .
+
+:получение_информации rdf:type comcore:Process ;
+    rdfs:label "получение информации"@ru ;
+    comcore:isPartOf :предоставление_возможности_получ ;
+    comcore:mentionedIn :56 .
+
+:исполнение_обязательств rdf:type comcore:Process ;
+    rdfs:label "исполнение обязательств"@ru ;
+    comcore:mentionedIn :56 .
+
+:соблюдение_требований rdf:type comcore:Process ;
+    rdfs:label "соблюдение требований"@ru ;
+    comcore:mentionedIn :56 .
+
+:запрос_нко rdf:type comcore:Resource ;
+    rdfs:label "запрос НКО"@ru ;
+    comcore:isResultOf :получение_запроса ;
+    comcore:isResourceOf :предоставление_сведений_и_доку ;
+    comcore:mentionedIn :56 .
+
+:сведения_и_документы rdf:type comcore:Resource ;
+    rdfs:label "сведения и документы"@ru ;
+    comcore:isResourceOf :выполнение_требований ;
+    comcore:isResultOf :предоставление_сведений_и_доку ;
+    comcore:mentionedIn :56 .
+
+:требования_законодательства_рф_и rdf:type comcore:Resource ;
+    rdfs:label "требования законодательства Российской Федерации и Банка России"@ru ;
+    comcore:isResourceOf :выполнение_требований ;
+    comcore:mentionedIn :56 .
+
+:федеральный_закон_115-фз rdf:type comcore:Resource ;
+    rdfs:label "Федеральный закон №115-ФЗ"@ru ;
+    comcore:isResourceOf :выполнение_требований ;
+    comcore:mentionedIn :56 .
+
+:предоставление_сведений_и_доку rdf:type comcore:Process ;
+    rdfs:label "предоставление сведений и документов"@ru ;
+    comcore:mentionedIn :56 .
+
+:выполнение_требований rdf:type comcore:Process ;
+    rdfs:label "выполнение требований"@ru ;
+    comcore:mentionedIn :56 .
+
+:получение_запроса rdf:type comcore:Process ;
+    rdfs:label "получение запроса"@ru ;
+    comcore:mentionedIn :56 .

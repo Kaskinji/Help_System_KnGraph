@@ -1,0 +1,56 @@
+:информация rdf:type comcore:Resource ;
+    rdfs:label "информация"@ru ;
+    comcore:relation :переводы ;
+    comcore:relation :перечисления ;
+    comcore:mentionedIn :65 .
+
+:переводы rdf:type comcore:Resource ;
+    rdfs:label "Переводы"@ru ;
+    comcore:isPartOf :расчеты ;
+    comcore:mentionedIn :65 .
+
+:перечисления rdf:type comcore:Resource ;
+    rdfs:label "Перечисления"@ru ;
+    comcore:isPartOf :расчеты ;
+    comcore:mentionedIn :65 .
+
+:расчеты rdf:type comcore:Process ;
+    rdfs:label "расчеты"@ru ;
+    comcore:relation :договор ;
+    comcore:mentionedIn :65 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:mentionedIn :65 .
+
+:требования rdf:type comcore:Resource ;
+    rdfs:label "требования"@ru ;
+    comcore:isResourceOf :формирование ;
+    comcore:isResourceOf :согласование ;
+    comcore:isResourceOf :подписание ;
+    comcore:isPartOf :раздел_7_договора ;
+    comcore:mentionedIn :65 .
+
+:формирование rdf:type comcore:Process ;
+    rdfs:label "формирование"@ru ;
+    comcore:mentionedIn :65 .
+
+:согласование rdf:type comcore:Process ;
+    rdfs:label "согласование"@ru ;
+    comcore:mentionedIn :65 .
+
+:подписание rdf:type comcore:Process ;
+    rdfs:label "подписание"@ru ;
+    comcore:mentionedIn :65 .
+
+:акт rdf:type comcore:Resource ;
+    rdfs:label "Акт"@ru ;
+    comcore:isResultOf :формирование ;
+    comcore:isResourceOf :согласование ;
+    comcore:isResourceOf :подписание ;
+    comcore:mentionedIn :65 .
+
+:раздел_7_договора rdf:type comcore:Resource ;
+    rdfs:label "раздел 7 Договора"@ru ;
+    comcore:isPartOf :договор ;
+    comcore:mentionedIn :65 .

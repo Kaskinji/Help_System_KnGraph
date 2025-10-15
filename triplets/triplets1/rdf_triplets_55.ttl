@@ -1,0 +1,42 @@
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :обновление_данных ;
+    comcore:isActorOf :уведомление_нко ;
+    comcore:isResponsibleFor :уведомление_нко ;
+    comcore:mentionedIn :55 .
+
+:данные_в_личном_кабинете rdf:type comcore:Resource ;
+    rdfs:label "Данные в личном кабинете"@ru ;
+    comcore:isResourceOf :обновление_данных ;
+    comcore:mentionedIn :55 .
+
+:обновление_данных rdf:type comcore:Process ;
+    rdfs:label "Обновление данных"@ru ;
+    comcore:mentionedIn :55 .
+
+:отсутствие_информации_об_изменении_дан rdf:type comcore:Event ;
+    rdfs:label "Отсутствие информации об изменении данных"@ru ;
+    comcore:mentionedIn :55 .
+
+:изменение_единоличного_исполнительного_о rdf:type comcore:Event ;
+    rdfs:label "Изменение единоличного исполнительного органа"@ru ;
+    comcore:Initiates :уведомление_нко ;
+    comcore:mentionedIn :55 .
+
+:изменение_бенефициарного_владельца rdf:type comcore:Event ;
+    rdfs:label "Изменение бенефициарного владельца"@ru ;
+    comcore:Initiates :уведомление_нко ;
+    comcore:mentionedIn :55 .
+
+:изменение_данных_документа rdf:type comcore:Event ;
+    rdfs:label "Изменение данных документа"@ru ;
+    comcore:Initiates :уведомление_нко ;
+    comcore:mentionedIn :55 .
+
+:уведомление_нко rdf:type comcore:Process ;
+    rdfs:label "Уведомление НКО"@ru ;
+    comcore:mentionedIn :55 .
+
+:документ_удостоверяющий_личность rdf:type comcore:Resource ;
+    rdfs:label "Документ, удостоверяющий личность"@ru ;
+    comcore:mentionedIn :55 .

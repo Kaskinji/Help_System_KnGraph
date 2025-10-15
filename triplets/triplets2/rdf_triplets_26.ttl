@@ -1,0 +1,49 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:регистрация_получателя_в_системе_мон rdf:type comcore:Process ;
+    rdfs:label "регистрация Получателя в Системе МОНЕТА.РУ"@ru ;
+    comcore:mentionedIn :26 .
+
+:оригинал_заявления rdf:type comcore:Resource ;
+    rdfs:label "оригинал Заявления"@ru ;
+    comcore:isResourceOf :регистрация_получателя_в_системе_мон ;
+    comcore:mentionedIn :26 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :прием_платежей ;
+    comcore:isActorOf :направление_уведомления_об_отзыве ;
+    comcore:mentionedIn :26 .
+
+:прием_платежей rdf:type comcore:Process ;
+    rdfs:label "прием платежей"@ru ;
+    comcore:mentionedIn :26 .
+
+:прекращение_приема_платежей rdf:type comcore:Event ;
+    rdfs:label "прекращение приема платежей"@ru ;
+    comcore:Initiates :направление_уведомления_об_отзыве ;
+    comcore:mentionedIn :26 .
+
+:направление_уведомления_об_отзыве rdf:type comcore:Process ;
+    rdfs:label "направление уведомления об отзыве акцепта оферты"@ru ;
+    comcore:hasResult :одностороннее_расторжение_договора ;
+    comcore:mentionedIn :26 .
+
+:одностороннее_расторжение_договора rdf:type comcore:Event ;
+    rdfs:label "одностороннее расторжение Договора"@ru ;
+    comcore:mentionedIn :26 .
+
+:адрес_электронной_почты rdf:type comcore:Resource ;
+    rdfs:label "адрес электронной почты"@ru ;
+    comcore:isResourceOf :направление_уведомления_об_отзыве ;
+    comcore:isResultOf :регистрация_получателя_в_системе_мон ;
+    comcore:mentionedIn :26 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :регистрация_получателя_в_системе_мон ;
+    comcore:mentionedIn :26 .

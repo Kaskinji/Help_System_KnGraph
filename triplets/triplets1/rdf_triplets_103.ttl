@@ -1,0 +1,96 @@
+:информационный_обмен rdf:type comcore:Process ;
+    rdfs:label "Информационный обмен"@ru ;
+    comcore:mentionedIn :103 .
+
+:аутентификационные_данные rdf:type comcore:Resource ;
+    rdfs:label "Аутентификационные данные"@ru ;
+    comcore:isResourceOf :информационный_обмен ;
+    comcore:mentionedIn :103 .
+
+:стороны rdf:type comcore:Agent ;
+    rdfs:label "Стороны"@ru ;
+    comcore:isActorOf :информационный_обмен ;
+    comcore:isActorOf :контроль_за_данными_эс ;
+    comcore:isActorOf :сообщение_об_ошибках ;
+    comcore:isActorOf :передача_эс ;
+    comcore:mentionedIn :103 .
+
+:электронные_сообщения rdf:type comcore:Resource ;
+    rdfs:label "Электронные сообщения"@ru ;
+    comcore:isResourceOf :информационный_обмен ;
+    comcore:isResourceOf :передача_эс ;
+    comcore:mentionedIn :103 .
+
+:обработка_эс rdf:type comcore:Process ;
+    rdfs:label "Обработка ЭС"@ru ;
+    comcore:isPartOf :информационный_обмен ;
+    comcore:mentionedIn :103 .
+
+:подтверждение_о_приеме_эс rdf:type comcore:Event ;
+    rdfs:label "Подтверждение о приеме ЭС"@ru ;
+    comcore:isResultOf :обработка_эс ;
+    comcore:mentionedIn :103 .
+
+:отказ_в_приеме_эс rdf:type comcore:Event ;
+    rdfs:label "Отказ в приеме ЭС"@ru ;
+    comcore:isResultOf :обработка_эс ;
+    comcore:mentionedIn :103 .
+
+:журнальные_файлы_машин rdf:type comcore:Resource ;
+    rdfs:label "Журнальные файлы машин"@ru ;
+    comcore:isResourceOf :информационный_обмен ;
+    comcore:mentionedIn :103 .
+
+:контроль_за_данными_эс rdf:type comcore:Process ;
+    rdfs:label "Контроль за данными ЭС"@ru ;
+    comcore:isPartOf :информационный_обмен ;
+    comcore:mentionedIn :103 .
+
+:обнаруженные_ошибки rdf:type comcore:Event ;
+    rdfs:label "Обнаруженные ошибки"@ru ;
+    comcore:Initiates :сообщение_об_ошибках ;
+    comcore:mentionedIn :103 .
+
+:формы_установленные_нко rdf:type comcore:Resource ;
+    rdfs:label "Формы, установленные НКО"@ru ;
+    comcore:isResourceOf :информационный_обмен ;
+    comcore:mentionedIn :103 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isResponsibleFor :формы_установленные_нко ;
+    comcore:mentionedIn :103 .
+
+:хранение_эс rdf:type comcore:Process ;
+    rdfs:label "Хранение ЭС"@ru ;
+    comcore:mentionedIn :103 .
+
+:прекращение_действия_договора rdf:type comcore:Event ;
+    rdfs:label "Прекращение действия Договора"@ru ;
+    comcore:Initiates :хранение_эс ;
+    comcore:mentionedIn :103 .
+
+:вступление_в_силу_договора rdf:type comcore:Event ;
+    rdfs:label "Вступление в силу Договора"@ru ;
+    comcore:Initiates :информационный_обмен ;
+    comcore:Initiates :информационно-технологическое_взаимодей ;
+    comcore:mentionedIn :103 .
+
+:информационно-технологическое_взаимодей rdf:type comcore:Process ;
+    rdfs:label "Информационно-технологическое взаимодействие"@ru ;
+    comcore:mentionedIn :103 .
+
+:сообщение_об_ошибках rdf:type comcore:Process ;
+    rdfs:label "Сообщение об ошибках"@ru ;
+    comcore:isPartOf :информационный_обмен ;
+    comcore:mentionedIn :103 .
+
+:передача_эс rdf:type comcore:Process ;
+    rdfs:label "Передача ЭС"@ru ;
+    comcore:isPartOf :информационный_обмен ;
+    comcore:mentionedIn :103 .
+
+:статус_переданных_сообщений rdf:type comcore:Event ;
+    rdfs:label "Статус переданных сообщений"@ru ;
+    comcore:isResultOf :передача_эс ;
+    comcore:mentionedIn :103 .

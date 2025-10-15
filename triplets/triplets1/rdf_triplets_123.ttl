@@ -1,0 +1,70 @@
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :регистрация_получателя, :предоставление_данных_о_получателе, :создание_бизнес_счета, :распоряжение_денежными_средствами ;
+    comcore:mentionedIn :123 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :предоставление_авторизационных_данных_и_пл ;
+    comcore:mentionedIn :123 .
+
+:система_монетару rdf:type comcore:Resource ;
+    rdfs:label "Система МОНЕТА.РУ"@ru ;
+    comcore:isResourceOf :регистрация_получателя, :создание_бизнес_счета ;
+    comcore:mentionedIn :123 .
+
+:данные_о_получателе rdf:type comcore:Resource ;
+    rdfs:label "данные о Получателе"@ru ;
+    comcore:isResourceOf :предоставление_данных_о_получателе ;
+    comcore:mentionedIn :123 .
+
+:бизнес_счет rdf:type comcore:Resource ;
+    rdfs:label "Бизнес-счет"@ru ;
+    comcore:isResultOf :создание_бизнес_счета ;
+    comcore:mentionedIn :123 .
+
+:авторизационные_данные rdf:type comcore:Resource ;
+    rdfs:label "Авторизационные данные"@ru ;
+    comcore:isResourceOf :предоставление_авторизационных_данных_и_пл ;
+    comcore:mentionedIn :123 .
+
+:платежный_пароль rdf:type comcore:Resource ;
+    rdfs:label "Платежный пароль"@ru ;
+    comcore:isResourceOf :предоставление_авторизационных_данных_и_пл ;
+    comcore:mentionedIn :123 .
+
+:денежные_средства rdf:type comcore:Resource ;
+    rdfs:label "денежные средства"@ru ;
+    comcore:isResourceOf :распоряжение_денежными_средствами ;
+    comcore:mentionedIn :123 .
+
+:регистрация_получателя rdf:type comcore:Process ;
+    rdfs:label "регистрация Получателя"@ru ;
+    comcore:hasActor :получатель ;
+    comcore:hasResource :система_монетару ;
+    comcore:mentionedIn :123 .
+
+:предоставление_данных_о_получателе rdf:type comcore:Process ;
+    rdfs:label "предоставление данных о Получателе"@ru ;
+    comcore:hasActor :получатель ;
+    comcore:hasResource :данные_о_получателе ;
+    comcore:mentionedIn :123 .
+
+:создание_бизнес_счета rdf:type comcore:Process ;
+    rdfs:label "создание Бизнес-счета"@ru ;
+    comcore:hasActor :получатель ;
+    comcore:hasResource :система_монетару ;
+    comcore:hasResult :бизнес_счет ;
+    comcore:mentionedIn :123 .
+
+:предоставление_авторизационных_данных_и_пл rdf:type comcore:Process ;
+    rdfs:label "предоставление Авторизационных данных и Платежного пароля"@ru ;
+    comcore:hasActor :нко ;
+    comcore:hasResource :авторизационные_данные, :платежный_пароль ;
+    comcore:mentionedIn :123 .
+
+:распоряжение_денежными_средствами rdf:type comcore:Process ;
+    rdfs:label "Распоряжение денежными средствами"@ru ;
+    comcore:hasActor :получатель ;
+    comcore:hasResource :денежные_средства ;
+    comcore:mentionedIn :123 .

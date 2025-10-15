@@ -1,0 +1,57 @@
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :направление_сообщения ;
+    comcore:isActorOf :предоставление_документов_и_информации ;
+    comcore:mentionedIn :111 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :отправка_запроса ;
+    comcore:mentionedIn :111 .
+
+:уполномоченный_представитель_получателя rdf:type comcore:Agent ;
+    rdfs:label "уполномоченный представитель Получателя"@ru ;
+    comcore:isResponsibleFor :подпись_уполномоченного_представителя ;
+    comcore:mentionedIn :111 .
+
+:запрос rdf:type comcore:Resource ;
+    rdfs:label "Запрос"@ru ;
+    comcore:isResourceOf :отправка_запроса ;
+    comcore:mentionedIn :111 .
+
+:сообщение rdf:type comcore:Resource ;
+    rdfs:label "сообщение"@ru ;
+    comcore:isResourceOf :направление_сообщения ;
+    comcore:mentionedIn :111 .
+
+:документы rdf:type comcore:Resource ;
+    rdfs:label "документы"@ru ;
+    comcore:isResourceOf :предоставление_документов_и_информации ;
+    comcore:mentionedIn :111 .
+
+:информация rdf:type comcore:Resource ;
+    rdfs:label "информация"@ru ;
+    comcore:isResourceOf :предоставление_документов_и_информации ;
+    comcore:mentionedIn :111 .
+
+:бумажный_носитель rdf:type comcore:Resource ;
+    rdfs:label "бумажный носитель"@ru ;
+    comcore:isResourceOf :предоставление_документов_и_информации ;
+    comcore:mentionedIn :111 .
+
+:подпись_уполномоченного_представителя rdf:type comcore:Resource ;
+    rdfs:label "подпись уполномоченного представителя"@ru ;
+    comcore:isResourceOf :предоставление_документов_и_информации ;
+    comcore:mentionedIn :111 .
+
+:отправка_запроса rdf:type comcore:Process ;
+    rdfs:label "отправка Запроса"@ru ;
+    comcore:mentionedIn :111 .
+
+:направление_сообщения rdf:type comcore:Process ;
+    rdfs:label "направление сообщения"@ru ;
+    comcore:mentionedIn :111 .
+
+:предоставление_документов_и_информации rdf:type comcore:Process ;
+    rdfs:label "предоставление документов и информации"@ru ;
+    comcore:mentionedIn :111 .

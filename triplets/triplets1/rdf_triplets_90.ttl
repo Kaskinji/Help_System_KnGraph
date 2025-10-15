@@ -1,0 +1,72 @@
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:mentionedIn :90 .
+
+:финансовая_операция rdf:type comcore:Process ;
+    rdfs:label "Финансовая операция"@ru ;
+    comcore:Initiates :вступление_договора_в_силу ;
+    comcore:mentionedIn :90 .
+
+:прием_перевода_плательщика rdf:type comcore:Process ;
+    rdfs:label "Прием Перевода Плательщика"@ru ;
+    comcore:isPartOf :финансовая_операция ;
+    comcore:mentionedIn :90 .
+
+:пополнение_счета_получателя rdf:type comcore:Process ;
+    rdfs:label "Пополнение счета Получателя"@ru ;
+    comcore:isPartOf :финансовая_операция ;
+    comcore:mentionedIn :90 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :90 .
+
+:плательщик rdf:type comcore:Agent ;
+    rdfs:label "Плательщик"@ru ;
+    comcore:mentionedIn :90 .
+
+:расторжение_договора rdf:type comcore:Process ;
+    rdfs:label "Расторжение Договора"@ru ;
+    comcore:isResourceOf :соглашение_сторон ;
+    comcore:isResourceOf :уведомление ;
+    comcore:mentionedIn :90 .
+
+:соглашение_сторон rdf:type comcore:Resource ;
+    rdfs:label "Соглашение Сторон"@ru ;
+    comcore:mentionedIn :90 .
+
+:сторона rdf:type comcore:Agent ;
+    rdfs:label "Сторона"@ru ;
+    comcore:Initiates :расторжение_договора ;
+    comcore:mentionedIn :90 .
+
+:уведомление rdf:type comcore:Resource ;
+    rdfs:label "Уведомление"@ru ;
+    comcore:mentionedIn :90 .
+
+:получение_уведомления rdf:type comcore:Event ;
+    rdfs:label "Получение уведомления"@ru ;
+    comcore:Initiates :прекращение_приема_распоряжений ;
+    comcore:mentionedIn :90 .
+
+:прием_распоряжений rdf:type comcore:Process ;
+    rdfs:label "Прием Распоряжений"@ru ;
+    comcore:isPartOf :осуществление_переводов ;
+    comcore:mentionedIn :90 .
+
+:осуществление_переводов rdf:type comcore:Process ;
+    rdfs:label "Осуществление Переводов"@ru ;
+    comcore:mentionedIn :90 .
+
+:прекращение_приема_распоряжений rdf:type comcore:Process ;
+    rdfs:label "Прекращение приема Распоряжений"@ru ;
+    comcore:mentionedIn :90 .
+
+:нко_получатель rdf:type comcore:Agent ;
+    rdfs:label "НКО/Получатель"@ru ;
+    comcore:mentionedIn :90 .
+
+:вступление_договора_в_силу rdf:type comcore:Event ;
+    rdfs:label "Вступление Договора в силу"@ru ;
+    comcore:isResultOf :финансовая_операция ;
+    comcore:mentionedIn :90 .

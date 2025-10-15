@@ -1,0 +1,78 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:согласование rdf:type comcore:Process ;
+    rdfs:label "согласование"@ru ;
+    comcore:isPartOf :подключение ;
+    comcore:mentionedIn :34 .
+
+:подключение rdf:type comcore:Process ;
+    rdfs:label "подключение"@ru ;
+    comcore:mentionedIn :34 .
+
+:инициирование_распоряжения rdf:type comcore:Process ;
+    rdfs:label "инициирование распоряжения"@ru ;
+    comcore:mentionedIn :34 .
+
+:осуществление_перевода rdf:type comcore:Process ;
+    rdfs:label "осуществление перевода"@ru ;
+    comcore:mentionedIn :34 .
+
+:обмен_электронными_документами rdf:type comcore:Process ;
+    rdfs:label "обмен электронными документами"@ru ;
+    comcore:mentionedIn :34 .
+
+:набор_полей_в_форме rdf:type comcore:Resource ;
+    rdfs:label "набор полей в форме"@ru ;
+    comcore:isResourceOf :согласование ;
+    comcore:isResourceOf :инициирование_распоряжения ;
+    comcore:mentionedIn :34 .
+
+:иные_данные rdf:type comcore:Resource ;
+    rdfs:label "иные данные"@ru ;
+    comcore:isResourceOf :согласование ;
+    comcore:isResourceOf :осуществление_перевода ;
+    comcore:mentionedIn :34 .
+
+:формат_сообщений rdf:type comcore:Resource ;
+    rdfs:label "формат сообщений"@ru ;
+    comcore:isResourceOf :согласование ;
+    comcore:isResourceOf :обмен_электронными_документами ;
+    comcore:mentionedIn :34 .
+
+:формат_иных_электронных_документо rdf:type comcore:Resource ;
+    rdfs:label "формат иных электронных документов"@ru ;
+    comcore:isResourceOf :согласование ;
+    comcore:isResourceOf :обмен_электронными_документами ;
+    comcore:mentionedIn :34 .
+
+:технический_регламент_взаимодействия rdf:type comcore:Resource ;
+    rdfs:label "технический регламент взаимодействия"@ru ;
+    comcore:relation :сайт_нко ;
+    comcore:mentionedIn :34 .
+
+:сайт_нко rdf:type comcore:Resource ;
+    rdfs:label "сайт нко"@ru ;
+    comcore:mentionedIn :34 .
+
+:сообщения_направленные_по_электронной rdf:type comcore:Resource ;
+    rdfs:label "сообщения направленные по электронной"@ru ;
+    comcore:relation :документы_на_бумажном_носителе ;
+    comcore:mentionedIn :34 .
+
+:документы_на_бумажном_носителе rdf:type comcore:Resource ;
+    rdfs:label "документы на бумажном носителе"@ru ;
+    comcore:mentionedIn :34 .
+
+:стороны rdf:type comcore:Agent ;
+    rdfs:label "стороны"@ru ;
+    comcore:isActorOf :согласование ;
+    comcore:mentionedIn :34 .
+
+:плательщик rdf:type comcore:Agent ;
+    rdfs:label "плательщик"@ru ;
+    comcore:isActorOf :осуществление_перевода ;
+    comcore:mentionedIn :34 .

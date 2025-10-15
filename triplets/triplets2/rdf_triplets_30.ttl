@@ -1,0 +1,49 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :30 ;
+    comcore:isActorOf :сообщение_о_бенефициарных_владельцах , :информирование_об_изменениях_в_соста ;
+    comcore:Initiates :сообщение_о_бенефициарных_владельцах , :информирование_об_изменениях_в_соста ;
+    comcore:isResponsibleFor :сообщение_о_бенефициарных_владельцах , :информирование_об_изменениях_в_соста .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:mentionedIn :30 ;
+    comcore:isActorOf :сообщение_о_бенефициарных_владельцах , :информирование_об_изменениях_в_соста .
+
+:бенефициарные_владельцы rdf:type comcore:Resource ;
+    rdfs:label "бенефициарные владельцы"@ru ;
+    comcore:mentionedIn :30 ;
+    comcore:isResourceOf :сообщение_о_бенефициарных_владельцах .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:mentionedIn :30 ;
+    comcore:isResultOf :заключение_договора .
+
+:изменения_в_составе_бенефициарных_вла rdf:type comcore:Resource ;
+    rdfs:label "изменения в составе бенефициарных владельцев"@ru ;
+    comcore:mentionedIn :30 ;
+    comcore:isResourceOf :информирование_об_изменениях_в_соста .
+
+:заключение_договора rdf:type comcore:Process ;
+    rdfs:label "заключение договора"@ru ;
+    comcore:mentionedIn :30 ;
+    comcore:hasResult :договор .
+
+:сообщение_о_бенефициарных_владельцах rdf:type comcore:Process ;
+    rdfs:label "сообщение о бенефициарных владельцах"@ru ;
+    comcore:mentionedIn :30 ;
+    comcore:hasActor :получатель , :нко ;
+    comcore:hasResource :бенефициарные_владельцы .
+
+:информирование_об_изменениях_в_соста rdf:type comcore:Process ;
+    rdfs:label "информирование об изменениях в составе бенефициарных владельцев"@ru ;
+    comcore:mentionedIn :30 ;
+    comcore:hasActor :получатель , :нко ;
+    comcore:hasResource :изменения_в_составе_бенефициарных_вла .

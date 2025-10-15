@@ -1,0 +1,68 @@
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:Initiates :дополнительное_подключение_интернет-магази ;
+    comcore:Initiates :направление_обращения_получателя_о_допол ;
+    comcore:Initiates :изменение_установленного_тарифа ;
+    comcore:isActorOf :дополнительное_подключение_интернет-магази ;
+    comcore:isActorOf :направление_обращения_получателя_о_допол ;
+    comcore:isActorOf :изменение_установленного_тарифа ;
+    comcore:mentionedIn :59 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :дополнительное_подключение_интернет-магази ;
+    comcore:isActorOf :изменение_установленного_тарифа ;
+    comcore:isResponsibleFor :дополнительное_подключение_интернет-магази ;
+    comcore:isResponsibleFor :изменение_установленного_тарифа ;
+    comcore:mentionedIn :59 .
+
+:торговая_площадка rdf:type comcore:Agent ;
+    rdfs:label "Торговая площадка"@ru ;
+    comcore:isActorOf :направление_обращения_получателя_о_допол ;
+    comcore:isResponsibleFor :направление_обращения_получателя_о_допол ;
+    comcore:mentionedIn :59 .
+
+:дополнительное_подключение_интернет-магази rdf:type comcore:Process ;
+    rdfs:label "дополнительное подключение интернет-магази"@ru ;
+    comcore:mentionedIn :59 .
+
+:направление_обращения_получателя_о_допол rdf:type comcore:Process ;
+    rdfs:label "направление обращения получателя о допол"@ru ;
+    comcore:isPartOf :дополнительное_подключение_интернет-магази ;
+    comcore:mentionedIn :59 .
+
+:изменение_установленного_тарифа rdf:type comcore:Process ;
+    rdfs:label "изменение установленного тарифа"@ru ;
+    comcore:mentionedIn :59 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:isResourceOf :дополнительное_подключение_интернет-магази ;
+    comcore:isResourceOf :направление_обращения_получателя_о_допол ;
+    comcore:isResourceOf :изменение_установленного_тарифа ;
+    comcore:mentionedIn :59 .
+
+:обращение rdf:type comcore:Resource ;
+    rdfs:label "обращение"@ru ;
+    comcore:isResourceOf :дополнительное_подключение_интернет-магази ;
+    comcore:isResourceOf :направление_обращения_получателя_о_допол ;
+    comcore:mentionedIn :59 .
+
+:электронная_почта rdf:type comcore:Resource ;
+    rdfs:label "электронная почта"@ru ;
+    comcore:isResourceOf :направление_обращения_получателя_о_допол ;
+    comcore:mentionedIn :59 .
+
+:личный_кабинет rdf:type comcore:Resource ;
+    rdfs:label "Личный кабинет"@ru ;
+    comcore:mentionedIn :59 .
+
+:адрес_электронной_почты_получателя rdf:type comcore:Resource ;
+    rdfs:label "адрес электронной почты получателя"@ru ;
+    comcore:isResourceOf :дополнительное_подключение_интернет-магази ;
+    comcore:mentionedIn :59 .
+
+:тариф rdf:type comcore:Resource ;
+    rdfs:label "Тариф"@ru ;
+    comcore:isResourceOf :изменение_установленного_тарифа ;
+    comcore:mentionedIn :59 .

@@ -1,0 +1,54 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:мпс rdf:type comcore:Agent ;
+    rdfs:label "МПС"@ru ;
+    comcore:mentionedIn :9 ;
+    dc:definition "международные платежные системы Visa International и MasterCard Worldwide" .
+
+:мир rdf:type comcore:Agent ;
+    rdfs:label "МИР"@ru ;
+    comcore:mentionedIn :9 ;
+    dc:definition "национальная платежная система «МИР»" .
+
+:недействительный_перевод rdf:type comcore:Process ;
+    rdfs:label "Недействительный перевод"@ru ;
+    comcore:mentionedIn :9 ;
+    dc:definition "Перевод, связанный с оплатой Запрещенных услуг, реализуемых Получателем, а также Перевод, совершенный Плательщиком в пользу Получателя с нарушением правил платежных систем, или Перевод, ставший или который может стать предметом споров и разногласий в соответствии с правилами платежных систем" .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :9 ;
+    comcore:isActorOf :недействительный_перевод .
+
+:плательщик rdf:type comcore:Agent ;
+    rdfs:label "Плательщик"@ru ;
+    comcore:mentionedIn :9 ;
+    comcore:isActorOf :недействительный_перевод .
+
+:запрещенные_услуги rdf:type comcore:Resource ;
+    rdfs:label "Запрещенные услуги"@ru ;
+    comcore:mentionedIn :9 ;
+    comcore:isResourceOf :недействительный_перевод .
+
+:правила_платежных_систем rdf:type comcore:Resource ;
+    rdfs:label "Правила платежных систем"@ru ;
+    comcore:mentionedIn :9 ;
+    comcore:isResourceOf :недействительный_перевод .
+
+:споры_и_разногласия rdf:type comcore:Event ;
+    rdfs:label "Споры и разногласия"@ru ;
+    comcore:mentionedIn :9 ;
+    comcore:isResultOf :недействительный_перевод .
+
+:порядок_взаимодействия_сторон rdf:type comcore:Process ;
+    rdfs:label "Порядок взаимодействия Сторон"@ru ;
+    comcore:mentionedIn :9 .
+
+:приложение_5 rdf:type comcore:Resource ;
+    rdfs:label "Приложение №5 к Договору"@ru ;
+    comcore:mentionedIn :9 ;
+    comcore:isResourceOf :порядок_взаимодействия_сторон .

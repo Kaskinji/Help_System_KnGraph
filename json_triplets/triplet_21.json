@@ -1,0 +1,125 @@
+[
+    {
+        "label": "Договор",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "договор isResultOf заключение договора",
+            "договор isResultOf заключение договора"
+        ],
+        "chunk_id": "21"
+    },
+    {
+        "label": "Заключение Договора",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "заключение договора hasResult договор",
+            "заключение договора hasResult договор",
+            "заключение договора hasPart регистрация",
+            "заключение договора hasPart регистрация"
+        ],
+        "chunk_id": "21"
+    },
+    {
+        "label": "Регистрация",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "регистрация isPartOf заключение договора",
+            "регистрация isPartOf заключение договора",
+            "регистрация isResourceOf данные для регистрации",
+            "регистрация hasResource данные для регистрации",
+            "регистрация hasResource сайт нко",
+            "регистрация hasResource отдельный договор"
+        ],
+        "chunk_id": "21"
+    },
+    {
+        "label": "Данные для регистрации",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "данные для регистрации hasResource регистрация",
+            "данные для регистрации isResourceOf регистрация"
+        ],
+        "chunk_id": "21"
+    },
+    {
+        "label": "Личный кабинет",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "личный кабинет isResultOf предоставление личного кабинета",
+            "личный кабинет isResultOf предоставление личного кабинета"
+        ],
+        "chunk_id": "21"
+    },
+    {
+        "label": "Предоставление Личного кабинета",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "предоставление личного кабинета hasResult личный кабинет",
+            "предоставление личного кабинета hasResult личный кабинет",
+            "предоставление личного кабинета isActorOf нко",
+            "предоставление личного кабинета hasActor нко"
+        ],
+        "chunk_id": "21"
+    },
+    {
+        "label": "НКО",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Agent",
+        "hasStatement": [
+            "нко hasActor предоставление личного кабинета",
+            "нко isActorOf предоставление личного кабинета"
+        ],
+        "chunk_id": "21"
+    },
+    {
+        "label": "Получатель",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Agent",
+        "hasStatement": [
+            "получатель Initiates заключение договора"
+        ],
+        "chunk_id": "21"
+    },
+    {
+        "label": "Сайт НКО",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "сайт нко isResourceOf регистрация"
+        ],
+        "chunk_id": "21"
+    },
+    {
+        "label": "Отдельный договор",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "отдельный договор isResourceOf регистрация"
+        ],
+        "chunk_id": "21"
+    },
+    {
+        "label": "Заявление",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [],
+        "chunk_id": "21"
+    }
+]

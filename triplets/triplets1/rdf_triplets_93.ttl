@@ -1,0 +1,31 @@
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:mentionedIn :93 .
+
+:стороны rdf:type comcore:Agent ;
+    rdfs:label "Стороны"@ru ;
+    comcore:mentionedIn :93 .
+
+:акт rdf:type comcore:Resource ;
+    rdfs:label "Акт"@ru ;
+    comcore:mentionedIn :93 .
+
+:расторжение_договора rdf:type comcore:Event ;
+    rdfs:label "Расторжение Договора"@ru ;
+    comcore:mentionedIn :93 .
+
+:обязательства rdf:type comcore:Resource ;
+    rdfs:label "обязательства"@ru ;
+    comcore:mentionedIn :93 .
+
+:нарушение_договора rdf:type comcore:Event ;
+    rdfs:label "нарушение Договора"@ru ;
+    comcore:mentionedIn :93 .
+
+:составление_акта rdf:type comcore:Process ;
+    rdfs:label "составление Акта"@ru ;
+    comcore:mentionedIn :93 .
+
+:стороны comcore:isActorOf :составление_акта .
+:акт comcore:isResultOf :составление_акта .
+:обязательства comcore:relation :нарушение_договора .

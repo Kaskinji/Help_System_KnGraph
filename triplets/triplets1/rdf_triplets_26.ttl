@@ -1,0 +1,72 @@
+:Получатель rdf:type comcore:Agent ;
+ rdfs:label "Получатель"@ru ;
+ comcore:isActorOf :предоставление_информации_и_докумен ;
+ comcore:mentionedIn :chunk_26 .
+
+:НКО rdf:type comcore:Agent ;
+ rdfs:label "НКО"@ru ;
+ comcore:isActorOf :повторное_подключение_Получателя ;
+ comcore:isActorOf :возобновление_осуществления_расчё ;
+ comcore:isActorOf :направление_уведомления ;
+ comcore:mentionedIn :chunk_26 .
+
+:информация_и_документы rdf:type comcore:Resource ;
+ rdfs:label "информация и документы"@ru ;
+ comcore:isResultOf :предоставление_информации_и_докумен ;
+ comcore:mentionedIn :chunk_26 .
+
+:Система_МОНЕТА_РУ rdf:type comcore:Resource ;
+ rdfs:label "Система МОНЕТА.РУ"@ru ;
+ comcore:isResourceOf :повторное_подключение_Получателя ;
+ comcore:mentionedIn :chunk_26 .
+
+:Переводы rdf:type comcore:Resource ;
+ rdfs:label "Переводы"@ru ;
+ comcore:isResourceOf :возобновление_осуществления_расчё ;
+ comcore:mentionedIn :chunk_26 .
+
+:уведомление rdf:type comcore:Resource ;
+ rdfs:label "уведомление"@ru ;
+ comcore:isResultOf :направление_уведомления ;
+ comcore:mentionedIn :chunk_26 .
+
+:адрес_электронной_почты rdf:type comcore:Resource ;
+ rdfs:label "адрес электронной почты"@ru ;
+ comcore:isResourceOf :направление_уведомления ;
+ comcore:isPartOf :Личный_кабинет ;
+ comcore:mentionedIn :chunk_26 .
+
+:Личный_кабинет rdf:type comcore:Resource ;
+ rdfs:label "Личный кабинет"@ru ;
+ comcore:hasPart :адрес_электронной_почты ;
+ comcore:mentionedIn :chunk_26 .
+
+:предоставление_информации_и_докумен rdf:type comcore:Process ;
+ rdfs:label "предоставление информации и документов"@ru ;
+ comcore:hasResult :информация_и_документы ;
+ comcore:hasResult :поступление_информации_и_документо ;
+ comcore:mentionedIn :chunk_26 .
+
+:повторное_подключение_Получателя rdf:type comcore:Process ;
+ rdfs:label "повторное подключение Получателя"@ru ;
+ comcore:hasResource :Система_МОНЕТА_РУ ;
+ comcore:mentionedIn :chunk_26 .
+
+:возобновление_осуществления_расчё rdf:type comcore:Process ;
+ rdfs:label "возобновление осуществления расчетов"@ru ;
+ comcore:hasResource :Переводы ;
+ comcore:mentionedIn :chunk_26 .
+
+:направление_уведомления rdf:type comcore:Process ;
+ rdfs:label "направление уведомления"@ru ;
+ comcore:hasResult :уведомление ;
+ comcore:hasResource :адрес_электронной_почты ;
+ comcore:mentionedIn :chunk_26 .
+
+:поступление_информации_и_докуменto rdf:type comcore:Event ;
+ rdfs:label "поступление информации и документов"@ru ;
+ comcore:Initiates :повторное_подключение_Получателя ;
+ comcore:Initiates :возобновление_осуществления_расчё ;
+ comcore:Initiates :направление_уведомления ;
+ comcore:isResultOf :предоставление_информации_и_докумен ;
+ comcore:mentionedIn :chunk_26 .

@@ -1,0 +1,31 @@
+:смена_аутентификационных_данных rdf:type comcore:Process ;
+    rdfs:label "Смена Аутентификационных данных"@ru ;
+    comcore:mentionedIn :105 .
+
+:аутентификационные_данные rdf:type comcore:Resource ;
+    rdfs:label "Аутентификационные данные"@ru ;
+    comcore:isResourceOf :экстренное_прекращение_действия ;
+    comcore:mentionedIn :105 .
+
+:стороны rdf:type comcore:Agent ;
+    rdfs:label "Стороны"@ru ;
+    comcore:Initiates :смена_аутентификационных_данных ;
+    comcore:mentionedIn :105 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:Initiates :экстренное_прекращение_действия ;
+    comcore:mentionedIn :105 .
+
+:компрометация_аутентификационных_данных rdf:type comcore:Event ;
+    rdfs:label "Компрометация Аутентификационных данных"@ru ;
+    comcore:mentionedIn :105 .
+
+:экстренное_прекращение_действия rdf:type comcore:Process ;
+    rdfs:label "Экстренное прекращение действия"@ru ;
+    comcore:mentionedIn :105 .
+
+:новые_аутентификационные_данные rdf:type comcore:Resource ;
+    rdfs:label "Новые Аутентификационные данные"@ru ;
+    comcore:isResultOf :смена_аутентификационных_данных ;
+    comcore:mentionedIn :105 .

@@ -1,0 +1,55 @@
+:нко rdf:type comcore:Agent ;
+     rdfs:label "НКО"@ru ;
+     comcore:isActorOf :рассмотрение_заявлений_эмитента , :направление_требования ;
+     comcore:isResponsibleFor :требование ;
+     comcore:mentionedIn :116 .
+
+:эмитент rdf:type comcore:Agent ;
+         rdfs:label "Эмитент"@ru ;
+         comcore:isResponsibleFor :заявление_эмитента ;
+         comcore:mentionedIn :116 .
+
+:получатель rdf:type comcore:Agent ;
+            rdfs:label "Получатель"@ru ;
+            comcore:isActorOf :возврат_суммы_недействительного_перевода ;
+            comcore:isResponsibleFor :возврат_суммы_недействительного_перевода ;
+            comcore:mentionedIn :116 .
+
+:заявление_эмитента rdf:type comcore:Resource ;
+                    rdfs:label "Заявление Эмитента"@ru ;
+                    comcore:isResourceOf :рассмотрение_заявлений_эмитента ;
+                    comcore:mentionedIn :116 .
+
+:недействительный_перевод rdf:type comcore:Resource ;
+                          rdfs:label "Недействительный перевод"@ru ;
+                          comcore:isResourceOf :рассмотрение_заявлений_эмитента , :возврат_суммы_недействительного_перевода ;
+                          comcore:mentionedIn :116 .
+
+:требование rdf:type comcore:Resource ;
+            rdfs:label "Требование"@ru ;
+            comcore:isResourceOf :направление_требования ;
+            comcore:mentionedIn :116 .
+
+:рассмотрение_заявлений_эмитента rdf:type comcore:Process ;
+                                 rdfs:label "рассмотрение заявлений эмитента"@ru ;
+                                 comcore:hasActor :нко ;
+                                 comcore:hasResource :заявление_эмитента , :недействительный_перевод ;
+                                 comcore:mentionedIn :116 .
+
+:направление_требования rdf:type comcore:Process ;
+                        rdfs:label "направление требования"@ru ;
+                        comcore:isPartOf :рассмотрение_заявлений_эмитента ;
+                        comcore:hasActor :нко ;
+                        comcore:hasResource :требование ;
+                        comcore:mentionedIn :116 .
+
+:возврат_суммы_недействительного_перевода rdf:type comcore:Process ;
+                                          rdfs:label "возврат суммы недействительного перевода"@ru ;
+                                          comcore:hasActor :получатель ;
+                                          comcore:hasResource :недействительный_перевод ;
+                                          comcore:mentionedIn :116 .
+
+:поступление_заявления_эмитента rdf:type comcore:Event ;
+                                rdfs:label "поступление заявления эмитента"@ru ;
+                                comcore:Initiates :рассмотрение_заявлений_эмитента ;
+                                comcore:mentionedIn :116 .

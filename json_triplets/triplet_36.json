@@ -1,0 +1,82 @@
+[
+    {
+        "label": "Права требования к НКО",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "права требования к нко canBeResourceFor передача прав требования",
+            "права требования к нко isResultOf заключение договора"
+        ],
+        "chunk_id": "36"
+    },
+    {
+        "label": "Заключение договора",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "заключение договора hasResult права требования к нко",
+            "заключение договора hasResult договор"
+        ],
+        "chunk_id": "36"
+    },
+    {
+        "label": "Получатель",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Agent",
+        "hasStatement": [
+            "получатель isActorOf передача прав требования",
+            "получатель Initiates передача прав требования"
+        ],
+        "chunk_id": "36"
+    },
+    {
+        "label": "Передача прав требования",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "передача прав требования hasActor получатель",
+            "передача прав требования hasResource письменное согласие нко"
+        ],
+        "chunk_id": "36"
+    },
+    {
+        "label": "НКО",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Agent",
+        "hasStatement": [],
+        "chunk_id": "36"
+    },
+    {
+        "label": "Договор",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "договор isResultOf заключение договора"
+        ],
+        "chunk_id": "36"
+    },
+    {
+        "label": "Третьи лица",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Agent",
+        "hasStatement": [],
+        "chunk_id": "36"
+    },
+    {
+        "label": "Письменное согласие НКО",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "письменное согласие нко isResourceOf передача прав требования"
+        ],
+        "chunk_id": "36"
+    }
+]

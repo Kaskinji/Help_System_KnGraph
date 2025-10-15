@@ -1,0 +1,78 @@
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :перечисление_суммы_переводов_получателю , :отказ_в_перечислении , :возврат_средств_плательщику , :предоставление_информации ;
+    comcore:mentionedIn :45 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :перечисление_суммы_переводов_получателю ;
+    comcore:isResponsibleFor :расходы_нко ;
+    comcore:mentionedIn :45 .
+
+:плательщик rdf:type comcore:Agent ;
+    rdfs:label "Плательщик"@ru ;
+    comcore:isActorOf :возврат_средств_плательщику ;
+    comcore:mentionedIn :45 .
+
+:эквайрер rdf:type comcore:Agent ;
+    rdfs:label "Эквайрер"@ru ;
+    comcore:isActorOf :предоставление_информации ;
+    comcore:mentionedIn :45 .
+
+:мпс rdf:type comcore:Agent ;
+    rdfs:label "МПС"@ru ;
+    comcore:isActorOf :передача_информации ;
+    comcore:mentionedIn :45 .
+
+:перечисление_суммы_переводов_получателю rdf:type comcore:Process ;
+    rdfs:label "перечисление суммы Переводов Получателю"@ru ;
+    comcore:mentionedIn :45 .
+
+:отказ_в_перечислении rdf:type comcore:Process ;
+    rdfs:label "отказ в перечислении"@ru ;
+    comcore:mentionedIn :45 .
+
+:возврат_средств_плательщику rdf:type comcore:Process ;
+    rdfs:label "возврат средств Плательщику"@ru ;
+    comcore:mentionedIn :45 .
+
+:сокращение_сроков rdf:type comcore:Process ;
+    rdfs:label "сокращение сроков"@ru ;
+    comcore:mentionedIn :45 .
+
+:предоставление_информации rdf:type comcore:Process ;
+    rdfs:label "предоставление информации"@ru ;
+    comcore:mentionedIn :45 .
+
+:передача_информации rdf:type comcore:Process ;
+    rdfs:label "передача информации"@ru ;
+    comcore:mentionedIn :45 .
+
+:сумма_переводов rdf:type comcore:Resource ;
+    rdfs:label "сумма Переводов"@ru ;
+    comcore:isResourceOf :перечисление_суммы_переводов_получателю ;
+    comcore:mentionedIn :45 .
+
+:средства rdf:type comcore:Resource ;
+    rdfs:label "средства"@ru ;
+    comcore:isResourceOf :возврат_средств_плательщику ;
+    comcore:mentionedIn :45 .
+
+:расходы_нко rdf:type comcore:Resource ;
+    rdfs:label "расходы НКО"@ru ;
+    comcore:isResultOf :возврат_средств_плательщику ;
+    comcore:mentionedIn :45 .
+
+:информация_о_получателе rdf:type comcore:Resource ;
+    rdfs:label "информация о Получателе"@ru ;
+    comcore:isResourceOf :предоставление_информации , :передача_информации ;
+    comcore:mentionedIn :45 .
+
+:платежные_средства_плательщика rdf:type comcore:Resource ;
+    rdfs:label "Платежные средства Плательщика"@ru ;
+    comcore:mentionedIn :45 .
+
+:решение_нко rdf:type comcore:Event ;
+    rdfs:label "решение НКО"@ru ;
+    comcore:Initiates :сокращение_сроков ;
+    comcore:mentionedIn :45 .

@@ -1,0 +1,150 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:расчеты rdf:type comcore:Process ;
+    rdfs:label "расчеты"@ru ;
+    comcore:mentionedIn :19 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :расчеты ;
+    comcore:mentionedIn :19 .
+
+:плательщик rdf:type comcore:Agent ;
+    rdfs:label "Плательщик"@ru ;
+    comcore:isActorOf :расчеты ;
+    comcore:mentionedIn :19 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :сбор_информации , :обработка_информации , :передача_информации , :исполнение_распоряжения , :учет_переводов ;
+    comcore:mentionedIn :19 .
+
+:вознаграждение rdf:type comcore:Resource ;
+    rdfs:label "вознаграждение"@ru ;
+    comcore:mentionedIn :19 .
+
+:сбор_информации rdf:type comcore:Process ;
+    rdfs:label "сбор информации"@ru ;
+    comcore:isPartOf :информационно_технологические_услуги ;
+    comcore:mentionedIn :19 .
+
+:обработка_информации rdf:type comcore:Process ;
+    rdfs:label "обработка информации"@ru ;
+    comcore:isPartOf :информационно_технологические_услуги ;
+    comcore:mentionedIn :19 .
+
+:передача_информации rdf:type comcore:Process ;
+    rdfs:label "передача информации"@ru ;
+    comcore:isPartOf :информационно_технологические_услуги ;
+    comcore:mentionedIn :19 .
+
+:информация_о_переводах_физических_лиц rdf:type comcore:Resource ;
+    rdfs:label "информация о переводах физических лиц"@ru ;
+    comcore:isResourceOf :передача_информации ;
+    comcore:mentionedIn :19 .
+
+:перевод rdf:type comcore:Resource ;
+    rdfs:label "Перевод"@ru ;
+    comcore:mentionedIn :19 .
+
+:распоряжение_плательщика rdf:type comcore:Resource ;
+    rdfs:label "Распоряжение Плательщика"@ru ;
+    comcore:isResourceOf :исполнение_распоряжения ;
+    comcore:mentionedIn :19 .
+
+:безусловность_перевода rdf:type comcore:Event ;
+    rdfs:label "безусловность перевода"@ru ;
+    comcore:Initiates :исполнение_распоряжения ;
+    comcore:mentionedIn :19 .
+
+:бизнес_счет rdf:type comcore:Resource ;
+    rdfs:label "Бизнес-счет"@ru ;
+    comcore:isResourceOf :учет_переводов ;
+    comcore:mentionedIn :19 .
+
+:обязательства_плательщика rdf:type comcore:Resource ;
+    rdfs:label "Обязательства Плательщика"@ru ;
+    comcore:mentionedIn :19 .
+
+:информационное_и_технологическое_взаимодей rdf:type comcore:Process ;
+    rdfs:label "Информационное и технологическое взаимодействие"@ru ;
+    comcore:isActorOf :получатель , :торговая_площадка ;
+    comcore:mentionedIn :19 .
+
+:торговая_площадка rdf:type comcore:Agent ;
+    rdfs:label "Торговая площадка"@ru ;
+    comcore:isActorOf :информационное_и_технологическое_взаимодей , :выбор_варианта_регистрации , :передача_информации_о_получателе , :распоряжение_денежными_средствами , :направление_волеизъявления ;
+    comcore:mentionedIn :19 .
+
+:вариант_регистрации rdf:type comcore:Resource ;
+    rdfs:label "вариант регистрации"@ru ;
+    comcore:isResourceOf :выбор_варианта_регистрации ;
+    comcore:mentionedIn :19 .
+
+:заявление rdf:type comcore:Resource ;
+    rdfs:label "Заявление"@ru ;
+    comcore:isResourceOf :направление_заявления ;
+    comcore:mentionedIn :19 .
+
+:волеизъявление_получателя rdf:type comcore:Resource ;
+    rdfs:label "волеизъявление Получателя"@ru ;
+    comcore:isResourceOf :направление_волеизъявления ;
+    comcore:mentionedIn :19 .
+
+:передача_информации_о_получателе rdf:type comcore:Process ;
+    rdfs:label "передача информации о Получателе"@ru ;
+    comcore:mentionedIn :19 .
+
+:распоряжение_денежными_средствами rdf:type comcore:Process ;
+    rdfs:label "распоряжение денежными средствами"@ru ;
+    comcore:mentionedIn :19 .
+
+:направление_волеизъявления rdf:type comcore:Process ;
+    rdfs:label "направление волеизъявления"@ru ;
+    comcore:mentionedIn :19 .
+
+:пополнение_счета rdf:type comcore:Process ;
+    rdfs:label "пополнение счета"@ru ;
+    comcore:isResultOf :перевод_денежных_средств ;
+    comcore:mentionedIn :19 .
+
+:система_учета_денежных_средств rdf:type comcore:Resource ;
+    rdfs:label "система учета денежных средств"@ru ;
+    comcore:mentionedIn :19 .
+
+:платежный_агент rdf:type comcore:Agent ;
+    rdfs:label "ПА"@ru ;
+    comcore:isActorOf :перевод_денежных_средств , :перечисление ;
+    comcore:mentionedIn :19 .
+
+:специальный_банковский_счет_па rdf:type comcore:Resource ;
+    rdfs:label "специальный банковский счет ПА"@ru ;
+    comcore:mentionedIn :19 .
+
+:перечисление rdf:type comcore:Process ;
+    rdfs:label "Перечисление"@ru ;
+    comcore:mentionedIn :19 .
+
+:исполнение_распоряжения rdf:type comcore:Process ;
+    rdfs:label "исполнение Распоряжения"@ru ;
+    comcore:mentionedIn :19 .
+
+:учет_переводов rdf:type comcore:Process ;
+    rdfs:label "учет Переводов"@ru ;
+    comcore:mentionedIn :19 .
+
+:выбор_варианта_регистрации rdf:type comcore:Process ;
+    rdfs:label "выбор варианта регистрации"@ru ;
+    comcore:mentionedIn :19 .
+
+:направление_заявления rdf:type comcore:Process ;
+    rdfs:label "направление Заявления"@ru ;
+    comcore:mentionedIn :19 .
+
+:перевод_денежных_средств rdf:type comcore:Process ;
+    rdfs:label "перевод денежных средств"@ru ;
+    comcore:mentionedIn :19 .

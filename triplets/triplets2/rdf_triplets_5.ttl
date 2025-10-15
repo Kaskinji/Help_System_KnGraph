@@ -1,0 +1,50 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:заявление rdf:type comcore:Resource ;
+    rdfs:label "Заявление"@ru ;
+    comcore:isResourceOf :заключение_договора ;
+    comcore:mentionedIn :5 ;
+    dc:definition "Заявление о заключении договора о переводах без открытия банковского счета в Системе МОНЕТА.РУ осуществлении информационно-технологического взаимодействия с привлечением Торговой площадки (Платформы) (Заявление) - документ, составленный по форме НКО (Приложение № 7), содержащий волеизъявление Получателя (включая его реквизиты) о заключении Договора, при этом информационное и технологическое взаимодействие с НКО в рамках настоящего Договора Получатель осуществляет с привлечением третьей стороны - Торговой площадки (Платформы)." .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :принятие_заявления ;
+    comcore:mentionedIn :5 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :осуществление_информационно_техно ;
+    comcore:mentionedIn :5 .
+
+:торговая_площадка rdf:type comcore:Agent ;
+    rdfs:label "Торговая площадка"@ru ;
+    comcore:isActorOf :осуществление_информационно_техно ;
+    comcore:mentionedIn :5 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:isResultOf :заключение_договора ;
+    comcore:mentionedIn :5 .
+
+:отметка_нко rdf:type comcore:Resource ;
+    rdfs:label "Отметка НКО"@ru ;
+    comcore:isResultOf :принятие_заявления ;
+    comcore:isPartOf :заявление ;
+    comcore:mentionedIn :5 .
+
+:заключение_договора rdf:type comcore:Process ;
+    rdfs:label "Заключение договора"@ru ;
+    comcore:mentionedIn :5 .
+
+:осуществление_информационно_техно rdf:type comcore:Process ;
+    rdfs:label "Осуществление информационно-технологического взаимодействия"@ru ;
+    comcore:relation :договор ;
+    comcore:mentionedIn :5 .
+
+:принятие_заявления rdf:type comcore:Process ;
+    rdfs:label "Принятие заявления"@ru ;
+    comcore:mentionedIn :5 .

@@ -1,0 +1,15 @@
+:небанковская_кредитная_организация_монета rdf:type comcore:Agent ;
+    rdfs:label "Небанковская кредитная организация «МОНЕТА»"@ru ;
+    comcore:relation :лицензия_банка_россии ;
+    comcore:mentionedIn :99 .
+
+:банк_россии rdf:type comcore:Agent ;
+    rdfs:label "Банк России"@ru ;
+    comcore:isResponsibleFor :лицензия_банка_россии ;
+    comcore:mentionedIn :99 .
+
+:лицензия_банка_россии rdf:type comcore:Resource ;
+    rdfs:label "Лицензия Банка России № 3508-К от 29 ноября 2017 года"@ru ;
+    comcore:relation :небанковская_кредитная_организация_монета ;
+    comcore:relation :банк_россии ;
+    comcore:mentionedIn :99 .

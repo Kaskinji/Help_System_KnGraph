@@ -1,0 +1,47 @@
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :рассмотрение_требования , :направление_ответа ;
+    comcore:mentionedIn :117 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:mentionedIn :117 .
+
+:требование rdf:type comcore:Resource ;
+    rdfs:label "Требование"@ru ;
+    comcore:isResourceOf :рассмотрение_требования ;
+    comcore:mentionedIn :117 .
+
+:уведомление_о_согласии_с_исполнением_тре rdf:type comcore:Resource ;
+    rdfs:label "уведомление о согласии с исполнением Требования"@ru ;
+    comcore:isResultOf :рассмотрение_требования ;
+    comcore:mentionedIn :117 .
+
+:мотивированный_отказ_от_исполнения_тре rdf:type comcore:Resource ;
+    rdfs:label "мотивированный отказ от исполнения Требования"@ru ;
+    comcore:isResultOf :рассмотрение_требования ;
+    comcore:mentionedIn :117 .
+
+:адрес_электронной_почты_finance_support rdf:type comcore:Resource ;
+    rdfs:label "адрес электронной почты finance@support.moneta.ru"@ru ;
+    comcore:mentionedIn :117 .
+
+:рассмотрение_требования rdf:type comcore:Process ;
+    rdfs:label "рассмотрение Требования"@ru ;
+    comcore:hasResource :требование ;
+    comcore:hasResult :уведомление_о_согласии_с_исполнением_тре ;
+    comcore:hasResult :мотивированный_отказ_от_исполнения_тре ;
+    comcore:hasActor :получатель ;
+    comcore:mentionedIn :117 .
+
+:направление_ответа rdf:type comcore:Process ;
+    rdfs:label "направление ответа"@ru ;
+    comcore:hasResource :уведомление_о_согласии_с_исполнением_тре ;
+    comcore:hasResource :мотивированный_отказ_от_исполнения_тре ;
+    comcore:hasResource :адрес_электронной_почты_finance_support ;
+    comcore:hasActor :получатель ;
+    comcore:mentionedIn :117 .
+
+:неполучение_сообщения_от_получателя rdf:type comcore:Event ;
+    rdfs:label "Неполучение сообщения от Получателя"@ru ;
+    comcore:mentionedIn :117 .

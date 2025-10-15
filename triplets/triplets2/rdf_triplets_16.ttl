@@ -1,0 +1,20 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:распоряжение rdf:type comcore:Resource ;
+    rdfs:label "Распоряжение"@ru ;
+    comcore:mentionedIn :16 ;
+    dc:definition "электронный документ, содержащий информацию, необходимую для осуществления Перевода, составленный и переданный Плательщиком или Получателем в НКО посредством Системы МОНЕТА.РУ в целях осуществления Перевода." .
+
+:сайт_нко rdf:type comcore:Resource ;
+    rdfs:label "Сайт НКО"@ru ;
+    comcore:mentionedIn :16 ;
+    dc:definition "сайт НКО в сети Интернет: www.moneta.ru, www.payanyway.ru" .
+
+:система_монетару rdf:type comcore:Resource ;
+    rdfs:label "Система МОНЕТА.РУ"@ru ;
+    comcore:mentionedIn :16 ;
+    dc:definition "совокупность программных и аппаратных средств, обеспечивающих информационно-технологическое взаимодействие между НКО, Плательщиком, Получателем при совершении Переводов с использованием сети Интернет." .

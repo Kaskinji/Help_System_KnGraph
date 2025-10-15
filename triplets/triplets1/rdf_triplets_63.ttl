@@ -1,0 +1,37 @@
+:стороны rdf:type comcore:Agent ;
+    rdfs:label "Стороны"@ru ;
+    comcore:isActorOf :информирование_сторон ;
+    comcore:isActorOf :извещение_об_изменениях ;
+    comcore:mentionedIn :63 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:mentionedIn :63 .
+
+:обстоятельства_имеющие_значение rdf:type comcore:Event ;
+    rdfs:label "Обстоятельства, имеющие значение"@ru ;
+    comcore:mentionedIn :63 .
+
+:изменения_адресов_и_реквизитов rdf:type comcore:Resource ;
+    rdfs:label "Изменения адресов и реквизитов"@ru ;
+    comcore:isResourceOf :извещение_об_изменениях ;
+    comcore:mentionedIn :63 .
+
+:уведомление rdf:type comcore:Resource ;
+    rdfs:label "Уведомление"@ru ;
+    comcore:isResultOf :извещение_об_изменениях ;
+    comcore:mentionedIn :63 .
+
+:информирование_сторон rdf:type comcore:Process ;
+    rdfs:label "Информирование сторон"@ru ;
+    comcore:isPartOf :исполнение_договора ;
+    comcore:mentionedIn :63 .
+
+:извещение_об_изменениях rdf:type comcore:Process ;
+    rdfs:label "Извещение об изменениях"@ru ;
+    comcore:isPartOf :исполнение_договора ;
+    comcore:mentionedIn :63 .
+
+:исполнение_договора rdf:type comcore:Process ;
+    rdfs:label "Исполнение договора"@ru ;
+    comcore:mentionedIn :63 .

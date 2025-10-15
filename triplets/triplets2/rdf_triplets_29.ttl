@@ -1,0 +1,74 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:сторона rdf:type comcore:Agent ;
+    rdfs:label "Сторона"@ru ;
+    comcore:isActorOf :заключение_договора ;
+    comcore:isActorOf :уплата_штрафа ;
+    comcore:Initiates :односторонний_отказ_от_договора ;
+    comcore:mentionedIn :29 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:isResultOf :заключение_договора ;
+    comcore:isResourceOf :исполнение_договора ;
+    comcore:isResourceOf :односторонний_отказ_от_договора ;
+    comcore:mentionedIn :29 .
+
+:недостоверные_заверения rdf:type comcore:Resource ;
+    rdfs:label "Недостоверные заверения"@ru ;
+    comcore:isResourceOf :заключение_договора ;
+    comcore:mentionedIn :29 .
+
+:обстоятельства rdf:type comcore:Resource ;
+    rdfs:label "Обстоятельства"@ru ;
+    comcore:canBeResourceFor :заключение_договора ;
+    comcore:canBeResourceFor :исполнение_договора ;
+    comcore:mentionedIn :29 .
+
+:письменное_требование rdf:type comcore:Resource ;
+    rdfs:label "Письменное требование"@ru ;
+    comcore:mentionedIn :29 .
+
+:штраф rdf:type comcore:Resource ;
+    rdfs:label "Штраф"@ru ;
+    comcore:isResultOf :уплата_штрафа ;
+    comcore:mentionedIn :29 .
+
+:сумма_комиссионного_вознаграждения rdf:type comcore:Resource ;
+    rdfs:label "Сумма комиссионного вознаграждения"@ru ;
+    comcore:mentionedIn :29 .
+
+:убытки rdf:type comcore:Resource ;
+    rdfs:label "Убытки"@ru ;
+    comcore:isResultOf :односторонний_отказ_от_договора ;
+    comcore:isResourceOf :возмещение_убытков ;
+    comcore:mentionedIn :29 .
+
+:недостоверность_заверений rdf:type comcore:Event ;
+    rdfs:label "Недостоверность заверений"@ru ;
+    comcore:Initiates :односторонний_отказ_от_договора ;
+    comcore:mentionedIn :29 .
+
+:заключение_договора rdf:type comcore:Process ;
+    rdfs:label "Заключение договора"@ru ;
+    comcore:mentionedIn :29 .
+
+:исполнение_договора rdf:type comcore:Process ;
+    rdfs:label "Исполнение договора"@ru ;
+    comcore:mentionedIn :29 .
+
+:уплата_штрафа rdf:type comcore:Process ;
+    rdfs:label "Уплата штрафа"@ru ;
+    comcore:mentionedIn :29 .
+
+:односторонний_отказ_от_договора rdf:type comcore:Process ;
+    rdfs:label "Односторонний отказ от договора"@ru ;
+    comcore:mentionedIn :29 .
+
+:возмещение_убытков rdf:type comcore:Process ;
+    rdfs:label "Возмещение убытков"@ru ;
+    comcore:mentionedIn :29 .

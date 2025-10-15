@@ -1,0 +1,37 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :аккумулирование_денежных_средств ;
+    comcore:relation :нко ;
+    comcore:mentionedIn :15 ;
+    dc:definition "юридическое лицо; физическое лицо, зарегистрированное в качестве индивидуального предпринимателя; некоммерческая организация; или кредитная организация, в том числе небанковская кредитная организация, реализующие Услуги в валюте Российской Федерации посредством сети Интернет либо иное уполномоченное конечным получателем или НКО юридическое лицо, осуществляющее аккумулирование денежных средств при перечислении их конечным получателям денежных средств." .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :принятие_распоряжений ;
+    comcore:mentionedIn :15 ;
+    dc:definition "некоммерческая организация" .
+
+:распоряжения rdf:type comcore:Resource ;
+    rdfs:label "Распоряжения"@ru ;
+    comcore:isResourceOf :принятие_распоряжений ;
+    comcore:mentionedIn :15 .
+
+:переводы rdf:type comcore:Process ;
+    rdfs:label "Переводы"@ru ;
+    comcore:mentionedIn :15 .
+
+:аккумулирование_денежных_средств rdf:type comcore:Process ;
+    rdfs:label "Аккумулирование денежных средств"@ru ;
+    comcore:mentionedIn :15 ;
+    dc:definition "аккумулирование денежных средств при перечислении их конечным получателям денежных средств." .
+
+:принятие_распоряжений rdf:type comcore:Process ;
+    rdfs:label "Принятие распоряжений"@ru ;
+    comcore:isPartOf :переводы ;
+    comcore:mentionedIn :15 .

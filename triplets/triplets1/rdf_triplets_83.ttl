@@ -1,0 +1,59 @@
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :выплата_пени ;
+    comcore:mentionedIn :83 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :выплата_неустойки ;
+    comcore:mentionedIn :83 .
+
+:пени rdf:type comcore:Resource ;
+    rdfs:label "пени"@ru ;
+    comcore:isResultOf :выплата_пени ;
+    comcore:mentionedIn :83 .
+
+:неустойка rdf:type comcore:Resource ;
+    rdfs:label "неустойка"@ru ;
+    comcore:isResultOf :выплата_неустойки ;
+    comcore:mentionedIn :83 .
+
+:требование_в_письменной_форме rdf:type comcore:Resource ;
+    rdfs:label "требование в письменной форме"@ru ;
+    comcore:isResourceOf :выплата_пени , :выплата_неустойки ;
+    comcore:mentionedIn :83 .
+
+:перечисление_денежных_средств rdf:type comcore:Resource ;
+    rdfs:label "перечисление денежных средств"@ru ;
+    comcore:isResourceOf :выплата_пени , :выплата_неустойки ;
+    comcore:mentionedIn :83 .
+
+:выплата_пени rdf:type comcore:Process ;
+    rdfs:label "выплата пени"@ru ;
+    comcore:hasResult :пени ;
+    comcore:mentionedIn :83 .
+
+:выплата_неустойки rdf:type comcore:Process ;
+    rdfs:label "выплата неустойки"@ru ;
+    comcore:hasResult :неустойка ;
+    comcore:mentionedIn :83 .
+
+:просрочка_исполнения_нко rdf:type comcore:Event ;
+    rdfs:label "просрочка исполнения обязательства НКО"@ru ;
+    comcore:Initiates :выплата_пени ;
+    comcore:mentionedIn :83 .
+
+:просрочка_исполнения_получателя rdf:type comcore:Event ;
+    rdfs:label "просрочка исполнения обязательства Получателя"@ru ;
+    comcore:Initiates :выплата_неустойки ;
+    comcore:mentionedIn :83 .
+
+:получение_требования_нко rdf:type comcore:Event ;
+    rdfs:label "получение требования НКО"@ru ;
+    comcore:Initiates :выплата_пени ;
+    comcore:mentionedIn :83 .
+
+:получение_требования_получателя rdf:type comcore:Event ;
+    rdfs:label "получение требования Получателя"@ru ;
+    comcore:Initiates :выплата_неустойки ;
+    comcore:mentionedIn :83 .

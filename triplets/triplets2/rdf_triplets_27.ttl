@@ -1,0 +1,41 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:заявление rdf:type comcore:Resource ;
+    rdfs:label "Заявление"@ru ;
+    comcore:isResourceOf :предоставление_заявления ;
+    comcore:mentionedIn :27 .
+:электронный_документ rdf:type comcore:Resource ;
+    rdfs:label "электронный документ"@ru ;
+    comcore:isResourceOf :предоставление_электронного_документа ;
+    comcore:mentionedIn :27 .
+:бумажный_вид rdf:type comcore:Resource ;
+    rdfs:label "бумажный вид"@ru ;
+    comcore:isResourceOf :предоставление_бумажного_документа ;
+    comcore:mentionedIn :27 .
+:форма rdf:type comcore:Resource ;
+    rdfs:label "форма"@ru ;
+    comcore:isResourceOf :предоставление_бумажного_документа ;
+    comcore:mentionedIn :27 .
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :предоставление_заявления , :предоставление_электронного_документа , :предоставление_бумажного_документа ;
+    comcore:mentionedIn :27 .
+:уполномоченное_лицо rdf:type comcore:Agent ;
+    rdfs:label "уполномоченное лицо"@ru ;
+    comcore:isActorOf :предоставление_бумажного_документа ;
+    comcore:mentionedIn :27 .
+:предоставление_заявления rdf:type comcore:Process ;
+    rdfs:label "предоставление заявления"@ru ;
+    comcore:mentionedIn :27 .
+:предоставление_электронного_документа rdf:type comcore:Process ;
+    rdfs:label "предоставление электронного документа"@ru ;
+    comcore:isPartOf :предоставление_заявления ;
+    comcore:mentionedIn :27 .
+:предоставление_бумажного_документа rdf:type comcore:Process ;
+    rdfs:label "предоставление бумажного документа"@ru ;
+    comcore:isPartOf :предоставление_заявления ;
+    comcore:mentionedIn :27 .

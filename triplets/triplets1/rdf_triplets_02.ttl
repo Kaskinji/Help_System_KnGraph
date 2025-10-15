@@ -1,0 +1,16 @@
+:акт rdf:type comcore:Resource ;
+    rdfs:label "Акт"@ru ;
+    comcore:mentionedIn :2 .
+
+:бизнес_счет rdf:type comcore:Resource ;
+    rdfs:label "Бизнес-счет"@ru ;
+    comcore:relation :положение_банка_россии_809_п ;
+    comcore:mentionedIn :2 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:mentionedIn :2 .
+
+:положение_банка_россии_809_п rdf:type comcore:Resource ;
+    rdfs:label "Положение Банка России № 809-П"@ru ;
+    comcore:mentionedIn :2 .

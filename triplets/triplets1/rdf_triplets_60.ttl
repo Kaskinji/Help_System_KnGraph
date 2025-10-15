@@ -1,0 +1,38 @@
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :направление_заявления ;
+    comcore:mentionedIn :60 .
+
+:ограничение rdf:type comcore:Resource ;
+    rdfs:label "ограничение"@ru ;
+    comcore:mentionedIn :60 .
+
+:список_возможных_ограничений rdf:type comcore:Resource ;
+    rdfs:label "список возможных ограничений"@ru ;
+    comcore:isPartOf :сайт_нко ;
+    comcore:mentionedIn :60 .
+
+:сайт_нко rdf:type comcore:Resource ;
+    rdfs:label "Сайт НКО"@ru ;
+    comcore:mentionedIn :60 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:mentionedIn :60 .
+
+:заявление rdf:type comcore:Resource ;
+    rdfs:label "заявление"@ru ;
+    comcore:isResourceOf :направление_заявления ;
+    comcore:mentionedIn :60 .
+
+:личный_кабинет rdf:type comcore:Resource ;
+    rdfs:label "Личный кабинет"@ru ;
+    comcore:mentionedIn :60 .
+
+:бумажный_носитель rdf:type comcore:Resource ;
+    rdfs:label "бумажный носитель"@ru ;
+    comcore:mentionedIn :60 .
+
+:направление_заявления rdf:type comcore:Process ;
+    rdfs:label "направление заявления"@ru ;
+    comcore:mentionedIn :60 .

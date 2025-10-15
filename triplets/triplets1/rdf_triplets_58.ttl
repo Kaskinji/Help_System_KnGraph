@@ -1,0 +1,17 @@
+:изменение_вида_деятельности_перечня_ус rdf:type comcore:Event ;
+    rdfs:label "изменение вида деятельности/перечня Услуг"@ru ;
+    comcore:Initiates :уведомление_нко ;
+    comcore:mentionedIn :58 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :уведомление_нко ;
+    comcore:mentionedIn :58 .
+
+:уведомление_нко rdf:type comcore:Process ;
+    rdfs:label "уведомить об этом НКО"@ru ;
+    comcore:mentionedIn :58 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:mentionedIn :58 .

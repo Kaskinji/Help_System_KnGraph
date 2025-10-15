@@ -1,0 +1,18 @@
+:поступление_в_нко_информации rdf:type comcore:Event ;
+    rdfs:label "поступление в НКО информации"@ru ;
+    comcore:Initiates :направление_запроса ;
+    comcore:mentionedIn :chunk_22 .
+
+:направление_запроса rdf:type comcore:Process ;
+    rdfs:label "направление запроса"@ru ;
+    comcore:mentionedIn :chunk_22 .
+
+:запрос rdf:type comcore:Resource ;
+    rdfs:label "Запрос"@ru ;
+    comcore:isResourceOf :направление_запроса ;
+    comcore:mentionedIn :chunk_22 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :направление_запроса ;
+    comcore:mentionedIn :chunk_22 .

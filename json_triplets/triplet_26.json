@@ -1,0 +1,98 @@
+[
+    {
+        "label": "регистрация Получателя в Системе МОНЕТА.РУ",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "регистрация получателя в системе мон hasResource оригинал заявления",
+            "регистрация получателя в системе мон hasResult адрес электронной почты",
+            "регистрация получателя в системе мон hasActor получатель"
+        ],
+        "chunk_id": "26"
+    },
+    {
+        "label": "оригинал Заявления",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "оригинал заявления isResourceOf регистрация получателя в системе мон"
+        ],
+        "chunk_id": "26"
+    },
+    {
+        "label": "НКО",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Agent",
+        "hasStatement": [
+            "нко isActorOf прием платежей",
+            "нко isActorOf направление уведомления об отзыве"
+        ],
+        "chunk_id": "26"
+    },
+    {
+        "label": "прием платежей",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "прием платежей hasActor нко"
+        ],
+        "chunk_id": "26"
+    },
+    {
+        "label": "направление уведомления об отзыве акцепта оферты",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "направление уведомления об отзыве hasActor нко",
+            "направление уведомления об отзыве hasResult одностороннее расторжение договора",
+            "направление уведомления об отзыве hasResource адрес электронной почты"
+        ],
+        "chunk_id": "26"
+    },
+    {
+        "label": "прекращение приема платежей",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Event",
+        "hasStatement": [
+            "прекращение приема платежей Initiates направление уведомления об отзыве"
+        ],
+        "chunk_id": "26"
+    },
+    {
+        "label": "одностороннее расторжение Договора",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Event",
+        "hasStatement": [
+            "одностороннее расторжение договора isResultOf направление уведомления об отзыве"
+        ],
+        "chunk_id": "26"
+    },
+    {
+        "label": "адрес электронной почты",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "адрес электронной почты isResourceOf направление уведомления об отзыве",
+            "адрес электронной почты isResultOf регистрация получателя в системе мон"
+        ],
+        "chunk_id": "26"
+    },
+    {
+        "label": "Получатель",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Agent",
+        "hasStatement": [
+            "получатель isActorOf регистрация получателя в системе мон"
+        ],
+        "chunk_id": "26"
+    }
+]

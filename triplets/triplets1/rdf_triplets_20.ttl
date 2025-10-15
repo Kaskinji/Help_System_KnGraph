@@ -1,0 +1,45 @@
+:па rdf:type comcore:Agent ;
+    rdfs:label "ПА"@ru ;
+    comcore:relation :нко ;
+    comcore:isActorOf :перевод ;
+    comcore:mentionedIn :20 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:relation :па ;
+    comcore:mentionedIn :20 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:mentionedIn :20 .
+
+:перевод rdf:type comcore:Process ;
+    rdfs:label "Перевод"@ru ;
+    comcore:mentionedIn :20 .
+
+:электронные_средства_платежа rdf:type comcore:Resource ;
+    rdfs:label "электронные средства платежа"@ru ;
+    comcore:mentionedIn :20 .
+
+:денежные_средства rdf:type comcore:Resource ;
+    rdfs:label "денежные средства"@ru ;
+    comcore:isResourceOf :перевод ;
+    comcore:mentionedIn :20 .
+
+:договорные_отношения rdf:type comcore:Resource ;
+    rdfs:label "договорные отношения"@ru ;
+    comcore:mentionedIn :20 .
+
+:условия rdf:type comcore:Resource ;
+    rdfs:label "условия"@ru ;
+    comcore:mentionedIn :20 .
+
+:юридические_лица rdf:type comcore:Agent ;
+    rdfs:label "юридические лица"@ru ;
+    comcore:isActorOf :перевод ;
+    comcore:mentionedIn :20 .
+
+:индивидуальные_предприниматели rdf:type comcore:Agent ;
+    rdfs:label "индивидуальные предприниматели"@ru ;
+    comcore:isActorOf :перевод ;
+    comcore:mentionedIn :20 .

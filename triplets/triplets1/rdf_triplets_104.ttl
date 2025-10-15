@@ -1,0 +1,111 @@
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isResponsibleFor :информационная_система ;
+    comcore:isResponsibleFor :ведение_архива_эс ;
+    comcore:isResponsibleFor :замена_аутентификационных_данных ;
+    comcore:Initiates :запрос_статуса_электронных_сообщен ;
+    comcore:Initiates :смена_аутентификационных_данных ;
+    comcore:isResponsibleFor :обеспечение_доступа_к_аутентификац ;
+    comcore:mentionedIn :104 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :запрос_статуса_электронных_сообщен ;
+    comcore:Initiates :приостановка_информационного_обмен ;
+    comcore:Initiates :направление_сообщения_на_эл_почту ;
+    comcore:Initiates :принудительная_инициация_смены_аут ;
+    comcore:isResponsibleFor :обеспечение_доступа_к_аутентификац ;
+    comcore:mentionedIn :104 .
+
+:уполномоченные_лица rdf:type comcore:Agent ;
+    rdfs:label "уполномоченные лица"@ru ;
+    comcore:mentionedIn :104 .
+
+:ведение_архива_эс rdf:type comcore:Process ;
+    rdfs:label "ведение архива ЭС"@ru ;
+    comcore:hasResult :архив_эс ;
+    comcore:mentionedIn :104 .
+
+:архив_эс rdf:type comcore:Resource ;
+    rdfs:label "архив ЭС"@ru ;
+    comcore:mentionedIn :104 .
+
+:замена_аутентификационных_данных rdf:type comcore:Process ;
+    rdfs:label "замена Аутентификационных данных"@ru ;
+    comcore:mentionedIn :104 .
+
+:запрос_статуса_электронных_сообщен rdf:type comcore:Process ;
+    rdfs:label "запрос статуса переданных по ЗКС Электронных сообщений"@ru ;
+    comcore:hasResult :статус_электронных_сообщений ;
+    comcore:mentionedIn :104 .
+
+:статус_электронных_сообщений rdf:type comcore:Resource ;
+    rdfs:label "статус переданных по ЗКС Электронных сообщений"@ru ;
+    comcore:mentionedIn :104 .
+
+:смена_аутентификационных_данных rdf:type comcore:Process ;
+    rdfs:label "смена Аутентификационных данных"@ru ;
+    comcore:mentionedIn :104 .
+
+:приостановка_информационного_обмен rdf:type comcore:Process ;
+    rdfs:label "приостановка Информационного обмена по ЗКС"@ru ;
+    comcore:mentionedIn :104 .
+
+:направление_сообщения_на_эл_почту rdf:type comcore:Process ;
+    rdfs:label "направление сообщения на адрес электронной почты"@ru ;
+    comcore:isPartOf :приостановка_информационного_обмен ;
+    comcore:hasResource :адрес_электронной_почты ;
+    comcore:hasResource :сообщение ;
+    comcore:mentionedIn :104 .
+
+:адрес_электронной_почты rdf:type comcore:Resource ;
+    rdfs:label "адрес электронной почты"@ru ;
+    comcore:mentionedIn :104 .
+
+:сообщение rdf:type comcore:Resource ;
+    rdfs:label "сообщение"@ru ;
+    comcore:mentionedIn :104 .
+
+:принудительная_инициация_смены_аут rdf:type comcore:Process ;
+    rdfs:label "принудительная инициация смены Аутентификационных данных"@ru ;
+    comcore:mentionedIn :104 .
+
+:обеспечение_доступа_к_аутентификац rdf:type comcore:Process ;
+    rdfs:label "обеспечение доступа к Аутентификационным данным и ЗКС"@ru ;
+    comcore:hasResult :доступ ;
+    comcore:relation :аутентификационные_данные ;
+    comcore:relation :зкс ;
+    comcore:mentionedIn :104 .
+
+:доступ rdf:type comcore:Resource ;
+    rdfs:label "доступ"@ru ;
+    comcore:mentionedIn :104 .
+
+:информационный_обмен rdf:type comcore:Process ;
+    rdfs:label "Информационный обмен"@ru ;
+    comcore:mentionedIn :104 .
+
+:информационная_система rdf:type comcore:Resource ;
+    rdfs:label "информационная система"@ru ;
+    comcore:mentionedIn :104 .
+
+:правила_безопасности rdf:type comcore:Resource ;
+    rdfs:label "Правила безопасности"@ru ;
+    comcore:mentionedIn :104 .
+
+:аутентификационные_данные rdf:type comcore:Resource ;
+    rdfs:label "Аутентификационные данные"@ru ;
+    comcore:mentionedIn :104 .
+
+:электронные_сообщения rdf:type comcore:Resource ;
+    rdfs:label "Электронные сообщения"@ru ;
+    comcore:mentionedIn :104 .
+
+:зкс rdf:type comcore:Resource ;
+    rdfs:label "ЗКС"@ru ;
+    comcore:mentionedIn :104 .
+
+:предварительное_предупреждение rdf:type comcore:Event ;
+    rdfs:label "предварительное предупреждение"@ru ;
+    comcore:Initiates :приостановка_информационного_обмен ;
+    comcore:mentionedIn :104 .

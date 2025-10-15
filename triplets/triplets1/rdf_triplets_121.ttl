@@ -1,0 +1,13 @@
+:подключение rdf:type comcore:Process ;
+    rdfs:label "Подключение"@ru ;
+    comcore:mentionedIn :121 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :подключение ;
+    comcore:mentionedIn :121 .
+
+:система_монетару rdf:type comcore:Resource ;
+    rdfs:label "Система Монета.ру"@ru ;
+    comcore:isResourceOf :подключение ;
+    comcore:mentionedIn :121 .

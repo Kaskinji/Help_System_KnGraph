@@ -1,0 +1,62 @@
+:установление_ограничения_перевода rdf:type comcore:Event ;
+    rdfs:label "установление ограничения Перевода"@ru ;
+    comcore:Initiates :направление_уведомления ;
+    comcore:mentionedIn :62 .
+
+:изменение_ограничения rdf:type comcore:Event ;
+    rdfs:label "изменение ограничения"@ru ;
+    comcore:Initiates :направление_уведомления ;
+    comcore:mentionedIn :62 .
+
+:снятие_ограничения rdf:type comcore:Event ;
+    rdfs:label "снятие ограничения"@ru ;
+    comcore:Initiates :направление_уведомления ;
+    comcore:mentionedIn :62 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :направление_уведомления ;
+    comcore:mentionedIn :62 .
+
+:уведомление rdf:type comcore:Resource ;
+    rdfs:label "уведомление"@ru ;
+    comcore:isResourceOf :направление_уведомления ;
+    comcore:mentionedIn :62 .
+
+:направление_уведомления rdf:type comcore:Process ;
+    rdfs:label "направление уведомления"@ru ;
+    comcore:mentionedIn :62 .
+
+:приостановление_перечисления rdf:type comcore:Event ;
+    rdfs:label "приостановление Перечисления"@ru ;
+    comcore:Initiates :подтверждение_заявления_о_перечислении ;
+    comcore:mentionedIn :62 .
+
+:подтверждение_заявления_о_перечислении rdf:type comcore:Process ;
+    rdfs:label "подтверждение Заявления о перечислении"@ru ;
+    comcore:mentionedIn :62 .
+
+:подтверждение rdf:type comcore:Resource ;
+    rdfs:label "подтверждение"@ru ;
+    comcore:isResourceOf :направление_подтверждения ;
+    comcore:mentionedIn :62 .
+
+:направление_подтверждения rdf:type comcore:Process ;
+    rdfs:label "направление подтверждения"@ru ;
+    comcore:isPartOf :подтверждение_заявления_о_перечислении ;
+    comcore:mentionedIn :62 .
+
+:ответное_сообщение rdf:type comcore:Resource ;
+    rdfs:label "ответное сообщение"@ru ;
+    comcore:isResourceOf :направление_подтверждения ;
+    comcore:mentionedIn :62 .
+
+:уведомление_нко rdf:type comcore:Resource ;
+    rdfs:label "уведомление НКО"@ru ;
+    comcore:isResourceOf :направление_подтверждения ;
+    comcore:mentionedIn :62 .
+
+:адрес_электронной_почты_нко rdf:type comcore:Resource ;
+    rdfs:label "адрес электронной почты НКО"@ru ;
+    comcore:isResourceOf :направление_подтверждения ;
+    comcore:mentionedIn :62 .

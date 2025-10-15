@@ -1,0 +1,33 @@
+:исключение_получателя_из_егрюл rdf:type comcore:Event ;
+    rdfs:label "исключение Получателя из ЕГРЮЛ" ;
+    comcore:Initiates :прекращение_договора ;
+    comcore:mentionedIn :96 .
+
+:прекращение_договора rdf:type comcore:Process ;
+    rdfs:label "прекращение договора" ;
+    comcore:mentionedIn :96 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО" ;
+    comcore:isActorOf :отнесение_невостребованного_остатка_в_доход ;
+    comcore:mentionedIn :96 .
+
+:невостребованный_остаток_денежных_средств rdf:type comcore:Resource ;
+    rdfs:label "невостребованный остаток денежных средств Получателя" ;
+    comcore:isResourceOf :отнесение_невостребованного_остатка_в_доход ;
+    comcore:canBeResourceFor :возврат_невостребованного_остатка ;
+    comcore:mentionedIn :96 .
+
+:отнесение_невостребованного_остатка_в_доход rdf:type comcore:Process ;
+    rdfs:label "отнесение невостребованного остатка в доход" ;
+    comcore:mentionedIn :96 .
+
+:возврат_невостребованного_остатка rdf:type comcore:Process ;
+    rdfs:label "возврат невостребованного остатка" ;
+    comcore:mentionedIn :96 .
+
+:нко comcore:isActorOf :отнесение_невостребованного_остатка_в_доход .
+
+:невостребованный_остаток_денежных_средств comcore:isResourceOf :отнесение_невостребованного_остатка_в_доход .
+:невостребованный_остаток_денежных_средств comcore:canBeResourceFor :возврат_невостребованного_остатка .
+:исключение_получателя_из_егрюл comcore:Initiates :прекращение_договора .

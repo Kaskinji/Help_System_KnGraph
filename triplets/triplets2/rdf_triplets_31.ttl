@@ -1,0 +1,30 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:распоряжение rdf:type comcore:Resource ;
+    rdfs:label "Распоряжение"@ru ;
+    comcore:isResourceOf :перевод ;
+    comcore:mentionedIn :31 .
+
+:перевод rdf:type comcore:Process ;
+    rdfs:label "Перевод"@ru ;
+    comcore:hasActor :нко ;
+    comcore:mentionedIn :31 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :перевод ;
+    comcore:mentionedIn :31 .
+
+:эмитент rdf:type comcore:Agent ;
+    rdfs:label "Эмитент"@ru ;
+    comcore:isResponsibleFor :авторизация ;
+    comcore:mentionedIn :31 .
+
+:авторизация rdf:type comcore:Resource ;
+    rdfs:label "авторизация"@ru ;
+    comcore:isResourceOf :перевод ;
+    comcore:mentionedIn :31 .

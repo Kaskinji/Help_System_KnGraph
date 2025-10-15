@@ -1,0 +1,18 @@
+:авторизационные_данные rdf:type comcore:Resource ;
+rdfs:label "Авторизационные данные"@ru ;
+comcore:isResourceOf :регистрация ;
+comcore:mentionedIn :1 .
+
+:регистрация rdf:type comcore:Process ;
+rdfs:label "регистрация"@ru ;
+comcore:mentionedIn :1 .
+
+:получатель rdf:type comcore:Agent ;
+rdfs:label "Получатель"@ru ;
+comcore:isActorOf :регистрация ;
+comcore:isResponsibleFor :авторизационные_данные ;
+comcore:mentionedIn :1 .
+
+:аутентификационные_данные rdf:type comcore:Resource ;
+rdfs:label "Аутентификационные данные"@ru ;
+comcore:mentionedIn :1 .

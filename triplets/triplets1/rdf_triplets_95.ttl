@@ -1,0 +1,76 @@
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :95 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:Initiates :запрос_информации, :направление_повторного_запроса, :списание ;
+    comcore:isActorOf :запрос_информации, :направление_повторного_запроса, :списание ;
+    comcore:mentionedIn :95 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:isPartOf :уведомление_о_расторжении_догов, :соглашение_о_расторжении_догов ;
+    comcore:mentionedIn :95 .
+
+:уведомление_о_расторжении_догов rdf:type comcore:Resource ;
+    rdfs:label "Уведомление о расторжении Договора"@ru ;
+    comcore:isResourceOf :запрос_информации ;
+    comcore:mentionedIn :95 .
+
+:соглашение_о_расторжении_догов rdf:type comcore:Resource ;
+    rdfs:label "Соглашение о расторжении Договора"@ru ;
+    comcore:isResourceOf :запрос_информации ;
+    comcore:mentionedIn :95 .
+
+:информация_о_банковских_реквизитах rdf:type comcore:Resource ;
+    rdfs:label "Информация о банковских реквизитах"@ru ;
+    comcore:isResourceOf :перечисление_остатка_денежных_сре ;
+    comcore:mentionedIn :95 .
+
+:остаток_денежных_средств rdf:type comcore:Resource ;
+    rdfs:label "Остаток денежных средств"@ru ;
+    comcore:mentionedIn :95 .
+
+:повторный_запрос rdf:type comcore:Resource ;
+    rdfs:label "Повторный запрос"@ru ;
+    comcore:isResultOf :направление_повторного_запроса ;
+    comcore:mentionedIn :95 .
+
+:невостребованный_остаток rdf:type comcore:Resource ;
+    rdfs:label "Невостребованный остаток"@ru ;
+    comcore:isResourceOf :списание ;
+    comcore:mentionedIn :95 .
+
+:срок_исковой_давности rdf:type comcore:Resource ;
+    rdfs:label "Срок исковой давности"@ru ;
+    comcore:mentionedIn :95 .
+
+:перечисление_остатка_денежных_сре rdf:type comcore:Process ;
+    rdfs:label "Перечисление остатка денежных средств"@ru ;
+    comcore:mentionedIn :95 .
+
+:запрос_информации rdf:type comcore:Process ;
+    rdfs:label "Запрос информации"@ru ;
+    comcore:mentionedIn :95 .
+
+:направление_повторного_запроса rdf:type comcore:Process ;
+    rdfs:label "Направление повторного запроса"@ru ;
+    comcore:mentionedIn :95 .
+
+:списание rdf:type comcore:Process ;
+    rdfs:label "Списание"@ru ;
+    comcore:mentionedIn :95 .
+
+:подписание_соглашения_о_расторж rdf:type comcore:Event ;
+    rdfs:label "Подписание соглашения о расторжении Договора"@ru ;
+    comcore:mentionedIn :95 .
+
+:получение_уведомления_о_расторж rdf:type comcore:Event ;
+    rdfs:label "Получение Получателем уведомления о расторжении Договора"@ru ;
+    comcore:mentionedIn :95 .
+
+:истечение_срока_исковой_давности rdf:type comcore:Event ;
+    rdfs:label "Истечение срока исковой давности"@ru ;
+    comcore:Initiates :списание ;
+    comcore:mentionedIn :95 .

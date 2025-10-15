@@ -1,0 +1,72 @@
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :80 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:mentionedIn :80 .
+
+:стороны rdf:type comcore:Agent ;
+    rdfs:label "Стороны"@ru ;
+    comcore:mentionedIn :80 .
+
+:акт rdf:type comcore:Resource ;
+    rdfs:label "Акт"@ru ;
+    comcore:isResourceOf :размещение_нко_акта_в_личном_кабинете ;
+    comcore:mentionedIn :80 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:mentionedIn :80 .
+
+:личный_кабинет rdf:type comcore:Resource ;
+    rdfs:label "Личный кабинет"@ru ;
+    comcore:isResourceOf :размещение_нко_акта_в_личном_кабинете ;
+    comcore:mentionedIn :80 .
+
+:данные_указанные_в_акте rdf:type comcore:Resource ;
+    rdfs:label "данные, указанные в Акте"@ru ;
+    comcore:isResourceOf :подтверждение_получателем_данных ;
+    comcore:mentionedIn :80 .
+
+:бумажный_носитель rdf:type comcore:Resource ;
+    rdfs:label "бумажный носитель"@ru ;
+    comcore:mentionedIn :80 .
+
+:обращение_получателя_в_нко_с_отказом rdf:type comcore:Process ;
+    rdfs:label "обращение Получателя в НКО с мотивированным отказом от принятия Акта"@ru ;
+    comcore:mentionedIn :80 .
+
+:размещение_нко_акта_в_личном_кабинете rdf:type comcore:Process ;
+    rdfs:label "размещение НКО Акта в Личном кабинете"@ru ;
+    comcore:isPartOf :подтверждение_надлежащего_исполнения_о ;
+    comcore:mentionedIn :80 .
+
+:подтверждение_получателем_данных rdf:type comcore:Process ;
+    rdfs:label "подтверждение Получателем данных"@ru ;
+    comcore:isPartOf :подтверждение_надлежащего_исполнения_о ;
+    comcore:mentionedIn :80 .
+
+:подписание_акта_на_бумажном_носителе rdf:type comcore:Process ;
+    rdfs:label "подписание Акта на бумажном носителе"@ru ;
+    comcore:mentionedIn :80 .
+
+:подтверждение_надлежащего_исполнения_о rdf:type comcore:Process ;
+    rdfs:label "подтверждение надлежащего исполнения обязательств"@ru ;
+    comcore:mentionedIn :80 .
+
+:отсутствие_обращения rdf:type comcore:Event ;
+    rdfs:label "отсутствие обращения"@ru ;
+    comcore:mentionedIn :80 .
+
+:согласие_получателя rdf:type comcore:Event ;
+    rdfs:label "согласие Получателя"@ru ;
+    comcore:mentionedIn :80 .
+
+:возникновение_обязательств_по_подпис rdf:type comcore:Event ;
+    rdfs:label "возникновение обязательств по подписанию"@ru ;
+    comcore:mentionedIn :80 .
+
+:нко comcore:isActorOf :размещение_нко_акта_в_личном_кабинете .
+
+:получатель comcore:isActorOf :подтверждение_получателем_данных .

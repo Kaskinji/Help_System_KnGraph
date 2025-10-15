@@ -1,0 +1,77 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:плательщик rdf:type comcore:Agent ;
+    rdfs:label "Плательщик"@ru ;
+    comcore:mentionedIn :38 .
+
+:эмитент rdf:type comcore:Agent ;
+    rdfs:label "Эмитент"@ru ;
+    comcore:mentionedIn :38 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :38 ;
+    comcore:isActorOf :информационно-технологическое_взаимодей ;
+    comcore:isActorOf :операция_возврата_перевода .
+
+:распоряжение rdf:type comcore:Resource ;
+    rdfs:label "Распоряжение"@ru ;
+    comcore:mentionedIn :38 .
+
+:ответ_на_авторизацию rdf:type comcore:Resource ;
+    rdfs:label "ответ на авторизацию"@ru ;
+    comcore:mentionedIn :38 .
+
+:сообщение_о_приеме_перевода rdf:type comcore:Resource ;
+    rdfs:label "Сообщение о приеме Перевода"@ru ;
+    comcore:mentionedIn :38 .
+
+:перевод rdf:type comcore:Resource ;
+    rdfs:label "Перевод"@ru ;
+    comcore:mentionedIn :38 .
+
+:заявление_на_перечисление rdf:type comcore:Resource ;
+    rdfs:label "Заявление на перечисление"@ru ;
+    comcore:mentionedIn :38 ;
+    comcore:isResourceOf :перечисление .
+
+:заявление_на_перечисление_по_опера rdf:type comcore:Resource ;
+    rdfs:label "Заявление на перечисление по Операции возврата Перевода"@ru ;
+    comcore:mentionedIn :38 ;
+    comcore:isResourceOf :перечисление_по_операции_возврата .
+
+:отказ_в_приеме_распоряжения rdf:type comcore:Process ;
+    rdfs:label "Отказ в приеме Распоряжения"@ru ;
+    comcore:mentionedIn :38 .
+
+:перечисление rdf:type comcore:Process ;
+    rdfs:label "Перечисление"@ru ;
+    comcore:mentionedIn :38 .
+
+:информационно-технологическое_взаимодей rdf:type comcore:Process ;
+    rdfs:label "информационно-технологическое взаимодействие"@ru ;
+    comcore:mentionedIn :38 ;
+    comcore:relation :операция_возврата_перевода .
+
+:операция_возврата_перевода rdf:type comcore:Process ;
+    rdfs:label "Операция возврата Перевода"@ru ;
+    comcore:mentionedIn :38 .
+
+:перечисление_по_операции_возврата rdf:type comcore:Process ;
+    rdfs:label "перечисление денежных средств по Операции возврата Перевода"@ru ;
+    comcore:mentionedIn :38 ;
+    comcore:isPartOf :операция_возврата_перевода .
+
+:получение_отрицательного_ответа_на_ав rdf:type comcore:Event ;
+    rdfs:label "получение отрицательного ответа на авторизацию"@ru ;
+    comcore:mentionedIn :38 ;
+    comcore:Initiates :отказ_в_приеме_распоряжения .
+
+:неполучение_положительного_сообщения rdf:type comcore:Event ;
+    rdfs:label "неполучение положительного Сообщения о приеме Перевода"@ru ;
+    comcore:mentionedIn :38 ;
+    comcore:Initiates :отказ_в_приеме_распоряжения .

@@ -1,0 +1,74 @@
+:отказ_в_приеме_распоряжения rdf:type comcore:Process ;
+    rdfs:label "Отказ в приеме Распоряжения"@ru ;
+    comcore:mentionedIn :38 .
+
+:отрицательный_ответ_на_авторизацию rdf:type comcore:Resource ;
+    rdfs:label "Отрицательный ответ на авторизацию"@ru ;
+    comcore:isResourceOf :отказ_в_приеме_распоряжения ;
+    comcore:mentionedIn :38 .
+
+:положительное_сообщение_о_приеме_перевода rdf:type comcore:Resource ;
+    rdfs:label "Положительное сообщение о приеме Перевода"@ru ;
+    comcore:isResourceOf :отказ_в_приеме_распоряжения ;
+    comcore:mentionedIn :38 .
+
+:плательщик rdf:type comcore:Agent ;
+    rdfs:label "Плательщик"@ru ;
+    comcore:mentionedIn :38 .
+
+:эмитент rdf:type comcore:Agent ;
+    rdfs:label "Эмитент"@ru ;
+    comcore:mentionedIn :38 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :38 .
+
+:распоряжение rdf:type comcore:Resource ;
+    rdfs:label "Распоряжение"@ru ;
+    comcore:mentionedIn :38 .
+
+:перечисление_получателю rdf:type comcore:Process ;
+    rdfs:label "Перечисление Получателю"@ru ;
+    comcore:mentionedIn :38 .
+
+:заявление_на_перечисление rdf:type comcore:Resource ;
+    rdfs:label "Заявление на перечисление"@ru ;
+    comcore:isResourceOf :перечисление_получателю ;
+    comcore:mentionedIn :38 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:isResourceOf :перечисление_получателю ;
+    comcore:mentionedIn :38 .
+
+:перевод rdf:type comcore:Resource ;
+    rdfs:label "Перевод"@ru ;
+    comcore:mentionedIn :38 .
+
+:взаимодействие_получателя_и_эмитента rdf:type comcore:Process ;
+    rdfs:label "Информационно-технологическое взаимодействие между Получателем и Эмитентом"@ru ;
+    comcore:relation :операция_возврата_перевода ;
+    comcore:mentionedIn :38 .
+
+:операция_возврата_перевода rdf:type comcore:Process ;
+    rdfs:label "Операция возврата Перевода"@ru ;
+    comcore:mentionedIn :38 .
+
+:перечисление_по_операции_возврата rdf:type comcore:Process ;
+    rdfs:label "Перечисление денежных средств по Операции возврата Перевода"@ru ;
+    comcore:isPartOf :операция_возврата_перевода ;
+    comcore:mentionedIn :38 .
+
+:заявление_на_перечисление_по_возврату rdf:type comcore:Resource ;
+    rdfs:label "Заявление на перечисление по Операции возврата Перевода"@ru ;
+    comcore:isResourceOf :перечисление_по_операции_возврата ;
+    comcore:mentionedIn :38 .
+
+:приложение_№3_к_договору rdf:type comcore:Resource ;
+    rdfs:label "Приложение №3 к Договору"@ru ;
+    comcore:isResourceOf :перечисление_по_операции_возврата ;
+    comcore:mentionedIn :38 .
+
+:получатель comcore:isActorOf :взаимодействие_получателя_и_эмитента ;
+    comcore:isActorOf :операция_возврата_перевода .

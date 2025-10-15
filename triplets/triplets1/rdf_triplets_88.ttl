@@ -1,0 +1,66 @@
+:стороны rdf:type comcore:Agent ;
+    rdfs:label "Стороны"@ru ;
+    comcore:isActorOf :переговоры , :направление_претензий , :ответ_на_претензию ;
+    comcore:mentionedIn :88 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:relation :споры ;
+    comcore:mentionedIn :88 .
+
+:споры rdf:type comcore:Event ;
+    rdfs:label "Споры"@ru ;
+    comcore:Initiates :переговоры , :направление_претензий ;
+    comcore:mentionedIn :88 .
+
+:переговоры rdf:type comcore:Process ;
+    rdfs:label "Переговоры"@ru ;
+    comcore:mentionedIn :88 .
+
+:направление_претензий rdf:type comcore:Process ;
+    rdfs:label "Направление претензий"@ru ;
+    comcore:hasPart :курьерская_доставка , :доставка_в_офис_стороны ;
+    comcore:mentionedIn :88 .
+
+:претензия rdf:type comcore:Resource ;
+    rdfs:label "Претензия"@ru ;
+    comcore:isResourceOf :направление_претензий , :ответ_на_претензию ;
+    comcore:mentionedIn :88 .
+
+:ответ_на_претензию rdf:type comcore:Process ;
+    rdfs:label "Ответ на претензию"@ru ;
+    comcore:mentionedIn :88 .
+
+:курьерская_доставка rdf:type comcore:Process ;
+    rdfs:label "Курьерская доставка"@ru ;
+    comcore:isResourceOf :адрес_нко , :место_нахождения ;
+    comcore:isActorOf :получатель ;
+    comcore:mentionedIn :88 .
+
+:доставка_в_офис_стороны rdf:type comcore:Process ;
+    rdfs:label "Доставка в офис Стороны"@ru ;
+    comcore:isResourceOf :адрес_нко , :место_нахождения ;
+    comcore:isActorOf :получатель ;
+    comcore:mentionedIn :88 .
+
+:телеграмма rdf:type comcore:Resource ;
+    rdfs:label "Телеграмма"@ru ;
+    comcore:isResourceOf :направление_претензий ;
+    comcore:mentionedIn :88 .
+
+:адрес_нко rdf:type comcore:Resource ;
+    rdfs:label "Адрес НКО"@ru ;
+    comcore:mentionedIn :88 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :88 .
+
+:место_нахождения rdf:type comcore:Resource ;
+    rdfs:label "Место нахождения"@ru ;
+    comcore:relation :егрюл_егрип ;
+    comcore:mentionedIn :88 .
+
+:егрюл_егрип rdf:type comcore:Resource ;
+    rdfs:label "ЕГРЮЛ/ЕГРИП"@ru ;
+    comcore:mentionedIn :88 .

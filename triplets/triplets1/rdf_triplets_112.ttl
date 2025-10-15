@@ -1,0 +1,28 @@
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isResponsibleFor :информация ;
+    comcore:isResponsibleFor :документы ;
+    comcore:mentionedIn :112 .
+
+:информация rdf:type comcore:Resource ;
+    rdfs:label "информация"@ru ;
+    comcore:relation :запрещенные_услуги ;
+    comcore:mentionedIn :112 .
+
+:документы rdf:type comcore:Resource ;
+    rdfs:label "документы"@ru ;
+    comcore:relation :запрещенные_услуги ;
+    comcore:mentionedIn :112 .
+
+:запрещенные_услуги rdf:type comcore:Resource ;
+    rdfs:label "Запрещенные услуги"@ru ;
+    comcore:mentionedIn :112 .
+
+:услуги_реализуемые_получателем rdf:type comcore:Resource ;
+    rdfs:label "Услуги, реализуемые Получателем"@ru ;
+    comcore:relation :запрещенные_услуги ;
+    comcore:mentionedIn :112 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:mentionedIn :112 .

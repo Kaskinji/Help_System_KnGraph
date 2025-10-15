@@ -1,0 +1,62 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:отказ_в_исполнении_распоряжения rdf:type comcore:Process ;
+    rdfs:label "Отказ в исполнении распоряжения"@ru ;
+    comcore:relation :перевод ;
+    comcore:mentionedIn :39 .
+
+:перевод rdf:type comcore:Process ;
+    rdfs:label "Перевод"@ru ;
+    comcore:relation :подозрения ;
+    comcore:mentionedIn :39 .
+
+:представление_информации rdf:type comcore:Process ;
+    rdfs:label "Представление информации"@ru ;
+    comcore:isPartOf :отказ_в_исполнении_распоряжения ;
+    comcore:mentionedIn :39 .
+
+:распоряжение_плательщика rdf:type comcore:Resource ;
+    rdfs:label "Распоряжение плательщика"@ru ;
+    comcore:isResourceOf :отказ_в_исполнении_распоряжения ;
+    comcore:mentionedIn :39 .
+
+:правила_внутреннего_контроля rdf:type comcore:Resource ;
+    rdfs:label "Правила внутреннего контроля"@ru ;
+    comcore:isResourceOf :отказ_в_исполнении_распоряжения ;
+    comcore:mentionedIn :39 .
+
+:информация_о_дате_и_причинах rdf:type comcore:Resource ;
+    rdfs:label "Информация о дате и причинах"@ru ;
+    comcore:isResourceOf :представление_информации ;
+    comcore:mentionedIn :39 .
+
+:плательщик rdf:type comcore:Agent ;
+    rdfs:label "Плательщик"@ru ;
+    comcore:isResponsibleFor :распоряжение_плательщика ;
+    comcore:mentionedIn :39 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:relation :информация_о_дате_и_причинах ;
+    comcore:mentionedIn :39 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :отказ_в_исполнении_распоряжения ;
+    comcore:isActorOf :представление_информации ;
+    comcore:mentionedIn :39 .
+
+:подозрения rdf:type comcore:Event ;
+    rdfs:label "Подозрения"@ru ;
+    comcore:Initiates :отказ_в_исполнении_распоряжения ;
+    comcore:mentionedIn :39 .
+
+:решение_об_отказе rdf:type comcore:Event ;
+    rdfs:label "Решение об отказе"@ru ;
+    comcore:isResultOf :отказ_в_исполнении_распоряжения ;
+    comcore:Initiates :представление_информации ;
+    comcore:mentionedIn :39 .

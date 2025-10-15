@@ -1,0 +1,86 @@
+:па rdf:type comcore:Agent ;
+    rdfs:label "ПА"@ru ;
+    comcore:isResponsibleFor :прием_электронных_средств_плат , :участие_в_переводе_денежных_ср ;
+    comcore:mentionedIn :48 .
+
+:прием_электронных_средств_плат rdf:type comcore:Process ;
+    rdfs:label "Прием электронных средств платежа"@ru ;
+    comcore:mentionedIn :48 .
+
+:участие_в_переводе_денежных_ср rdf:type comcore:Process ;
+    rdfs:label "Участие в переводе денежных средств"@ru ;
+    comcore:mentionedIn :48 .
+
+:прекращение_договорных_отношен rdf:type comcore:Event ;
+    rdfs:label "Прекращение договорных отношений"@ru ;
+    comcore:Initiates :расторжение_договора_с_получате ;
+    comcore:mentionedIn :48 .
+
+:расторжение_договора_с_получате rdf:type comcore:Process ;
+    rdfs:label "Расторжение договора с Получателем"@ru ;
+    comcore:hasPart :направление_уведомления ;
+    comcore:relation :получатель ;
+    comcore:mentionedIn :48 .
+
+:направление_уведомления rdf:type comcore:Process ;
+    rdfs:label "Направление уведомления"@ru ;
+    comcore:isResourceOf :личный_кабинет , :адрес_электронной_почты ;
+    comcore:mentionedIn :48 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :48 .
+
+:личный_кабинет rdf:type comcore:Resource ;
+    rdfs:label "Личный кабинет"@ru ;
+    comcore:mentionedIn :48 .
+
+:адрес_электронной_почты rdf:type comcore:Resource ;
+    rdfs:label "Адрес электронной почты"@ru ;
+    comcore:isPartOf :заявление ;
+    comcore:mentionedIn :48 .
+
+:заявление rdf:type comcore:Resource ;
+    rdfs:label "Заявление"@ru ;
+    comcore:mentionedIn :48 .
+
+:отказ_в_подключении_интернет-ма rdf:type comcore:Process ;
+    rdfs:label "Отказ в подключении Интернет-магазина"@ru ;
+    comcore:mentionedIn :48 .
+
+:прекращение_приема_переводов rdf:type comcore:Process ;
+    rdfs:label "Прекращение приема Переводов"@ru ;
+    comcore:relation :интернет-магазин ;
+    comcore:mentionedIn :48 .
+
+:внесение_изменений_в_контент_интер rdf:type comcore:Process ;
+    rdfs:label "Внесение изменений в контент Интернет-магазина"@ru ;
+    comcore:isResourceOf :интернет-магазин , :информационные_материалы ;
+    comcore:isActorOf :третье_лицо ;
+    comcore:mentionedIn :48 .
+
+:наличие_возможности_внесения_изм rdf:type comcore:Event ;
+    rdfs:label "Наличие возможности внесения изменений"@ru ;
+    comcore:Initiates :отказ_в_подключении_интернет-ма , :прекращение_приема_переводов ;
+    comcore:mentionedIn :48 .
+
+:третье_лицо rdf:type comcore:Agent ;
+    rdfs:label "Третье лицо"@ru ;
+    comcore:mentionedIn :48 .
+
+:интернет-магазин rdf:type comcore:Resource ;
+    rdfs:label "Интернет-магазин"@ru ;
+    comcore:relation :бесплатный_хостинг ;
+    comcore:mentionedIn :48 .
+
+:информационные_материалы rdf:type comcore:Resource ;
+    rdfs:label "Информационные материалы"@ru ;
+    comcore:mentionedIn :48 .
+
+:бесплатный_хостинг rdf:type comcore:Resource ;
+    rdfs:label "Бесплатный хостинг"@ru ;
+    comcore:mentionedIn :48 .
+
+:подключение_интернет-магазина rdf:type comcore:Process ;
+    rdfs:label "Подключение Интернет-магазина"@ru ;
+    comcore:mentionedIn :48 .

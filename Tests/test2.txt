@@ -1,0 +1,59 @@
+ЗАПРОС:
+ Как узнать результат проверки заявки отделом ОБР?
+
+ОТВЕТ:
+ Отдел ОБР осуществляет анализ юридического лица и подключаемого сайта. Результат проверки отражает статус задачи MRM в Jira. У заявки после проверки может быть установлен один из трех статусов: - статус задачи MRM – Закрыт. Согласовано; это означает положительное решение по регистрации ИМ; - статус задачи MRM – Закрыт. Отказано; это означает отрицательное решение по регистрации ИМ; - статус задачи MRM – Открытый. Нет решения; это означает, что есть замечания, осуществляется запрос дополнительной информации. При этом отдел сопровождения интернет-магазинов отслеживает изменение статуса задачи MRM.
+
+ТРИПЛЕТЫ:
+ :отдел_обр rdf:type comcore:Agent ;
+    rdfs:label "Отдел ОБР"@ru ;
+    comcore:isActorOf :анализ_юридического_лица_и_подключаемого_с ;
+    comcore:mentionedIn :0 .
+
+:анализ_юридического_лица_и_подключаемого_с rdf:type comcore:Process ;
+    rdfs:label "анализ юридического лица и подключаемого сайта"@ru ;
+    comcore:mentionedIn :0 .
+
+:юридическое_лицо rdf:type comcore:Resource ;
+    rdfs:label "юридическое лицо"@ru ;
+    comcore:isResourceOf :анализ_юридического_лица_и_подключаемого_с ;
+    comcore:mentionedIn :0 .
+
+:подключаемый_сайт rdf:type comcore:Resource ;
+    rdfs:label "подключаемый сайт"@ru ;
+    comcore:isResourceOf :анализ_юридического_лица_и_подключаемого_с ;
+    comcore:mentionedIn :0 .
+
+:заявка rdf:type comcore:Resource ;
+    rdfs:label "заявка"@ru ;
+    comcore:isResourceOf :анализ_юридического_лица_и_подключаемого_с ;
+    comcore:mentionedIn :0 .
+
+:закрыт_согласовано rdf:type comcore:Event ;
+    rdfs:label "Закрыт. Согласовано"@ru ;
+    comcore:isResultOf :анализ_юридического_лица_и_подключаемого_с ;
+    comcore:mentionedIn :0 .
+
+:закрыт_отказано rdf:type comcore:Event ;
+    rdfs:label "Закрыт. Отказано"@ru ;
+    comcore:isResultOf :анализ_юридического_лица_и_подключаемого_с ;
+    comcore:mentionedIn :0 .
+
+:открытый_нет_решения rdf:type comcore:Event ;
+    rdfs:label "Открытый. Нет решения"@ru ;
+    comcore:isResultOf :анализ_юридического_лица_и_подключаемого_с ;
+    comcore:Initiates :запрос_дополнительной_информации ;
+    comcore:mentionedIn :0 .
+
+:отдел_сопровождения_интернет-магазинов rdf:type comcore:Agent ;
+    rdfs:label "отдел сопровождения интернет-магазинов"@ru ;
+    comcore:relation :закрыт_согласовано ;
+    comcore:relation :закрыт_отказано ;
+    comcore:relation :открытый_нет_решения ;
+    comcore:mentionedIn :0 .
+
+:запрос_дополнительной_информации rdf:type comcore:Process ;
+    rdfs:label "запрос дополнительной информации"@ru ;
+    comcore:mentionedIn :0 .
+ОТВЕТ2:
+ подключаемый сайт(Сайт НКО) - сайт НКО в сети Интернет: www.moneta.ru, www.payanyway.ru (score: 0.78)

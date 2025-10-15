@@ -1,0 +1,36 @@
+:ошибочное_перечисление rdf:type comcore:Event ;
+    rdfs:label "ошибочное Перечисление"@ru ;
+    comcore:Initiates :уведомление ;
+    comcore:Initiates :возврат ;
+    comcore:mentionedIn :54 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:mentionedIn :54 .
+
+:уведомление rdf:type comcore:Process ;
+    rdfs:label "уведомление"@ru ;
+    comcore:mentionedIn :54 .
+
+:письменное_уведомление rdf:type comcore:Resource ;
+    rdfs:label "письменное уведомление"@ru ;
+    comcore:isResultOf :уведомление ;
+    comcore:mentionedIn :54 .
+
+:возврат rdf:type comcore:Process ;
+    rdfs:label "возврат"@ru ;
+    comcore:mentionedIn :54 .
+
+:запрос rdf:type comcore:Event ;
+    rdfs:label "запрос"@ru ;
+    comcore:Initiates :предоставление ;
+    comcore:mentionedIn :54 .
+
+:предоставление rdf:type comcore:Process ;
+    rdfs:label "предоставление"@ru ;
+    comcore:mentionedIn :54 .
+
+:документы rdf:type comcore:Resource ;
+    rdfs:label "документы"@ru ;
+    comcore:isResultOf :предоставление ;
+    comcore:mentionedIn :54 .

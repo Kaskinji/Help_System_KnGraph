@@ -1,0 +1,63 @@
+:нко rdf:type comcore:Agent ;
+  rdfs:label "НКО"@ru ;
+  comcore:isActorOf :признание_переводов_недейс, :прекращение_взаимодействия, :не_осуществление_расчетов, :приостановка_переводов, :направление_уведомления ;
+  comcore:mentionedIn :25 .
+
+:получатель rdf:type comcore:Agent ;
+  rdfs:label "Получатель"@ru ;
+  comcore:mentionedIn :25 .
+
+:интернет_магазин rdf:type comcore:Agent ;
+  rdfs:label "Интернет-магазин"@ru ;
+  comcore:mentionedIn :25 .
+
+:переводы rdf:type comcore:Resource ;
+  rdfs:label "Переводы"@ru ;
+  comcore:isResourceOf :признание_переводов_недейс, :приостановка_переводов ;
+  comcore:mentionedIn :25 .
+
+:недействительные_переводы rdf:type comcore:Resource ;
+  rdfs:label "Недействительные переводы"@ru ;
+  comcore:isResultOf :признание_переводов_недейс ;
+  comcore:mentionedIn :25 .
+
+:уведомление_об_отключении rdf:type comcore:Resource ;
+  rdfs:label "уведомление об отключении"@ru ;
+  comcore:isResourceOf :направление_уведомления ;
+  comcore:mentionedIn :25 .
+
+:адрес_электронной_почты_пол rdf:type comcore:Resource ;
+  rdfs:label "адрес электронной почты получателя"@ru ;
+  comcore:isResourceOf :направление_уведомления ;
+  comcore:mentionedIn :25 .
+
+:личный_кабинет rdf:type comcore:Resource ;
+  rdfs:label "Личный кабинет"@ru ;
+  comcore:isResourceOf :направление_уведомления ;
+  comcore:mentionedIn :25 .
+
+:признание_переводов_недейс rdf:type comcore:Process ;
+  rdfs:label "признание переводов недействительными"@ru ;
+  comcore:mentionedIn :25 .
+
+:прекращение_взаимодействия rdf:type comcore:Process ;
+  rdfs:label "прекращение взаимодействия"@ru ;
+  comcore:relation :получатель, :интернет_магазин ;
+  comcore:mentionedIn :25 .
+
+:не_осуществление_расчетов rdf:type comcore:Process ;
+  rdfs:label "не осуществление расчетов"@ru ;
+  comcore:mentionedIn :25 .
+
+:приостановка_переводов rdf:type comcore:Process ;
+  rdfs:label "приостановка переводов"@ru ;
+  comcore:mentionedIn :25 .
+
+:направление_уведомления rdf:type comcore:Process ;
+  rdfs:label "направление уведомления"@ru ;
+  comcore:mentionedIn :25 .
+
+:отключение_от_системы_мон rdf:type comcore:Event ;
+  rdfs:label "отключение от системы МОНЕТА.РУ"@ru ;
+  comcore:isResultOf :прекращение_взаимодействия ;
+  comcore:mentionedIn :25 .

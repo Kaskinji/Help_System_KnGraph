@@ -1,0 +1,50 @@
+:прекращение_исполнения_обязательств rdf:type comcore:Process ;
+    rdfs:label "прекращение исполнения обязательств"@ru ;
+    comcore:mentionedIn :50 .
+
+:расторжение_договора rdf:type comcore:Process ;
+    rdfs:label "расторжение договора"@ru ;
+    comcore:mentionedIn :50 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "договор"@ru ;
+    comcore:isResourceOf :расторжение_договора ;
+    comcore:mentionedIn :50 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "получатель"@ru ;
+    comcore:isActorOf :уведомление_получателя ;
+    comcore:mentionedIn :50 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:relation :получение_информации_нко_от_банка ;
+    comcore:mentionedIn :50 .
+
+:банк_россии rdf:type comcore:Agent ;
+    rdfs:label "Банк России"@ru ;
+    comcore:relation :получение_информации_нко_от_банка ;
+    comcore:mentionedIn :50 .
+
+:информация rdf:type comcore:Resource ;
+    rdfs:label "информация"@ru ;
+    comcore:isPartOf :база_данных ;
+    comcore:relation :получатель ;
+    comcore:mentionedIn :50 .
+
+:база_данных rdf:type comcore:Resource ;
+    rdfs:label "база данных"@ru ;
+    comcore:mentionedIn :50 .
+
+:уведомление_получателя rdf:type comcore:Process ;
+    rdfs:label "уведомление получателя"@ru ;
+    comcore:mentionedIn :50 .
+
+:получение_информации_нко_от_банка rdf:type comcore:Event ;
+    rdfs:label "получение информации НКО от Банка России"@ru ;
+    comcore:Initiates :прекращение_исполнения_обязательств ;
+    comcore:Initiates :расторжение_договора ;
+    comcore:relation :информация ;
+    comcore:relation :нко ;
+    comcore:relation :банк_россии ;
+    comcore:mentionedIn :50 .

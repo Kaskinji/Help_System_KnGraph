@@ -1,0 +1,57 @@
+[
+    {
+        "label": "Распоряжение",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "распоряжение isResourceOf перевод"
+        ],
+        "chunk_id": "31"
+    },
+    {
+        "label": "Перевод",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "перевод hasResource распоряжение",
+            "перевод hasActor нко",
+            "перевод hasActor нко",
+            "перевод hasResource авторизация"
+        ],
+        "chunk_id": "31"
+    },
+    {
+        "label": "НКО",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Agent",
+        "hasStatement": [
+            "нко isActorOf перевод",
+            "нко isActorOf перевод"
+        ],
+        "chunk_id": "31"
+    },
+    {
+        "label": "Эмитент",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Agent",
+        "hasStatement": [
+            "эмитент isResponsibleFor авторизация"
+        ],
+        "chunk_id": "31"
+    },
+    {
+        "label": "авторизация",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "авторизация hasResponsible эмитент",
+            "авторизация isResourceOf перевод"
+        ],
+        "chunk_id": "31"
+    }
+]

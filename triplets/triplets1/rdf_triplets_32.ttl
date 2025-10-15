@@ -1,0 +1,35 @@
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :обмен_информацией_электронными_документами ;
+    comcore:mentionedIn :32 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :обмен_информацией_электронными_документами ;
+    comcore:mentionedIn :32 .
+
+:сообщение rdf:type comcore:Resource ;
+    rdfs:label "Сообщение"@ru ;
+    comcore:isResourceOf :обмен_информацией_электронными_документами ;
+    comcore:mentionedIn :32 .
+
+:информация_о_результатах_приема_и_обработки rdf:type comcore:Resource ;
+    rdfs:label "Информация о результатах приема и обработки"@ru ;
+    comcore:isResultOf :обмен_информацией_электронными_документами ;
+    comcore:mentionedIn :32 .
+
+:обмен_информацией_электронными_документами rdf:type comcore:Process ;
+    rdfs:label "Обмен информацией и электронными документами"@ru ;
+    comcore:hasActor :нко ;
+    comcore:hasActor :получатель ;
+    comcore:mentionedIn :32 .
+
+:система_монета.ру rdf:type comcore:Resource ;
+    rdfs:label "Система МОНЕТА.РУ"@ru ;
+    comcore:isResourceOf :обмен_информацией_электронными_документами ;
+    comcore:mentionedIn :32 .
+
+:регламент_информационного_обмена_электронными rdf:type comcore:Resource ;
+    rdfs:label "Регламент информационного обмена электронными документами"@ru ;
+    comcore:isPartOf :обмен_информацией_электронными_документами ;
+    comcore:mentionedIn :32 .

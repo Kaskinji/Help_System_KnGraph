@@ -1,0 +1,58 @@
+ЗАПРОС:
+ Что делать, если Клиент получил отказ в регистрации по причине «Не зарегистрирован в ЕГРЮЛ».
+
+ОТВЕТ:
+ Если причина отказа «Не зарегистрирован в ЕГРЮЛ», сотрудник отдела сопровождения заходит на сайт https://egrul.nalog.ru , вводит указанный в заявке ИНН и убеждается в отсутствии действующего юридического лица. Проверяет на сайте ИФНС, в разделе Самозанятые регистрацию в качестве самозанятого. Если клиент не зарегистрирован в ЕГРЮЛ и не зарегистрирован как самозанятый, то сотрудник пишет письмо в OTRS. Для этого он в системе OTRS ищет письмо о регистрации клиента ("Заявки - Поиск – Добавить атрибут поиска –Тема - вставляет ИНН Клиента
+
+ТРИПЛЕТЫ:
+ :причина_отказа_не_зарегистрирован_в_егрюл rdf:type comcore:Event ;
+    rdfs:label "Причина отказа «Не зарегистрирован в ЕГРЮЛ»"@ru ;
+    comcore:Initiates :проверка_регистрации_в_качестве ;
+    comcore:mentionedIn :0 .
+
+:проверка_регистрации_в_качестве rdf:type comcore:Process ;
+    rdfs:label "Проверка регистрации в качестве самозанятого"@ru ;
+    comcore:hasResult :отсутствие_действующего_юридическо ;
+    comcore:hasResult :отсутствие_регистрации_как_самоз ;
+    comcore:mentionedIn :0 .
+
+:отсутствие_действующего_юридическо rdf:type comcore:Event ;
+    rdfs:label "Отсутствие действующего юридического лица"@ru ;
+    comcore:isResultOf :проверка_регистрации_в_качестве ;
+    comcore:mentionedIn :0 .
+
+:отсутствие_регистрации_как_самоз rdf:type comcore:Event ;
+    rdfs:label "Отсутствие регистрации как самозанятого"@ru ;
+    comcore:isResultOf :проверка_регистрации_в_качестве ;
+    comcore:mentionedIn :0 .
+
+:написание_письма_в_otrs rdf:type comcore:Process ;
+    rdfs:label "Написание письма в OTRS"@ru ;
+    comcore:hasPart :поиск_письма_о_регистрации_кл ;
+    comcore:mentionedIn :0 .
+
+:поиск_письма_о_регистрации_кл rdf:type comcore:Process ;
+    rdfs:label "Поиск письма о регистрации клиента"@ru ;
+    comcore:isPartOf :написание_письма_в_otrs ;
+    comcore:mentionedIn :0 .
+
+:сотрудник_отдела_сопровождения rdf:type comcore:Agent ;
+    rdfs:label "Сотрудник отдела сопровождения"@ru ;
+    comcore:isActorOf :проверка_регистрации_в_качестве ;
+    comcore:isActorOf :написание_письма_в_otrs ;
+    comcore:isActorOf :поиск_письма_о_регистрации_кл ;
+    comcore:Initiates :проверка_регистрации_в_качестве ;
+    comcore:Initiates :написание_письма_в_otrs ;
+    comcore:mentionedIn :0 .
+
+:инн rdf:type comcore:Resource ;
+    rdfs:label "ИНН"@ru ;
+    comcore:isResourceOf :проверка_регистрации_в_качестве ;
+    comcore:isResourceOf :поиск_письма_о_регистрации_кл ;
+    comcore:mentionedIn :0 .
+
+:заявка rdf:type comcore:Resource ;
+    rdfs:label "Заявка"@ru ;
+    comcore:mentionedIn :0 .
+ОТВЕТ2:
+ Не найдено подходящих результатов

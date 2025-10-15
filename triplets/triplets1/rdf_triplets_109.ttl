@@ -1,0 +1,78 @@
+:заявление_на_перечисление_по_операции_воз rdf:type comcore:Resource ;
+    rdfs:label "Заявление на перечисление по Операции возврата Перевода"@ru ;
+    comcore:isResourceOf :операция_возврата_перевода ;
+    comcore:mentionedIn :109 .
+
+:операция_возврата_перевода rdf:type comcore:Process ;
+    rdfs:label "Операция возврата Перевода"@ru ;
+    comcore:hasActor :нко ;
+    comcore:mentionedIn :109 .
+
+:эмитент rdf:type comcore:Agent ;
+    rdfs:label "Эмитент"@ru ;
+    comcore:mentionedIn :109 .
+
+:перечисление rdf:type comcore:Resource ;
+    rdfs:label "Перечисление"@ru ;
+    comcore:isResourceOf :операция_возврата_перевода ;
+    comcore:mentionedIn :109 .
+
+:комиссия_нко rdf:type comcore:Resource ;
+    rdfs:label "Комиссия НКО"@ru ;
+    comcore:isResourceOf :операция_возврата_перевода ;
+    comcore:mentionedIn :109 .
+
+:тарифы rdf:type comcore:Resource ;
+    rdfs:label "Тарифы"@ru ;
+    comcore:mentionedIn :109 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :операция_возврата_перевода ;
+    comcore:isActorOf :доведение_информации_до_сведения ;
+    comcore:isResponsibleFor :информация_о_невозможности_исполнить_заяв ;
+    comcore:isResponsibleFor :личный_кабинет ;
+    comcore:mentionedIn :109 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :109 .
+
+:личный_кабинет rdf:type comcore:Resource ;
+    rdfs:label "Личный кабинет"@ru ;
+    comcore:isResourceOf :доведение_информации_до_сведения ;
+    comcore:mentionedIn :109 .
+
+:поступление_заявления rdf:type comcore:Event ;
+    rdfs:label "поступление заявления"@ru ;
+    comcore:Initiates :операция_возврата_перевода ;
+    comcore:mentionedIn :109 .
+
+:получение_информации rdf:type comcore:Event ;
+    rdfs:label "получение информации"@ru ;
+    comcore:mentionedIn :109 .
+
+:недостаточность_суммы rdf:type comcore:Event ;
+    rdfs:label "недостаточность суммы"@ru ;
+    comcore:Initiates :непринятие_заявления ;
+    comcore:mentionedIn :109 .
+
+:непринятие_заявления rdf:type comcore:Event ;
+    rdfs:label "непринятие заявления"@ru ;
+    comcore:Initiates :доведение_информации_до_сведения ;
+    comcore:mentionedIn :109 .
+
+:доведение_информации_до_сведения rdf:type comcore:Process ;
+    rdfs:label "Доведение информации до сведения"@ru ;
+    comcore:hasActor :нко ;
+    comcore:mentionedIn :109 .
+
+:информация_о_невозможности_исполнить_заяв rdf:type comcore:Resource ;
+    rdfs:label "Информация о невозможности исполнить Заявление"@ru ;
+    comcore:isResourceOf :доведение_информации_до_сведения ;
+    comcore:mentionedIn :109 .
+
+:информация_от_эмитента rdf:type comcore:Resource ;
+    rdfs:label "информация от Эмитента"@ru ;
+    comcore:isResourceOf :операция_возврата_перевода ;
+    comcore:mentionedIn :109 .

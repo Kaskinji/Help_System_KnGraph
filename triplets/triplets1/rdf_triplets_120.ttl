@@ -1,0 +1,44 @@
+:нко_монета_ооо rdf:type comcore:Agent ;
+    rdfs:label "НКО «МОНЕТА» (ООО)"@ru ;
+    comcore:mentionedIn :120 .
+
+:система rdf:type comcore:Resource ;
+    rdfs:label "Система"@ru ;
+    comcore:isResourceOf :открыт_прием_переводов ;
+    comcore:mentionedIn :120 .
+
+:председатель_правления rdf:type comcore:Agent ;
+    rdfs:label "Председатель Правления"@ru ;
+    comcore:isActorOf :открыт_прием_переводов ;
+    comcore:mentionedIn :120 .
+
+:руководитель rdf:type comcore:Agent ;
+    rdfs:label "Руководитель"@ru ;
+    comcore:mentionedIn :120 .
+
+:отметки rdf:type comcore:Resource ;
+    rdfs:label "Отметки"@ru ;
+    comcore:mentionedIn :120 .
+
+:заявление rdf:type comcore:Resource ;
+    rdfs:label "Заявление"@ru ;
+    comcore:mentionedIn :120 .
+
+:проверено rdf:type comcore:Process ;
+    rdfs:label "проверено"@ru ;
+    comcore:mentionedIn :120 .
+
+:открыт_прием_переводов rdf:type comcore:Process ;
+    rdfs:label "прием переводов"@ru ;
+    comcore:hasResource :интернет-ресурс ;
+    comcore:hasResource :доступ ;
+    comcore:mentionedIn :120 .
+
+:интернет-ресурс rdf:type comcore:Resource ;
+    rdfs:label "интернет-ресурс"@ru ;
+    comcore:mentionedIn :120 .
+
+:доступ rdf:type comcore:Resource ;
+    rdfs:label "доступ"@ru ;
+    comcore:mentionedIn :120 .
+

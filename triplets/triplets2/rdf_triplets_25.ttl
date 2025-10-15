@@ -1,0 +1,63 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:регистрация_получателя rdf:type comcore:Process ;
+    rdfs:label "регистрация Получателя"@ru ;
+    comcore:mentionedIn :25 .
+
+:прием_перевода_плательщика_в_пользу rdf:type comcore:Process ;
+    rdfs:label "прием Перевода Плательщика в пользу Получателя"@ru ;
+    comcore:hasResult :проведение_первой_финансовой_операции ;
+    comcore:mentionedIn :25 .
+
+:пополнение_бизнес-счета_получателя rdf:type comcore:Process ;
+    rdfs:label "пополнение Бизнес-счета Получателя"@ru ;
+    comcore:hasResult :проведение_первой_финансовой_операции ;
+    comcore:mentionedIn :25 .
+
+:документальное_подтверждение_полномочий rdf:type comcore:Process ;
+    rdfs:label "документальное подтверждение полномочий"@ru ;
+    comcore:mentionedIn :25 .
+
+:предоставление_заявления rdf:type comcore:Process ;
+    rdfs:label "предоставление Заявления"@ru ;
+    comcore:hasResult :заявление ;
+    comcore:mentionedIn :25 .
+
+:проведение_первой_финансовой_операции rdf:type comcore:Event ;
+    rdfs:label "проведение первой финансовой операции"@ru ;
+    comcore:mentionedIn :25 .
+
+:небанковская_кредитная_организация rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:mentionedIn :25 .
+
+:плательщик rdf:type comcore:Agent ;
+    rdfs:label "Плательщик"@ru ;
+    comcore:mentionedIn :25 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :предоставление_заявления ;
+    comcore:mentionedIn :25 .
+
+:торговая_площадка rdf:type comcore:Agent ;
+    rdfs:label "Торговая площадка"@ru ;
+    comcore:mentionedIn :25 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:mentionedIn :25 .
+
+:бизнес-счет_получателя rdf:type comcore:Resource ;
+    rdfs:label "Бизнес-счет Получателя"@ru ;
+    comcore:isResourceOf :пополнение_бизнес-счета_получателя ;
+    comcore:mentionedIn :25 .
+
+:заявление rdf:type comcore:Resource ;
+    rdfs:label "Заявление"@ru ;
+    comcore:isResourceOf :документальное_подтверждение_полномочий ;
+    comcore:mentionedIn :25 .

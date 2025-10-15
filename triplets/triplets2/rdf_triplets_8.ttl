@@ -1,0 +1,44 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:личный_кабинет rdf:type comcore:Resource ;
+    rdfs:label "Личный кабинет"@ru ;
+    comcore:isResourceOf :доступ_в_личный_кабинет , :обмен_информацией_посредством_личного ;
+    dc:definition "раздел в Системе МОНЕТА.РУ, который содержит данные о Получателе и его Интернет-магазине, позволяет Получателю получать от НКО информацию о состоянии Переводов, реестры успешно осуществленных Переводов, Акты, формировать и направлять в НКО Заявление на перечисление, Заявление на перечисление по Операции возврата Перевода, Распоряжения и другие документы, необходимые для исполнения Договора." ;
+    comcore:mentionedIn :8 .
+
+:доступ_в_личный_кабинет rdf:type comcore:Process ;
+    rdfs:label "Доступ в Личный кабинет"@ru ;
+    comcore:mentionedIn :8 .
+
+:двухфакторная_аутентификация rdf:type comcore:Process ;
+    rdfs:label "двухфакторная аутентификация"@ru ;
+    comcore:isPartOf :доступ_в_личный_кабинет ;
+    comcore:mentionedIn :8 .
+
+:обмен_информацией_посредством_личного rdf:type comcore:Process ;
+    rdfs:label "обмен информацией, документами и распоряжениями посредством Личного кабинета"@ru ;
+    comcore:mentionedIn :8 .
+
+:регламент_информационного_обмена_элек rdf:type comcore:Resource ;
+    rdfs:label "Регламент информационного обмена электронными документами"@ru ;
+    comcore:isResourceOf :обмен_информацией_посредством_личного ;
+    comcore:relation :приложение_№2_к_договору ;
+    comcore:mentionedIn :8 .
+
+:приложение_№2_к_договору rdf:type comcore:Resource ;
+    rdfs:label "Приложение №2 к Договору"@ru ;
+    comcore:mentionedIn :8 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :доступ_в_личный_кабинет , :обмен_информацией_посредством_личного ;
+    comcore:mentionedIn :8 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :обмен_информацией_посредством_личного ;
+    comcore:mentionedIn :8 .

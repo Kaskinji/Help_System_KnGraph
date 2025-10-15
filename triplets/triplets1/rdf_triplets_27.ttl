@@ -1,0 +1,7 @@
+:нко rdf:type comcore:Agent ;
+  rdfs:label "НКО"@ru ;
+  comcore:mentionedIn :27 .
+
+:перечисления_получателю rdf:type comcore:Process ;
+  rdfs:label "Перечисления Получателю"@ru ;
+  comcore:mentionedIn :27 .

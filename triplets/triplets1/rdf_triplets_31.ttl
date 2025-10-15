@@ -1,0 +1,17 @@
+:нко rdf:type comcore:Agent ;
+     rdfs:label "НКО"@ru ;
+     comcore:isResponsibleFor :распоряжение ;
+     comcore:mentionedIn :31 .
+
+:эмитент rdf:type comcore:Agent ;
+     rdfs:label "Эмитент"@ru ;
+     comcore:isResponsibleFor :авторизация ;
+     comcore:mentionedIn :31 .
+
+:распоряжение rdf:type comcore:Resource ;
+     rdfs:label "Распоряжение"@ru ;
+     comcore:mentionedIn :31 .
+
+:авторизация rdf:type comcore:Resource ;
+     rdfs:label "Авторизация"@ru ;
+     comcore:mentionedIn :31 .

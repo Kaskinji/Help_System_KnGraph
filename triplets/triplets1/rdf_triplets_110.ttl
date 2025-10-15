@@ -1,0 +1,103 @@
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:Initiates :направление_запроса ;
+    comcore:isActorOf :направление_запроса ;
+    comcore:isActorOf :осуществление_анализа ;
+    comcore:isResponsibleFor :информация ;
+    comcore:mentionedIn :110 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :реализация_услуг ;
+    comcore:mentionedIn :110 .
+
+:плательщик rdf:type comcore:Agent ;
+    rdfs:label "Плательщик"@ru ;
+    comcore:mentionedIn :110 .
+
+:эмитент rdf:type comcore:Agent ;
+    rdfs:label "Эмитент"@ru ;
+    comcore:mentionedIn :110 .
+
+:эквайрер rdf:type comcore:Agent ;
+    rdfs:label "Эквайрер"@ru ;
+    comcore:mentionedIn :110 .
+
+:взаимодействие_сторон rdf:type comcore:Process ;
+    rdfs:label "Взаимодействие сторон"@ru ;
+    comcore:mentionedIn :110 .
+
+:реализация_услуг rdf:type comcore:Process ;
+    rdfs:label "Реализация услуг"@ru ;
+    comcore:mentionedIn :110 .
+
+:направление_запроса rdf:type comcore:Process ;
+    rdfs:label "Направление запроса"@ru ;
+    comcore:hasResult :запрос ;
+    comcore:mentionedIn :110 .
+
+:предоставление_информации rdf:type comcore:Process ;
+    rdfs:label "Предоставление информации"@ru ;
+    comcore:hasResult :информация ;
+    comcore:mentionedIn :110 .
+
+:предоставление_документов rdf:type comcore:Process ;
+    rdfs:label "Предоставление документов"@ru ;
+    comcore:hasResult :документы ;
+    comcore:mentionedIn :110 .
+
+:оказание_услуги rdf:type comcore:Process ;
+    rdfs:label "Оказание услуги"@ru ;
+    comcore:mentionedIn :110 .
+
+:осуществление_перевода rdf:type comcore:Process ;
+    rdfs:label "Осуществление перевода"@ru ;
+    comcore:mentionedIn :110 .
+
+:осуществление_анализа rdf:type comcore:Process ;
+    rdfs:label "Осуществление анализа"@ru ;
+    comcore:isResourceOf :информация ;
+    comcore:isResourceOf :документы ;
+    comcore:mentionedIn :110 .
+
+:информация rdf:type comcore:Resource ;
+    rdfs:label "Информация"@ru ;
+    comcore:isResourceOf :осуществление_анализа ;
+    comcore:mentionedIn :110 .
+
+:запрос rdf:type comcore:Resource ;
+    rdfs:label "Запрос"@ru ;
+    comcore:isResultOf :направление_запроса ;
+    comcore:mentionedIn :110 .
+
+:документы rdf:type comcore:Resource ;
+    rdfs:label "Документы"@ru ;
+    comcore:isResourceOf :осуществление_анализа ;
+    comcore:mentionedIn :110 .
+
+:услуги rdf:type comcore:Resource ;
+    rdfs:label "Услуги"@ru ;
+    comcore:mentionedIn :110 .
+
+:запрещенные_услуги rdf:type comcore:Resource ;
+    rdfs:label "Запрещенные услуги"@ru ;
+    comcore:isResourceOf :реализация_услуг ;
+    comcore:mentionedIn :110 .
+
+:адрес_электронной_почты rdf:type comcore:Resource ;
+    rdfs:label "Адрес электронной почты"@ru ;
+    comcore:relation :личный_кабинет ;
+    comcore:mentionedIn :110 .
+
+:личный_кабинет rdf:type comcore:Resource ;
+    rdfs:label "Личный кабинет"@ru ;
+    comcore:mentionedIn :110 .
+
+:анализ rdf:type comcore:Resource ;
+    rdfs:label "Анализ"@ru ;
+    comcore:mentionedIn :110 .
+
+:поступление_информации rdf:type comcore:Event ;
+    rdfs:label "Поступление информации"@ru ;
+    comcore:Initiates :направление_запроса ;
+    comcore:mentionedIn :110 .

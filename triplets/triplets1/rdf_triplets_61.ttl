@@ -1,0 +1,53 @@
+:торговая_площадка rdf:type comcore:Agent ;
+    rdfs:label "Торговая площадка"@ru ;
+    comcore:mentionedIn :61 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :61 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :установление_ограничений_перевода ;
+    comcore:isActorOf :аннулирование_ограничения ;
+    comcore:mentionedIn :61 .
+
+:волеизъявление_об_установлении_огра rdf:type comcore:Resource ;
+    rdfs:label "волеизъявление об установлении ограничений перевода"@ru ;
+    comcore:mentionedIn :61 .
+
+:заявление_об_установлении rdf:type comcore:Resource ;
+    rdfs:label "заявление об установлении ограничений перевода"@ru ;
+    comcore:isResourceOf :установление_ограничений_перевода ;
+    comcore:mentionedIn :61 .
+
+:ограничения_перевода rdf:type comcore:Resource ;
+    rdfs:label "ограничения перевода"@ru ;
+    comcore:mentionedIn :61 .
+
+:заявление_о_снятии rdf:type comcore:Resource ;
+    rdfs:label "заявление о снятии ограничений перевода"@ru ;
+    comcore:isResourceOf :снятие_ограничений_перевода ;
+    comcore:mentionedIn :61 .
+
+:параметры rdf:type comcore:Resource ;
+    rdfs:label "параметры"@ru ;
+    comcore:mentionedIn :61 .
+
+:установление_ограничений_перевода rdf:type comcore:Process ;
+    rdfs:label "установление ограничений перевода"@ru ;
+    comcore:mentionedIn :61 .
+
+:аннулирование_ограничения rdf:type comcore:Process ;
+    rdfs:label "аннулирование ограничения"@ru ;
+    comcore:mentionedIn :61 .
+
+:снятие_ограничений_перевода rdf:type comcore:Process ;
+    rdfs:label "снятие ограничений перевода"@ru ;
+    comcore:mentionedIn :61 .
+
+:получение_заявления_об_установл rdf:type comcore:Event ;
+    rdfs:label "получение заявления об установлении ограничений перевода"@ru ;
+    comcore:Initiates :аннулирование_ограничения ;
+    comcore:Initiates :установление_ограничений_перевода ;
+    comcore:mentionedIn :61 .

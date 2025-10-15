@@ -1,0 +1,43 @@
+:отсутствие_переводов_получателя_в_течен rdf:type comcore:Event ;
+    rdfs:label "отсутствие Переводов Получателя в течение 180 (ста восьмидесяти) календарных дней"@ru ;
+    comcore:Initiates :прекращение_исполнения_обязательств ;
+    comcore:Initiates :расторжение_договора ;
+    comcore:mentionedIn :46 .
+
+:информация_о_начале_процедуры_ликвидац rdf:type comcore:Event ;
+    rdfs:label "информация о начале процедуры ликвидации или банкротства Получателя"@ru ;
+    comcore:Initiates :прекращение_исполнения_обязательств ;
+    comcore:Initiates :расторжение_договора ;
+    comcore:mentionedIn :46 .
+
+:переводы_получателя rdf:type comcore:Resource ;
+    rdfs:label "Переводы Получателя"@ru ;
+    comcore:mentionedIn :46 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:isResourceOf :расторжение_договора ;
+    comcore:mentionedIn :46 .
+
+:обязательства rdf:type comcore:Resource ;
+    rdfs:label "обязательства"@ru ;
+    comcore:isResourceOf :прекращение_исполнения_обязательств ;
+    comcore:mentionedIn :46 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :прекращение_исполнения_обязательств ;
+    comcore:isActorOf :расторжение_договора ;
+    comcore:mentionedIn :46 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :46 .
+
+:прекращение_исполнения_обязательств rdf:type comcore:Process ;
+    rdfs:label "прекращение исполнения обязательств"@ru ;
+    comcore:mentionedIn :46 .
+
+:расторжение_договора rdf:type comcore:Process ;
+    rdfs:label "расторжение Договора"@ru ;
+    comcore:mentionedIn :46 .

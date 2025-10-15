@@ -1,0 +1,48 @@
+:операция_возврата_перевода rdf:type comcore:Process ;
+  rdfs:label "Операция возврата Перевода"@ru ;
+  comcore:mentionedIn :19 .
+
+:получатель rdf:type comcore:Agent ;
+  rdfs:label "Получатель"@ru ;
+  comcore:Initiates :операция_возврата_перевода ;
+  comcore:isActorOf :информационно-технологическое_взаимодейс ;
+  comcore:mentionedIn :19 .
+
+:плательщик rdf:type comcore:Agent ;
+  rdfs:label "Плательщик"@ru ;
+  comcore:mentionedIn :19 .
+
+:личный_кабинет rdf:type comcore:Resource ;
+  rdfs:label "Личный кабинет"@ru ;
+  comcore:isResourceOf :операция_возврата_перевода ;
+  comcore:mentionedIn :19 .
+
+:нко rdf:type comcore:Agent ;
+  rdfs:label "НКО"@ru ;
+  comcore:isActorOf :информационно-технологическое_взаимодейс ;
+  comcore:isActorOf :возврат_денежных_средств ;
+  comcore:mentionedIn :19 .
+
+:информационно-технологическое_взаимодейс rdf:type comcore:Process ;
+  rdfs:label "информационно-технологическое взаимодействие"@ru ;
+  comcore:mentionedIn :19 .
+
+:возврат_денежных_средств rdf:type comcore:Process ;
+  rdfs:label "возврат денежных средств"@ru ;
+  comcore:isPartOf :операция_возврата_перевода ;
+  comcore:mentionedIn :19 .
+
+:денежные_средства rdf:type comcore:Resource ;
+  rdfs:label "денежные средства"@ru ;
+  comcore:isResourceOf :возврат_денежных_средств ;
+  comcore:isPartOf :сумма_перечисления ;
+  comcore:mentionedIn :19 .
+
+:сумма_перечисления rdf:type comcore:Resource ;
+  rdfs:label "сумма Перечисления"@ru ;
+  comcore:mentionedIn :19 .
+
+:эмитент rdf:type comcore:Agent ;
+  rdfs:label "Эмитент"@ru ;
+  comcore:isActorOf :информационно-технологическое_взаимодейс ;
+  comcore:mentionedIn :19 .

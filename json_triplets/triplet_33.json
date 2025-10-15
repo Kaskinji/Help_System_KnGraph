@@ -1,0 +1,75 @@
+[
+    {
+        "label": "подключение Получателя к Системе МОНЕТА.РУ",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "подключение получателя к системе мон hasActor нко"
+        ],
+        "chunk_id": "33"
+    },
+    {
+        "label": "НКО",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Agent",
+        "hasStatement": [
+            "нко isActorOf подключение получателя к системе мон"
+        ],
+        "chunk_id": "33"
+    },
+    {
+        "label": "информационный обмен",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "информационный обмен hasResource сообщения",
+            "информационный обмен hasResource электронные документы"
+        ],
+        "chunk_id": "33"
+    },
+    {
+        "label": "Сообщения",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "сообщения isResourceOf информационный обмен"
+        ],
+        "chunk_id": "33"
+    },
+    {
+        "label": "электронные документы",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "электронные документы isResourceOf информационный обмен",
+            "электронные документы hasPart информация о переводах"
+        ],
+        "chunk_id": "33"
+    },
+    {
+        "label": "информация о Переводах",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "информация о переводах isPartOf электронные документы",
+            "информация о переводах relation переводы"
+        ],
+        "chunk_id": "33"
+    },
+    {
+        "label": "Переводы",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "переводы relation информация о переводах"
+        ],
+        "chunk_id": "33"
+    }
+]

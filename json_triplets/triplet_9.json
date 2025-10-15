@@ -1,0 +1,102 @@
+[
+    {
+        "label": "МПС",
+        "abbreviation": [],
+        "definition": "международные платежные системы Visa International и MasterCard Worldwide",
+        "type": "Agent",
+        "hasStatement": [],
+        "chunk_id": "9"
+    },
+    {
+        "label": "МИР",
+        "abbreviation": [],
+        "definition": "национальная платежная система «МИР»",
+        "type": "Agent",
+        "hasStatement": [],
+        "chunk_id": "9"
+    },
+    {
+        "label": "Недействительный перевод",
+        "abbreviation": [],
+        "definition": "Перевод, связанный с оплатой Запрещенных услуг, реализуемых Получателем, а также Перевод, совершенный Плательщиком в пользу Получателя с нарушением правил платежных систем, или Перевод, ставший или который может стать предметом споров и разногласий в соответствии с правилами платежных систем",
+        "type": "Process",
+        "hasStatement": [
+            "недействительный перевод hasActor получатель",
+            "недействительный перевод hasActor плательщик",
+            "недействительный перевод hasResource запрещенные услуги",
+            "недействительный перевод hasResource правила платежных систем",
+            "недействительный перевод hasResult споры и разногласия"
+        ],
+        "chunk_id": "9"
+    },
+    {
+        "label": "Получатель",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Agent",
+        "hasStatement": [
+            "получатель isActorOf недействительный перевод"
+        ],
+        "chunk_id": "9"
+    },
+    {
+        "label": "Плательщик",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Agent",
+        "hasStatement": [
+            "плательщик isActorOf недействительный перевод"
+        ],
+        "chunk_id": "9"
+    },
+    {
+        "label": "Запрещенные услуги",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "запрещенные услуги isResourceOf недействительный перевод"
+        ],
+        "chunk_id": "9"
+    },
+    {
+        "label": "Правила платежных систем",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "правила платежных систем isResourceOf недействительный перевод"
+        ],
+        "chunk_id": "9"
+    },
+    {
+        "label": "Споры и разногласия",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Event",
+        "hasStatement": [
+            "споры и разногласия isResultOf недействительный перевод"
+        ],
+        "chunk_id": "9"
+    },
+    {
+        "label": "Порядок взаимодействия Сторон",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "порядок взаимодействия сторон hasResource приложение 5"
+        ],
+        "chunk_id": "9"
+    },
+    {
+        "label": "Приложение №5 к Договору",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "приложение 5 isResourceOf порядок взаимодействия сторон"
+        ],
+        "chunk_id": "9"
+    }
+]

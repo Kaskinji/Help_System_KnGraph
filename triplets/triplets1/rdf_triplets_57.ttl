@@ -1,0 +1,32 @@
+:памятка_о_порядке_действий_в_случае rdf:type comcore:Resource ;
+    rdfs:label "Памятка о порядке действий в случае наличия подозрения о компрометации средств доступа к счету"@ru ;
+    comcore:isResourceOf :обеспечение_информационной_безо ;
+    comcore:isPartOf :раздел_безопасность_сайта_нко ;
+    comcore:mentionedIn :57 .
+
+:правила_безопасности_при_доступе_к rdf:type comcore:Resource ;
+    rdfs:label "Правила безопасности при доступе к счетам и совершении операций по переводу электронных денежных средств"@ru ;
+    comcore:isResourceOf :обеспечение_информационной_безо ;
+    comcore:isPartOf :раздел_безопасность_сайта_нко ;
+    comcore:mentionedIn :57 .
+
+:раздел_безопасность_сайта_нко rdf:type comcore:Resource ;
+    rdfs:label "раздел «Безопасность» Сайта НКО"@ru ;
+    comcore:mentionedIn :57 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :согласование_раскрытия_информац ;
+    comcore:mentionedIn :57 .
+
+:обеспечение_информационной_безо rdf:type comcore:Process ;
+    rdfs:label "обеспечение информационной безопасности"@ru ;
+    comcore:mentionedIn :57 .
+
+:согласование_раскрытия_информац rdf:type comcore:Process ;
+    rdfs:label "согласование раскрытия информации"@ru ;
+    comcore:mentionedIn :57 .
+
+:раскрытие_информации rdf:type comcore:Process ;
+    rdfs:label "раскрытие информации"@ru ;
+    comcore:mentionedIn :57 .

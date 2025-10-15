@@ -1,0 +1,148 @@
+[
+    {
+        "label": "Сторона",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Agent",
+        "hasStatement": [
+            "сторона isActorOf заключение договора",
+            "сторона isActorOf уплата штрафа",
+            "сторона Initiates односторонний отказ от договора"
+        ],
+        "chunk_id": "29"
+    },
+    {
+        "label": "Заключение договора",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "заключение договора hasActor сторона",
+            "заключение договора hasResult договор",
+            "заключение договора hasResource недостоверные заверения"
+        ],
+        "chunk_id": "29"
+    },
+    {
+        "label": "Уплата штрафа",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "уплата штрафа hasActor сторона",
+            "уплата штрафа hasResult штраф"
+        ],
+        "chunk_id": "29"
+    },
+    {
+        "label": "Договор",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "договор isResultOf заключение договора",
+            "договор isResourceOf исполнение договора",
+            "договор isResourceOf односторонний отказ от договора"
+        ],
+        "chunk_id": "29"
+    },
+    {
+        "label": "Исполнение договора",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "исполнение договора hasResource договор"
+        ],
+        "chunk_id": "29"
+    },
+    {
+        "label": "Односторонний отказ от договора",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "односторонний отказ от договора hasResource договор",
+            "односторонний отказ от договора hasResult убытки"
+        ],
+        "chunk_id": "29"
+    },
+    {
+        "label": "Недостоверные заверения",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "недостоверные заверения isResourceOf заключение договора"
+        ],
+        "chunk_id": "29"
+    },
+    {
+        "label": "Обстоятельства",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "обстоятельства canBeResourceFor заключение договора",
+            "обстоятельства canBeResourceFor исполнение договора"
+        ],
+        "chunk_id": "29"
+    },
+    {
+        "label": "Письменное требование",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [],
+        "chunk_id": "29"
+    },
+    {
+        "label": "Штраф",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "штраф isResultOf уплата штрафа"
+        ],
+        "chunk_id": "29"
+    },
+    {
+        "label": "Сумма комиссионного вознаграждения",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [],
+        "chunk_id": "29"
+    },
+    {
+        "label": "Убытки",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "убытки isResultOf односторонний отказ от договора",
+            "убытки isResourceOf возмещение убытков"
+        ],
+        "chunk_id": "29"
+    },
+    {
+        "label": "Возмещение убытков",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "возмещение убытков hasResource убытки"
+        ],
+        "chunk_id": "29"
+    },
+    {
+        "label": "Недостоверность заверений",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Event",
+        "hasStatement": [
+            "недостоверность заверений Initiates односторонний отказ от договора"
+        ],
+        "chunk_id": "29"
+    }
+]

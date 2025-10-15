@@ -1,0 +1,30 @@
+:недействительный_перевод rdf:type comcore:Resource ;
+  rdfs:label "Недействительный перевод"@ru ;
+  comcore:isResourceOf :порядок_взаимодействия_сторон ;
+  comcore:mentionedIn :chunk_9 .
+
+:плательщик rdf:type comcore:Agent ;
+  rdfs:label "Плательщик"@ru ;
+  comcore:mentionedIn :chunk_9 .
+
+:получатель rdf:type comcore:Agent ;
+  rdfs:label "Получатель"@ru ;
+  comcore:mentionedIn :chunk_9 .
+
+:порядок_взаимодействия_сторон rdf:type comcore:Process ;
+  rdfs:label "Порядок взаимодействия Сторон"@ru ;
+  comcore:mentionedIn :chunk_9 .
+
+:приложение_5 rdf:type comcore:Resource ;
+  rdfs:label "Приложение №5"@ru ;
+  comcore:mentionedIn :chunk_9 .
+
+:стороны rdf:type comcore:Agent ;
+  rdfs:label "Стороны"@ru ;
+  comcore:isActorOf :порядок_взаимодействия_сторон ;
+  comcore:mentionedIn :chunk_9 .
+
+:недействительный_перевод comcore:relation :плательщик ;
+  comcore:relation :получатель .
+
+:приложение_5 comcore:relation :порядок_взаимодействия_сторон .

@@ -1,0 +1,83 @@
+[
+    {
+        "label": "Получатель",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Agent",
+        "hasStatement": [
+            "получатель isActorOf аутентификация",
+            "получатель isActorOf регистрация"
+        ],
+        "chunk_id": "22"
+    },
+    {
+        "label": "аутентификация",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "аутентификация hasActor получатель",
+            "аутентификация hasResult доступ к личному кабинету предоставлен",
+            "аутентификация hasResource авторизационные данные",
+            "аутентификация hasResult доступ к личному кабинету предоставлен"
+        ],
+        "chunk_id": "22"
+    },
+    {
+        "label": "регистрация",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Process",
+        "hasStatement": [
+            "регистрация hasActor получатель",
+            "регистрация hasResult авторизационные данные",
+            "регистрация hasResult авторизационные данные"
+        ],
+        "chunk_id": "22"
+    },
+    {
+        "label": "доступ к личному кабинету предоставлен",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Event",
+        "hasStatement": [
+            "доступ к личному кабинету предоставлен isResultOf аутентификация",
+            "доступ к личному кабинету предоставлен isResultOf аутентификация"
+        ],
+        "chunk_id": "22"
+    },
+    {
+        "label": "Авторизационные данные",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "авторизационные данные isResourceOf аутентификация",
+            "авторизационные данные isResultOf регистрация",
+            "авторизационные данные hasPart логин",
+            "авторизационные данные hasPart пароль",
+            "авторизационные данные isResultOf регистрация"
+        ],
+        "chunk_id": "22"
+    },
+    {
+        "label": "логин",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "логин isPartOf авторизационные данные"
+        ],
+        "chunk_id": "22"
+    },
+    {
+        "label": "пароль",
+        "abbreviation": [],
+        "definition": "",
+        "type": "Resource",
+        "hasStatement": [
+            "пароль isPartOf авторизационные данные"
+        ],
+        "chunk_id": "22"
+    }
+]

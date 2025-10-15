@@ -1,0 +1,84 @@
+:уведомление_нко_об_изменении_домен rdf:type comcore:Process ;
+    rdfs:label "уведомление нко об изменении доменного имени"@ru ;
+    comcore:mentionedIn :52 .
+
+:изменение_доменного_имени rdf:type comcore:Resource ;
+    rdfs:label "изменение доменного имени"@ru ;
+    comcore:isResourceOf :уведомление_нко_об_изменении_домен ;
+    comcore:mentionedIn :52 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :уведомление_нко_об_изменении_домен ;
+    comcore:mentionedIn :52 .
+
+:отключение_интернет-магазина rdf:type comcore:Process ;
+    rdfs:label "отключение интернет-магазина"@ru ;
+    comcore:mentionedIn :52 .
+
+:интернет-магазин rdf:type comcore:Resource ;
+    rdfs:label "интернет-магазин"@ru ;
+    comcore:isResourceOf :отключение_интернет-магазина ;
+    comcore:mentionedIn :52 .
+
+:нко comcore:isActorOf :отключение_интернет-магазина .
+
+:приостановка_исполнения_договора rdf:type comcore:Process ;
+    rdfs:label "приостановка исполнения договора"@ru ;
+    comcore:mentionedIn :52 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "договор"@ru ;
+    comcore:isResourceOf :приостановка_исполнения_договора ;
+    comcore:mentionedIn :52 .
+
+:нко comcore:isActorOf :приостановка_исполнения_договора .
+
+:сообщение_нко_сведений_документа rdf:type comcore:Process ;
+    rdfs:label "сообщение нко сведений документа"@ru ;
+    comcore:mentionedIn :52 .
+
+:сведения_документа rdf:type comcore:Resource ;
+    rdfs:label "сведения документа"@ru ;
+    comcore:isResourceOf :сообщение_нко_сведений_документа ;
+    comcore:mentionedIn :52 .
+
+:документ_подтверждающий_право rdf:type comcore:Resource ;
+    rdfs:label "документ подтверждающий право"@ru ;
+    comcore:isResourceOf :сообщение_нко_сведений_документа ;
+    comcore:mentionedIn :52 .
+
+:идентификационные_данные rdf:type comcore:Resource ;
+    rdfs:label "идентификационные данные"@ru ;
+    comcore:isResourceOf :сообщение_нко_сведений_документа ;
+    comcore:mentionedIn :52 .
+
+:место_нахождения rdf:type comcore:Resource ;
+    rdfs:label "место нахождения"@ru ;
+    comcore:isResourceOf :сообщение_нко_сведений_документа ;
+    comcore:mentionedIn :52 .
+
+:копии_документов rdf:type comcore:Resource ;
+    rdfs:label "копии документов"@ru ;
+    comcore:isResourceOf :сообщение_нко_сведений_документа ;
+    comcore:mentionedIn :52 .
+
+:нко comcore:isActorOf :сообщение_нко_сведений_документа .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:Initiates :сообщение_нко_сведений_документа ;
+    comcore:isActorOf :сообщение_нко_сведений_документа ;
+    comcore:mentionedIn :52 .
+
+:единоличный_исполнительный_орган rdf:type comcore:Agent ;
+    rdfs:label "единоличный исполнительный орган"@ru ;
+    comcore:mentionedIn :52 .
+
+:бенефициарный_владелец rdf:type comcore:Agent ;
+    rdfs:label "бенефициарный владелец"@ru ;
+    comcore:mentionedIn :52 .
+
+:иностранный_гражданин rdf:type comcore:Agent ;
+    rdfs:label "иностранный гражданин"@ru ;
+    comcore:mentionedIn :52 .

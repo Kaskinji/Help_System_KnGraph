@@ -1,0 +1,13 @@
+:подключения_получателя_к_системе rdf:type comcore:Process ;
+    rdfs:label "Подключения получателя к системе Монета.Ру"@ru ;
+    comcore:mentionedIn :chunk_34 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :подключения_получателя_к_системе ;
+    comcore:mentionedIn :chunk_34 .
+
+:система_монета_ру rdf:type comcore:Resource ;
+    rdfs:label "Системе Монета.Ру"@ru ;
+    comcore:isResourceOf :подключения_получателя_к_системе ;
+    comcore:mentionedIn :chunk_34 .

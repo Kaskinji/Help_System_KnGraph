@@ -1,0 +1,58 @@
+:переводы rdf:type comcore:Resource ;
+    rdfs:label "Переводы"@ru ;
+    comcore:isResultOf :осуществление_переводов ;
+    comcore:isResourceOf :расчеты_по_переводам ;
+    comcore:mentionedIn :113 .
+
+:недействительные_переводы rdf:type comcore:Resource ;
+    rdfs:label "Недействительные переводы"@ru ;
+    comcore:isPartOf :переводы ;
+    comcore:mentionedIn :113 .
+
+:уведомление_об_отключении rdf:type comcore:Resource ;
+    rdfs:label "уведомление об отключении"@ru ;
+    comcore:relation :отключение_получателя_интернет_магазин ;
+    comcore:mentionedIn :113 .
+
+:адрес_электронной_почты rdf:type comcore:Resource ;
+    rdfs:label "адрес электронной почты"@ru ;
+    comcore:relation :личный_кабинет ;
+    comcore:mentionedIn :113 .
+
+:личный_кабинет rdf:type comcore:Resource ;
+    rdfs:label "Личный кабинет"@ru ;
+    comcore:mentionedIn :113 .
+
+:осуществление_переводов rdf:type comcore:Process ;
+    rdfs:label "осуществление Переводов"@ru ;
+    comcore:mentionedIn :113 .
+
+:информационно_технологическое_взаимод rdf:type comcore:Process ;
+    rdfs:label "информационно-технологическое взаимодействие"@ru ;
+    comcore:mentionedIn :113 .
+
+:расчеты_по_переводам rdf:type comcore:Process ;
+    rdfs:label "расчеты по Переводам"@ru ;
+    comcore:mentionedIn :113 .
+
+:отключение_получателя_интернет_магазин rdf:type comcore:Process ;
+    rdfs:label "отключение Получателя/Интернет-магазина"@ru ;
+    comcore:mentionedIn :113 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :информационно_технологическое_взаимод ;
+    comcore:mentionedIn :113 .
+
+:интернет_магазин rdf:type comcore:Agent ;
+    rdfs:label "Интернет-магазин"@ru ;
+    comcore:isActorOf :информационно_технологическое_взаимод ;
+    comcore:mentionedIn :113 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :информационно_технологическое_взаимод ;
+    comcore:isActorOf :расчеты_по_переводам ;
+    comcore:isActorOf :осуществление_переводов ;
+    comcore:isActorOf :отключение_получателя_интернет_магазин ;
+    comcore:mentionedIn :113 .

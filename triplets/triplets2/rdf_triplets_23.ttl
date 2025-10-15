@@ -1,0 +1,64 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+```turtle
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+
+:личный_кабинет rdf:type comcore:Resource ;
+    rdfs:label "Личный кабинет"@ru ;
+    comcore:isResourceOf :действия ;
+    comcore:isResourceOf :размещение_нко_информации_в_личном_ка ;
+    comcore:mentionedIn :23 .
+
+:документы_уведомления rdf:type comcore:Resource ;
+    rdfs:label "документы/уведомления"@ru ;
+    comcore:isPartOf :личный_кабинет ;
+    comcore:mentionedIn :23 .
+
+:информация rdf:type comcore:Resource ;
+    rdfs:label "информация"@ru ;
+    comcore:isResourceOf :размещение_нко_информации_в_личном_ка ;
+    comcore:mentionedIn :23 .
+
+:стороны rdf:type comcore:Agent ;
+    rdfs:label "Стороны"@ru ;
+    comcore:mentionedIn :23 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :действия ;
+    comcore:mentionedIn :23 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:Initiates :размещение_нко_информации_в_личном_ка ;
+    comcore:mentionedIn :23 .
+
+:действия rdf:type comcore:Process ;
+    rdfs:label "действия"@ru ;
+    comcore:mentionedIn :23 .
+
+:размещение_нко_информации_в_личном_ка rdf:type comcore:Process ;
+    rdfs:label "Размещение НКО информации в Личном кабинете"@ru ;
+    comcore:mentionedIn :23 .
+
+:юридически_значимые_действия rdf:type comcore:Process ;
+    rdfs:label "юридически значимые действия"@ru ;
+    comcore:mentionedIn :23 .
+
+:уведомление_получателя rdf:type comcore:Event ;
+    rdfs:label "уведомление Получателя"@ru ;
+    comcore:isResultOf :размещение_нко_информации_в_личном_ка ;
+    comcore:relation :юридически_значимые_действия ;
+    comcore:relation :юридически_значимые_события ;
+    comcore:mentionedIn :23 .
+
+:юридически_значимые_события rdf:type comcore:Event ;
+    rdfs:label "юридически значимые события"@ru ;
+    comcore:mentionedIn :23 .
+```

@@ -1,0 +1,46 @@
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :перечисление , :расчет_вознаграждения ;
+    comcore:Initiates :перечисление , :расчет_вознаграждения ;
+    comcore:mentionedIn :72 .
+
+:перечисление rdf:type comcore:Process ;
+    rdfs:label "Перечисление"@ru ;
+    comcore:hasResult :дата_списания ;
+    comcore:hasResource :банковским_реквизитам_получателя , :заявление_на_перечисление , :корреспондентского_счета_нко ;
+    comcore:mentionedIn :72 .
+
+:банковским_реквизитам_получателя rdf:type comcore:Resource ;
+    rdfs:label "банковским реквизитам Получателя"@ru ;
+    comcore:isResourceOf :перечисление ;
+    comcore:mentionedIn :72 .
+
+:заявление_на_перечисление rdf:type comcore:Resource ;
+    rdfs:label "Заявление на перечисление"@ru ;
+    comcore:isResourceOf :перечисление ;
+    comcore:mentionedIn :72 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:relation :заявление_на_перечисление ;
+    comcore:mentionedIn :72 .
+
+:дата_списания rdf:type comcore:Event ;
+    rdfs:label "дата списания"@ru ;
+    comcore:isResultOf :перечисление ;
+    comcore:mentionedIn :72 .
+
+:корреспондентского_счета_нко rdf:type comcore:Resource ;
+    rdfs:label "корреспондентского счета НКО"@ru ;
+    comcore:isResourceOf :перечисление ;
+    comcore:mentionedIn :72 .
+
+:расчет_вознаграждения rdf:type comcore:Process ;
+    rdfs:label "Расчет вознаграждения"@ru ;
+    comcore:hasResource :бизнес-счет ;
+    comcore:mentionedIn :72 .
+
+:бизнес-счет rdf:type comcore:Resource ;
+    rdfs:label "Бизнес-счет"@ru ;
+    comcore:isResourceOf :расчет_вознаграждения ;
+    comcore:mentionedIn :72 .

@@ -1,0 +1,13 @@
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :приостановка_перечислений_получателю ;
+    comcore:mentionedIn :115 .
+
+:приостановка_перечислений_получателю rdf:type comcore:Process ;
+    rdfs:label "Приостановка перечислений получателю"@ru ;
+    comcore:mentionedIn :115 .
+
+:пункт_3_настоящего_порядка rdf:type comcore:Resource ;
+    rdfs:label "пункт 3 настоящего Порядка"@ru ;
+    comcore:canBeResourceFor :приостановка_перечислений_получателю ;
+    comcore:mentionedIn :115 .

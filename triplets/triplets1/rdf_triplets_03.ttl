@@ -1,0 +1,52 @@
+:небанковская_кредитная_организация_монета rdf:type comcore:Agent ;
+    rdfs:label "Небанковская кредитная организация МОНЕТА"@ru ;
+    comcore:isActorOf :перевод_денежных_средств ;
+    comcore:mentionedIn :3 .
+
+:банк_россии rdf:type comcore:Agent ;
+    rdfs:label "Банк России"@ru ;
+    comcore:isResponsibleFor :лицензия_банка_россии_3508-к ;
+    comcore:mentionedIn :3 .
+
+:юридические_лица rdf:type comcore:Agent ;
+    rdfs:label "юридические лица"@ru ;
+    comcore:isActorOf :перевод_денежных_средств ;
+    comcore:isActorOf :осуществление_информационно-технологического ;
+    comcore:mentionedIn :3 .
+
+:индивидуальные_предприниматели rdf:type comcore:Agent ;
+    rdfs:label "индивидуальные предприниматели"@ru ;
+    comcore:isActorOf :перевод_денежных_средств ;
+    comcore:isActorOf :осуществление_информационно-технологического ;
+    comcore:mentionedIn :3 .
+
+:лицензия_банка_россии_3508-к rdf:type comcore:Resource ;
+    rdfs:label "Лицензия Банка России № 3508-К"@ru ;
+    comcore:mentionedIn :3 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:isResourceOf :размещение_текста_договора_на_сайте ;
+    comcore:mentionedIn :3 .
+
+:система_монета_ру rdf:type comcore:Resource ;
+    rdfs:label "Система МОНЕТА.РУ"@ru ;
+    comcore:isResourceOf :перевод_денежных_средств ;
+    comcore:mentionedIn :3 .
+
+:сайт_нко rdf:type comcore:Resource ;
+    rdfs:label "Сайт НКО"@ru ;
+    comcore:isResourceOf :размещение_текста_договора_на_сайте ;
+    comcore:mentionedIn :3 .
+
+:перевод_денежных_средств rdf:type comcore:Process ;
+    rdfs:label "перевод денежных средств"@ru ;
+    comcore:mentionedIn :3 .
+
+:осуществление_информационно-технологического rdf:type comcore:Process ;
+    rdfs:label "осуществление информационно-технологического взаимодействия"@ru ;
+    comcore:mentionedIn :3 .
+
+:размещение_текста_договора_на_сайте rdf:type comcore:Process ;
+    rdfs:label "размещение текста Договора на Сайте"@ru ;
+    comcore:mentionedIn :3 .

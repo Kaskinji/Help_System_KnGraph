@@ -1,0 +1,49 @@
+:окончательность_перевода rdf:type comcore:Event ;
+    rdfs:label "Окончательность перевода"@ru ;
+    comcore:isResultOf :исполнение_распоряжения ;
+    comcore:mentionedIn :chunk_10 .
+
+:исполнение_распоряжения rdf:type comcore:Process ;
+    rdfs:label "исполнение Распоряжения"@ru ;
+    comcore:mentionedIn :chunk_10 .
+
+:денежные_средства rdf:type comcore:Resource ;
+    rdfs:label "денежные средства"@ru ;
+    comcore:isResourceOf :исполнение_распоряжения ;
+    comcore:mentionedIn :chunk_10 .
+
+:электронные_денежные_средства rdf:type comcore:Resource ;
+    rdfs:label "электронные денежные средства"@ru ;
+    comcore:isResourceOf :исполнение_распоряжения ;
+    comcore:mentionedIn :chunk_10 .
+
+:плательщик rdf:type comcore:Agent ;
+    rdfs:label "Плательщик"@ru ;
+    comcore:isActorOf :исполнение_распоряжения ;
+    comcore:mentionedIn :chunk_10 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :исполнение_распоряжения ;
+    comcore:Initiates :информационно_технологическое_взаимод ;
+    comcore:mentionedIn :chunk_10 .
+
+:система_монета_ру rdf:type comcore:Agent ;
+    rdfs:label "Система МОНЕТА.РУ"@ru ;
+    comcore:isActorOf :исполнение_распоряжения ;
+    comcore:mentionedIn :chunk_10 .
+
+:информационно_технологическое_взаимод rdf:type comcore:Process ;
+    rdfs:label "информационно-технологическое взаимодействие"@ru ;
+    comcore:mentionedIn :chunk_10 .
+
+:торговая_площадка rdf:type comcore:Agent ;
+    rdfs:label "Торговая площадка"@ru ;
+    comcore:isActorOf :информационно_технологическое_взаимод ;
+    comcore:isResponsibleFor :система_учета_денежных_средств_пол ;
+    comcore:mentionedIn :chunk_10 .
+
+:система_учета_денежных_средств_пол rdf:type comcore:Resource ;
+    rdfs:label "система учета денежных средств Получателя"@ru ;
+    comcore:isResourceOf :информационно_технологическое_взаимод ;
+    comcore:mentionedIn :chunk_10 .

@@ -1,0 +1,39 @@
+:сумма_руб rdf:type comcore:Resource ;
+    rdfs:label "Сумма, руб."@ru ;
+    comcore:mentionedIn :102 .
+
+:сумма_задолженности_нко_перед_получа rdf:type comcore:Resource ;
+    rdfs:label "Сумма задолженности НКО перед Получателем на начало отчетного периода по переводам, принятым в предыдущих отчетных периодах"@ru ;
+    comcore:mentionedIn :102 .
+
+:сумма_переводов_принятых_в_адрес_пол rdf:type comcore:Resource ;
+    rdfs:label "Сумма Переводов, принятых в адрес Получателя за отчетный период"@ru ;
+    comcore:mentionedIn :102 .
+
+:количество_принятых_переводов_шт rdf:type comcore:Resource ;
+    rdfs:label "Количество принятых Переводов, шт."@ru ;
+    comcore:mentionedIn :102 .
+
+:перечислено_получателем_в_пользу_нко rdf:type comcore:Process ;
+    rdfs:label "Перечислено Получателем в пользу НКО за отчетный период"@ru ;
+    comcore:mentionedIn :102 .
+
+:сумма_вознаграждения_нко_за_исполнен rdf:type comcore:Resource ;
+    rdfs:label "Сумма вознаграждения НКО за исполнение обязательств по Договору, удержанная за отчетный период (без НДС)"@ru ;
+    comcore:mentionedIn :102 .
+
+:сумма_возвратов_переводов rdf:type comcore:Resource ;
+    rdfs:label "Сумма возвратов Переводов"@ru ;
+    comcore:mentionedIn :102 .
+
+:количество_возвратов_переводов_шт rdf:type comcore:Resource ;
+    rdfs:label "Количество возвратов Переводов, шт."@ru ;
+    comcore:mentionedIn :102 .
+
+:перечислено_денежных_средств_нко_в_ rdf:type comcore:Process ;
+    rdfs:label "Перечислено денежных средств НКО в пользу Получателя за отчетный период"@ru ;
+    comcore:mentionedIn :102 .
+
+:сумма_задолженности_нко_перед_получа_02 rdf:type comcore:Resource ;
+    rdfs:label "Сумма задолженности НКО перед Получателем на конец отчетного периода, подлежащая перечислению в следующем отчетном периоде"@ru ;
+    comcore:mentionedIn :102 .

@@ -1,0 +1,39 @@
+:интернет-ресурс_получателя rdf:type comcore:Resource ;
+    rdfs:label "Интернет-ресурс Получателя"@ru ;
+    comcore:mentionedIn :119 .
+
+:контактный_адрес_электронной_почты rdf:type comcore:Resource ;
+    rdfs:label "Контактный адрес электронной почты"@ru ;
+    comcore:mentionedIn :119 .
+
+:электронный_адрес_получателя_для_вх rdf:type comcore:Resource ;
+    rdfs:label "Электронный адрес Получателя для входа в личный кабинет"@ru ;
+    comcore:mentionedIn :119 .
+
+:информационно-технологическое_взаимод rdf:type comcore:Process ;
+    rdfs:label "Информационно-технологическое взаимодействие"@ru ;
+    comcore:mentionedIn :119 .
+
+:торговая_площадка rdf:type comcore:Agent ;
+    rdfs:label "Торговая площадка"@ru ;
+    comcore:isActorOf :информационно-технологическое_взаимод ;
+    comcore:mentionedIn :119 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :информационно-технологическое_взаимод ;
+    comcore:mentionedIn :119 .
+
+:прием_эсп rdf:type comcore:Process ;
+    rdfs:label "прием ЭСП"@ru ;
+    comcore:isPartOf :информационно-технологическое_взаимод ;
+    comcore:mentionedIn :119 .
+
+:участие_в_переводе_денежных_средс rdf:type comcore:Process ;
+    rdfs:label "участие в переводе денежных средств"@ru ;
+    comcore:isPartOf :информационно-технологическое_взаимод ;
+    comcore:mentionedIn :119 .
+
+:регистрация_в_системе_монета.ру rdf:type comcore:Process ;
+    rdfs:label "Регистрация в Системе МОНЕТА.РУ"@ru ;
+    comcore:mentionedIn :119 .

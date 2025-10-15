@@ -1,0 +1,80 @@
+:эмитент rdf:type comcore:Agent ;
+        rdfs:label "Эмитент"@ru ;
+        comcore:isResponsibleFor :заявление_эмитента ;
+        comcore:mentionedIn :28 .
+
+:получатель rdf:type comcore:Agent ;
+        rdfs:label "Получатель"@ru ;
+        comcore:isActorOf :возврат_суммы_недействительного_пер ;
+        comcore:mentionedIn :28 .
+
+:нко rdf:type comcore:Agent ;
+        rdfs:label "НКО"@ru ;
+        comcore:isActorOf :рассмотрение_заявлений_эмитента ;
+        comcore:isResponsibleFor :требование ;
+        comcore:mentionedIn :28 .
+
+:договор rdf:type comcore:Resource ;
+        rdfs:label "Договор"@ru ;
+        comcore:mentionedIn :28 .
+
+:приложение_№5 rdf:type comcore:Resource ;
+        rdfs:label "Приложение №5"@ru ;
+        comcore:isResourceOf :рассмотрение_заявлений_эмитента ;
+        comcore:mentionedIn :28 .
+
+:заявление_эмитента rdf:type comcore:Resource ;
+        rdfs:label "Заявление Эмитента"@ru ;
+        comcore:isResourceOf :рассмотрение_заявлений_эмитента ;
+        comcore:mentionedIn :28 .
+
+:требование rdf:type comcore:Resource ;
+        rdfs:label "Требование"@ru ;
+        comcore:isResultOf :рассмотрение_заявлений_эмитента ;
+        comcore:mentionedIn :28 .
+
+:сумма_недействительного_перевода rdf:type comcore:Resource ;
+        rdfs:label "Сумма Недействительного перевода"@ru ;
+        comcore:isResourceOf :возврат_суммы_недействительного_пер ;
+        comcore:mentionedIn :28 .
+
+:адрес_электронной_почты rdf:type comcore:Resource ;
+        rdfs:label "Адрес электронной почты"@ru ;
+        comcore:isResourceOf :рассмотрение_заявлений_эмитента ;
+        comcore:mentionedIn :28 .
+
+:личный_кабинет rdf:type comcore:Resource ;
+        rdfs:label "Личный кабинет"@ru ;
+        comcore:mentionedIn :28 .
+
+:недействительный_перевод rdf:type comcore:Event ;
+        rdfs:label "Недействительный перевод"@ru ;
+        comcore:Initiates :рассмотрение_заявлений_эмитента ;
+        comcore:mentionedIn :28 .
+
+:переводы_без_открытия_банковского_сче rdf:type comcore:Process ;
+        rdfs:label "Переводы без открытия банковского счета"@ru ;
+        comcore:mentionedIn :28 .
+
+:рассмотрение_заявлений_эмитента rdf:type comcore:Process ;
+        rdfs:label "Рассмотрение заявлений Эмитента"@ru ;
+        comcore:isPartOf :переводы_без_открытия_банковского_сче ;
+        comcore:mentionedIn :28 .
+
+:возврат_суммы_недействительного_пер rdf:type comcore:Process ;
+        rdfs:label "Возврат суммы Недействительного перевода"@ru ;
+        comcore:isPartOf :переводы_без_открытия_банковского_сче ;
+        comcore:mentionedIn :28 .
+
+:недействительный_перевод comcore:Initiates :рассмотрение_заявлений_эмитента .
+:эмитент comcore:isResponsibleFor :заявление_эмитента .
+:получатель comcore:isActorOf :возврат_суммы_недействительного_пер .
+:нко comcore:isActorOf :рассмотрение_заявлений_эмитента .
+:нко comcore:isResponsibleFor :требование .
+:приложение_№5 comcore:isResourceOf :рассмотрение_заявлений_эмитenta .
+:заявление_эмитента comcore:isResourceOf :рассмотрение_заявлений_эмитenta .
+:требование comcore:isResultOf :рассмотрение_заявлений_эмитента .
+:сумма_недействительного_перевода comcore:isResourceOf :возврат_суммы_недействительного_пер .
+:адрес_электронной_почты comcore:isResourceOf :рассмотрение_заявлений_эмитента .
+:рассмотрение_заявлений_эмитента comcore:isPartOf :переводы_без_открытия_банковского_сче .
+:возврат_суммы_недействительного_пер comcore:isPartOf :переводы_без_открытия_банковского_сче .

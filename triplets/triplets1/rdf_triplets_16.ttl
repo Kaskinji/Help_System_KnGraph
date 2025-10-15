@@ -1,0 +1,14 @@
+:смена_аутентификационных_данных rdf:type comcore:Process ;
+    rdfs:label "смена Аутентификационных данных"@ru ;
+    comcore:hasResult :новые_аутентификационные_данные ;
+    comcore:mentionedIn :chunk_16 .
+
+:новые_аутентификационные_данные rdf:type comcore:Resource ;
+    rdfs:label "новые Аутентификационные данные"@ru ;
+    comcore:isResultOf :смена_аутентификационных_данных ;
+    comcore:mentionedIn :chunk_16 .
+
+:стороны rdf:type comcore:Agent ;
+    rdfs:label "Стороны"@ru ;
+    comcore:initiates :смена_аутентификационных_данных ;
+    comcore:mentionedIn :chunk_16 .

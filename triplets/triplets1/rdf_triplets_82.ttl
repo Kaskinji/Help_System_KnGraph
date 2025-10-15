@@ -1,0 +1,120 @@
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:mentionedIn :82 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :82 .
+
+:плательщик rdf:type comcore:Agent ;
+    rdfs:label "Плательщик"@ru ;
+    comcore:mentionedIn :82 .
+
+:перевод rdf:type comcore:Process ;
+    rdfs:label "Перевод"@ru ;
+    comcore:mentionedIn :82 .
+
+:оплата_услуг rdf:type comcore:Process ;
+    rdfs:label "Оплата Услуг"@ru ;
+    comcore:mentionedIn :82 .
+
+:перечисление_денежных_средств rdf:type comcore:Process ;
+    rdfs:label "Перечисление денежных средств"@ru ;
+    comcore:mentionedIn :82 .
+
+:защита_нарушенного_права rdf:type comcore:Process ;
+    rdfs:label "Защита нарушенного права"@ru ;
+    comcore:mentionedIn :82 .
+
+:возмещение_убытков rdf:type comcore:Process ;
+    rdfs:label "Возмещение убытков"@ru ;
+    comcore:mentionedIn :82 .
+
+:взыскание_денежных_средств rdf:type comcore:Process ;
+    rdfs:label "Взыскание денежных средств"@ru ;
+    comcore:mentionedIn :82 .
+
+:управление_интернет-магазином rdf:type comcore:Process ;
+    rdfs:label "Управление Интернет-магазином"@ru ;
+    comcore:mentionedIn :82 .
+
+:несоблюдение_нормативных_докумен rdf:type comcore:Process ;
+    rdfs:label "Несоблюдение нормативных документов"@ru ;
+    comcore:mentionedIn :82 .
+
+:задержка_перевода rdf:type comcore:Event ;
+    rdfs:label "Задержка Перевода"@ru ;
+    comcore:mentionedIn :82 .
+
+:споры_и_разногласия rdf:type comcore:Event ;
+    rdfs:label "Споры и разногласия"@ru ;
+    comcore:mentionedIn :82 .
+
+:вина_получателя rdf:type comcore:Event ;
+    rdfs:label "Вина Получателя"@ru ;
+    comcore:mentionedIn :82 .
+
+:претензия rdf:type comcore:Event ;
+    rdfs:label "Претензия"@ru ;
+    comcore:mentionedIn :82 .
+
+:действия_направленные_против_плательщиков rdf:type comcore:Event ;
+    rdfs:label "Действия направленные против Плательщиков"@ru ;
+    comcore:mentionedIn :82 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:mentionedIn :82 .
+
+:услуги rdf:type comcore:Resource ;
+    rdfs:label "Услуги"@ru ;
+    comcore:mentionedIn :82 .
+
+:предмет_договора rdf:type comcore:Resource ;
+    rdfs:label "Предмет Договора"@ru ;
+    comcore:mentionedIn :82 .
+
+:платежные_средства rdf:type comcore:Resource ;
+    rdfs:label "Платежные средства"@ru ;
+    comcore:mentionedIn :82 .
+
+:инструкция rdf:type comcore:Resource ;
+    rdfs:label "Инструкция"@ru ;
+    comcore:mentionedIn :82 .
+
+:нормативные_документы_нко rdf:type comcore:Resource ;
+    rdfs:label "Нормативные документы НКО"@ru ;
+    comcore:mentionedIn :82 .
+
+:убытки rdf:type comcore:Resource ;
+    rdfs:label "Убытки"@ru ;
+    comcore:mentionedIn :82 .
+
+:денежные_средства rdf:type comcore:Resource ;
+    rdfs:label "Денежные средства"@ru ;
+    comcore:mentionedIn :82 .
+
+:иное_имущество rdf:type comcore:Resource ;
+    rdfs:label "Иное имущество"@ru ;
+    comcore:mentionedIn :82 .
+
+:интернет-магазин rdf:type comcore:Resource ;
+    rdfs:label "Интернет-магазин"@ru ;
+    comcore:mentionedIn :82 .
+
+:получатель comcore:isResponsibleFor :возмещение_убытков ;
+    comcore:isResponsibleFor :действия_направленные_против_плательщиков ;
+    comcore:isResponsibleFor :убытки .
+
+:убытки comcore:isResultOf :взыскание_денежных_средств ;
+    comcore:isResultOf :несоблюдение_нормативных_докумен .
+
+:денежные_средства comcore:isResourceOf :взыскание_денежных_средств .
+
+:иное_имущество comcore:isResourceOf :взыскание_денежных_средств .
+
+:платежные_средства comcore:isResourceOf :перевод .
+
+:действия_направленные_против_плательщиков comcore:relation :перевод .
+
+:претензия comcore:Initiates :защита_нарушенного_права .

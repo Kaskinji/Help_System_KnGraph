@@ -1,0 +1,40 @@
+:руководитель rdf:type comcore:Agent ;
+    rdfs:label "Руководитель"@ru ;
+    comcore:isResponsibleFor :заявление ;
+    comcore:mentionedIn :chunk_33 .
+
+:нко_монета rdf:type comcore:Agent ;
+    rdfs:label "НКО «МОНЕТА» (ООО)"@ru ;
+    comcore:mentionedIn :chunk_33 .
+
+:заявление rdf:type comcore:Resource ;
+    rdfs:label "Заявление"@ru ;
+    comcore:mentionedIn :chunk_33 .
+
+:прием_переводов rdf:type comcore:Process ;
+    rdfs:label "прием переводов"@ru ;
+    comcore:mentionedIn :chunk_33 .
+
+:интернет_ресурс rdf:type comcore:Resource ;
+    rdfs:label "интернет-ресурс"@ru ;
+    comcore:relation :прием_переводов ;
+    comcore:mentionedIn :chunk_33 .
+
+:доступ rdf:type comcore:Resource ;
+    rdfs:label "доступ"@ru ;
+    comcore:isResultOf :предоставление_доступа ;
+    comcore:mentionedIn :chunk_33 .
+
+:система rdf:type comcore:Resource ;
+    rdfs:label "Система"@ru ;
+    comcore:isResourceOf :предоставление_доступа ;
+    comcore:mentionedIn :chunk_33 .
+
+:предоставление_доступа rdf:type comcore:Process ;
+    rdfs:label "предоставление доступа"@ru ;
+    comcore:mentionedIn :chunk_33 .
+
+:председатель_правления rdf:type comcore:Agent ;
+    rdfs:label "Председатель Правления"@ru ;
+    comcore:isResponsibleFor :предоставление_доступа ;
+    comcore:mentionedIn :chunk_33 .

@@ -1,0 +1,48 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:запрещенные_услуги rdf:type comcore:Resource ;
+    rdfs:label "Запрещенные услуги"@ru ;
+    comcore:mentionedIn :4 ;
+    dc:definition "Запрещенные услуги - виды Услуг, реализуемых Получателем и/или связанные с деятельностью Получателя, нарушающие требования, установленные законодательство Российской Федерации, в том числе Услуги, которые, по имеющейся у НКО информации, умышлено не будут или не были предоставлены Получателем Плательщику после их оплаты (совершения Перевода); Услуги, в отношении которых Получатель отказался предоставить НКО документы, подтверждающие факт их оказания Плательщику после совершения Перевода, и/или Услуги, в отношении которых Получатель не сообщил о факте их реализации/ предоставил недостоверную информацию о реализуемых Услугах."@ru .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :4 ;
+    comcore:isResponsibleFor :запрещенные_услуги ;
+    comcore:isResponsibleFor :документы_подтверждающие_факт_ ;
+    comcore:isActorOf :порядок_взаимодействия_сторон .
+
+:плательщик rdf:type comcore:Agent ;
+    rdfs:label "Плательщик"@ru ;
+    comcore:mentionedIn :4 ;
+    comcore:isResponsibleFor :перевод .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:mentionedIn :4 ;
+    comcore:isActorOf :порядок_взаимодействия_сторон .
+
+:перевод rdf:type comcore:Resource ;
+    rdfs:label "Перевод"@ru ;
+    comcore:mentionedIn :4 .
+
+:документы_подтверждающие_факт_ rdf:type comcore:Resource ;
+    rdfs:label "Документы подтверждающие факт оказания"@ru ;
+    comcore:mentionedIn :4 .
+
+:приложение_4 rdf:type comcore:Resource ;
+    rdfs:label "Приложение №4"@ru ;
+    comcore:mentionedIn :4 ;
+    comcore:isPartOf :договор .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:mentionedIn :4 .
+
+:порядок_взаимодействия_сторон rdf:type comcore:Process ;
+    rdfs:label "Порядок взаимодействия Сторон"@ru ;
+    comcore:mentionedIn :4 .

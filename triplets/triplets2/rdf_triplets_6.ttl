@@ -1,0 +1,21 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:заявление_на_перечисление rdf:type comcore:Resource ;
+    rdfs:label "Заявление на перечисление"@ru ;
+    comcore:mentionedIn :6 ;
+    dc:definition "документ, составленный Получателем по форме НКО или в электронном виде, сформированный в Личном кабинете, содержащий распоряжение Получателя на Перечисления, реквизиты для Перечисления." .
+
+:заявление_на_перечисление_по_операции_воз rdf:type comcore:Resource ;
+    rdfs:label "Заявление на перечисление по Операции возврата Перевода"@ru ;
+    comcore:mentionedIn :6 ;
+    dc:definition "документ, составленный Получателем по форме НКО или в электронном виде, сформированный в Личном кабинете, в порядке, установленном в Приложении №3 к Договору, содержащий распоряжение Получателя на перечисление денежных средств по Операции возврата Перевода." .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :6 ;
+    comcore:isResponsibleFor :заявление_на_перечисление ;
+    comcore:isResponsibleFor :заявление_на_перечисление_по_операции_воз .

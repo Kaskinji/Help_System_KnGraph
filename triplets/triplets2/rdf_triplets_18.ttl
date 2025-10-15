@@ -1,0 +1,82 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:стороны rdf:type comcore:Agent ;
+    rdfs:label "Стороны"@ru ;
+    comcore:mentionedIn :18 ;
+    dc:definition "НКО и Получатель при совместном упоминании." ;
+    comcore:relation :нко ;
+    comcore:relation :получатель .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:mentionedIn :18 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:mentionedIn :18 ;
+    comcore:isResponsibleFor :услуги .
+
+:тариф rdf:type comcore:Resource ;
+    rdfs:label "Тариф"@ru ;
+    comcore:mentionedIn :18 ;
+    dc:definition "перечень видов и размеров вознагражд Данные поручения не могут быть оспорены в соответствии с правилами МПС, МИР." .
+
+:торговая_площадка rdf:type comcore:Agent ;
+    rdfs:label "Торговая площадка"@ru ;
+    comcore:mentionedIn :18 ;
+    dc:definition "юридическое лицо или физическое лицо, зарегистрированное в качестве индивидуального предпринимателя, являющееся владельцем и (или) оператором программноаппаратного комплекса организационных, информационных и технических решений, обеспечивающего взаимодействие Получателя и Плательщика через электронные каналы связи, предоставляющий Плательщикам и Получателям возможность инициирования Распоряжений для осуществления НКО Переводов, а также Подключение Получателей к Системе МОНЕТА.РУ." ;
+    comcore:isResponsibleFor :программноаппаратный_комплекс .
+
+:программноаппаратный_комплекс rdf:type comcore:Resource ;
+    rdfs:label "программноаппаратный комплекс"@ru ;
+    comcore:mentionedIn :18 .
+
+:уведомление_о_приостановлении rdf:type comcore:Event ;
+    rdfs:label "Уведомление о приостановлении"@ru ;
+    comcore:mentionedIn :18 ;
+    dc:definition "уведомление от оператора по переводу денежных средств, обслуживающего Плательщика, о приостановлении зачисления денежных средств на банковский счет Получателя." ;
+    comcore:relation :оператор .
+
+:оператор rdf:type comcore:Agent ;
+    rdfs:label "оператор"@ru ;
+    comcore:mentionedIn :18 ;
+    comcore:relation :плательщик .
+
+:плательщик rdf:type comcore:Agent ;
+    rdfs:label "Плательщик"@ru ;
+    comcore:mentionedIn :18 .
+
+:услуги rdf:type comcore:Resource ;
+    rdfs:label "Услуги"@ru ;
+    comcore:mentionedIn :18 ;
+    dc:definition "товары (работы, услуги), реализуемые Получателем в порядке и на условиях, установленными заключенными договорами между Плательщиком и Получателем, в том числе деятельность некоммерческой организации, связанная с приемом денежных средств от физических лиц на безвозмездной основе, а также услуги, оказываемые Получателем - кредитной организацией (небанковской кредитной организацией) в целях последующего осуществления расчетов по Переводу." .
+
+:эмитент rdf:type comcore:Agent ;
+    rdfs:label "Эмитент"@ru ;
+    comcore:mentionedIn :18 ;
+    dc:definition "юридическое лицо либо кредитная организация (в том числе небанковская кредитная организация), предоставившее Плательщику Средство платежа в соответствии с условиями заключенного между ними договора." ;
+    comcore:isResponsibleFor :средство_платежа ;
+    comcore:isActorOf :безналичные_расчеты .
+
+:средство_платежа rdf:type comcore:Resource ;
+    rdfs:label "средство платежа"@ru ;
+    comcore:mentionedIn :18 .
+
+:эквайрер rdf:type comcore:Agent ;
+    rdfs:label "Эквайрер"@ru ;
+    comcore:mentionedIn :18 ;
+    dc:definition "юридическое лицо либо кредитная организация, обслуживающая безналичные расчёты между держателем Средства платежа и Эмитентом." ;
+    comcore:isActorOf :безналичные_расчеты .
+
+:безналичные_расчеты rdf:type comcore:Process ;
+    rdfs:label "безналичные расчёты"@ru ;
+    comcore:mentionedIn :18 .
+
+:держатель_средства_платежа rdf:type comcore:Agent ;
+    rdfs:label "держатель средства платежа"@ru ;
+    comcore:mentionedIn :18 ;
+    comcore:isActorOf :безналичные_расчеты .

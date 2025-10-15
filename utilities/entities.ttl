@@ -1,0 +1,32 @@
+```turtle
+:настройка_счета rdf:type comcore:Process ;
+  rdfs:label "настройка счета"@ru ;
+  comcore:hasResult :информационное_письмо ;
+  comcore:hasActor :система ;
+  comcore:mentionedIn :0 .
+
+:информационное_письмо rdf:type comcore:Resource ;
+  rdfs:label "информационное письмо"@ru ;
+  comcore:isResultOf :настройка_счета ;
+  comcore:mentionedIn :0 .
+
+:система rdf:type comcore:Agent ;
+  rdfs:label "система"@ru ;
+  comcore:isActorOf :настройка_счета ;
+  comcore:mentionedIn :0 .
+
+:открытие_бизнес-счета rdf:type comcore:Process ;
+  rdfs:label "открытие бизнес-счета"@ru ;
+  comcore:hasActor :клиент ;
+  comcore:mentionedIn :0 .
+
+:клиент rdf:type comcore:Agent ;
+  rdfs:label "клиент"@ru ;
+  comcore:isActorOf :открытие_бизнес-счета ;
+  comcore:mentionedIn :0 .
+
+:бизнес-счет rdf:type comcore:Resource ;
+  rdfs:label "бизнес-счет"@ru ;
+  comcore:isResultOf :открытие_бизнес-счета ;
+  comcore:mentionedIn :0 .
+```

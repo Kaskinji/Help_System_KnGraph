@@ -1,0 +1,38 @@
+:заявление rdf:type comcore:Resource ;
+    rdfs:label "Заявление"@ru ;
+    comcore:mentionedIn :91 .
+
+:регистрация rdf:type comcore:Process ;
+    rdfs:label "Регистрация"@ru ;
+    comcore:mentionedIn :91 .
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :регистрация ;
+    comcore:isActorOf :отправление_уведомления ;
+    comcore:mentionedIn :91 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:isResourceOf :расторжение_договора ;
+    comcore:mentionedIn :91 .
+
+:расторжение_договора rdf:type comcore:Process ;
+    rdfs:label "Расторжение договора"@ru ;
+    comcore:mentionedIn :91 .
+
+:нко rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:Initiates :расторжение_договора ;
+    comcore:mentionedIn :91 .
+
+:отправление_уведомления rdf:type comcore:Process ;
+    rdfs:label "Отправление уведомления"@ru ;
+    comcore:isPartOf :расторжение_договора ;
+    comcore:mentionedIn :91 .
+
+:адрес_электронной_почты rdf:type comcore:Resource ;
+    rdfs:label "Адрес электронной почты"@ru ;
+    comcore:isResourceOf :регистрация ;
+    comcore:isResourceOf :отправление_уведомления ;
+    comcore:mentionedIn :91 .

@@ -1,0 +1,56 @@
+:претензия rdf:type comcore:Resource ;
+    rdfs:label "Претензия"@ru ;
+    comcore:mentionedIn :89 ;
+    comcore:relation :адрес_электронной_почты , :почтовый_адрес ;
+    comcore:isResourceOf :отправка_претензии .
+
+:стороны rdf:type comcore:Agent ;
+    rdfs:label "Стороны"@ru ;
+    comcore:mentionedIn :89 ;
+    comcore:isActorOf :отправка_претензии .
+
+:регистрация rdf:type comcore:Process ;
+    rdfs:label "Регистрация"@ru ;
+    comcore:mentionedIn :89 .
+
+:договор rdf:type comcore:Resource ;
+    rdfs:label "Договор"@ru ;
+    comcore:mentionedIn :89 .
+
+:претензионный_порядок rdf:type comcore:Process ;
+    rdfs:label "Претензионный порядок"@ru ;
+    comcore:mentionedIn :89 ;
+    comcore:relation :договор .
+
+:переговоры rdf:type comcore:Process ;
+    rdfs:label "Переговоры"@ru ;
+    comcore:mentionedIn :89 ;
+    comcore:relation :споры_и_разногласия .
+
+:арбитражный_суд_республики_марий_эл rdf:type comcore:Agent ;
+    rdfs:label "Арбитражный суд Республики Марий Эл"@ru ;
+    comcore:mentionedIn :89 ;
+    comcore:relation :споры_и_разногласия .
+
+:адрес_электронной_почты rdf:type comcore:Resource ;
+    rdfs:label "Адрес электронной почты"@ru ;
+    comcore:mentionedIn :89 ;
+    comcore:isResourceOf :регистрация .
+
+:почтовый_адрес rdf:type comcore:Resource ;
+    rdfs:label "Почтовый адрес"@ru ;
+    comcore:mentionedIn :89 ;
+    comcore:isResourceOf :регистрация .
+
+:система_монета_ру rdf:type comcore:Resource ;
+    rdfs:label "Система МОНЕТА.РУ"@ru ;
+    comcore:mentionedIn :89 ;
+    comcore:isResourceOf :регистрация .
+
+:споры_и_разногласия rdf:type comcore:Event ;
+    rdfs:label "Споры и разногласия"@ru ;
+    comcore:mentionedIn :89 .
+
+:отправка_претензии rdf:type comcore:Process ;
+    rdfs:label "Отправка претензии"@ru ;
+    comcore:mentionedIn :89 .

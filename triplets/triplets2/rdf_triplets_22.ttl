@@ -1,0 +1,42 @@
+@prefix : <#> .
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :аутентификация ;
+    comcore:isActorOf :регистрация ;
+    comcore:mentionedIn :22 .
+
+:аутентификация rdf:type comcore:Process ;
+    rdfs:label "аутентификация"@ru ;
+    comcore:hasResult :доступ_к_личному_кабинету_предоставлен ;
+    comcore:mentionedIn :22 .
+
+:авторизационные_данные rdf:type comcore:Resource ;
+    rdfs:label "Авторизационные данные"@ru ;
+    comcore:isResourceOf :аутентификация ;
+    comcore:isResultOf :регистрация ;
+    comcore:mentionedIn :22 .
+
+:логин rdf:type comcore:Resource ;
+    rdfs:label "логин"@ru ;
+    comcore:isPartOf :авторизационные_данные ;
+    comcore:mentionedIn :22 .
+
+:пароль rdf:type comcore:Resource ;
+    rdfs:label "пароль"@ru ;
+    comcore:isPartOf :авторизационные_данные ;
+    comcore:mentionedIn :22 .
+
+:регистрация rdf:type comcore:Process ;
+    rdfs:label "регистрация"@ru ;
+    comcore:hasResult :авторизационные_данные ;
+    comcore:mentionedIn :22 .
+
+:доступ_к_личному_кабинету_предоставлен rdf:type comcore:Event ;
+    rdfs:label "доступ к личному кабинету предоставлен"@ru ;
+    comcore:isResultOf :аутентификация ;
+    comcore:mentionedIn :22 .
