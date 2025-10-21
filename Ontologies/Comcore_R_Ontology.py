@@ -21,7 +21,6 @@ comcore:hasSource rdf:type owl:ObjectProperty;
   rdfs:comment """
   """
   
-
 comcore:isResultOf rdf:type owl:ObjectProperty;
   owl:inverseOf comcore:hasResult;
   rdf:type owl:IrreflexiveProperty;
@@ -93,4 +92,11 @@ comcore:extractedFrom a owl:ObjectProperty;
   rdfs:range comcore:TextChunk;
   rdfs:comment "Связывает триплет с фрагментом текста, из которого он был извлечен".
 
+comcore:hasCondition a owl:ObjectProperty;
+   rdfs:label "имеет условие"@ru;
+   rdfs:label "has condition"@en;
+   rdfs:domain comcore:Answer;
+   rdfs:domain comcore:Event;
+   rdfs:range comcore:Condition;
+   rdfs:comment "Условие или причина ответа.
 '''

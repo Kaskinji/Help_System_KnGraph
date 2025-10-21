@@ -11,7 +11,7 @@ def llm_request(prompt: str, api_key: str) -> str:
             "Content-Type": "application/json",
         },
         data=json.dumps({
-            "model": "meta-llama/llama-3.3-70b-instruct:free",
+            "model": "tngtech/deepseek-r1t2-chimera:free",
             "messages": [{"role": "user", "content": prompt}],
             "temperature": 0.1,
         })
@@ -27,7 +27,7 @@ def llm_request(prompt: str, api_key: str) -> str:
 
 
 def extract_entities_from_chunk(prompt):
-    return llm_request(prompt, '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')
+    return llm_request(prompt, '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')
 
 if __name__ == "__main__":
     print("Запуск извлечения сущностей...")
