@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3c61cf25-c880-4c9b-a0e9-ece05a7ea9e9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Help_System_Moneta.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Help_System_Moneta.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2 Test CQs/CQ_AlexandrSerebryakov.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2 Test CQs/CQ_АндрейСажнев.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2 Test CQs/CQ_ДмитрийМельников.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2 Test CQs/CQ_ЕгорКарпычев.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2 Test CQs/CQ_ИльяВолицкий.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2 Test CQs/CQ_НикитаКасаткин.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chunk_extraction/Extract_chunks.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chunk_extraction/Extract_chunks2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chunk_extraction/chunksmaker.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities_extraction/Extract_Entities_Querry.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ontologies/Comcore_E_Ontology.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ontologies/Comcore_R_Ontology.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ontologies/New_Ontology.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source_texts/b2boffer.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source_texts/b2boffer.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source_texts/connecting_client.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source_texts/connecting_client.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testing_Ontology/Context.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testing_Ontology/Results/res_1.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testing_Ontology/Results/res_2.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testing_Ontology/Results/res_3.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testing_Ontology/Results/res_4.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testing_Ontology/Results/res_5.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/test1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/test2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/test3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/test4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/test5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/test6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/test7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weaviate/AddNewObject.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weaviate/AddNewObject2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weaviate/AllCollection.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weaviate/CreateCollection.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weaviate/CreateCollection2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weaviate/HybridSearch.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weaviate/NeedEntity.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weaviate/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weaviate/SearchHybridUp.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weaviate/Triplet_Combine.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weaviate/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weaviate/parsing_ttl.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weaviate/parsing_ttl2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weaviate/weaviatecheack.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk00.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk01.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk02.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk03.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk04.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk05.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk06.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk07.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk08.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk09.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk10.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk100.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk101.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk102.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk103.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk104.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk105.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk106.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk107.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk108.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk109.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk11.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk110.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk111.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk112.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk113.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk114.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk115.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk116.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk117.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk118.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk119.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk12.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk120.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk121.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk122.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk123.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk124.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk13.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk14.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk15.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk16.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk17.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk18.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk19.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk20.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk21.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk22.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk23.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk24.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk25.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk26.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk27.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk28.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk29.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk30.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk31.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk32.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk33.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk34.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk35.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk36.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk37.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk38.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk39.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk40.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk41.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk42.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk43.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk44.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk45.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk46.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk47.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk48.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk49.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk50.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk51.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk52.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk53.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk54.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk55.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk56.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk57.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk58.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk59.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk60.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk61.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk62.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk63.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk64.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk65.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk66.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk67.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk68.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk69.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk70.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk71.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk72.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk73.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk74.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk75.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk76.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk77.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk78.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk79.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk80.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk81.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk82.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk83.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk84.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk85.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk86.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk87.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk88.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk89.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk90.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk91.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk92.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk93.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk94.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk95.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk96.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk97.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk98.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_1/chunks_111/chunk99.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk00.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk01.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk02.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk03.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk04.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk05.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk06.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk07.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk08.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk09.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk10.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk11.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk12.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk13.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk14.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk15.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk16.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk17.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk18.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk19.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk20.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk21.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk22.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk23.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk24.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk25.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk26.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk27.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk28.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk29.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk30.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk31.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk32.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk33.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk34.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk35.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk36.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk37.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk38.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chunks_2/chunk39.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_10.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_11.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_12.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_13.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_14.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_15.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_16.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_17.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_18.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_19.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_21.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_22.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_23.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_24.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_25.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_26.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_27.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_28.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_29.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_30.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_31.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_32.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_33.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_34.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_35.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_36.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_37.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_38.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_39.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/json_triplets/triplet_9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prompts/Prompt_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/prompts/prompt_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_01.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_02.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_03.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_04.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_05.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_06.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_07.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_08.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_09.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_10.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_100.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_101.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_102.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_103.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_104.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_105.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_106.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_107.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_108.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_109.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_11.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_110.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_111.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_112.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_113.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_114.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_115.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_116.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_117.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_118.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_119.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_12.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_120.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_121.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_122.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_123.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_124.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_13.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_14.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_15.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_16.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_17.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_18.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_19.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_20.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_21.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_22.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_23.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_24.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_25.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_26.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_27.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_28.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_29.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_30.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_31.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_32.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_33.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_34.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_35.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_36.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_37.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_38.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_39.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_40.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_41.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_42.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_43.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_44.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_45.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_46.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_47.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_48.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_49.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_50.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_51.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_52.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_53.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_54.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_55.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_56.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_57.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_58.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_59.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_60.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_61.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_62.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_63.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_64.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_65.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_66.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_67.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_68.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_69.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_70.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_71.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_72.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_73.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_75.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_76.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_78.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_79.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_80.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_81.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_82.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_83.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_84.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_85.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_86.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_87.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_88.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_89.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_90.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_91.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_92.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_93.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_94.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_95.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_96.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_97.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_98.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets1/rdf_triplets_99.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_1.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_10.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_11.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_12.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_13.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_14.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_15.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_16.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_17.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_18.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_19.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_2.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_21.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_22.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_23.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_24.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_25.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_26.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_27.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_28.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_29.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_3.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_30.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_31.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_32.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_33.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_34.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_35.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_36.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_37.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_38.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_39.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_4.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_5.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_6.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_7.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_8.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/triplets/triplets2/rdf_triplets_9.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/Extract_json_content.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/Merge_json.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/Merge_rdf.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/chunks_reader.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/delete_prefix.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/entities.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/entities.ttl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/limit.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/merge_json.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/pdf_to_text.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="34QrvrSN5SR75SktXufK1I5UtjR" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.Extract_Entities_Querry.executor": "Run",
+    "Python.Prompt.executor": "Run",
+    "Python.test.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "LLM-Testing",
+    "last_opened_file_path": "C:/Users/andri/OneDrive/Документы/GitHub/Help_System_KnGraph",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\andri\OneDrive\Документы\GitHub\Help_System_KnGraph\Prompts" />
+      <recent name="C:\Users\andri\OneDrive\Документы\GitHub\Help_System_KnGraph\PromptTest" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-164cda30dcd9-0af03a5fa574-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.26830.99" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3c61cf25-c880-4c9b-a0e9-ece05a7ea9e9" name="Changes" comment="" />
+      <created>1761156873170</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761156873170</updated>
+    </task>
+    <servers />
+  </component>
+</project>
