@@ -1,0 +1,14 @@
+Как перенести клиента в ветку для товаров с доставкой?
+
+:перенести rdf:type comcore:Process ;
+    rdfs:label "перенести"@ru ;
+    comcore:hasTarget :клиент ;
+    comcore:hasTarget :ветка_для_товаров_с_доставкой .
+
+:клиент rdf:type comcore:Target ;
+    rdfs:label "клиент"@ru ;
+    comcore:isTargetOf :перенести .
+
+:ветка_для_товаров_с_доставкой rdf:type comcore:Resource ;
+    rdfs:label "ветка для товаров с доставкой"@ru ;
+    comcore:isResourceOf :перенести .

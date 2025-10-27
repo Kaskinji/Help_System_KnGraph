@@ -1,0 +1,17 @@
+Как проверить правильность заполнения поля "ИНН" клиента?
+
+:проверка_правильности_заполнения_поля rdf:type comcore:Process ;
+    rdfs:label "Проверка правильности заполнения поля"@ru ;
+    comcore:hasTarget :правильность_заполнения_поля_инн ;
+    comcore:isResourceOf :инн .
+
+:инн rdf:type comcore:Resource ;
+    rdfs:label "ИНН"@ru ;
+    comcore:isResourceOf :проверка_правильности_заполнения_поля .
+
+:клиент rdf:type comcore:Agent ;
+    rdfs:label "Клиент"@ru ;
+    comcore:isActorOf :проверка_правильности_заполнения_поля .
+
+:правильность_заполнения_поля_инн rdf:type comcore:Target ;
+    rdfs:label "Правильность заполнения поля ИНН"@ru .

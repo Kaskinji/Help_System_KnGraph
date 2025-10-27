@@ -1,0 +1,13 @@
+Что делать при причине отказа «Не зарегистрирован в ЕГРЮЛ»?
+
+:причина_отказа rdf:type comcore:Status ;
+    rdfs:label "причина отказа"@ru ;
+    comcore:hasCondition :не_зарегистрирован_в_егрюл
+    comcore:Initiates :что_делать .
+
+:не_зарегистрирован_в_егрюл rdf:type comcore:Condition ;
+    rdfs:label "Не зарегистрирован в ЕГРЮЛ"@ru ;
+    comcore:isConditionOf :причина_отказа .
+
+:что_делать rdf:type comcore:Process ;
+    rdfs:label "Что делать"@ru .

@@ -1,0 +1,19 @@
+Как дополнить базовую настройку API для рекуррентных платежей?
+
+:базовая_настройка rdf:type comcore:Process ;
+    rdfs:label "Базовая настройка"@ru ;
+    comcore:hasResource :api_для_рекуррентных_платежей .
+
+:api_для_рекуррентных_платежей rdf:type comcore:Resource ;
+    rdfs:label "API для рекуррентных платежей"@ru ;
+    comcore:isResourceOf :базовая_настройка ;
+    comcore:isResourceOf :дополнение_базовой_настройки .
+
+:дополнение_базовой_настройки rdf:type comcore:Process ;
+    rdfs:label "Дополнение базовой настройки"@ru ;
+    comcore:isPartOf :базовая_настройка ;
+    comcore:hasTarget :рекуррентные_платежи .
+
+:рекуррентные_платежи rdf:type comcore:Target ;
+    rdfs:label "Рекуррентные платежи"@ru ;
+    comcore:isTargetOf :дополнение_базовой_настройки .

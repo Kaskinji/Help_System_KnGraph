@@ -1,0 +1,35 @@
+Что делать если MRM в статусе отказано?
+
+:mrm rdf:type comcore:Process ;
+     rdfs:label "MRM"@ru ;
+     comcore:hasResult :отказано .
+
+:отказано rdf:type comcore:Status ;
+          rdfs:label "отказано"@ru ;
+          comcore:isPartOf :mrm .
+
+Context:
+
+:задача_mrm rdf:type comcore:Process ;
+    rdfs:label "задача MRM"@ru ;
+    comcore:hasResult :закрыт_отказано .
+
+:закрыт_отказано rdf:type comcore:Status ;
+    rdfs:label "Закрыт. Отказано"@ru ;
+    comcore:isResultOf :задача_mrm .
+
+:сотрудник_отдела_сопровождения rdf:type comcore:Agent ;
+    rdfs:label "сотрудник отдела сопровождения"@ru ;
+    comcore:isActorOf :ознакомление_с_комментариями .
+
+:сотрудник_обр rdf:type comcore:Agent ;
+    rdfs:label "сотрудник ОБР"@ru ;
+    comcore:isResponsibleFor :комментарии_сотрудника_обр .
+
+:комментарии_сотрудника_обр rdf:type comcore:Resource ;
+    rdfs:label "комментарии сотрудника ОБР"@ru ;
+    comcore:isResourceOf :ознакомление_с_комментариями .
+
+:ознакомление_с_комментариями rdf:type comcore:Process ;
+    rdfs:label "ознакомление с комментариями"@ru ;
+    comcore:hasResource :комментарии_сотрудника_обр .

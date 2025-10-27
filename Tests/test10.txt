@@ -1,0 +1,8 @@
+что делать если статус MRM «Закрыт. Согласовано»?
+
+:закрыт_согласовано rdf:type comcore:Status ;
+    rdfs:label "Закрыт. Согласовано"@ru ;
+    comcore:isPartOf :mrm_process .
+
+:mrm_process rdf:type comcore:Process ;
+    rdfs:label "MRM процесс"@ru .

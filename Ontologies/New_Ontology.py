@@ -53,65 +53,28 @@ comcore:Event rdfs:subClassOf dcmtype:Event;
   rdfs:comment "Событие - стартовое условие запуска следующего Процесса, может быть результатом предыдущего Процесса или инициироваться Агентом (Клиентом, Оператором, ПО)";
   dc:description """
 Это описание какого-то исхода в результате реализации Процесса, или События, инициирующего Процесс.
-Пример:"Отправлено письмо", "Получен ответ", "Изменен статус" """.
+Пример:"Отправлено письмо", "Получен ответ", "Изменен статус", "Отправка запроса дополнительных документов""".
 
 comcore:Status a rdfs:Class;
-  rdfs:subClassOf comcore:Process;
+  comcore:Status rdfs:subClassOf comcore:Event;
   rdfs:label "Статус"@ru, "Status"@en;
   rdfs:comment "Статус процесса или задачи";
   dc:description """
 Статус процесса или задачи, например успешно или неуспешно.
 Пример:  Проверка MRM задачи может иметь три статуса (Согласовано, Отказано, Нет решения), при отсутствии решения отправляется запрос дополнительных документов.
-Статусы: Статус Согласовано, Статус Отказано, Статус Нет решения, Отправка запроса дополнительных документов.
+Статусы: Статус Согласовано, Статус Отказано, Статус Нет решения.
 """
- 
-comcore:Answer a rdfs:Class;
-   rdfs:label "Ответ"@ru;
-   rdfs:label "Answer"@en;
-   rdfs:comment "результат на запрос агента по какому-дибо вопросу.
-   Пример: отказ".
-   
+
 comcore:Condition a rdfs:class;
    rdfs:label "Условие"@ru;
    rdfs:label "Condition"@en;
    rdfs:comment "Условие или причина события или состояния. Обычно предшествуют слова "при", "если", "когда" или конкретные слова обозначающие что это условие.
    Пример: если «Не зарегистрирован в ЕГРЮЛ»
-'''
-extra = '''
-
-## Answer ( отрицательный - причина, положительный - ок ) 
-## отказ - условие
-
-## шаблон ответа
-comcore:Statement rdfs:subClassOf rdf:Statement;
-    rdfs:label "Триплет"@ru;
-    rdfs:label "Triple"@en;
-    rdfs:comment "Триплет (субъект-предикат-объект), извлеченный из текста, с метаданными о происхождении".
-     
-comcore:TextChunk a rdfs:Class;
-   rdfs:label "Текстовый фрагмент"@ru;
-   rdfs:label "Text Chunk"@en;
-   rdfs:comment "Фрагмент исходного текста, из которого были извлечены знания".
    
-comcore:Document a rdfs:Class;
-   rdfs:label "Документ"@ru;
-   rdfs:label "Document"@en;
-   rdfs:comment "Документ с информацией".
-  
-comcore:Client rdfs:subClassOf comcore:Agent;
-  rdfs:label "Клиент"@ru;
-  rdfs:label "Client"@en;
-  rdfs:comment "Агент, выступающий в роли клиента или заказчика услуг".
-
-comcore:Employee rdfs:subClassOf comcore:Agent;
-  rdfs:label "Сотрудник"@ru;
-  rdfs:label "Employee"@en;
-  rdfs:comment "Агент, являющийся сотрудником организации".
-
-comcore:System rdfs:subClassOf comcore:Agent;
-  rdfs:label "Система"@ru;
-  rdfs:label "System"@en;
-  rdfs:comment "Программная система или сервис, выступающий в роли Агента".
-  
-  блянахы
+comcore:Target a rdfs:class;
+    rdfs:label "Цель"@ru;
+    rdfs:label "Target"@en;
+    rdfs:seeAlso "предмет", "цель", "target";
+    rdfs:comment "объект над которым совершается процесс
+    Пример: Проверить наличие: проверить - процесс, наличие - объект."
 '''

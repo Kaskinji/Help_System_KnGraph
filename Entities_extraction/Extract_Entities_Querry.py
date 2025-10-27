@@ -27,7 +27,7 @@ def llm_request(prompt: str, api_key: str) -> str:
 
 
 def extract_entities_from_chunk(prompt):
-    return llm_request(prompt, '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')
+    return llm_request(prompt, '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')
 
 if __name__ == "__main__":
     print("Запуск извлечения сущностей...")
