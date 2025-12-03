@@ -1,0 +1,85 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:подключение_СБП rdf:type comcore:Process ;
+  rdfs:label "Подключение СБП"@ru ;
+  comcore:hasResult :платежи_через_СБП , :успешное_подключение ;
+  .
+
+:СБП rdf:type comcore:Resource ;
+  rdfs:label "СБП"@ru ;
+  comcore:isPartOf :способы_оплаты ;
+  .
+
+:Клиент rdf:type comcore:Agent ;
+  rdfs:label "Клиент"@ru ;
+  comcore:isActorOf :подключение_СБП , :проверка_правильности_ставки ;
+  .
+
+:СБП_QR_Добавить rdf:type comcore:Resource ;
+  rdfs:label "Мой счет – Управление счетами– Согласования - СБП QR  - Добавить"@ru ;
+  comcore:isResourceOf :подключение_СБП ;
+  .
+
+:кнопка_Сохранить rdf:type comcore:Resource ;
+  rdfs:label "Сохранить"@ru ;
+  comcore:isResourceOf :подключение_СБП ;
+  .
+
+:платежи_через_СБП rdf:type comcore:Resource ;
+  rdfs:label "платежи через систему СБП"@ru ;
+  .
+
+:Рабочий_кабинет rdf:type comcore:Resource ;
+  rdfs:label "Рабочий кабинет"@ru ;
+  comcore:isResourceOf :перепроверка_подключения ;
+  .
+
+:доступные_платежные_сервисы rdf:type comcore:Resource ;
+  rdfs:label "доступные клиенту платежные сервисы"@ru ;
+  comcore:isResourceOf :перепроверка_подключения ;
+  .
+
+:перепроверка_подключения rdf:type comcore:Process ;
+  rdfs:label "Перепроверка подключения СБП"@ru ;
+  comcore:hasResult :информация_о_СБП ;
+  .
+
+:информация_о_СБП rdf:type comcore:Resource ;
+  rdfs:label "информация о СБП – ставка, номер счета СБП и № тарифа"@ru ;
+  .
+
+:ставка rdf:type comcore:Resource ;
+  rdfs:label "Ставка"@ru ;
+  comcore:isPartOf :информация_о_СБП ;
+  comcore:isResourceOf :проверка_правильности_ставки ;
+  .
+
+:номер_счета_СБП rdf:type comcore:Resource ;
+  rdfs:label "Номер счета СБП"@ru ;
+  comcore:isPartOf :информация_о_СБП ;
+  .
+
+:номер_тарифа rdf:type comcore:Resource ;
+  rdfs:label "№ тарифа"@ru ;
+  comcore:isPartOf :информация_о_СБП ;
+  .
+
+:способы_оплаты rdf:type comcore:Resource ;
+  rdfs:label "способы оплаты"@ru ;
+  .
+
+:успешное_подключение rdf:type comcore:Event ;
+  rdfs:label "Подключение прошло успешно"@ru ;
+  .
+
+:проверка_правильности_ставки rdf:type comcore:Process ;
+  rdfs:label "Проверка правильности ставки"@ru ;
+  .

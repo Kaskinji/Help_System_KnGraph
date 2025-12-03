@@ -1,0 +1,59 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:регистрация rdf:type comcore:Process ;
+    rdfs:label "Регистрация"@ru ;
+    comcore:hasResult :успешная_регистрация , :юнит , :личный_кабинет , :данные_для_входа , :отправка_данных_на_почту , :информация_об_успешной_регистрации , :информация_о_том_что_данные_отправлены_на_почту .
+
+:успешная_регистрация rdf:type comcore:Event ;
+    rdfs:label "Успешная регистрация"@ru .
+
+:клиент rdf:type comcore:Agent ;
+    rdfs:label "Клиент"@ru ;
+    comcore:isActorOf :регистрация .
+
+:юнит rdf:type comcore:Resource ;
+    rdfs:label "Юнит (идентификационная запись в базе)"@ru .
+
+:личный_кабинет rdf:type comcore:Resource ;
+    rdfs:label "Личный кабинет"@ru .
+
+:ЛК rdf:type comcore:Resource ;
+    rdfs:label "ЛК"@ru ;
+    comcore:isPartOf :личный_кабинет .
+
+:поля rdf:type comcore:Resource ;
+    rdfs:label "Поля"@ru ;
+    comcore:isResourceOf :регистрация .
+
+:данные_для_входа rdf:type comcore:Resource ;
+    rdfs:label "Данные для входа в личный кабинет"@ru ;
+    comcore:canBeResourceFor :вход_в_личный_кабинет .
+
+:вход_в_личный_кабинет rdf:type comcore:Process ;
+    rdfs:label "Вход в личный кабинет"@ru .
+
+:экран_пользователя rdf:type comcore:Resource ;
+    rdfs:label "Экран пользователя"@ru .
+
+:информация_об_успешной_регистрации rdf:type comcore:Resource ;
+    rdfs:label "Информация об успешной регистрации"@ru ;
+    comcore:isPartOf :экран_пользователя .
+
+:информация_о_том_что_данные_отправлены_на_почту rdf:type comcore:Resource ;
+    rdfs:label "Информация о том, что на почту отправлены данные для входа в личный кабинет"@ru ;
+    comcore:isPartOf :экран_пользователя .
+
+:почта rdf:type comcore:Resource ;
+    rdfs:label "Почта"@ru .
+
+:отправка_данных_на_почту rdf:type comcore:Event ;
+    rdfs:label "Отправка данных для входа на почту"@ru ;
+    comcore:isPartOf :регистрация .

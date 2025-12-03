@@ -1,0 +1,43 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:Зайти rdf:type comcore:Process ;
+    rdfs:label "Зайти"@ru ;
+    comcore:hasSubProcess :Мой_счет .
+
+:Мой_счет rdf:type comcore:Process ;
+    rdfs:label "Мой счет"@ru ;
+    comcore:hasSubProcess :Управление_счетами ;
+    comcore:isPartOf :Зайти .
+
+:Управление_счетами rdf:type comcore:Process ;
+    rdfs:label "Управление счетами"@ru ;
+    comcore:hasSubProcess :Согласования ;
+    comcore:isPartOf :Мой_счет .
+
+:Согласования rdf:type comcore:Process ;
+    rdfs:label "Согласования"@ru ;
+    comcore:hasSubProcess :Добавить ;
+    comcore:isPartOf :Управление_счетами .
+
+:Сервис_Apple_Pay rdf:type comcore:Resource ;
+    rdfs:label "Сервис Apple Pay"@ru ;
+    comcore:isPartOf :Согласования ;
+    comcore:isResourceOf :Добавить .
+
+:Добавить rdf:type comcore:Process ;
+    rdfs:label "Добавить"@ru ;
+    comcore:hasSubProcess :Зарегистрировать ;
+    comcore:isPartOf :Согласования ;
+    comcore:canBeResourceFor :Зарегистрировать .
+
+:Зарегистрировать rdf:type comcore:Process ;
+    rdfs:label "Зарегистрировать"@ru ;
+    comcore:isPartOf :Добавить .

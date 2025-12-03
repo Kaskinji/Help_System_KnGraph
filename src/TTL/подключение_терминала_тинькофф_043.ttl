@@ -1,0 +1,66 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+:подключение_терминала_Тинькофф a comcore:Process ;
+    rdfs:label "Подключение терминала Тинькофф"@ru ;
+    comcore:hasSubProcess :зайти_в_Мой_счет ;
+    comcore:hasSubProcess :нажать_Сгенерировать ;
+    comcore:hasSubProcess :нажать_Отправить ;
+    comcore:hasSubProcess :согласование_терминала ;
+    comcore:hasResult :запрос_отправлен_в_Тинькоф_Банк .
+
+:зайти_в_Мой_счет a comcore:Process ;
+    rdfs:label "Зайти: Мой счет – Управление счетами– Согласования - TCS merchant – Добавить"@ru ;
+    comcore:hasPart :Мой_счет , :Управление_счетами , :Согласования , :TCS_merchant , :Добавить .
+
+:Мой_счет a comcore:Resource ;
+    rdfs:label "Мой счет"@ru ;
+    comcore:isPartOf :зайти_в_Мой_счет .
+
+:Управление_счетами a comcore:Resource ;
+    rdfs:label "Управление счетами"@ru ;
+    comcore:isPartOf :зайти_в_Мой_счет .
+
+:Согласования a comcore:Resource ;
+    rdfs:label "Согласования"@ru ;
+    comcore:isPartOf :зайти_в_Мой_счет .
+
+:TCS_merchant a comcore:Resource ;
+    rdfs:label "TCS merchant"@ru ;
+    comcore:isPartOf :зайти_в_Мой_счет .
+
+:Добавить a comcore:Resource ;
+    rdfs:label "Добавить"@ru ;
+    comcore:isPartOf :зайти_в_Мой_счет .
+
+:нажать_Сгенерировать a comcore:Process ;
+    rdfs:label "Нажать «Сгенерировать»"@ru ;
+    comcore:isPartOf :подключение_терминала_Тинькофф .
+
+:нажать_Отправить a comcore:Process ;
+    rdfs:label "Нажать «Отправить»"@ru ;
+    comcore:isPartOf :подключение_терминала_Тинькофф ;
+    comcore:hasResult :запрос_отправлен_в_Тинькоф_Банк .
+
+:запрос_на_подключение a comcore:Resource ;
+    rdfs:label "Запрос на подключение"@ru ;
+    comcore:isResourceOf :подключение_терминала_Тинькофф .
+
+:запрос_отправлен_в_Тинькоф_Банк a comcore:Event ;
+    rdfs:label "Запрос отправлен в Тинькоф Банк"@ru .
+
+:Тинькоф_Банк a comcore:Agent ;
+    rdfs:label "Тинькоф Банк"@ru ;
+    comcore:isActorOf :согласование_терминала ;
+    comcore:isResponsibleFor :согласование_терминала .
+
+:согласование_терминала a comcore:Process ;
+    rdfs:label "Согласование терминала"@ru ;
+    comcore:isPartOf :подключение_терминала_Тинькофф ;
+    comcore:hasResult :запрос_отправлен_в_Тинькоф_Банк .
+
+:1_2_часов a comcore:Resource ;
+    rdfs:label "1-2 часов"@ru ;
+    comcore:isResourceOf :согласование_терминала .

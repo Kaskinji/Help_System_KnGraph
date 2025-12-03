@@ -1,0 +1,92 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:эквайер rdf:type comcore:Agent ;
+  rdfs:label "Эквайер"@ru ;
+  comcore:isActorOf :согласование_проекта ;
+  comcore:Initiates :запрос_дополнительных_документов ;
+  comcore:isResponsibleFor :запрос_дополнительных_документов .
+
+:клиент rdf:type comcore:Agent ;
+  rdfs:label "Клиент"@ru ;
+  comcore:isActorOf :связаться_с_клиентом_по_почте , :связаться_с_клиентом_по_телефону , :запрос_необходимой_информации .
+
+:платежный_сервис_PayAnyWay_НКО_Монета rdf:type comcore:Agent ;
+  rdfs:label "Платежный сервис PayAnyWay НКО Монета"@ru .
+
+:согласование_проекта rdf:type comcore:Process ;
+  rdfs:label "Согласование проекта"@ru ;
+  comcore:hasResult :замечания_на_сайте ;
+  comcore:hasPart :запрос_дополнительных_документов .
+
+:замечания_на_сайте rdf:type comcore:Event ;
+  rdfs:label "Замечания по информации, размещенной на сайте"@ru .
+
+:запрос_дополнительных_документов rdf:type comcore:Process ;
+  rdfs:label "Запрос дополнительных документов"@ru ;
+  comcore:isPartOf :согласование_проекта ;
+  comcore:isResponsibleFor :дополнительные_документы .
+
+:дополнительные_документы rdf:type comcore:Resource ;
+  rdfs:label "Дополнительные документы"@ru ;
+  comcore:canBeResourceFor :запрос_дополнительных_документов , :согласование_проекта ;
+  comcore:isResourceOf :запрос_дополнительных_документов .
+
+:связаться_с_клиентом_по_почте rdf:type comcore:Process ;
+  rdfs:label "Связаться с клиентом по почте"@ru ;
+  comcore:isPartOf :запрос_необходимой_информации .
+
+:связаться_с_клиентом_по_телефону rdf:type comcore:Process ;
+  rdfs:label "Связаться с клиентом по телефону"@ru ;
+  comcore:isPartOf :запрос_необходимой_информации .
+
+:запрос_необходимой_информации rdf:type comcore:Process ;
+  rdfs:label "Запрос необходимой информации"@ru ;
+  comcore:hasPart :связаться_с_клиентом_по_почте , :связаться_с_клиентом_по_телефону , :направить_эквайеру_информацию ;
+  comcore:isActorOf :клиент .
+
+:направить_эквайеру_информацию rdf:type comcore:Process ;
+  rdfs:label "Направить эквайеру информацию"@ru ;
+  comcore:isPartOf :запрос_необходимой_информации .
+
+:необходимая_информация rdf:type comcore:Resource ;
+  rdfs:label "Необходимая информация"@ru ;
+  comcore:canBeResourceFor :запрос_необходимой_информации , :направить_эквайеру_информацию ;
+  comcore:isResourceOf :запрос_необходимой_информации .
+
+:электронная_почта_com_payanyway_ru rdf:type comcore:Resource ;
+  rdfs:label "Электронная почта com@payanyway.ru"@ru ;
+  comcore:canBeResourceFor :запрос_необходимой_информации ;
+  comcore:isResourceOf :запрос_необходимой_информации .
+
+:ответным_письмом rdf:type comcore:Resource ;
+  rdfs:label "Ответным письмом"@ru ;
+  comcore:canBeResourceFor :запрос_необходимой_информации .
+
+:личный_кабинет rdf:type comcore:Resource ;
+  rdfs:label "Личный кабинет"@ru .
+
+:телефон_в_личном_кабинете rdf:type comcore:Resource ;
+  rdfs:label "Телефон, указанный в личном кабинете"@ru ;
+  comcore:isResourceOf :связаться_с_клиентом_по_телефону ;
+  comcore:isPartOf :личный_кабинет .
+
+:шаблон_разговора rdf:type comcore:Resource ;
+  rdfs:label "Шаблон разговора"@ru ;
+  comcore:canBeResourceFor :построение_разговора , :связаться_с_клиентом_по_телефону ;
+  comcore:isResourceOf :построение_разговора .
+
+:построение_разговора rdf:type comcore:Process ;
+  rdfs:label "Построение разговора"@ru ;
+  comcore:hasPart :шаблон_разговора .
+
+:имя_отчество rdf:type comcore:Resource ;
+  rdfs:label "Имя Отчество"@ru ;
+  comcore:canBeResourceFor :построение_разговора .

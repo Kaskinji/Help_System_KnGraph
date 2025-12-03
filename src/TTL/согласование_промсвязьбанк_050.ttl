@@ -1,0 +1,162 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:Информационное_письмо rdf:type comcore:Resource ;
+    rdfs:label "Информационное письмо"@ru ;
+    comcore:isResourceOf :получение_информационного_письма .
+
+:Дмитрий_Демаков rdf:type comcore:Agent ;
+    rdfs:label "Дмитрий Демаков"@ru ;
+    comcore:isActorOf :получение_информационного_письма ;
+    comcore:isResponsibleFor :ответ_от_банка .
+
+:банк rdf:type comcore:Agent ;
+    rdfs:label "Банк"@ru ;
+    comcore:isResponsibleFor :согласование_терминала .
+
+:ПСБ rdf:type comcore:Agent ;
+    rdfs:label "ПСБ"@ru ;
+    comcore:isResponsibleFor :согласование_терминала ;
+    comcore:isResourceOf :тарифы_на_ПСБ .
+
+:согласование_терминала rdf:type comcore:Process ;
+    rdfs:label "Согласование терминала"@ru ;
+    comcore:hasSubProcess :получение_информационного_письма ;
+    comcore:hasSubProcess :проверить_внесение_данных_терминала .
+
+:получение_информационного_письма rdf:type comcore:Process ;
+    rdfs:label "Получение информационного письма"@ru ;
+    comcore:isPartOf :согласование_терминала ;
+    comcore:hasSubProcess :получение_информационного_письма .
+
+:срок_согласования_по_ПСБ rdf:type comcore:Resource ;
+    rdfs:label "Срок согласования по ПСБ"@ru ;
+    comcore:isPartOf :согласование_терминала ;
+    comcore:isResourceOf :проверить_внесение_данных_терминала .
+
+:7_дней rdf:type comcore:Resource ;
+    rdfs:label "7 дней"@ru ;
+    comcore:isPartOf :срок_согласования_по_ПСБ .
+
+:проверить_внесение_данных_терминала rdf:type comcore:Process ;
+    rdfs:label "Проверить внесение данных терминала"@ru ;
+    comcore:isPartOf :согласование_терминала ;
+    comcore:hasSubProcess :обратиться_к_Дмитрию ;
+    comcore:isPartOf :внести_данные_терминала .
+
+:данные_терминала rdf:type comcore:Resource ;
+    rdfs:label "Данные терминала"@ru ;
+    comcore:isPartOf :Дополнительные_параметры ;
+    comcore:isResourceOf :проверить_внесение_данных_терминала ;
+    comcore:canBeResourceFor :внести_данные_терминала .
+
+:Дополнительные_параметры rdf:type comcore:Resource ;
+    rdfs:label "Дополнительные параметры"@ru ;
+    comcore:isPartOf :счет ;
+    comcore:isPartOf :Дополнительные_параметры_интерфейса .
+
+:счет rdf:type comcore:Resource ;
+    rdfs:label "Счет"@ru .
+
+:отсутствие_согласования_через_неделю rdf:type comcore:Event ;
+    rdfs:label "Отсутствие согласования через неделю"@ru ;
+    comcore:Initiates :обратиться_к_Дмитрию .
+
+:обратиться_к_Дмитрию rdf:type comcore:Process ;
+    rdfs:label "Обратиться к Дмитрию"@ru ;
+    comcore:hasSubProcess :проверить_ответ_от_банка .
+
+:ответ_от_банка rdf:type comcore:Resource ;
+    rdfs:label "Ответ от банка"@ru ;
+    comcore:isResourceOf :проверить_ответ_от_банка .
+
+:проверить_ответ_от_банка rdf:type comcore:Process ;
+    rdfs:label "Проверить ответ от банка"@ru .
+
+:согласование_не_подгрузилось rdf:type comcore:Event ;
+    rdfs:label "Согласование не подгрузилось"@ru ;
+    comcore:Initiates :внести_данные_терминала .
+
+:внести_данные_терминала rdf:type comcore:Process ;
+    rdfs:label "Внести данные терминала вручную"@ru ;
+    comcore:hasSubProcess :добавить_строчку ;
+    comcore:isPartOf :Показать_дополнительные_поля .
+
+:Управление_счетами rdf:type comcore:Process ;
+    rdfs:label "Управление счетами"@ru ;
+    comcore:hasSubProcess :Редактировать_счет .
+
+:Редактировать_счет rdf:type comcore:Process ;
+    rdfs:label "Редактировать счет"@ru ;
+    comcore:hasSubProcess :Показать_дополнительные_поля ;
+    comcore:isPartOf :Управление_счетами .
+
+:Показать_дополнительные_поля rdf:type comcore:Process ;
+    rdfs:label "Показать дополнительные поля"@ru ;
+    comcore:hasSubProcess :Дополнительные_параметры_интерфейса ;
+    comcore:isPartOf :Редактировать_счет .
+
+:Дополнительные_параметры_интерфейса rdf:type comcore:Resource ;
+    rdfs:label "Дополнительные параметры интерфейса"@ru ;
+    comcore:isPartOf :Показать_дополнительные_поля .
+
+:добавить_строчку rdf:type comcore:Process ;
+    rdfs:label "Добавить строчку"@ru ;
+    comcore:isPartOf :внести_данные_терминала .
+
+:psbankmerchname rdf:type comcore:Resource ;
+    rdfs:label "psbankmerchname"@ru ;
+    comcore:isPartOf :Дополнительные_параметры_интерфейса ;
+    comcore:isResourceOf :внести_данные_терминала ;
+    comcore:isPartOf :дескриптор .
+
+:psbankmerchant rdf:type comcore:Resource ;
+    rdfs:label "psbankmerchant"@ru ;
+    comcore:isPartOf :Дополнительные_параметры_интерфейса ;
+    comcore:isResourceOf :внести_данные_терминала ;
+    comcore:canBeResourceFor :внести_данные_терминала ;
+    comcore:isPartOf :терминал .
+
+:дескриптор rdf:type comcore:Resource ;
+    rdfs:label "Дескриптор"@ru .
+
+:терминал rdf:type comcore:Resource ;
+    rdfs:label "Терминал"@ru .
+
+:assistantpriority rdf:type comcore:Resource ;
+    rdfs:label "assistantpriority"@ru ;
+    comcore:isPartOf :Дополнительные_параметры_интерфейса ;
+    comcore:canBeResourceFor :проверить_тарифы .
+
+:psbcard rdf:type comcore:Resource ;
+    rdfs:label "psbcard"@ru ;
+    comcore:isPartOf :assistantpriority .
+
+:tcs rdf:type comcore:Resource ;
+    rdfs:label "tcs"@ru ;
+    comcore:isPartOf :assistantpriority .
+
+:mdm rdf:type comcore:Resource ;
+    rdfs:label "mdm"@ru ;
+    comcore:isPartOf :assistantpriority .
+
+:тарифы_на_ПСБ rdf:type comcore:Resource ;
+    rdfs:label "Тарифы на ПСБ"@ru ;
+    comcore:isResourceOf :проверить_тарифы ;
+    comcore:isPartOf :ПСБ .
+
+:проверить_тарифы rdf:type comcore:Process ;
+    rdfs:label "Проверить тарифы"@ru ;
+    comcore:isPartOf :внести_данные_терминала ;
+    comcore:hasSubProcess :проверить_тарифы .
+
+:C_Users_ludmila_rusova_Desktop rdf:type comcore:Resource ;
+    rdfs:label "C:/Users/ludmila.rusova/Desktop/contracts/Договоры/..."@ru ;
+    comcore:isResourceOf :проверить_тарифы .

@@ -1,0 +1,50 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:сотрудник rdf:type comcore:Agent ;
+  rdfs:label "Сотрудник"@ru ;
+  comcore:isActorOf :проверка_банковских_реквизитов , :нажатие_кнопки_Сохранить ;
+  comcore:isResponsibleFor :проверка_банковских_реквизитов , :нажатие_кнопки_Сохранить .
+
+:блок_Банковские_реквизиты rdf:type comcore:Resource ;
+  rdfs:label "Блок «Банковские реквизиты»"@ru .
+
+:БИК rdf:type comcore:Resource ;
+  rdfs:label "БИК"@ru ;
+  comcore:isPartOf :блок_Банковские_реквизиты ;
+  comcore:isResourceOf :проверка_банковских_реквизитов .
+
+:Расчетный_счет rdf:type comcore:Resource ;
+  rdfs:label "Расчетный счет"@ru ;
+  comcore:isPartOf :блок_Банковские_реквизиты ;
+  comcore:isResourceOf :проверка_банковских_реквизитов .
+
+:галочка_Подтвержденное_БИК rdf:type comcore:Resource ;
+  rdfs:label "Галочка «Подтвержденное» в БИК"@ru ;
+  comcore:isPartOf :БИК ;
+  comcore:isResourceOf :проверка_банковских_реквизитов .
+
+:галочка_Подтвержденное_Расчетный_счет rdf:type comcore:Resource ;
+  rdfs:label "Галочка «Подтвержденное» в Расчетный счет"@ru ;
+  comcore:isPartOf :Расчетный_счет ;
+  comcore:isResourceOf :проверка_банковских_реквизитов .
+
+:кнопка_Сохранить rdf:type comcore:Resource ;
+  rdfs:label "Кнопка «Сохранить»"@ru ;
+  comcore:isResourceOf :нажатие_кнопки_Сохранить .
+
+:проверка_банковских_реквизитов rdf:type comcore:Process ;
+  rdfs:label "Проверяет (банковские реквизиты)"@ru ;
+  comcore:hasResult :галочка_Подтвержденное_БИК , :галочка_Подтвержденное_Расчетный_счет ;
+  comcore:isPartOf :блок_Банковские_реквизиты .
+
+:нажатие_кнопки_Сохранить rdf:type comcore:Process ;
+  rdfs:label "Нажимает кнопку «Сохранить»"@ru ;
+  comcore:isPartOf :блок_Банковские_реквизиты .

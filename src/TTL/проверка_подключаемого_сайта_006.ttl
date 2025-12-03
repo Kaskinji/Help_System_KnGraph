@@ -1,0 +1,66 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:анализ_статуса_задачи_MRM a comcore:Process ;
+    rdfs:label "Анализ статуса задачи MRM"@ru ;
+    comcore:hasSubProcess :поиск_в_Jira , :просмотр_статуса_задачи_MRM .
+
+:поиск_в_Jira a comcore:Process ;
+    rdfs:label "Поиск в Jira"@ru .
+
+:просмотр_статуса_задачи_MRM a comcore:Process ;
+    rdfs:label "Просмотр статуса задачи MRM"@ru ;
+    comcore:hasResult :статус_задачи_MRM .
+
+:статус_задачи_MRM a comcore:Event ;
+    rdfs:label "Статус задачи MRM"@ru .
+
+:сотрудник_отдела_сопровождения a comcore:Agent ;
+    rdfs:label "Сотрудник отдела сопровождения"@ru ;
+    comcore:isActorOf :анализ_статуса_задачи_MRM , :просмотр_статуса_задачи_MRM ;
+    comcore:Initiates :поиск_в_Jira , :просмотр_статуса_задачи_MRM .
+
+:ИНН_клиента a comcore:Resource ;
+    rdfs:label "ИНН клиента"@ru ;
+    comcore:isResourceOf :поиск_в_Jira .
+
+:поисковое_поле_Jira a comcore:Resource ;
+    rdfs:label "Поисковое поле в среде Jira"@ru ;
+    comcore:isPartOf :Jira .
+
+:Jira a comcore:Resource ;
+    rdfs:label "Jira"@ru .
+
+:письмо_v_OTRS a comcore:Resource ;
+    rdfs:label "Письмо в OTRS"@ru ;
+    comcore:isPartOf :OTRS .
+
+:OTRS a comcore:Resource ;
+    rdfs:label "OTRS"@ru .
+
+:ЛК a comcore:Resource ;
+    rdfs:label "ЛК"@ru .
+
+:Клиент a comcore:Agent ;
+    rdfs:label "Клиент"@ru .
+
+:задача_MRM a comcore:Resource ;
+    rdfs:label "Задача MRM"@ru ;
+    comcore:isPartOf :MRM , :поиск_в_Jira .
+
+:задача_CRM a comcore:Resource ;
+    rdfs:label "Задача CRM"@ru ;
+    comcore:isPartOf :CRM , :поиск_в_Jira .
+
+:MRM a comcore:Resource ;
+    rdfs:label "MRM"@ru .
+
+:CRM a comcore:Resource ;
+    rdfs:label "CRM"@ru .

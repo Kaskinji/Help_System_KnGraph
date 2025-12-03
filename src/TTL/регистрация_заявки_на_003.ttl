@@ -1,0 +1,64 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:Клиент rdf:type comcore:Agent ;
+    rdfs:label "Клиент"@ru ;
+    comcore:isActorOf :подключение_нового_ИМ ,
+                      :изменение_эл_почты ,
+                      :использовать_более_раннюю_регистрацию .
+
+:ИНН rdf:type comcore:Resource ;
+    rdfs:label "ИНН"@ru .
+
+:эл_почта rdf:type comcore:Resource ;
+    rdfs:label "Эл. почта"@ru .
+
+:ИНН_уже_зарегистрирован rdf:type comcore:Event ;
+    rdfs:label "ИНН уже зарегистрирован"@ru ;
+    comcore:Initiates :выслать_письмо_с_отказом .
+
+:эл_почта_уже_зарегистрирована rdf:type comcore:Event ;
+    rdfs:label "Эл. почта уже зарегистрирована"@ru ;
+    comcore:Initiates :выслать_письмо_с_отказом .
+
+:отказ_от_регистрации rdf:type comcore:Event ;
+    rdfs:label "Отказ от регистрации"@ru ;
+    comcore:Initiates :изменение_эл_почты ,
+                      :использовать_более_раннюю_регистрацию .
+
+:письмо_с_отказом_от_регистрации rdf:type comcore:Resource ;
+    rdfs:label "Письмо с отказом от регистрации"@ru ;
+    comcore:isResultOf :выслать_письмо_с_отказом ;
+    comcore:isPartOf :отказ_от_регистрации .
+
+:причина_отказа rdf:type comcore:Resource ;
+    rdfs:label "Причина"@ru ;
+    comcore:isPartOf :письмо_с_отказом_от_регистрации .
+
+:выслать_письмо_с_отказом rdf:type comcore:Process ;
+    rdfs:label "Выслать письмо с отказом от регистрации"@ru ;
+    comcore:hasResult :письмо_с_отказом_от_регистрации .
+
+:изменение_эл_почты rdf:type comcore:Process ;
+    rdfs:label "Изменение эл. почты"@ru .
+
+:более_ранняя_регистрация rdf:type comcore:Resource ;
+    rdfs:label "Более ранняя регистрация"@ru ;
+    comcore:canBeResourceFor :подключение_нового_ИМ .
+
+:ИМ rdf:type comcore:Resource ;
+    rdfs:label "ИМ"@ru .
+
+:подключение_нового_ИМ rdf:type comcore:Process ;
+    rdfs:label "Подключение нового ИМ"@ru .
+
+:использовать_более_раннюю_регистрацию rdf:type comcore:Process ;
+    rdfs:label "Использовать более раннюю регистрацию"@ru ;
+    comcore:isPartOf :подключение_нового_ИМ .

@@ -1,0 +1,64 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:Система rdf:type comcore:Agent ;
+  rdfs:label "Система"@ru ;
+  comcore:isResponsibleFor :Коммерческие_счета .
+
+:Коммерческие_счета rdf:type comcore:Resource ;
+  rdfs:label "Коммерческие счета"@ru .
+
+:Клиенты rdf:type comcore:Resource ;
+  rdfs:label "Клиенты"@ru ;
+  comcore:isPartOf :Коммерческие_счета .
+
+:Получатели_Юрлица_ИП rdf:type comcore:Resource ;
+  rdfs:label "Получатели (Юр.лица/ИП)"@ru ;
+  comcore:isPartOf :Клиенты .
+
+:Pay_Any_Way rdf:type comcore:Resource ;
+  rdfs:label "Pay Any Way"@ru ;
+  comcore:isPartOf :Получатели_Юрлица_ИП .
+
+:Лояльные_стандарт_РФ rdf:type comcore:Resource ;
+  rdfs:label "Лояльные стандарт. РФ"@ru ;
+  comcore:isPartOf :Pay_Any_Way .
+
+:Лояльные_по_ОФЕРТЕ rdf:type comcore:Resource ;
+  rdfs:label "Лояльные по ОФЕРТЕ"@ru ;
+  comcore:isPartOf :Лояльные_стандарт_РФ .
+
+:Оферта rdf:type comcore:Resource ;
+  rdfs:label "Оферта"@ru ;
+  comcore:isPartOf :Лояльные_по_ОФЕРТЕ .
+
+:Товары_с_доставкой rdf:type comcore:Resource ;
+  rdfs:label "Товары с доставкой"@ru ;
+  comcore:isPartOf :Оферта .
+
+:Я.Д._4_3 rdf:type comcore:Resource ;
+  rdfs:label "Я.Д. 4%(3%)"@ru ;
+  comcore:isPartOf :Оферта , :Товары_с_доставкой .
+
+:Qiwi_5_4 rdf:type comcore:Resource ;
+  rdfs:label "Qiwi 5%(4%)"@ru ;
+  comcore:isPartOf :Оферта , :Товары_с_доставкой .
+
+:Услуги_контент_онлайн_игры_онлайн_сервисы rdf:type comcore:Resource ;
+  rdfs:label "Услуги, контент, онлайн игры, онлайн сервисы"@ru ;
+  comcore:isPartOf :Оферта .
+
+:Я.Д._6_5 rdf:type comcore:Resource ;
+  rdfs:label "Я.Д. 6%(5%)"@ru ;
+  comcore:isPartOf :Оферта , :Услуги_контент_онлайн_игры_онлайн_сервисы .
+
+:Qiwi_6_5 rdf:type comcore:Resource ;
+  rdfs:label "Qiwi 6%(5%)"@ru ;
+  comcore:isPartOf :Оферта , :Услуги_контент_онлайн_игры_онлайн_сервисы .

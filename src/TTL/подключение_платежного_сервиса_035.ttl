@@ -1,0 +1,75 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:Клиент rdf:type comcore:Agent ;
+  rdfs:label "Клиент"@ru ;
+  comcore:isActorOf :Открытие_бизнес_счета ,
+                    :заход_в_личный_кабинет ,
+                    :настройка_платежного_сервиса ,
+                    :интеграция_с_кассой ,
+                    :настройка_API ,
+                    :настройка_автоматического_перевода_остатка .
+
+:Монета rdf:type comcore:Agent ;
+  rdfs:label "Монета"@ru .
+
+:Открытие_бизнес_счета rdf:type comcore:Process ;
+  rdfs:label "Открытие бизнес-счета"@ru ;
+  comcore:hasResult :настройка_платежного_сервиса ,
+                    :интеграция_с_кассой ,
+                    :настройка_API ,
+                    :возможность_приема_оплаты_с_Монеты ,
+                    :настройка_автоматического_перевода_остатка .
+
+:заход_в_личный_кабинет rdf:type comcore:Process ;
+  rdfs:label "Заход в личный кабинет"@ru ;
+  comcore:isPartOf :Открытие_бизнес_счета .
+
+:получение_письма_от_Монета rdf:type comcore:Event ;
+  rdfs:label "Получение письма от Монета"@ru ;
+  comcore:Initiates :Открытие_бизнес_счета .
+
+:настройка_платежного_сервиса rdf:type comcore:Process ;
+  rdfs:label "Настройка платежного сервиса"@ru .
+
+:интеграция_с_кассой rdf:type comcore:Process ;
+  rdfs:label "Интеграция с кассой"@ru .
+
+:настройка_API rdf:type comcore:Process ;
+  rdfs:label "Настройка API"@ru .
+
+:настройка_автоматического_перевода_остатка rdf:type comcore:Process ;
+  rdfs:label "Настройка автоматического перевода остатка"@ru .
+
+:письмо_от_Монета rdf:type comcore:Resource ;
+  rdfs:label "Письмо от Монета"@ru .
+
+:личный_кабинет rdf:type comcore:Resource ;
+  rdfs:label "Личный кабинет"@ru ;
+  comcore:isResourceOf :заход_в_личный_кабинет .
+
+:готовые_модули rdf:type comcore:Resource ;
+  rdfs:label "Готовые модули"@ru ;
+  comcore:canBeResourceFor :настройка_платежного_сервиса .
+
+:платежный_сервис rdf:type comcore:Resource ;
+  rdfs:label "Платежный сервис"@ru ;
+  comcore:isResourceOf :настройка_платежного_сервиса .
+
+:касса rdf:type comcore:Resource ;
+  rdfs:label "Касса"@ru ;
+  comcore:isResourceOf :интеграция_с_кассой .
+
+:API rdf:type comcore:Resource ;
+  rdfs:label "API"@ru ;
+  comcore:isResourceOf :настройка_API .
+
+:возможность_приема_оплаты_с_Монеты rdf:type comcore:Resource ;
+  rdfs:label "Возможность приема оплаты с Монеты"@ru .

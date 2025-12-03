@@ -1,0 +1,52 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:задача_MRM rdf:type comcore:Process ;
+    rdfs:label "Задача MRM"@ru ;
+    comcore:hasResult :статус_Открытый_Нет_решения .
+
+:статус_Открытый_Нет_решения rdf:type comcore:Event ;
+    rdfs:label "Статус «Открытый. Нет решения»"@ru .
+
+:MRM rdf:type comcore:Resource ;
+    rdfs:label "MRM"@ru .
+
+:сотрудник rdf:type comcore:Agent ;
+    rdfs:label "Сотрудник"@ru ;
+    comcore:isActorOf :анализ_комментария .
+
+:анализ_комментария rdf:type comcore:Process ;
+    rdfs:label "Анализ комментария сотрудника ОБР"@ru ;
+    comcore:isPartOf :анализ_задачи_MRM .
+
+:анализ_задачи_MRM rdf:type comcore:Process ;
+    rdfs:label "Анализ задачи MRM"@ru .
+
+:комментарий_сотрудника_ОБР rdf:type comcore:Resource ;
+    rdfs:label "Комментарий сотрудника ОБР (отдел комплаенс)"@ru ;
+    comcore:isResourceOf :анализ_комментария .
+
+:сотрудник_ОБР rdf:type comcore:Agent ;
+    rdfs:label "Сотрудник ОБР (отдел комплаенс)"@ru .
+
+:отдел_комплаенс rdf:type comcore:Agent ;
+    rdfs:label "Отдел комплаенс"@ru ;
+    comcore:isActorOf :анализ_задачи_MRM, :оперативное_информирование .
+
+:наблюдатель rdf:type comcore:Agent ;
+    rdfs:label "Наблюдатель"@ru ;
+    comcore:isActorOf :оперативное_информирование .
+
+:оперативное_информирование rdf:type comcore:Process ;
+    rdfs:label "Оперативное информирование при изменениях"@ru .
+
+:изменения rdf:type comcore:Event ;
+    rdfs:label "Изменения"@ru ;
+    comcore:Initiates :оперативное_информирование .

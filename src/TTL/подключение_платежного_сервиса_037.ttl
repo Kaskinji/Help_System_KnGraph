@@ -1,0 +1,62 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:клиент rdf:type comcore:Agent ;
+  rdfs:label "Клиент"@ru ;
+  comcore:isActorOf :интеграция_кассы_с_нашим_сервисом .
+
+:наш_сервис rdf:type comcore:Agent ;
+  rdfs:label "наш сервис"@ru ;
+  comcore:isActorOf :интеграция_кассы_с_нашим_сервисом .
+
+:касса rdf:type comcore:Resource ;
+  rdfs:label "Касса"@ru ;
+  comcore:canBeResourceFor :интеграция_кассы_с_нашим_сервисом .
+
+:интеграция_кассы_с_нашим_сервисом rdf:type comcore:Process ;
+  rdfs:label "Интеграция кассы с нашим сервисом"@ru .
+
+:вопрос_интеграции_кассы rdf:type comcore:Event ;
+  rdfs:label "Вопрос по интеграции кассы с нашим сервисом"@ru ;
+  comcore:Initiates :направление_ссылки_kassa_pay .
+
+:направление_ссылки_kassa_pay rdf:type comcore:Process ;
+  rdfs:label "Направление ссылки Инструкция по сервису kassa.payanyway"@ru .
+
+:инструкция_po_сервису_kassa_payanyway rdf:type comcore:Resource ;
+  rdfs:label "Инструкция по сервису kassa.payanyway"@ru ;
+  comcore:canBeResourceFor :интеграция_кассы_с_нашим_сервисом ;
+  comcore:isPartOf :интеграция_с_PayAnyWay_Касса .
+
+:https_kassa_payanyway_ru_instruction rdf:type comcore:Resource ;
+  rdfs:label "https://kassa.payanyway.ru/instruction"@ru ;
+  comcore:isPartOf :инструкция_po_сервису_kassa_payanyway .
+
+:личный_кабинет rdf:type comcore:Resource ;
+  rdfs:label "Личный кабинет"@ru .
+
+:счета rdf:type comcore:Resource ;
+  rdfs:label "Счета"@ru ;
+  comcore:isPartOf :личный_кабинет .
+
+:настроить_счет rdf:type comcore:Resource ;
+  rdfs:label "Настроить счет"@ru ;
+  comcore:isPartOf :счета .
+
+:инструкции rdf:type comcore:Resource ;
+  rdfs:label "Инструкции"@ru ;
+  comcore:isPartOf :настроить_счет .
+
+:интеграция_с_PayAnyWay_Касса rdf:type comcore:Resource ;
+  rdfs:label "Интеграция с PayAnyWay.Касса. Порядок подключения кассы"@ru ;
+  comcore:isPartOf :инструкции ;
+  comcore:isPartOf :личный_кабинет .
+
+:инструкция_po_сервису_kassa_payanyway comcore:isPartOf :интеграция_с_PayAnyWay_Касса .

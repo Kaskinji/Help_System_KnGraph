@@ -1,0 +1,26 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+:Финансовое_положение rdf:type comcore:Resource ;
+    rdfs:label "Финансовое положение"@ru .
+
+:галочки rdf:type comcore:Resource ;
+    rdfs:label "галочки"@ru ;
+    comcore:isPartOf :Финансовое_положение ;
+    comcore:isResourceOf :ставим_галочки .
+
+:Подтвержденное rdf:type comcore:Resource ;
+    rdfs:label "Подтвержденное"@ru ;
+    comcore:isPartOf :галочки ;
+    comcore:isResourceOf :ставим_галочки .
+
+:Сохранить rdf:type comcore:Resource ;
+    rdfs:label "Сохранить"@ru ;
+    comcore:isPartOf :галочки ;
+    comcore:isResourceOf :ставим_галочки .
+
+:ставим_галочки rdf:type comcore:Process ;
+    rdfs:label "ставим галочки"@ru ;
+    comcore:isPartOf :Финансовое_положение .

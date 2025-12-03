@@ -1,0 +1,103 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:НКО_Монета rdf:type comcore:Agent ;
+    rdfs:label "НКО Монета"@ru ;
+    comcore:isActorOf :формирование_писем_и_задач .
+
+:ПО_АС_МОНЕТА rdf:type comcore:Agent ;
+    rdfs:label "ПО АС МОНЕТА"@ru ;
+    comcore:isActorOf :формирование_писем_и_задач .
+
+:успешная_регистрация rdf:type comcore:Event ;
+    rdfs:label "Успешная регистрация"@ru ;
+    comcore:Initiates :проверка_функционала_ИМ_и_легитимность ,
+                     :заполнение_ЛК_и_сопровождение ,
+                     :формирование_писем_и_задач .
+
+:формирование_писем_и_задач rdf:type comcore:Process ;
+    rdfs:label "Формирование писем и задач"@ru .
+
+:письмо_клиенту rdf:type comcore:Resource ;
+    rdfs:label "Письмо клиенту"@ru ;
+    comcore:isResultOf :успешная_регистрация ;
+    comcore:isResourceOf :формирование_писем_и_задач .
+
+:OTRS_очередь_Коммерческий_Уведомления rdf:type comcore:Resource ;
+    rdfs:label "Очередь «Коммерческий отдел. Уведомления» в OTRS"@ru ;
+    comcore:isResourceOf :формирование_писем_и_задач .
+
+:письмо_отдел_интернет_магазины rdf:type comcore:Resource ;
+    rdfs:label "Письмо для сотрудников отдела интернет-магазины"@ru ;
+    comcore:isResultOf :успешная_регистрация ;
+    comcore:isResourceOf :формирование_писем_и_задач ;
+    comcore:isPartOf :OTRS_очередь_Коммерческий_Уведомления .
+
+:Jira rdf:type comcore:Agent ;
+    rdfs:label "Jira"@ru ;
+    comcore:isActorOf :формирование_писем_и_задач .
+
+:OTRS rdf:type comcore:Agent ;
+    rdfs:label "OTRS"@ru ;
+    comcore:isActorOf :формирование_писем_и_задач .
+
+:задача_Moneta_Risk_Management_MRM rdf:type comcore:Resource ;
+    rdfs:label "Moneta Risk Management (MRM) - задача"@ru ;
+    comcore:isResultOf :успешная_регистрация ;
+    comcore:isResourceOf :формирование_писем_и_задач ;
+    comcore:isPartOf :проверка_функционала_ИМ_и_легитимность .
+
+:задача_CRM rdf:type comcore:Resource ;
+    rdfs:label "Задача CRM"@ru ;
+    comcore:isResultOf :успешная_регистрация ;
+    comcore:isResourceOf :формирование_писем_и_задач ;
+    comcore:isPartOf :проверка_функционала_ИМ_и_легитимность .
+
+:MRM rdf:type comcore:Resource ;
+    rdfs:label "MRM"@ru .
+
+:CRM rdf:type comcore:Resource ;
+    rdfs:label "CRM"@ru .
+
+:отдел_безопасности_рисков rdf:type comcore:Agent ;
+    rdfs:label "Отдел безопасности рисков"@ru ;
+    comcore:isResponsibleFor :задача_Moneta_Risk_Management_MRM .
+
+:ОБР rdf:type comcore:Agent ;
+    rdfs:label "ОБР"@ru ;
+    comcore:isResponsibleFor :задача_Moneta_Risk_Management_MRM .
+
+:отдел_интернет_магазины rdf:type comcore:Agent ;
+    rdfs:label "Отдел интернет-магазины"@ru ;
+    comcore:isResponsibleFor :задача_CRM .
+
+:сотрудник_отдела_интернет_магазины rdf:type comcore:Agent ;
+    rdfs:label "Сотрудник отдела по работе с интернет-магазинами"@ru ;
+    comcore:isActorOf :заполнение_ЛК_и_сопровождение ;
+    comcore:isResponsibleFor :заполнение_ЛК_и_сопровождение .
+
+:Клиент rdf:type comcore:Agent ;
+    rdfs:label "Клиент"@ru ;
+    comcore:isActorOf :заполнение_ЛК_и_сопровождение .
+
+:ЛК rdf:type comcore:Resource ;
+    rdfs:label "ЛК"@ru ;
+    comcore:isResourceOf :заполнение_ЛК_и_сопровождение .
+
+:проверка_функционала_ИМ_и_легитимность rdf:type comcore:Process ;
+    rdfs:label "Проверка готовности функционала сайта ИМ и установление легитимности продаваемых товаров и услуг"@ru ;
+    comcore:isResultOf :успешная_регистрация ;
+    comcore:hasResult :задача_Moneta_Risk_Management_MRM .
+
+:заполнение_ЛК_и_сопровождение rdf:type comcore:Process ;
+    rdfs:label "Заполнение Клиентом ЛК и сопровождение процесса сотрудником отдела по работе с интернет-магазинами"@ru ;
+    comcore:isResultOf :успешная_регистрация ;
+    comcore:isActorOf :Клиент ,
+                      :сотрудник_отдела_интернет_магазины .

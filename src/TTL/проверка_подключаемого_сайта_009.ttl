@@ -1,0 +1,86 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:зарегистрирован_как_самозанятый rdf:type comcore:Event ;
+    rdfs:label "зарегистрирован как самозанятый"@ru .
+
+:причина_отказа rdf:type comcore:Event ;
+    rdfs:label "Причина отказа"@ru .
+
+:сотрудник rdf:type comcore:Agent ;
+    rdfs:label "Сотрудник"@ru ;
+    comcore:Initiates :передача_информации, :поиск_письма_в_OTRS, :добавление_заметки_в_ticket, :переместить ;
+    comcore:isActorOf :передача_информации, :поиск_письма_в_OTRS, :добавление_заметки_в_ticket, :переместить .
+
+:отдел_сопровождения rdf:type comcore:Agent ;
+    rdfs:label "Отдел сопровождения"@ru ;
+    comcore:isActorOf :связаться_с_клиентом, :направить_на_регистрацию_самозанятого ;
+    comcore:Initiates :связаться_с_клиентом, :направить_на_регистрацию_самозанятого .
+
+:клиент rdf:type comcore:Agent ;
+    rdfs:label "Клиент"@ru ;
+    comcore:isActorOf :связаться_с_клиентом .
+
+:Служба_поддержка rdf:type comcore:Agent ;
+    rdfs:label "Служба поддержка"@ru ;
+    comcore:isActorOf :переместить .
+
+:OTRS rdf:type comcore:Resource ;
+    rdfs:label "OTRS"@ru ;
+    comcore:isResourceOf :поиск_письма_в_OTRS .
+
+:письмо_о_регистрации_клиента rdf:type comcore:Resource ;
+    rdfs:label "Письмо о регистрации клиента"@ru ;
+    comcore:isResourceOf :поиск_письма_в_OTRS .
+
+:ticket rdf:type comcore:Resource ;
+    rdfs:label "Тикет"@ru ;
+    comcore:isResourceOf :добавление_заметки_в_ticket, :переместить .
+
+:заметка_Самозанятый rdf:type comcore:Resource ;
+    rdfs:label "Заметка «Самозанятый»"@ru ;
+    comcore:isResourceOf :добавление_заметки_в_ticket .
+
+:https_self_payanyway_ru_registerinstauser rdf:type comcore:Resource ;
+    rdfs:label "https://self.payanyway.ru/registerinstauser"@ru ;
+    comcore:isResourceOf :направить_на_регистрацию_самозанятого .
+
+:передача_информации rdf:type comcore:Process ;
+    rdfs:label "Передает информацию в отдел сопровождения"@ru ;
+    comcore:hasResult :связаться_с_клиентом .
+
+:связаться_с_клиентом rdf:type comcore:Process ;
+    rdfs:label "Связаться с клиентом"@ru .
+
+:направить_на_регистрацию_самозанятого rdf:type comcore:Process ;
+    rdfs:label "Направить на регистрацию самозанятого"@ru ;
+    comcore:isPartOf :передача_информации ;
+    comcore:hasResult :регистрация_самозанятого .
+
+:регистрация_самозанятого rdf:type comcore:Process ;
+    rdfs:label "Регистрация самозанятого"@ru ;
+    comcore:hasResult :зарегистрирован_как_самозанятый .
+
+:поиск_письма_в_OTRS rdf:type comcore:Process ;
+    rdfs:label "Ищет письмо о регистрации клиента в OTRS"@ru ;
+    comcore:isPartOf :передача_информации ;
+    comcore:isResourceOf :OTRS .
+
+:добавление_заметки_в_ticket rdf:type comcore:Process ;
+    rdfs:label "Добавляет в ticket заметку «Самозанятый»"@ru ;
+    comcore:isPartOf :поиск_письма_в_OTRS ;
+    comcore:hasResult :заметка_Самозанятый ;
+    comcore:isResourceOf :ticket .
+
+:переместить rdf:type comcore:Process ;
+    rdfs:label "Переместить"@ru ;
+    comcore:isPartOf :добавление_заметки_в_ticket ;
+    comcore:isResourceOf :ticket ;
+    comcore:hasResult :Служба_поддержка .

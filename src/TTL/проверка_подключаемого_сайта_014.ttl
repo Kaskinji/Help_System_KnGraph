@@ -1,0 +1,117 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:сотрудник_отдела_ОБР rdf:type comcore:Agent ;
+    rdfs:label "Сотрудник отдела ОБР"@ru .
+
+:сотрудник_отдела_сопровождения rdf:type comcore:Agent ;
+    rdfs:label "Сотрудник отдела сопровождения"@ru ;
+    comcore:isResponsibleFor :запрос_клиенту_в_OTRS ;
+    comcore:isResponsibleFor :связаться_по_телефону ;
+    comcore:isResponsibleFor :шаблон_запроса ;
+    comcore:isResponsibleFor :письмо_самостоятельно .
+
+:OTRS rdf:type comcore:Agent ;
+    rdfs:label "OTRS"@ru ;
+    comcore:isActorOf :запрос_клиенту_в_OTRS .
+
+:клиент rdf:type comcore:Agent ;
+    rdfs:label "Клиент"@ru ;
+    comcore:isActorOf :запрос_клиенту_в_OTRS ;
+    comcore:isActorOf :связаться_по_телефону .
+
+:PayAnyWay_НКО_Монета rdf:type comcore:Agent ;
+    rdfs:label "PayAnyWay НКО Монета"@ru .
+
+:ООО______ rdf:type comcore:Agent ;
+    rdfs:label "ООО ______"@ru ;
+    comcore:isActorOf :заявка_на_подключение .
+
+:комментарий rdf:type comcore:Event ;
+    rdfs:label "Комментарий"@ru ;
+    comcore:Initiates :запрос_клиенту_в_OTRS .
+
+:непредоставление_документов_2_3_дня rdf:type comcore:Event ;
+    rdfs:label "Клиент не предоставляет запрошенные документы в течение 2-3 дней"@ru ;
+    comcore:Initiates :связаться_по_телефону .
+
+:запрос_клиенту_в_OTRS rdf:type comcore:Process ;
+    rdfs:label "Направление запроса клиенту в OTRS"@ru ;
+    comcore:hasActor :сотрудник_отдела_сопровождения ;
+    comcore:hasActor :OTRS ;
+    comcore:hasActor :клиент ;
+    comcore:hasResource :шаблон_запроса ;
+    comcore:hasResource :письмо_самостоятельно ;
+    comcore:hasResource :доп_документы_существование_бизнеса ;
+    comcore:hasResource :договор_на_поставку ;
+    comcore:hasResource :запрошенные_документы_информация .
+
+:связаться_по_телефону rdf:type comcore:Process ;
+    rdfs:label "Связаться с клиентом по телефону"@ru ;
+    comcore:isActorOf :сотрудник_отдела_сопровождения ;
+    comcore:isActorOf :клиент ;
+    comcore:hasResource :телефон_в_личном_кабинете ;
+    comcore:hasResource :шаблон_разговора_с_клиентом ;
+    comcore:hasResource :скан_договора ;
+    comcore:hasResource :com_payanyway_ru .
+
+:шаблон_запроса rdf:type comcore:Resource ;
+    rdfs:label "Шаблон"@ru ;
+    comcore:isResourceOf :запрос_клиенту_в_OTRS ;
+    comcore:canBeResourceFor :запрос_клиенту_в_OTRS .
+
+:письмо_самостоятельно rdf:type comcore:Resource ;
+    rdfs:label "Письмо (составленное самостоятельно)"@ru ;
+    comcore:isResourceOf :запрос_клиенту_в_OTRS .
+
+:доп_документы_существование_бизнеса rdf:type comcore:Resource ;
+    rdfs:label "Дополнительные документы, подтверждающие фактическое существование бизнеса"@ru ;
+    comcore:canBeResourceFor :запрос_клиенту_в_OTRS ;
+    comcore:isResourceOf :запрос_клиенту_в_OTRS .
+
+:запрошенные_документы_информация rdf:type comcore:Resource ;
+    rdfs:label "Запрошенные документы или информация"@ru ;
+    comcore:isResourceOf :запрос_клиенту_в_OTRS .
+
+:телефон_в_личном_кабинете rdf:type comcore:Resource ;
+    rdfs:label "Телефон, указанный в личном кабинете"@ru ;
+    comcore:isResourceOf :связаться_по_телефону ;
+    comcore:isPartOf :личный_кабинет .
+
+:личный_кабинет rdf:type comcore:Resource ;
+    rdfs:label "Личный кабинет"@ru .
+
+:шаблон_разговора_с_клиентом rdf:type comcore:Resource ;
+    rdfs:label "Шаблон разговора с клиентом"@ru ;
+    comcore:isResourceOf :связаться_по_телефону .
+
+:скан_договора rdf:type comcore:Resource ;
+    rdfs:label "Скан договора"@ru ;
+    comcore:canBeResourceFor :запрос_клиенту_в_OTRS ;
+    comcore:isResourceOf :связаться_по_телефону .
+
+:com_payanyway_ru rdf:type comcore:Resource ;
+    rdfs:label "com@payanyway.ru"@ru ;
+    comcore:isResourceOf :связаться_по_телефону ;
+    comcore:isResourceOf :запрос_клиенту_в_OTRS .
+
+:заявка_на_подключение rdf:type comcore:Resource ;
+    rdfs:label "Заявка на подключение"@ru ;
+    comcore:isResourceOf :запрос_клиенту_в_OTRS ;
+    comcore:isPartOf :ООО______ .
+
+:договор_на_поставку rdf:type comcore:Resource ;
+    rdfs:label "Договор на поставку реализуемого товара"@ru ;
+    comcore:canBeResourceFor :запрос_клиенту_в_OTRS ;
+    comcore:canBeResourceFor :связаться_по_телефону .
+
+:отдел_комплаенс rdf:type comcore:Agent ;
+    rdfs:label "Отдел комплаенс"@ru ;
+    comcore:isResponsibleFor :договор_на_поставку .

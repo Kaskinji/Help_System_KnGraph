@@ -1,0 +1,41 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:Мой_счет rdf:type comcore:Resource ;
+  rdfs:label "Мой счет"@ru .
+
+:Управление_счетами rdf:type comcore:Resource ;
+  rdfs:label "Управление счетами"@ru ;
+  comcore:isPartOf :Мой_счет .
+
+:Согласования rdf:type comcore:Resource ;
+  rdfs:label "Согласования"@ru ;
+  comcore:isPartOf :Управление_счетами .
+
+:Юmoney rdf:type comcore:Resource ;
+  rdfs:label "Юmoney"@ru ;
+  comcore:isPartOf :Согласования .
+
+:Добавить rdf:type comcore:Process ;
+  rdfs:label "Добавить"@ru ;
+  comcore:isPartOf :Юmoney .
+
+:Зайти rdf:type comcore:Process ;
+  rdfs:label "Зайти"@ru ;
+  comcore:hasSubProcess :Добавить .
+
+:Вид_товара_работы_услуги rdf:type comcore:Resource ;
+  rdfs:label "Вид товара (работы,услуги)"@ru ;
+  comcore:isPartOf :Добавить ;
+  comcore:isResourceOf :Добавить .
+
+:Отправить rdf:type comcore:Resource ;
+  rdfs:label "Отправить"@ru ;
+  comcore:isPartOf :Вид_товара_работы_услуги .

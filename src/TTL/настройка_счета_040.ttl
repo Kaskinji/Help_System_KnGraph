@@ -1,0 +1,58 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:клиент rdf:type comcore:Agent ;
+    rdfs:label "Клиент"@ru ;
+    comcore:isResponsibleFor :бизнес_счет .
+
+:бизнес_счет rdf:type comcore:Resource ;
+    rdfs:label "Бизнес-счет"@ru ;
+    comcore:isResourceOf :настройка_счета ;
+    comcore:isResultOf :открытие_бизнес_счета .
+
+:система rdf:type comcore:Agent ;
+    rdfs:label "Система"@ru ;
+    comcore:Initiates :направление_информационного_письма ;
+    comcore:isActorOf :направление_информационного_письма .
+
+:информационное_письмо rdf:type comcore:Resource ;
+    rdfs:label "Информационное письмо"@ru ;
+    comcore:isPartOf :направление_информационного_письма .
+
+:OTRS rdf:type comcore:Agent ;
+    rdfs:label "OTRS"@ru ;
+    comcore:isActorOf :направление_информационного_письма .
+
+:направление_информационного_письма rdf:type comcore:Process ;
+    rdfs:label "Направление информационного письма"@ru .
+
+:открытие_бизнес_счета rdf:type comcore:Event ;
+    rdfs:label "Открытие бизнес-счета"@ru ;
+    comcore:Initiates :направление_информационного_письма .
+
+:сотрудник_отдела_сопровождения rdf:type comcore:Agent ;
+    rdfs:label "Сотрудник отдела сопровождения"@ru ;
+    comcore:isActorOf :вход_в_учетную_запись , :настройка_счета ;
+    comcore:isResponsibleFor :настройка_счета .
+
+:отдел_сопровождения rdf:type comcore:Agent ;
+    rdfs:label "Отдел сопровождения"@ru .
+
+:вход_в_учетную_запись rdf:type comcore:Process ;
+    rdfs:label "Вход в учетную запись клиента"@ru ;
+    comcore:isPartOf :настройка_счета .
+
+:учетная_запись_клиента rdf:type comcore:Resource ;
+    rdfs:label "Учетная запись клиента"@ru ;
+    comcore:isResourceOf :вход_в_учетную_запись , :настройка_счета .
+
+:настройка_счета rdf:type comcore:Process ;
+    rdfs:label "Настройка счета"@ru ;
+    comcore:isResourceOf :настройка_счета .

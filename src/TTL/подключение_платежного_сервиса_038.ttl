@@ -1,0 +1,53 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:настройка_API rdf:type comcore:Process ;
+    rdfs:label "Настройка API"@ru .
+
+:клиент rdf:type comcore:Agent ;
+    rdfs:label "Клиент"@ru ;
+    comcore:Initiates :настройка_API .
+
+:MONETA_Assistant_Документация rdf:type comcore:Resource ;
+    rdfs:label "MONETA.Assistant - Документация"@ru ;
+    comcore:isPartOf :API_Assistant ;
+    comcore:isResourceOf :настройка_API .
+
+:API_Assistant rdf:type comcore:Resource ;
+    rdfs:label "Существующее API Assistant"@ru .
+
+:автоматизация_различных_процессов rdf:type comcore:Process ;
+    rdfs:label "Автоматизация различных процессов"@ru .
+
+:выводы rdf:type comcore:Process ;
+    rdfs:label "Выводы"@ru ;
+    comcore:isPartOf :автоматизация_различных_процессов .
+
+:запрос_данных rdf:type comcore:Process ;
+    rdfs:label "Запрос данных"@ru ;
+    comcore:isPartOf :автоматизация_различных_процессов .
+
+:рекуррентные_платежи rdf:type comcore:Process ;
+    rdfs:label "Рекуррентные платежи"@ru ;
+    comcore:isPartOf :автоматизация_различных_процессов .
+
+:MerchantAPI rdf:type comcore:Resource ;
+    rdfs:label "MerchantAPI"@ru .
+
+:элементы_MerchantAPI rdf:type comcore:Resource ;
+    rdfs:label "Элементы MerchantAPI"@ru ;
+    comcore:isPartOf :MerchantAPI ;
+    comcore:isPartOf :API_Assistant ;
+    comcore:canBeResourceFor :автоматизация_различных_процессов .
+
+:Инструкция_MerchantAPI rdf:type comcore:Resource ;
+    rdfs:label "Инструкция MerchantAPI"@ru ;
+    comcore:isPartOf :элементы_MerchantAPI ;
+    comcore:canBeResourceFor :автоматизация_различных_процессов .

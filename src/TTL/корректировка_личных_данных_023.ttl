@@ -1,0 +1,77 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:Клиент a comcore:Agent ;
+  rdfs:label "Клиент"@ru ;
+  comcore:isActorOf :вход_в_личный_кабинет,
+                     :корректировка_паспортных_данных,
+                     :корректировка_данных_ИНН,
+                     :нажатие_кнопка_Сохранить,
+                     :нажатие_кнопка_Отправить_на_проверку .
+
+:OTRS a comcore:Agent ;
+  rdfs:label "OTRS"@ru .
+
+:письмо_о_необходимости_корректировки a comcore:Resource ;
+  rdfs:label "Письмо о необходимости корректировки"@ru .
+
+:информационное_письмо_о_необходимости_проверить_данные a comcore:Resource ;
+  rdfs:label "Информационное письмо о необходимости проверить данные у клиента"@ru ;
+  comcore:isResourceOf :проверить_данные_у_клиента .
+
+:личный_кабинет a comcore:Resource ;
+  rdfs:label "Личный кабинет"@ru .
+
+:паспортные_данные a comcore:Resource ;
+  rdfs:label "Паспортные данные"@ru ;
+  comcore:isResourceOf :корректировка_паспортных_данных .
+
+:данные_ИНН a comcore:Resource ;
+  rdfs:label "Данные ИНН"@ru ;
+  comcore:isResourceOf :корректировка_данных_ИНН .
+
+:кнопка_Сохранить a comcore:Resource ;
+  rdfs:label "Кнопка Сохранить"@ru ;
+  comcore:isResourceOf :нажатие_кнопка_Сохранить .
+
+:кнопка_Отправить_на_проверку a comcore:Resource ;
+  rdfs:label "Кнопка Отправить на проверку"@ru ;
+  comcore:isResourceOf :нажатие_кнопка_Отправить_на_проверку .
+
+:получение_письма_о_необходимости_корректировки a comcore:Event ;
+  rdfs:label "Получение письма о необходимости корректировки"@ru ;
+  comcore:Initiates :вход_в_личный_кабинет .
+
+:вход_в_личный_кабинет a comcore:Process ;
+  rdfs:label "Заходит в личный кабинет"@ru .
+
+:корректировка_паспортных_данных a comcore:Process ;
+  rdfs:label "Корректирует паспортные данные"@ru ;
+  comcore:isPartOf :вход_в_личный_кабинет .
+
+:корректировка_данных_ИНН a comcore:Process ;
+  rdfs:label "Корректирует данные ИНН"@ru ;
+  comcore:isPartOf :вход_в_личный_кабинет .
+
+:нажатие_кнопка_Сохранить a comcore:Process ;
+  rdfs:label "Нажимает кнопку Сохранить"@ru ;
+  comcore:isPartOf :вход_в_личный_кабинет .
+
+:нажатие_кнопка_Отправить_на_проверку a comcore:Process ;
+  rdfs:label "Нажимает кнопку Отправить на проверку"@ru ;
+  comcore:isPartOf :вход_в_личный_кабинет ;
+  comcore:hasResult :приход_информационного_письма_в_OTRS .
+
+:приход_информационного_письма_в_OTRS a comcore:Event ;
+  rdfs:label "В OTRS приходит информационное письмо о необходимости проверить данные у клиента"@ru ;
+  comcore:Initiates :проверить_данные_у_клиента .
+
+:проверить_данные_у_клиента a comcore:Process ;
+  rdfs:label "Проверить данные у клиента"@ru .

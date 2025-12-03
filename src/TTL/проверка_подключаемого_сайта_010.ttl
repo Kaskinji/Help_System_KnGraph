@@ -1,0 +1,53 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:причина_отказа rdf:type comcore:Event ;
+  rdfs:label "Причина отказа"@ru .
+
+:юридическое_лицо rdf:type comcore:Resource ;
+  rdfs:label "Юридическое лицо"@ru .
+
+:положительные_характеристики rdf:type comcore:Resource ;
+  rdfs:label "Положительные характеристики"@ru ;
+  comcore:isPartOf :юридическое_лицо .
+
+:проект rdf:type comcore:Resource ;
+  rdfs:label "Проект"@ru .
+
+:отдел_ОБР rdf:type comcore:Agent ;
+  rdfs:label "Отдел ОБР"@ru .
+
+:руководитель_отдела_ОБР rdf:type comcore:Agent ;
+  rdfs:label "Руководитель отдела ОБР"@ru ;
+  comcore:isActorOf :убедиться_в_правильности_принятого_решения .
+
+:обратиться_к_руководителю_отдела_ОБР rdf:type comcore:Process ;
+  rdfs:label "Обратиться к руководителю отдела ОБР"@ru ;
+  comcore:hasPart :просьба_убедиться_в_правильности_принятого_решения .
+
+:просьба_убедиться_в_правильности_принятого_решения rdf:type comcore:Resource ;
+  rdfs:label "Просьба убедиться в правильности принятого решения"@ru ;
+  comcore:canBeResourceFor :убедиться_в_правильности_принятого_решения ;
+  comcore:isResourceOf :обратиться_к_руководителю_отдела_ОБР .
+
+:убедиться_в_правильности_принятого_решения rdf:type comcore:Process ;
+  rdfs:label "Убедиться в правильности принятого решения"@ru ;
+  comcore:hasResult :правильность_принятого_решения .
+
+:правильность_принятого_решения rdf:type comcore:Event ;
+  rdfs:label "Правильность принятого решения"@ru .
+
+:MRM rdf:type comcore:Resource ;
+  rdfs:label "MRM"@ru .
+
+:№_задачи_MRM rdf:type comcore:Resource ;
+  rdfs:label "№ задачи MRM"@ru ;
+  comcore:isResourceOf :просьба_убедиться_в_правильности_принятого_решения ;
+  comcore:isPartOf :MRM .
