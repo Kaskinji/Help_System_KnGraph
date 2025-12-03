@@ -1,0 +1,55 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:соответствие_правилам_и_условиям rdf:type comcore:Resource ;
+    rdfs:label "Блок «Соответствие Правилам и Условиям»"@ru .
+
+:поле rdf:type comcore:Resource ;
+    rdfs:label "Поле"@ru ;
+    comcore:isPartOf :соответствие_правилам_и_условиям .
+
+:галочка rdf:type comcore:Resource ;
+    rdfs:label "Галочка"@ru ;
+    comcore:isPartOf :поле .
+
+:кнопка_Сохранить rdf:type comcore:Resource ;
+    rdfs:label "Кнопка \"Сохранить\""@ru ;
+    comcore:isPartOf :соответствие_правилам_и_условиям .
+
+:установка_галочек_во_всех_полях rdf:type comcore:Process ;
+    rdfs:label "Установка галочек во всех полях"@ru .
+
+:нажатие_кнопки_Сохранить rdf:type comcore:Process ;
+    rdfs:label "Нажатие кнопки \"Сохранить\""@ru .
+
+:подтверждение_соответствие_правил rdf:type comcore:Process ;
+    rdfs:label "Подтверждение блока «Соответствие Правилам и Условиям»"@ru ;
+    comcore:hasSubProcess :установка_галочек_во_всех_полях , :нажатие_кнопки_Сохранить ;
+    comcore:hasResult :приход_информационного_письма .
+
+:приход_информационного_письма rdf:type comcore:Event ;
+    rdfs:label "Приход информационного письма"@ru ;
+    comcore:hasPart :информационное_письмо .
+
+:информационное_письмо rdf:type comcore:Resource ;
+    rdfs:label "Информационное письмо"@ru ;
+    comcore:isPartOf :приход_информационного_письма ;
+    comcore:canBeResourceFor :создание_бизнес_счета .
+
+:создание_бизнес_счета rdf:type comcore:Process ;
+    rdfs:label "Создание бизнес- счета"@ru .
+
+:система rdf:type comcore:Agent ;
+    rdfs:label "Система"@ru ;
+    comcore:isResponsibleFor :информационное_письмо ;
+    comcore:Initiates :приход_информационного_письма .
+
+:клиент rdf:type comcore:Agent ;
+    rdfs:label "Клиент"@ru .

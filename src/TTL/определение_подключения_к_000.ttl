@@ -1,0 +1,95 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:Подключение_к_Системе_МОНЕТА_РУ rdf:type comcore:Process ;
+    rdfs:label "Подключение к Системе МОНЕТА.РУ"@ru ;
+    comcore:hasSubProcess :регистрация_Получателя ,
+                         :проверка_готовности_сайта_ИМ ,
+                         :установление_легитимности ,
+                         :заполнение_личного_кабинета ,
+                         :создание_Бизнес_счета ;
+    comcore:hasResult :регистрация_Клиента_в_системе ,
+                      :условия_проведения_Переводов .
+
+:регистрация_Получателя rdf:type comcore:Process ;
+    rdfs:label "Регистрация Получателя в Системе МОНЕТА.РУ"@ru ;
+    comcore:hasResult :регистрация_Клиента_в_системе .
+
+:проверка_готовности_сайта_ИМ rdf:type comcore:Process ;
+    rdfs:label "Проверка готовности функционала сайта ИМ"@ru ;
+    comcore:isPartOf :Подключение_к_Системе_МОНЕТА_РУ .
+
+:установление_легитимности rdf:type comcore:Process ;
+    rdfs:label "Установление легитимности продаваемых сайтом товаров и услуг"@ru ;
+    comcore:isPartOf :Подключение_к_Системе_МОНЕТА_РУ .
+
+:заполнение_личного_кабинета rdf:type comcore:Process ;
+    rdfs:label "Заполнение личного кабинета (ЛК) Клиента"@ru ;
+    comcore:hasResult :Личный_кабинет_Клиента ;
+    comcore:isPartOf :Подключение_к_Системе_МОНЕТА_РУ .
+
+:создание_Бизнес_счета rdf:type comcore:Process ;
+    rdfs:label "Создание Бизнес - счета для Получателя в Системе МОНЕТА.РУ"@ru ;
+    comcore:hasResult :Бизнес_счет_Получателя ;
+    comcore:isPartOf :Подключение_к_Системе_МОНЕТА_РУ .
+
+:Личный_кабинет_Клиента rdf:type comcore:Resource ;
+    rdfs:label "Личный кабинет (ЛК) Клиента"@ru ;
+    comcore:isResourceOf :заполнение_личного_кабинета ;
+    comcore:isResourceOf :Подключение_к_Системе_МОНЕТА_РУ .
+
+:Данные_о_Получателе rdf:type comcore:Resource ;
+    rdfs:label "Данные о Получателе"@ru ;
+    comcore:canBeResourceFor :заполнение_личного_кабинета ;
+    comcore:isResourceOf :Подключение_к_Системе_МОНЕТА_РУ .
+
+:Бизнес_счет_Получателя rdf:type comcore:Resource ;
+    rdfs:label "Бизнес - счет Получателя"@ru ;
+    comcore:isResourceOf :создание_Бизнес_счета ;
+    comcore:isResourceOf :Подключение_к_Системе_МОНЕТА_РУ .
+
+:регистрация_Клиента_в_системе rdf:type comcore:Event ;
+    rdfs:label "Регистрация Клиента в системе"@ru .
+
+:условия_проведения_Переводов rdf:type comcore:Event ;
+    rdfs:label "Условия для проведения Переводов"@ru .
+
+:Получатель rdf:type comcore:Agent ;
+    rdfs:label "Получатель"@ru ;
+    comcore:isActorOf :Подключение_к_Системе_МОНЕТА_РУ .
+
+:Торговая_площадка rdf:type comcore:Agent ;
+    rdfs:label "Торговая площадка"@ru ;
+    comcore:isActorOf :Подключение_к_Системе_МОНЕТА_РУ .
+
+:Клиент_ЮЛ_ИП rdf:type comcore:Agent ;
+    rdfs:label "Клиент (ЮЛ/ИП)"@ru ;
+    comcore:isActorOf :Подключение_к_Системе_МОНЕТА_РУ .
+
+:ПО_АС_МОНЕТА rdf:type comcore:Agent ;
+    rdfs:label "ПО АС МОНЕТА"@ru ;
+    comcore:isActorOf :Подключение_к_Системе_МОНЕТА_РУ .
+
+:Руководитель_отдела_ИМ rdf:type comcore:Agent ;
+    rdfs:label "Руководитель отдела по работе с ИМ (интернет-магазин)"@ru ;
+    comcore:isActorOf :Подключение_к_Системе_МОНЕТА_РУ ;
+    comcore:isResponsibleFor :Подключение_к_Системе_МОНЕТА_РУ .
+
+:Сотрудник_по_работе_с_Клиентами rdf:type comcore:Agent ;
+    rdfs:label "Сотрудник отдела по работе с Клиентами"@ru ;
+    comcore:isActorOf :Подключение_к_Системе_МОНЕТА_РУ .
+
+:Отдел_ОБР rdf:type comcore:Agent ;
+    rdfs:label "Отдел ОБР"@ru ;
+    comcore:isActorOf :Подключение_к_Системе_МОНЕТА_РУ .
+
+:НКО rdf:type comcore:Agent ;
+    rdfs:label "НКО"@ru ;
+    comcore:isActorOf :заполнение_личного_кабинета .

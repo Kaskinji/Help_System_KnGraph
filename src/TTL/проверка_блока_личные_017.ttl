@@ -1,0 +1,88 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:Сотрудник rdf:type comcore:Agent ;
+    rdfs:label "Сотрудник"@ru ;
+    comcore:isActorOf :проверка_блока_Личные_данные , :нажатие_кнопки_Сохранить ;
+    comcore:isResponsibleFor :Псевдоним , :Вид_деятельности , :Сайт_URL , :Процессинговая_система , :Комментарий .
+
+:проверка_блока_Личные_данные rdf:type comcore:Process ;
+    rdfs:label "Проверка блока «Личные данные»"@ru ;
+    comcore:hasResult :подтвержденные_поля ;
+    comcore:isPartOf :процесс_подтверждения_личных_данных .
+
+:нажатие_кнопки_Сохранить rdf:type comcore:Process ;
+    rdfs:label "Нажатие кнопки «Сохранить»"@ru ;
+    comcore:hasResult :сохраненные_подтверждения .
+
+:процесс_подтверждения_личных_данных rdf:type comcore:Process ;
+    rdfs:label "Процесс подтверждения личных данных"@ru ;
+    comcore:hasResult :подтвержденные_поля .
+
+:блок_Личные_данные rdf:type comcore:Resource ;
+    rdfs:label "Блок «Личные данные»"@ru ;
+    comcore:isResourceOf :проверка_блока_Личные_данные .
+
+:Псевдоним rdf:type comcore:Resource ;
+    rdfs:label "Псевдоним"@ru ;
+    comcore:isResourceOf :проверка_блока_Личные_данные .
+
+:Вид_деятельности rdf:type comcore:Resource ;
+    rdfs:label "Вид деятельности"@ru ;
+    comcore:isResourceOf :проверка_блока_Личные_данные .
+
+:Сайт_URL rdf:type comcore:Resource ;
+    rdfs:label "Сайт (URL)"@ru ;
+    comcore:isResourceOf :проверка_блока_Личные_данные .
+
+:Процессинговая_система rdf:type comcore:Resource ;
+    rdfs:label "Процессинговая система"@ru ;
+    comcore:isResourceOf :проверка_блока_Личные_данные .
+
+:Комментарий rdf:type comcore:Resource ;
+    rdfs:label "Комментарий"@ru ;
+    comcore:isResourceOf :проверка_блока_Личные_данные .
+
+:чекбокс rdf:type comcore:Resource ;
+    rdfs:label "Чекбокс"@ru ;
+    comcore:canBeResourceFor :проверка_блока_Личные_данные .
+
+:галочка_Подтвержденное rdf:type comcore:Resource ;
+    rdfs:label "Галочка «Подтвержденное»"@ru ;
+    comcore:isPartOf :Псевдоним , :Вид_деятельности , :Сайт_URL , :Процессинговая_система ;
+    comcore:isResourceOf :процесс_подтверждения_личных_данных .
+
+:галочка_Публичное rdf:type comcore:Resource ;
+    rdfs:label "Галочка «Публичное»"@ru ;
+    comcore:isPartOf :Псевдоним , :Вид_деятельности , :Сайт_URL ;
+    comcore:isResourceOf :процесс_подтверждения_личных_данных .
+
+:подтвержденные_поля rdf:type comcore:Resource ;
+    rdfs:label "Подтвержденные поля"@ru ;
+    comcore:isResourceOf :нажатие_кнопки_Сохранить .
+
+:сохраненные_подтверждения rdf:type comcore:Resource ;
+    rdfs:label "Сохраненные подтверждения"@ru ;
+    comcore:isResourceOf :нажатие_кнопки_Сохранить .
+
+:PAYANYWAY rdf:type comcore:Resource ;
+    rdfs:label "PAYANYWAY"@ru ;
+    comcore:isPartOf :Процессинговая_система ;
+    comcore:isResourceOf :проверка_блока_Личные_данные .
+
+:ООО_Ромашка_www_website_ru rdf:type comcore:Resource ;
+    rdfs:label "ООО «Ромашка» / www.website.ru"@ru ;
+    comcore:isPartOf :Псевдоним ;
+    comcore:isResourceOf :проверка_блока_Личные_данные .
+
+:ИП_Иванов_Иван_Иванович_www_website_ru rdf:type comcore:Resource ;
+    rdfs:label "ИП Иванов Иван Иванович / www.website.ru"@ru ;
+    comcore:isPartOf :Псевдоним ;
+    comcore:isResourceOf :проверка_блока_Личные_данные .

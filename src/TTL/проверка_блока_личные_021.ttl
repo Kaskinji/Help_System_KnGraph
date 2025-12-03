@@ -1,0 +1,72 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:проверка_ИНН rdf:type comcore:Process ;
+    rdfs:label "Проверка ИНН"@ru ;
+    comcore:hasResult :ИНН_найден .
+
+:ИНН rdf:type comcore:Resource ;
+    rdfs:label "ИНН"@ru ;
+    comcore:isResourceOf :проверка_ИНН .
+
+:ИНН_найден rdf:type comcore:Event ;
+    rdfs:label "ИНН найден"@ru .
+
+:nalog_ru rdf:type comcore:Agent ;
+    rdfs:label "nalog.ru"@ru ;
+    comcore:isActorOf :проверка_ИНН .
+
+:сотрудник rdf:type comcore:Agent ;
+    rdfs:label "Сотрудник"@ru ;
+    comcore:isActorOf :проверка_ИНН , :проверка_заполненности_полей , :нажатие_кнопки_Сохранить ;
+    comcore:isResponsibleFor :проверка_ИНН , :проверка_заполненности_полей , :кнопка_Сохранить .
+
+:данные rdf:type comcore:Resource ;
+    rdfs:label "Данные"@ru ;
+    comcore:isResourceOf :проверка_ИНН , :проверка_заполненности_полей .
+
+:ФИО rdf:type comcore:Resource ;
+    rdfs:label "ФИО"@ru ;
+    comcore:isResourceOf :проверка_ИНН .
+
+:дата_рождения rdf:type comcore:Resource ;
+    rdfs:label "Дата рождения"@ru ;
+    comcore:isResourceOf :проверка_ИНН .
+
+:паспортные_данные rdf:type comcore:Resource ;
+    rdfs:label "Паспортные данные"@ru ;
+    comcore:isResourceOf :проверка_ИНН .
+
+:галочка_Подтвержденное rdf:type comcore:Resource ;
+    rdfs:label "Галочка «Подтвержденное»"@ru ;
+    comcore:isResourceOf :проверка_ИНН , :проверка_заполненности_полей .
+
+:проверка_заполненности_полей rdf:type comcore:Process ;
+    rdfs:label "Проверка заполненности всех полей"@ru ;
+    comcore:hasResult :все_поля_заполнены .
+
+:все_поля_заполнены rdf:type comcore:Event ;
+    rdfs:label "Все поля заполнены"@ru .
+
+:адрес rdf:type comcore:Resource ;
+    rdfs:label "Адрес"@ru ;
+    comcore:isResourceOf :проверка_заполненности_полей .
+
+:индекс rdf:type comcore:Resource ;
+    rdfs:label "Индекс"@ru ;
+    comcore:isPartOf :адрес .
+
+:нажатие_кнопки_Сохранить rdf:type comcore:Process ;
+    rdfs:label "Нажатие кнопки «Сохранить»"@ru ;
+    comcore:isPartOf :проверка_заполненности_полей .
+
+:кнопка_Сохранить rdf:type comcore:Resource ;
+    rdfs:label "Кнопка «Сохранить»"@ru ;
+    comcore:isResourceOf :нажатие_кнопки_Сохранить .

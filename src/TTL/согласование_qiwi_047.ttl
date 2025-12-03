@@ -1,0 +1,53 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:зайти rdf:type comcore:Process ;
+  rdfs:label "Зайти"@ru ;
+  comcore:hasSubProcess :управление_счетами .
+
+:мой_счет rdf:type comcore:Resource ;
+  rdfs:label "Мой счет"@ru ;
+  comcore:canBeResourceFor :зайти , :управление_счетами .
+
+:управление_счетами rdf:type comcore:Process ;
+  rdfs:label "Управление счетами"@ru ;
+  comcore:hasSubProcess :согласования ;
+  comcore:isPartOf :мой_счет .
+
+:согласования rdf:type comcore:Process ;
+  rdfs:label "Согласования"@ru ;
+  comcore:hasSubProcess :добавить ;
+  comcore:isPartOf :управление_счетами .
+
+:Qiwi rdf:type comcore:Agent ;
+  rdfs:label "Qiwi"@ru ;
+  comcore:isActorOf :согласования , :добавить .
+
+:добавить rdf:type comcore:Process ;
+  rdfs:label "Добавить"@ru ;
+  comcore:isPartOf :согласования ;
+  comcore:hasSubProcess :выбираете_подходящий_вид_товара , :отправить .
+
+:поле_Вид_товара_работы_услуги rdf:type comcore:Resource ;
+  rdfs:label "в поле «Вид товара (работы,услуги)»"@ru ;
+  comcore:isResourceOf :добавить .
+
+:выбираете_подходящий_вид_товара rdf:type comcore:Process ;
+  rdfs:label "выбираете подходящий вид товара"@ru ;
+  comcore:hasResult :подходящий_вид_товара ;
+  comcore:isPartOf :добавить .
+
+:подходящий_вид_товара rdf:type comcore:Resource ;
+  rdfs:label "подходящий вид товара"@ru ;
+  comcore:isResourceOf :выбираете_подходящий_вид_товара .
+
+:отправить rdf:type comcore:Process ;
+  rdfs:label "Отправить"@ru ;
+  comcore:isPartOf :добавить .

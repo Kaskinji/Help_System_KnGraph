@@ -1,0 +1,68 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:подтверждение_поля_ЛК rdf:type comcore:Process ;
+    rdfs:label "Подтверждение правильной заполненности всех полей ЛК"@ru ;
+    comcore:isPartOf :создание_бизнес_счета ;
+    comcore:isPartOf :выбор_тарифа_подключения .
+
+:сотрудник rdf:type comcore:Agent ;
+    rdfs:label "Сотрудник"@ru ;
+    comcore:Initiates :создание_бизнес_счета ;
+    comcore:isResponsibleFor :подтверждение_поля_ЛК .
+
+:создание_бизнес_счета rdf:type comcore:Process ;
+    rdfs:label "Создание бизнес-счета"@ru ;
+    comcore:hasSubProcess :подтверждение_поля_ЛК ;
+    comcore:hasSubProcess :выбор_тарифа_подключения .
+
+:выбор_тарифа_подключения rdf:type comcore:Process ;
+    rdfs:label "Выбрать-указать тариф подключения"@ru ;
+    comcore:isPartOf :создание_бизнес_счета ;
+    comcore:isPartOf :подключение_стандартных_тарифов .
+
+:тариф_подключения rdf:type comcore:Resource ;
+    rdfs:label "Тариф подключения"@ru ;
+    comcore:isResourceOf :выбор_тарифа_подключения , :создание_бизнес_счета ;
+    comcore:canBeResourceFor :подключение_стандартных_тарифов .
+
+:ЛК rdf:type comcore:Resource ;
+    rdfs:label "ЛК"@ru .
+
+:поля_ЛК rdf:type comcore:Resource ;
+    rdfs:label "Поля ЛК"@ru ;
+    comcore:isPartOf :ЛК ;
+    comcore:isResourceOf :подтверждение_поля_ЛК .
+
+:подключение_стандартных_тарифов rdf:type comcore:Process ;
+    rdfs:label "Подключение клиента к стандартным тарифам"@ru ;
+    comcore:hasSubProcess :перенос_клиента_в_ветку ;
+    comcore:isPartOf :создание_бизнес_счета .
+
+:стандартные_тарифы rdf:type comcore:Resource ;
+    rdfs:label "Стандартные тарифы"@ru ;
+    comcore:isResourceOf :подключение_стандартных_тарифов .
+
+:перенос_клиента_в_ветку rdf:type comcore:Process ;
+    rdfs:label "Перенести клиента в необходимую ветку"@ru ;
+    comcore:isPartOf :подключение_стандартных_тарифов ;
+    comcore:isPartOf :создание_бизнес_счета .
+
+:клиент rdf:type comcore:Resource ;
+    rdfs:label "Клиент"@ru ;
+    comcore:isResourceOf :перенос_клиента_в_ветку , :подключение_стандартных_тарифов .
+
+:ветка rdf:type comcore:Resource ;
+    rdfs:label "Ветка"@ru ;
+    comcore:isResourceOf :перенос_клиента_в_ветку .
+
+:вид_деятельности rdf:type comcore:Resource ;
+    rdfs:label "Вид деятельности"@ru ;
+    comcore:canBeResourceFor :перенос_клиента_в_ветку .

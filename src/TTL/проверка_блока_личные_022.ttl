@@ -1,0 +1,91 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:сайт_ИФНС rdf:type comcore:Resource ;
+    rdfs:label "Сайт ИФНС"@ru ;
+    comcore:canBeResourceFor :проверка_данных .
+
+:информация_об_ИНН_не_найдена rdf:type comcore:Event ;
+    rdfs:label "Информация об ИНН не найдена"@ru ;
+    comcore:isResultOf :проверка_данных .
+
+:паспорт_недействителен rdf:type comcore:Event ;
+    rdfs:label "Паспорт недействителен"@ru ;
+    comcore:isResultOf :проверка_данных .
+
+:сотрудник rdf:type comcore:Agent ;
+    rdfs:label "Сотрудник"@ru ;
+    comcore:isActorOf :соответствие_правилам_и_условиям ;
+    comcore:Initiates :соответствие_правилам_и_условиям .
+
+:соответствие_правилам_и_условиям rdf:type comcore:Process ;
+    rdfs:label "Соответствие правилам и условиям"@ru ;
+    comcore:isPartOf :проверка_данных ;
+    comcore:hasResult :текст_о_неподтверждении_паспортных_данных .
+
+:галочка_все_необходимые_данные_внесены rdf:type comcore:Resource ;
+    rdfs:label "Галочка в поле «Все необходимые данные внесены и являются актуальными»"@ru ;
+    comcore:isResourceOf :соответствие_правилам_и_условиям .
+
+:поле_сообщения rdf:type comcore:Resource ;
+    rdfs:label "Открывшееся поле"@ru ;
+    comcore:isResourceOf :соответствие_правилам_и_условиям .
+
+:текст_о_неподтверждении_паспортных_данных rdf:type comcore:Resource ;
+    rdfs:label "Текст сообщения о неподтверждении паспортных данных"@ru ;
+    comcore:isResultOf :соответствие_правилам_и_условиям ;
+    comcore:isPartOf :поле_сообщения .
+
+:фз_115 rdf:type comcore:Resource ;
+    rdfs:label "115 ФЗ"@ru ;
+    comcore:isResourceOf :проверка_данных .
+
+:личный_кабинет rdf:type comcore:Resource ;
+    rdfs:label "Личный кабинет"@ru ;
+    comcore:canBeResourceFor :проверка_данных .
+
+:паспортные_данные_руководителя rdf:type comcore:Resource ;
+    rdfs:label "Паспортные данные вашего руководителя"@ru ;
+    comcore:isPartOf :личный_кабинет ;
+    comcore:isResourceOf :проверка_данных .
+
+:государственный_сервис_inn_do rdf:type comcore:Resource ;
+    rdfs:label "Государственный сервис https://service.nalog.ru/inn.do"@ru .
+
+:система rdf:type comcore:Agent ;
+    rdfs:label "Система"@ru ;
+    comcore:isActorOf :отправка_письма_на_электронную_почту ;
+    comcore:isResponsibleFor :письмо_с_текстом .
+
+:клиент rdf:type comcore:Agent ;
+    rdfs:label "Клиент"@ru .
+
+:заявленная_электронная_почта rdf:type comcore:Resource ;
+    rdfs:label "Заявленная электронная почта"@ru ;
+    comcore:isResourceOf :отправка_письма_на_электронную_почту .
+
+:письмо_с_текстом rdf:type comcore:Resource ;
+    rdfs:label "Письмо с данным текстом"@ru ;
+    comcore:isResultOf :отправка_письма_на_электронную_почту ;
+    comcore:isPartOf :поле_сообщения .
+
+:проверка_данных rdf:type comcore:Process ;
+    rdfs:label "Проверка данных"@ru ;
+    comcore:hasResult :информация_об_ИНН_не_найдена , :паспорт_недействителен , :неподтверждение_паспортных_данных_руководителя ;
+    comcore:canBeResourceFor :отправка_письма_на_электронную_почту .
+
+:отправка_письма_на_электронную_почту rdf:type comcore:Process ;
+    rdfs:label "Отправка письма на электронную почту"@ru ;
+    comcore:hasResult :письмо_с_текстом .
+
+:неподтверждение_паспортных_данных_руководителя rdf:type comcore:Event ;
+    rdfs:label "Не удалось подтвердить паспортные данные вашего руководителя"@ru ;
+    comcore:isResultOf :проверка_данных ;
+    comcore:Initiates :отправка_письма_на_электронную_почту .

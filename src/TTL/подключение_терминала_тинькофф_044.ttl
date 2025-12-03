@@ -1,0 +1,108 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:банк_Тинькофф rdf:type comcore:Agent ;
+    rdfs:label "банк Тинькофф"@ru .
+
+:автоматический_обработчик rdf:type comcore:Agent ;
+    rdfs:label "автоматический обработчик"@ru ;
+    comcore:isActorOf :внесение_данных_терминала .
+
+:Управление_счетами rdf:type comcore:Agent ;
+    rdfs:label "Управление счетами"@ru ;
+    comcore:isResponsibleFor :поле_Дополнительные_параметры_интерфейса , :данные_терминала .
+
+:OTRS rdf:type comcore:Agent ;
+    rdfs:label "OTRS"@ru ;
+    comcore:isActorOf :приход_информационного_письма .
+
+:Монета rdf:type comcore:Agent ;
+    rdfs:label "Монета"@ru ;
+    comcore:isActorOf :исключение_Тинькофф_из_assistantpriority ;
+    comcore:isResponsibleFor :assistantpriority .
+
+:Jira rdf:type comcore:Agent ;
+    rdfs:label "Jira"@ru .
+
+:поле_Дополнительные_параметры_интерфейса rdf:type comcore:Resource ;
+    rdfs:label "поле «Дополнительные параметры интерфейса»"@ru ;
+    comcore:isResourceOf :внесение_данных_терминала , :проверка_наличия_данных_терминала .
+
+:поле_Дополнительные_параметры rdf:type comcore:Resource ;
+    rdfs:label "поле «Дополнительные параметры»"@ru ;
+    comcore:isResourceOf :проверка_наличия_данных_терминала .
+
+:данные_терминала rdf:type comcore:Resource ;
+    rdfs:label "данные терминала"@ru ;
+    comcore:canBeResourceFor :внесение_данных_терминала ;
+    comcore:isResourceOf :проверка_наличия_данных_терминала .
+
+:информационное_письмо rdf:type comcore:Resource ;
+    rdfs:label "информационное письмо"@ru ;
+    comcore:canBeResourceFor :проверка_наличия_данных_терминала .
+
+:приход_информационного_письма rdf:type comcore:Event ;
+    rdfs:label "приход информационного письма в OTRS"@ru ;
+    comcore:Initiates :проверка_наличия_данных_терминала .
+
+:согласование_терминала rdf:type comcore:Event ;
+    rdfs:label "согласование терминала"@ru ;
+    comcore:Initiates :внесение_данных_терминала .
+
+:внесение_данных_терминала rdf:type comcore:Process ;
+    rdfs:label "внесение данных терминала"@ru ;
+    comcore:hasResult :tcsbankmerchant ;
+    comcore:isPartOf :управление_счетами_процесс .
+
+:tcsbankmerchant rdf:type comcore:Resource ;
+    rdfs:label "tcsbankmerchant=200000000004497/20001862/20001863/850407/dychmoy.ru"@ru ;
+    comcore:isResourceOf :внесение_данных_терминала .
+
+:проверка_наличия_данных_терминала rdf:type comcore:Process ;
+    rdfs:label "проверить внесены ли данные терминала в поле «Дополнительные параметры» в счете"@ru ;
+    comcore:canBeResourceFor :внесение_данных_терминала ;
+    comcore:isPartOf :управление_счетами_процесс .
+
+:CRM_заявка_Jira rdf:type comcore:Resource ;
+    rdfs:label "CRM заявке в Jira"@ru .
+
+:информация_об_отказе rdf:type comcore:Resource ;
+    rdfs:label "информация об отказе"@ru ;
+    comcore:isResourceOf :прописать_информацию_об_отказе .
+
+:прописать_информацию_об_отказе rdf:type comcore:Process ;
+    rdfs:label "прописать информацию об отказе в CRM заявке в Jira"@ru ;
+    comcore:hasResult :комментарий_Тинькофф_отказ ;
+    comcore:isPartOf :работа_с_CRM .
+
+:комментарий_Тинькофф_отказ rdf:type comcore:Resource ;
+    rdfs:label "Тинькофф отказ"@ru ;
+    comcore:isPartOf :CRM_заявка_Jira ;
+    comcore:isResourceOf :прописать_информацию_об_отказе .
+
+:Ticket rdf:type comcore:Resource ;
+    rdfs:label "Ticket"@ru ;
+    comcore:isPartOf :CRM_заявка_Jira .
+
+:assistantpriority rdf:type comcore:Resource ;
+    rdfs:label "assistantpriority"@ru ;
+    comcore:isResourceOf :исключение_Тинькофф_из_assistantpriority .
+
+:assistantpriority_tcs_mdm_psbcard rdf:type comcore:Resource ;
+    rdfs:label "assistantpriority=tcs,mdm,psbcard"@ru ;
+    comcore:canBeResourceFor :исключение_Тинькофф_из_assistantpriority .
+
+:assistantpriority_mdm_psbcard rdf:type comcore:Resource ;
+    rdfs:label "assistantpriority=mdm,psbcard"@ru ;
+    comcore:isResourceOf :исключение_Тинькофф_из_assistantpriority .
+
+:исключение_Тинькофф_из_assistantpriority rdf:type comcore:Process ;
+    rdfs:label "исключение Тинькофф из assistantpriority"@ru ;
+    comcore:hasResult :assistantpriority_mdm_psbcard .

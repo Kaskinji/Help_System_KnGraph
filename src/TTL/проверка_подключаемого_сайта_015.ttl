@@ -1,0 +1,93 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:задача_MRM a comcore:Process ;
+    rdfs:label "задача MRM"@ru .
+
+:статус_Закрыт_Согласовано a comcore:Event ;
+    rdfs:label "Статус «Закрыт. Согласовано»"@ru ;
+    comcore:Initiates :проверка_заполнения_личного_кабинета .
+
+:проверка_заполнения_личного_кабинета a comcore:Process ;
+    rdfs:label "проверка заполнения Клиентом личного кабинета"@ru .
+
+:сотрудник a comcore:Agent ;
+    rdfs:label "сотрудник"@ru ;
+    comcore:isActorOf :проверка_заполнения_личного_кабинета,
+                     :поиск_письма_о_регистрации_клиента,
+                     :отправка_письма_шаблон_согласован,
+                     :звонок_на_контактный_телефон ;
+    comcore:isResponsibleFor :проверка_заполнения_личного_кабинета,
+                              :отправка_письма_шаблон_согласован,
+                              :звонок_на_контактный_телефон .
+
+:клиент a comcore:Agent ;
+    rdfs:label "Клиент"@ru .
+
+:личный_кабинет_клиента a comcore:Resource ;
+    rdfs:label "личный кабинет клиента"@ru ;
+    comcore:isResourceOf :подключение_платежного_сервиса,
+                         :проверка_заполнения_личного_кабинета .
+
+:OTRS a comcore:Resource ;
+    rdfs:label "OTRS"@ru ;
+    comcore:isResourceOf :поиск_письма_о_регистрации_клиента .
+
+:поиск_письма_о_регистрации_клиента a comcore:Process ;
+    rdfs:label "поиск письма о регистрации клиента в OTRS"@ru .
+
+:письмо_о_регистрации_клиента a comcore:Resource ;
+    rdfs:label "письмо о регистрации клиента"@ru ;
+    comcore:isResourceOf :поиск_письма_о_регистрации_клиента,
+                         :отправка_письма_шаблон_согласован .
+
+:шаблон_согласован a comcore:Resource ;
+    rdfs:label "шаблон «согласован»"@ru ;
+    comcore:isResourceOf :отправка_письма_шаблон_согласован .
+
+:отправка_письма_шаблон_согласован a comcore:Process ;
+    rdfs:label "отправка письма шаблоном «согласован»"@ru .
+
+:имя_и_отчество a comcore:Resource ;
+    rdfs:label "имя и отчество"@ru ;
+    comcore:isResourceOf :отправка_письма_шаблон_согласован .
+
+:заявка_на_подключение a comcore:Resource ;
+    rdfs:label "заявка на подключение"@ru ;
+    comcore:isResourceOf :подключение_платежного_сервиса .
+
+:подключение_платежного_сервиса a comcore:Process ;
+    rdfs:label "подключение платежного сервиса"@ru .
+
+:подключение_одобрено a comcore:Event ;
+    rdfs:label "заявка на подключение одобрена"@ru .
+
+:контактный_телефон a comcore:Resource ;
+    rdfs:label "контактный телефон"@ru ;
+    comcore:isPartOf :личный_кабинет_клиента ;
+    comcore:isResourceOf :звонок_на_контактный_телефон .
+
+:нет_результата a comcore:Event ;
+    rdfs:label "нет результата после отправки письма"@ru ;
+    comcore:Initiates :звонок_на_контактный_телефон .
+
+:звонок_на_контактный_телефон a comcore:Process ;
+    rdfs:label "звонок на контактный телефон"@ru .
+
+:шаблон_скрипт a comcore:Resource ;
+    rdfs:label "шаблон (скрипт) звонка/письма"@ru ;
+    comcore:isResourceOf :звонок_на_контактный_телефон,
+                         :отправка_письма_шаблон_согласован .
+
+:PayAnyWay_НКО_Монета a comcore:Agent ;
+    rdfs:label "PayAnyWay НКО Монета"@ru .
+
+:ООО______ a comcore:Agent ;
+    rdfs:label "ООО ______"@ru .

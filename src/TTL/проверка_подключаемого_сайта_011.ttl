@@ -1,0 +1,55 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:фейковый_сайт rdf:type comcore:Event ;
+    rdfs:label "фейковый сайт"@ru .
+
+:признаки_недобросовестного_лица rdf:type comcore:Event ;
+    rdfs:label "признаки недобросовестного юридического лица"@ru .
+
+:вид_деятельности_сомнительный rdf:type comcore:Event ;
+    rdfs:label "вид деятельности сомнительный"@ru .
+
+:отказ rdf:type comcore:Event ;
+    rdfs:label "Отказ"@ru .
+
+:сотрудник rdf:type comcore:Agent ;
+    rdfs:label "Сотрудник"@ru ;
+    comcore:isResponsibleFor :написание_письма_в_OTRS , :направление_уточняющего_письма ;
+    comcore:Initiates :написание_письма_в_OTRS , :направление_уточняющего_письма ;
+    comcore:isActorOf :написание_письма_в_OTRS , :направление_уточняющего_письма .
+
+:клиент rdf:type comcore:Agent ;
+    rdfs:label "Клиент"@ru ;
+    comcore:isActorOf :написание_письма_в_OTRS .
+
+:OTRS rdf:type comcore:Agent ;
+    rdfs:label "OTRS"@ru ;
+    comcore:isActorOf :написание_письма_в_OTRS .
+
+:КО-Отказ rdf:type comcore:Resource ;
+    rdfs:label "КО-Отказ"@ru ;
+    comcore:isResourceOf :написание_письма_в_OTRS .
+
+:письмо_уточнение rdf:type comcore:Resource ;
+    rdfs:label "Письмо: Рады, что вас заинтересовали возможности нашего сервиса по проведению и приёму платежей. В настоящий момент мы хотим уточнить, за какие именно товары/услуги вы собираетесь принимать платежи и на каком именно этапе сделки это будет происходить?"@ru ;
+    comcore:isResourceOf :направление_уточняющего_письма .
+
+:написание_письма_в_OTRS rdf:type comcore:Process ;
+    rdfs:label "Написание письма в OTRS"@ru ;
+    comcore:hasResult :сообщение_об_отказе ;
+    comcore:isPartOf :процесс_сообщения_клиенту .
+
+:направление_уточняющего_письма rdf:type comcore:Process ;
+    rdfs:label "Направление уточняющего письма"@ru ;
+    comcore:hasResult :письмо_уточнение .
+
+:сообщение_об_отказе rdf:type comcore:Event ;
+    rdfs:label "Сообщение об отказе"@ru .

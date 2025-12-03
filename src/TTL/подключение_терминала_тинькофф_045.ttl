@@ -1,0 +1,114 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:Тинькофф_банк rdf:type comcore:Agent ;
+    rdfs:label "Тинькофф банк"@ru ;
+    comcore:isActorOf :согласование .
+
+:Банк rdf:type comcore:Agent ;
+    rdfs:label "Банк"@ru ;
+    comcore:isActorOf :направление_письма_об_изменении .
+
+:Монета rdf:type comcore:Agent ;
+    rdfs:label "Монета"@ru ;
+    comcore:isActorOf :изменение_MCC_в_Монете ;
+    comcore:isResponsibleFor :MCC .
+
+:Вы rdf:type comcore:Agent ;
+    rdfs:label "Вы"@ru ;
+    comcore:Initiates :отправка_клиента_на_согласование , :анализ_рекомендуемого_MCC , :изменение_MCC_в_Монете , :связаться_с_банком_по_email ;
+    comcore:isActorOf :изменение_MCC_в_Монете .
+
+:клиент rdf:type comcore:Resource ;
+    rdfs:label "Клиент"@ru ;
+    comcore:isResourceOf :отправка_клиента_на_согласование .
+
+:MCC rdf:type comcore:Resource ;
+    rdfs:label "MCC"@ru ;
+    comcore:isResourceOf :отправка_клиента_на_согласование ;
+    comcore:isResourceOf :анализ_рекомендуемого_MCC ;
+    comcore:isResourceOf :изменение_MCC_в_Монете .
+
+:рекомендуемый_MCC rdf:type comcore:Resource ;
+    rdfs:label "Рекомендуемый MCC"@ru ;
+    comcore:isResourceOf :анализ_рекомендуемого_MCC .
+
+:письмо_об_изменении rdf:type comcore:Resource ;
+    rdfs:label "Письмо об изменении"@ru ;
+    comcore:canBeResourceFor :анализ_рекомендуемого_MCC .
+
+:ответное_письмо rdf:type comcore:Resource ;
+    rdfs:label "Ответное письмо"@ru .
+
+:формат_tcsbankmerchant rdf:type comcore:Resource ;
+    rdfs:label "формат tcsbankmerchant=200000000006856/200020002117/200021171695348/my.euroloss.ru"@ru ;
+    comcore:isResourceOf :изменение_MCC_в_Монете .
+
+:acq_monitoring_tinkoff_ru rdf:type comcore:Resource ;
+    rdfs:label "acq_monitoring@tinkoff.ru"@ru ;
+    comcore:isResourceOf :связаться_с_банком_по_email .
+
+:вид_деятельности rdf:type comcore:Resource ;
+    rdfs:label "Вид деятельности"@ru ;
+    comcore:canBeResourceFor :анализ_рекомендуемого_MCC .
+
+:сайт rdf:type comcore:Resource ;
+    rdfs:label "Сайт"@ru ;
+    comcore:canBeResourceFor :анализ_рекомендуемого_MCC .
+
+:отправка_клиента_на_согласование rdf:type comcore:Process ;
+    rdfs:label "Отправка клиента на согласование"@ru ;
+    comcore:isPartOf :согласование ;
+    comcore:hasResult :письмо_об_изменении .
+
+:согласование rdf:type comcore:Process ;
+    rdfs:label "Согласование"@ru ;
+    comcore:hasResult :письмо_об_изменении .
+
+:направление_письма_об_изменении rdf:type comcore:Process ;
+    rdfs:label "Направление письма об изменении"@ru ;
+    comcore:isActorOf :Банк ;
+    comcore:hasResult :письмо_об_изменении .
+
+:анализ_рекомендуемого_MCC rdf:type comcore:Process ;
+    rdfs:label "Анализ рекомендуемого MCC"@ru ;
+    comcore:isResourceOf :анализ_рекомендуемого_MCC ;
+    comcore:hasResult :замечание , :замечание_корректное , :MCC_не_подходит_под_вид_деятельности ;
+    comcore:hasResult :MCC_не_подходит_под_вид_деятельности .
+
+:изменение_MCC_в_Монете rdf:type comcore:Process ;
+    rdfs:label "Изменение MCC в Монете"@ru ;
+    comcore:isActorOf :Монета , :Вы ;
+    comcore:isResponsibleFor :MCC ;
+    comcore:hasResult :ответное_письмо .
+
+:связаться_с_банком_по_email rdf:type comcore:Process ;
+    rdfs:label "Связаться с банком по e-mail"@ru ;
+    comcore:isResourceOf :связаться_с_банком_по_email ;
+    comcore:hasResult :обоснование_присвоения_другого_MCC ;
+    comcore:isActorOf :Вы .
+
+:обоснование_присвоения_другого_MCC rdf:type comcore:Process ;
+    rdfs:label "Обоснование правильности присвоения другого MCC"@ru ;
+    comcore:isPartOf :связаться_с_банком_по_email .
+
+:замечание rdf:type comcore:Event ;
+    rdfs:label "Замечание"@ru ;
+    comcore:isResultOf :анализ_рекомендуемого_MCC .
+
+:замечание_корректное rdf:type comcore:Event ;
+    rdfs:label "Замечание корректное"@ru ;
+    comcore:isResultOf :анализ_рекомендуемого_MCC ;
+    comcore:Initiates :изменение_MCC_в_Монете .
+
+:MCC_не_подходит_под_вид_деятельности rdf:type comcore:Event ;
+    rdfs:label "MCC не подходит под вид деятельности"@ru ;
+    comcore:isResultOf :анализ_рекомендуемого_MCC ;
+    comcore:Initiates :связаться_с_банком_по_email .

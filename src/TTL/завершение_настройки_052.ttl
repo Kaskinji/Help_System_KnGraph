@@ -1,0 +1,115 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:информационное_письмо_OTRS rdf:type comcore:Resource ;
+    rdfs:label "Информационное письмо в OTRS"@ru ;
+    comcore:isPartOf :OTRS .
+
+:OTRS rdf:type comcore:Resource ;
+    rdfs:label "OTRS"@ru .
+
+:клиент rdf:type comcore:Agent ;
+    rdfs:label "Клиент"@ru .
+
+:бизнес_счет rdf:type comcore:Resource ;
+    rdfs:label "Бизнес - счет"@ru ;
+    comcore:isResultOf :уведомление_о_открытии_бизнес_счета .
+
+:уведомление_о_открытии_бизнес_счета rdf:type comcore:Event ;
+    rdfs:label "У клиента открыт бизнес - счет"@ru ;
+    comcore:hasResult :бизнес_счет .
+
+:завершение_всех_настроек rdf:type comcore:Process ;
+    rdfs:label "Завершение всех настроек"@ru ;
+    comcore:hasSubProcess :закрытие_информационного_письма_в_OTRS .
+
+:закрытие_информационного_письма_в_OTRS rdf:type comcore:Process ;
+    rdfs:label "Закрытие информационного письма в OTRS"@ru ;
+    comcore:isPartOf :завершение_всех_настроек .
+
+:7_дней rdf:type comcore:Resource ;
+    rdfs:label "7 дней"@ru ;
+    comcore:canBeResourceFor :анализ_согласования_терминалов .
+
+:анализ_согласования_терминалов rdf:type comcore:Process ;
+    rdfs:label "Анализ согласования всех терминалов"@ru .
+
+:проверка_транзакций_по_счету rdf:type comcore:Process ;
+    rdfs:label "Проверяем транзакции по счету"@ru ;
+    comcore:isPartOf :анализ_согласования_терминалов .
+
+:транзакции_по_счету rdf:type comcore:Resource ;
+    rdfs:label "Транзакции по счету"@ru ;
+    comcore:isResourceOf :проверка_транзакций_по_счету .
+
+:отсутствие_транзакций rdf:type comcore:Event ;
+    rdfs:label "Отсутствие транзакций"@ru ;
+    comcore:Initiates :проверка_работы_оплаты_на_сайте .
+
+:проверка_работы_оплаты_на_сайте rdf:type comcore:Process ;
+    rdfs:label "Проверка работы оплаты на сайте"@ru .
+
+:оплата_на_сайте rdf:type comcore:Resource ;
+    rdfs:label "Оплата на сайте"@ru ;
+    comcore:isResourceOf :проверка_работы_оплаты_на_сайте .
+
+:платежная_система rdf:type comcore:Agent ;
+    rdfs:label "Платежная система"@ru .
+
+:PayAnyWay_НКО_Монета rdf:type comcore:Agent ;
+    rdfs:label "Платежный сервис PayAnyWay НКО Монета"@ru ;
+    comcore:isActorOf :связь_с_клиентом_по_телефону ;
+    comcore:isResponsibleFor :инструкция_о_настройке ;
+    comcore:Initiates :связь_с_клиентом_по_телефону .
+
+:связь_с_клиентом_по_телефону rdf:type comcore:Process ;
+    rdfs:label "Связываемся с клиентом по телефону"@ru .
+
+:телефон rdf:type comcore:Resource ;
+    rdfs:label "Телефон"@ru ;
+    comcore:isResourceOf :связь_с_клиентом_по_телефону ;
+    comcore:isPartOf :личный_кабинет .
+
+:личный_кабинет rdf:type comcore:Resource ;
+    rdfs:label "Личный кабинет"@ru .
+
+:шаблон_сообщения rdf:type comcore:Resource ;
+    rdfs:label "Шаблон сообщения для общения"@ru ;
+    comcore:isResourceOf :связь_с_клиентом_по_телефону .
+
+:интеграция rdf:type comcore:Process ;
+    rdfs:label "Интеграция"@ru .
+
+:настройка_кассы rdf:type comcore:Process ;
+    rdfs:label "Настройка кассы"@ru .
+
+:своя_касса rdf:type comcore:Resource ;
+    rdfs:label "Свая касса"@ru ;
+    comcore:canBeResourceFor :настройка_кассы .
+
+:kassa_payanyway rdf:type comcore:Resource ;
+    rdfs:label "kassa.payanyway"@ru ;
+    comcore:canBeResourceFor :настройка_кассы .
+
+:инструкция_о_настройке rdf:type comcore:Resource ;
+    rdfs:label "Инструкция о настройке"@ru ;
+    comcore:canBeResourceFor :настройка_кассы .
+
+:электронная_почта rdf:type comcore:Resource ;
+    rdfs:label "Электронная почта"@ru .
+
+:направление_инструкции_на_электронную_почту rdf:type comcore:Process ;
+    rdfs:label "Направление инструкции на электронную почту"@ru ;
+    comcore:isPartOf :настройка_кассы ;
+    comcore:isResourceOf :настройка_кассы ;
+    comcore:isResourceOf :направление_инструкции_на_электронную_почту .
+
+:инструкция_о_настройке comcore:isResourceOf :направление_инструкции_на_электронную_почту ;
+    :электронная_почта rdf:type comcore:Resource .

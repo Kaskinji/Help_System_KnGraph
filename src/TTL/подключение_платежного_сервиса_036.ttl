@@ -1,0 +1,65 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:клиент rdf:type comcore:Agent ;
+  rdfs:label "Клиент"@ru ;
+  comcore:Initiates :уточнение_CMS .
+
+:сотрудник rdf:type comcore:Agent ;
+  rdfs:label "Сотрудник"@ru ;
+  comcore:isActorOf :уточнение_CMS ;
+  comcore:isResponsibleFor :ссылка_на_соответствующий_модуль .
+
+:обращение_с_вопросом_по_интеграции rdf:type comcore:Event ;
+  rdfs:label "Обращение с вопросом по интеграции"@ru ;
+  comcore:Initiates :уточнение_CMS .
+
+:уточнение_CMS rdf:type comcore:Process ;
+  rdfs:label "Уточнить какую CMS клиент использует"@ru ;
+  comcore:hasResult :ссылка_на_соответствующий_модуль .
+
+:ссылка_на_соответствующий_модуль rdf:type comcore:Resource ;
+  rdfs:label "Ссылка на соответствующий модуль"@ru ;
+  comcore:isResultOf :уточнение_CMS ;
+  comcore:isPartOf :payanyway_cms_url , :модули_оплаты_для_CMS , :список_готовых_модулей .
+
+:модуль_для_интеграции_CMS rdf:type comcore:Resource ;
+  rdfs:label "Модуль для интеграции CMS"@ru ;
+  comcore:canBeResourceFor :интеграция_CMS ;
+  comcore:isPartOf :список_готовых_модулей .
+
+:список_готовых_модулей rdf:type comcore:Resource ;
+  rdfs:label "Список готовых модулей для интеграции CMS"@ru ;
+  comcore:isPartOf :модули_оплаты_для_CMS , :payanyway_cms_url , :личный_кабинет .
+
+:payanyway_cms_url rdf:type comcore:Resource ;
+  rdfs:label "https://payanyway.ru/info/w/ru/public/w/partnership/developers/cms.html"@ru .
+
+:личный_кабинет rdf:type comcore:Resource ;
+  rdfs:label "Личный кабинет"@ru .
+
+:раздел_счета rdf:type comcore:Resource ;
+  rdfs:label "Раздел Счета"@ru ;
+  comcore:isPartOf :личный_кабинет .
+
+:настроить_счет rdf:type comcore:Resource ;
+  rdfs:label "Настроить счет"@ru ;
+  comcore:isPartOf :раздел_счета .
+
+:инструкции rdf:type comcore:Resource ;
+  rdfs:label "Инструкции"@ru ;
+  comcore:isPartOf :настроить_счет .
+
+:модули_оплаты_для_CMS rdf:type comcore:Resource ;
+  rdfs:label "Модули оплаты для CMS"@ru ;
+  comcore:isPartOf :инструкции .
+
+:интеграция_CMS rdf:type comcore:Process ;
+  rdfs:label "Интеграция CMS"@ru .

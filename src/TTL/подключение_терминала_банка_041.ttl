@@ -1,0 +1,95 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:подключение_терминала_банка_Открытия rdf:type comcore:Process ;
+    rdfs:label "Подключение терминала банка Открытия (без согласования)"@ru ;
+    comcore:hasSubProcess :зайти_в_Мой_счет ,
+                         :скопировать_параметры_из_поля ,
+                         :перейти_в_Управление_счетами ,
+                         :нажать_Показать_дополнительные_поля ,
+                         :вставить_параметры ,
+                         :нажать_Сохранить .
+
+:зайти_в_Мой_счет rdf:type comcore:Process ;
+    rdfs:label "Зайти в «Мой счет - Персональные данные – Настройки»"@ru ;
+    comcore:hasSubProcess :скопировать_параметры_из_поля ;
+    comcore:isPartOf :подключение_терминала_банка_Открытия .
+
+:скопировать_параметры_из_поля rdf:type comcore:Process ;
+    rdfs:label "Скопировать параметры из поля «Дополнительные параметры интерфейса»"@ru ;
+    comcore:hasResult :скопированные_параметры ;
+    comcore:isPartOf :подключение_терминала_банка_Открытия .
+
+:перейти_в_Управление_счетами rdf:type comcore:Process ;
+    rdfs:label "Перейти в «Мой счет - Управление счетами - Редактировать счет»"@ru ;
+    comcore:hasSubProcess :нажать_Показать_дополнительные_поля ;
+    comcore:isPartOf :подключение_терминала_банка_Открытия .
+
+:нажать_Показать_дополнительные_поля rdf:type comcore:Process ;
+    rdfs:label "Нажать «Показать дополнительные поля»"@ru ;
+    comcore:isPartOf :подключение_терминала_банка_Открытия .
+
+:вставить_параметры rdf:type comcore:Process ;
+    rdfs:label "Вставить скопированные параметры в «Дополнительные параметры интерфейса»"@ru ;
+    comcore:isPartOf :подключение_терминала_банка_Открытия .
+
+:нажать_Сохранить rdf:type comcore:Process ;
+    rdfs:label "Нажать «Сохранить»"@ru ;
+    comcore:isPartOf :подключение_терминала_банка_Открытия .
+
+:Мой_счет rdf:type comcore:Resource ;
+    rdfs:label "Мой счет"@ru ;
+    comcore:canBeResourceFor :зайти_в_Мой_счет .
+
+:Персональные_данные rdf:type comcore:Resource ;
+    rdfs:label "Персональные данные"@ru ;
+    comcore:isPartOf :Мой_счет ;
+    comcore:canBeResourceFor :зайти_в_Мой_счет .
+
+:Настройки rdf:type comcore:Resource ;
+    rdfs:label "Настройки"@ru ;
+    comcore:isPartOf :Персональные_данные ;
+    comcore:canBeResourceFor :зайти_в_Мой_счет .
+
+:Управление_счетами rdf:type comcore:Resource ;
+    rdfs:label "Управление счетами"@ru ;
+    comcore:isPartOf :Мой_счет ;
+    comcore:canBeResourceFor :перейти_в_Управление_счетами .
+
+:Редактировать_счет rdf:type comcore:Resource ;
+    rdfs:label "Редактировать счет"@ru ;
+    comcore:isPartOf :Управление_счетами ;
+    comcore:canBeResourceFor :перейти_в_Управление_счетами .
+
+:Дополнительные_параметры_интерфейса rdf:type comcore:Resource ;
+    rdfs:label "Дополнительные параметры интерфейса"@ru ;
+    comcore:isResourceOf :скопировать_параметры_из_поля ,
+                         :вставить_параметры .
+
+:параметры rdf:type comcore:Resource ;
+    rdfs:label "Параметры"@ru ;
+    comcore:isPartOf :Дополнительные_параметры_интерфейса ;
+    comcore:canBeResourceFor :скопировать_параметры_из_поля ,
+                             :вставить_параметры .
+
+:скопированные_параметры rdf:type comcore:Resource ;
+    rdfs:label "Скопированные параметры"@ru ;
+    comcore:isResourceOf :вставить_параметры ;
+    comcore:isPartOf :параметры .
+
+:Показать_дополнительные_поля rdf:type comcore:Resource ;
+    rdfs:label "Показать дополнительные поля"@ru ;
+    comcore:isPartOf :Редактировать_счет ;
+    comcore:canBeResourceFor :нажать_Показать_дополнительные_поля .
+
+:Сохранить rdf:type comcore:Resource ;
+    rdfs:label "Сохранить"@ru ;
+    comcore:isPartOf :Редактировать_счет ;
+    comcore:canBeResourceFor :нажать_Сохранить .

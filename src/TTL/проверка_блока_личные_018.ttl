@@ -1,0 +1,82 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:сотрудник rdf:type comcore:Agent ;
+    rdfs:label "Сотрудник"@ru ;
+    comcore:isActorOf :заход_в_персональные_данные_настройки ,
+                      :заполнить_доп_параметры_интерфейса ,
+                      :выбор_категории_товара_по_MCC ,
+                      :поиск_в_Справочнике_MCC ,
+                      :поиск_группы_по_MCC .
+
+:Дополнительные_параметры_интерфейса rdf:type comcore:Resource ;
+    rdfs:label "Дополнительные параметры интерфейса"@ru ;
+    comcore:isResourceOf :заполнить_доп_параметры_интерфейса .
+
+:заход_в_персональные_данные_настройки rdf:type comcore:Process ;
+    rdfs:label "Заход в Персональные данные – Настройки – Редактировать – «Дополнительные параметры интерфейса»"@ru .
+
+:заполнить_доп_параметры_интерфейса rdf:type comcore:Process ;
+    rdfs:label "Заполнить поле «Дополнительные параметры интерфейса»"@ru ;
+    comcore:isPartOf :заход_в_персональные_данные_настройки ;
+    comcore:hasResult :Дополнительные_параметры_интерфейса .
+
+:таблица_деятельности_MCC rdf:type comcore:Resource ;
+    rdfs:label "Таблица деятельности MCC"@ru ;
+    comcore:isResourceOf :выбор_категории_товара_по_MCC ,
+                         :поиск_группы_по_MCC .
+
+:MCC rdf:type comcore:Resource ;
+    rdfs:label "MCC"@ru ;
+    comcore:canBeResourceFor :выбор_категории_товара_по_MCC ,
+                             :поиск_группы_по_MCC ;
+    comcore:isResourceOf :поиск_в_Справочнике_MCC .
+
+:выбор_категории_товара_по_MCC rdf:type comcore:Process ;
+    rdfs:label "Выбор подходящей категории товара в таблице деятельности MCC"@ru ;
+    comcore:isPartOf :заполнить_доп_параметры_интерфейса ;
+    comcore:hasResult :категория_товара ;
+    comcore:isPartOf :заход_в_персональные_данные_настройки .
+
+:категория_товара rdf:type comcore:Resource ;
+    rdfs:label "Категория товара"@ru .
+
+:Справочник_MCC rdf:type comcore:Resource ;
+    rdfs:label "Справочник MCC"@ru ;
+    comcore:isResourceOf :поиск_в_Справочнике_MCC .
+
+:поиск_в_Справочнике_MCC rdf:type comcore:Process ;
+    rdfs:label "Поиск подходящего MCC в Справочнике MCC"@ru ;
+    comcore:isResourceOf :Справочник_MCC .
+
+:номер_MCC rdf:type comcore:Resource ;
+    rdfs:label "Номер MCC"@ru ;
+    comcore:isResourceOf :поиск_группы_по_MCC .
+
+:поиск_группы_по_MCC rdf:type comcore:Process ;
+    rdfs:label "Поиск необходимой группы в таблице по номеру MCC"@ru ;
+    comcore:hasResult :группа_в_таблице ;
+    comcore:isPartOf :выбор_категории_товара_по_MCC .
+
+:группа_в_таблице rdf:type comcore:Resource ;
+    rdfs:label "Группа в таблице"@ru ;
+    comcore:isResourceOf :поиск_группы_по_MCC .
+
+:сомнение rdf:type comcore:Event ;
+    rdfs:label "Сомнение при выборе категории"@ru ;
+    comcore:Initiates :поиск_в_Справочнике_MCC .
+
+:мискодинг rdf:type comcore:Process ;
+    rdfs:label "Мискодинг"@ru ;
+    comcore:hasResult :штрафные_санкции .
+
+:штрафные_санкции rdf:type comcore:Event ;
+    rdfs:label "Штрафные санкции"@ru ;
+    comcore:isResultOf :мискодинг .

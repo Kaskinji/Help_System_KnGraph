@@ -1,0 +1,95 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:перенос_в_ветку_клиента rdf:type comcore:Process ;
+    rdfs:label "Перенос в нужную ветку клиента"@ru ;
+    comcore:hasResult :переход_в_Рабочий_кабинет ,
+                     :появление_вариантов_оплат .
+
+:ветка_клиента rdf:type comcore:Resource ;
+    rdfs:label "Ветка клиента"@ru ;
+    comcore:isResourceOf :перенос_в_ветку_клиента .
+
+:переход_в_Рабочий_кабинет rdf:type comcore:Event ;
+    rdfs:label "Переход в «Рабочий кабинет»"@ru .
+
+:Рабочий_кабинет rdf:type comcore:Resource ;
+    rdfs:label "Рабочий кабинет"@ru .
+
+:банковские_карты rdf:type comcore:Resource ;
+    rdfs:label "Блок «Банковские карты»"@ru ;
+    comcore:isPartOf :Рабочий_кабинет .
+
+:варианты_оплат rdf:type comcore:Resource ;
+    rdfs:label "Варианты оплат"@ru ;
+    comcore:isPartOf :банковские_карты .
+
+:ставки rdf:type comcore:Resource ;
+    rdfs:label "Ставки"@ru ;
+    comcore:isPartOf :варианты_оплат .
+
+:появление_вариантов_оплат rdf:type comcore:Event ;
+    rdfs:label "Появление вариантов оплат с указанием ставок"@ru ;
+    comcore:isResultOf :перенос_в_ветку_клиента .
+
+:возможность_оплаты_отсутствует rdf:type comcore:Event ;
+    rdfs:label "Возможность оплаты отсутствует"@ru ;
+    comcore:isResultOf :открыть_счет .
+
+:открыть_счет rdf:type comcore:Process ;
+    rdfs:label "Открыть счет"@ru .
+
+:настройка_полей_в_СРМ_задаче rdf:type comcore:Process ;
+    rdfs:label "Настройка всех полей в СРМ-задаче по клиенту"@ru ;
+    comcore:hasPart :проставление_комментария_Включил ;
+    comcore:hasResult :отправка_письма_клиенту .
+
+:СРМ_задача rdf:type comcore:Resource ;
+    rdfs:label "СРМ-задача"@ru .
+
+:поля_в_СРМ_задаче rdf:type comcore:Resource ;
+    rdfs:label "Поля в СРМ-задаче"@ru ;
+    comcore:isPartOf :СРМ_задача ;
+    comcore:isResourceOf :настройка_полей_в_СРМ_задаче .
+
+:сотрудник rdf:type comcore:Agent ;
+    rdfs:label "Сотрудник"@ru ;
+    comcore:isActorOf :настройка_полей_в_СРМ_задаче ;
+    comcore:isResponsibleFor :поля_в_СРМ_задаче .
+
+:Jira rdf:type comcore:Resource ;
+    rdfs:label "Jira"@ru .
+
+:проставление_комментария_Включил rdf:type comcore:Process ;
+    rdfs:label "Проставление комментария «Включил»"@ru ;
+    comcore:isPartOf :настройка_полей_в_СРМ_задаче ;
+    comcore:isActorOf :сотрудник ;
+    comcore:hasResult :комментарий_Включил .
+
+:комментарий_Включил rdf:type comcore:Resource ;
+    rdfs:label "Комментарий «Включил»"@ru ;
+    comcore:isPartOf :Jira ;
+    comcore:isResourceOf :проставление_комментария_Включил .
+
+:отправка_письма_клиенту rdf:type comcore:Process ;
+    rdfs:label "Отправка письма клиенту"@ru ;
+    comcore:hasPart :письмо .
+
+:письмо rdf:type comcore:Resource ;
+    rdfs:label "Письмо"@ru ;
+    comcore:isResourceOf :отправка_письма_клиенту ;
+    comcore:hasPart :возможность_открытия_счета .
+
+:возможность_открытия_счета rdf:type comcore:Resource ;
+    rdfs:label "Возможность открытия счета"@ru ;
+    comcore:isPartOf :письмо .
+
+:Клиент rdf:type comcore:Agent ;
+    rdfs:label "Клиент"@ru .

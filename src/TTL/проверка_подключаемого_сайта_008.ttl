@@ -1,0 +1,101 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:не_зарегистрирован_в_ЕГРЮЛ rdf:type comcore:Event ;
+    rdfs:label "Не зарегистрирован в ЕГРЮЛ"@ru .
+
+:сотрудник_отдела_сопровождения rdf:type comcore:Agent ;
+    rdfs:label "Сотрудник отдела сопровождения"@ru ;
+    comcore:isActorOf :проверка_регистрации_и_отправка_письма ;
+    comcore:Initiates :проверка_регистрации_и_отправка_письма ;
+    comcore:isResponsibleFor :письмо_OTRS , :написание_письма_в_OTRS .
+
+:клиент rdf:type comcore:Agent ;
+    rdfs:label "Клиент"@ru .
+
+:сайт_egrul_nalog_ru rdf:type comcore:Resource ;
+    rdfs:label "Сайт https://egrul.nalog.ru"@ru ;
+    comcore:canBeResourceFor :проверка_регистрации_и_отправка_письма ;
+    comcore:isResourceOf :проверка_регистрации_и_отправка_письма .
+
+:сайт_ИФНС rdf:type comcore:Resource ;
+    rdfs:label "Сайт ИФНС"@ru ;
+    comcore:canBeResourceFor :проверка_регистрации_и_отправка_письма ;
+    comcore:isResourceOf :проверка_регистрации_и_отправка_письма .
+
+:раздел_Самозанятые rdf:type comcore:Resource ;
+    rdfs:label "Раздел Самозанятые"@ru ;
+    comcore:isPartOf :сайт_ИФНС ;
+    comcore:canBeResourceFor :проверка_регистрации_и_отправка_письма .
+
+:ИНН_Клиента rdf:type comcore:Resource ;
+    rdfs:label "ИНН Клиента"@ru ;
+    comcore:isPartOf :заявка ;
+    comcore:isResourceOf :проверка_регистрации_и_отправка_письма ;
+    comcore:canBeResourceFor :поиск_письма_в_OTRS .
+
+:заявка rdf:type comcore:Resource ;
+    rdfs:label "Заявка"@ru ;
+    comcore:canBeResourceFor :проверка_регистрации_и_отправка_письма .
+
+:регистрация_как_самозанятый rdf:type comcore:Resource ;
+    rdfs:label "Регистрация в качестве самозанятого"@ru ;
+    comcore:isResourceOf :проверка_регистрации_и_отправка_письма .
+
+:система_OTRS rdf:type comcore:Resource ;
+    rdfs:label "Система OTRS"@ru ;
+    comcore:canBeResourceFor :поиск_письма_в_OTRS , :написание_письма_в_OTRS ;
+    comcore:isResourceOf :написание_письма_в_OTRS .
+
+:письмо_OTRS rdf:type comcore:Resource ;
+    rdfs:label "Письмо о регистрации клиента в OTRS"@ru ;
+    comcore:isResourceOf :поиск_письма_в_OTRS ;
+    comcore:isPartOf :система_OTRS .
+
+:шаблон_КО_ИНН_не_найден rdf:type comcore:Resource ;
+    rdfs:label "КО-ИНН не найден"@ru ;
+    comcore:isResourceOf :выбор_шаблона ;
+    comcore:canBeResourceFor :написание_письма_в_OTRS .
+
+:проверка_регистрации_и_отправка_письма rdf:type comcore:Process ;
+    rdfs:label "Проверка регистрации и отправка письма"@ru ;
+    comcore:hasResult :письмо_OTRS ;
+    comcore:isPartOf :процесс_сопровождения .
+
+:поиск_письма_в_OTRS rdf:type comcore:Process ;
+    rdfs:label "Поиск письма в OTRS"@ru ;
+    comcore:isPartOf :написание_письма_в_OTRS ;
+    comcore:hasResult :письмо_OTRS ;
+    comcore:isActorOf :сотрудник_отдела_сопровождения .
+
+:фильтрация_письма rdf:type comcore:Process ;
+    rdfs:label "Фильтрация нужного письма"@ru ;
+    comcore:isPartOf :поиск_письма_в_OTRS ;
+    comcore:hasResult :письмо_OTRS .
+
+:написание_письма_в_OTRS rdf:type comcore:Process ;
+    rdfs:label "Написание письма в OTRS"@ru ;
+    comcore:hasResult :письмо_OTRS ;
+    comcore:isPartOf :проверка_регистрации_и_отправка_письма ;
+    comcore:isActorOf :сотрудник_отдела_сопровождения .
+
+:обработка_письма_OTRS rdf:type comcore:Process ;
+    rdfs:label "Обработка письма в OTRS (открыть, ответить, выбрать шаблон)"@ru ;
+    comcore:isPartOf :написание_письма_в_OTRS ;
+    comcore:hasResult :шаблон_КО_ИНН_не_найден .
+
+:выбор_шаблона rdf:type comcore:Process ;
+    rdfs:label "Выбор шаблона из списка"@ru ;
+    comcore:isPartOf :обработка_письма_OTRS ;
+    comcore:hasResult :шаблон_КО_ИНН_не_найден .
+
+:процесс_сопровождения rdf:type comcore:Process ;
+    rdfs:label "Процесс сопровождения"@ru ;
+    comcore:hasSubProcess :проверка_регистрации_и_отправка_письма .

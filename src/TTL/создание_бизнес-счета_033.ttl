@@ -1,0 +1,89 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:перенос_в_нужную_ветку rdf:type comcore:Process ;
+    rdfs:label "Перенос в нужную ветку"@ru ;
+    comcore:hasPart :блок_Действие , :поэтапно_выбирать , :кнопка_Выбрать_текущий_юнит .
+
+:блок_Действие rdf:type comcore:Resource ;
+    rdfs:label "блок Действие"@ru ;
+    comcore:isResourceOf :перенос_в_нужную_ветку .
+
+:кнопка_Перенести_структуру rdf:type comcore:Resource ;
+    rdfs:label "Перенести структуру"@ru ;
+    comcore:isResourceOf :перенос_в_нужную_ветку ;
+    comcore:isPartOf :блок_Действие .
+
+:поэтапно_выбирать rdf:type comcore:Process ;
+    rdfs:label "поэтапно выбирать"@ru ;
+    comcore:isPartOf :перенос_в_нужную_ветку ;
+    comcore:hasPart :Получатели_Юр_лица_ИП .
+
+:Получатели_Юр_лица_ИП rdf:type comcore:Resource ;
+    rdfs:label "Получатели (Юр.лица/ИП)"@ru ;
+    comcore:isPartOf :поэтапно_выбирать ;
+    comcore:isResourceOf :перенос_в_нужную_ветку .
+
+:Pay_Any_Way rdf:type comcore:Resource ;
+    rdfs:label "Pay Any Way"@ru ;
+    comcore:isPartOf :Получатели_Юр_лица_ИП ;
+    comcore:isResourceOf :перенос_в_нужную_ветку .
+
+:Лояльные_стандарт_РФ rdf:type comcore:Resource ;
+    rdfs:label "Лояльные стандарт. РФ"@ru ;
+    comcore:isPartOf :Pay_Any_Way ;
+    comcore:isResourceOf :перенос_в_нужную_ветку .
+
+:Лояльные_по_ОФЕРТЕ rdf:type comcore:Resource ;
+    rdfs:label "Лояльные по ОФЕРТЕ"@ru ;
+    comcore:isPartOf :Лояльные_стандарт_РФ ;
+    comcore:isResourceOf :перенос_в_нужную_ветку .
+
+:Оферта rdf:type comcore:Resource ;
+    rdfs:label "Оферта"@ru ;
+    comcore:isPartOf :Лояльные_по_ОФЕРТЕ ;
+    comcore:isResourceOf :перенос_в_нужную_ветку .
+
+:Я.Д._4_3 rdf:type comcore:Resource ;
+    rdfs:label "Я.Д. 4%(3%)"@ru ;
+    comcore:isPartOf :Оферта ;
+    comcore:isResourceOf :перенос_в_нужную_ветку .
+
+:Qiwi_5_4 rdf:type comcore:Resource ;
+    rdfs:label "Qiwi 5%(4%)"@ru ;
+    comcore:isPartOf :Оферта ;
+    comcore:isResourceOf :перенос_в_нужную_ветку .
+
+:Товары_с_доставкой_Я.Д._или_6_5 rdf:type comcore:Resource ;
+    rdfs:label "Товары с доставкой/Я.Д. или 6%(5%)"@ru ;
+    comcore:isPartOf :Оферта ;
+    comcore:isResourceOf :перенос_в_нужную_ветку .
+
+:Qiwi_6_5 rdf:type comcore:Resource ;
+    rdfs:label "Qiwi 6%(5%)"@ru ;
+    comcore:isPartOf :Оферта ;
+    comcore:isResourceOf :перенос_в_нужную_ветку .
+
+:Услуги_контент_онлайн_игры_онлайн_сервисы rdf:type comcore:Resource ;
+    rdfs:label "Услуги, контент, онлайн игры, онлайн сервисы"@ru ;
+    comcore:isPartOf :Оферта ;
+    comcore:isResourceOf :перенос_в_нужную_ветку .
+
+:кнопка_Выбрать_текущий_юнит rdf:type comcore:Resource ;
+    rdfs:label "Выбрать текущий юнит"@ru ;
+    comcore:isResourceOf :перенос_в_нужную_ветку .
+
+:появление_вопроса_Вы_уверены_что_надо_перенести rdf:type comcore:Event ;
+    rdfs:label "появится дополнительный вопрос «Вы уверены, что надо перенести»"@ru ;
+    comcore:isResultOf :кнопка_Выбрать_текущий_юнит .
+
+:кнопка_Да rdf:type comcore:Resource ;
+    rdfs:label "Да"@ru ;
+    comcore:isResourceOf :перенос_в_нужную_ветку .

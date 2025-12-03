@@ -1,0 +1,3361 @@
+[
+  {
+    "label": "Отправка письма",
+    "hasStatement": [
+      "отправка_письма isPartOf процедура_проверки_клиента",
+      "отправка_письма hasResult результат_отправки_письма",
+      "отправка_письма isPartOf процедура_проверки_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_6.json"
+    ]
+  },
+  {
+    "label": "Терминал",
+    "hasStatement": [
+      "терминал hasResource согласование_терминалов",
+      "терминал isResourceFor согласование_терминалов"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_37.json"
+    ]
+  },
+  {
+    "label": "Система OTRS",
+    "hasStatement": [
+      "система_отрс isResourceFor проверка_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_7.json"
+    ]
+  },
+  {
+    "label": "Проверка другой платежной системы",
+    "hasStatement": [
+      "проверка_другой_платежной_системы isPartOf проверка",
+      "проверка_другой_платежной_системы isResourceFor другая_платежная_система",
+      "проверка_другой_платежной_системы hasResource другая_платежная_система"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_37.json"
+    ]
+  },
+  {
+    "label": "Отдел комплаенс",
+    "hasStatement": [
+      "отдел_комплаенс isActorOf анализ_комментария"
+    ],
+    "abbreviation": "",
+    "type": "Agent",
+    "definition": "",
+    "chunks": [
+      "chunk_5.json"
+    ]
+  },
+  {
+    "label": "Блок действие",
+    "hasStatement": [
+      "блок_действие isPartOf перенос_структуры",
+      "блок_действие isResourceFor перенос_структуры"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_28.json"
+    ]
+  },
+  {
+    "label": "Я.Д. 4%(3%)",
+    "hasStatement": [
+      "яд_4_3 isPartOf оферта",
+      "яд_4_3 isResourceFor подключение_к_ветке_товаров"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_32.json"
+    ]
+  },
+  {
+    "label": "Статус переноса клиента",
+    "hasStatement": [],
+    "abbreviation": "",
+    "type": "Status",
+    "definition": "",
+    "chunks": [
+      "chunk_31.json"
+    ]
+  },
+  {
+    "label": "Информация о клиенте",
+    "hasStatement": [
+      "информация_о_клиенте isPartOf данные_о_клиенте",
+      "информация_о_клиенте isResourceFor подключение_платежного_сервиса",
+      "информация_о_клиенте isPartOf база_данных_клиентов",
+      "информация_о_клиенте hasPart паспортные_данные",
+      "информация_о_клиенте isResourceFor процедура_проверки_клиента",
+      "информация_о_клиенте isResourceFor процедура_регистрации_клиента",
+      "информация_о_клиенте hasPart данные_о_клиенте",
+      "информация_о_клиенте isResourceFor проверка_данных",
+      "информация_о_клиенте hasPart данные_клиента",
+      "информация_о_клиенте isPartOf данные_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_19.json",
+      "chunk_33.json",
+      "chunk_21.json",
+      "chunk_16.json",
+      "chunk_20.json"
+    ]
+  },
+  {
+    "label": "Сайт ЕГРЮЛ",
+    "hasStatement": [
+      "сайт_егрюл isResourceFor проверка_клиента"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_7.json"
+    ]
+  },
+  {
+    "label": "Варианты оплат",
+    "hasStatement": [
+      "варианты_оплат isPartOf клиент",
+      "варианты_оплат isResourceFor работа_с_клиентом"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_24.json"
+    ]
+  },
+  {
+    "label": "Перенос клиента",
+    "hasStatement": [
+      "перенос_клиента hasResource ветка_зарегистрировавшиеся_партнеры",
+      "перенос_клиента isPartOf процедура_подключения_клиента",
+      "перенос_клиента hasResource ветка_товары",
+      "перенос_клиента hasResource ветка_услуги"
+    ],
+    "type": "Process",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_31.json"
+    ]
+  },
+  {
+    "label": "Результат завершения",
+    "hasStatement": [
+      "результат_завершения isResultOf завершение_процедуры"
+    ],
+    "abbreviation": "",
+    "type": "Event",
+    "definition": "",
+    "chunks": [
+      "chunk_5.json"
+    ]
+  },
+  {
+    "label": "Ветка зарегистрировавшиеся партнеры",
+    "hasStatement": [
+      "ветка_зарегистрировавшиеся_партнеры isResourceFor регистрация",
+      "ветка_зарегистрировавшиеся_партнеры isPartOf клиент",
+      "ветка_зарегистрировавшиеся_партнеры isResourceFor перенос_клиента"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_31.json",
+      "chunk_24.json"
+    ]
+  },
+  {
+    "label": "Статус на согласовании",
+    "hasStatement": [
+      "статус_на_согласовании isPartOf процедура_согласования"
+    ],
+    "abbreviation": "",
+    "type": "Status",
+    "definition": "",
+    "chunks": [
+      "chunk_35.json"
+    ]
+  },
+  {
+    "label": "Результат проверки личного кабинета",
+    "hasStatement": [
+      "результат_проверки_личного_кабинета isResultOf проверка_заполнения_личного_кабинета"
+    ],
+    "type": "Event",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_6.json"
+    ]
+  },
+  {
+    "label": "Проверка клиента",
+    "hasStatement": [
+      "проверка_клиента hasActor отдел_сопровождения",
+      "проверка_клиента isPartOf процедура_регистрации_клиента",
+      "проверка_клиента isResourceFor проверка_клиента",
+      "проверка_клиента hasResource проверка_клиента",
+      "проверка_клиента hasResult результат_проверки_клиента",
+      "проверка_клиента hasResource сайт_егрюл",
+      "проверка_клиента hasResource инн_клиента",
+      "проверка_клиента hasResource система_отрс",
+      "проверка_клиента hasResource шаблон_письма",
+      "проверка_клиента isPartOf процедура_регистрации_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_7.json"
+    ]
+  },
+  {
+    "label": "Вопрос по интеграции",
+    "hasStatement": [
+      "вопрос_по_интеграции isResultOf интеграция_cms"
+    ],
+    "abbreviation": "",
+    "type": "Event",
+    "definition": "",
+    "chunks": [
+      "chunk_27.json"
+    ]
+  },
+  {
+    "label": "Статус проверки клиента",
+    "hasStatement": [
+      "статус_проверки_клиента isResultOf процедура_проверки_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Status",
+    "definition": "",
+    "chunks": [
+      "chunk_22.json"
+    ]
+  },
+  {
+    "label": "Статус неидентифицированного клиента",
+    "hasStatement": [
+      "статус_неидентифицированного_клиента isPartOf процедура_проверки_клиента",
+      "статус_неидентифицированного_клиента isResultOf проверка_данных"
+    ],
+    "abbreviation": "",
+    "type": "Event",
+    "definition": "",
+    "chunks": [
+      "chunk_16.json"
+    ]
+  },
+  {
+    "label": "Ставки",
+    "hasStatement": [
+      "ставки isPartOf клиент",
+      "ставки isResourceFor работа_с_клиентом"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_24.json"
+    ]
+  },
+  {
+    "label": "Перенос клиента",
+    "hasStatement": [
+      "перенос_клиента isPartOf процедура_переноса_клиента"
+    ],
+    "type": "Process",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_24.json"
+    ]
+  },
+  {
+    "label": "Статус подключенного клиента",
+    "hasStatement": [],
+    "abbreviation": "",
+    "type": "Status",
+    "definition": "",
+    "chunks": [
+      "chunk_31.json"
+    ]
+  },
+  {
+    "label": "Настройка API",
+    "hasStatement": [
+      "настройка_api isPartOf настройка_платежного_сервиса",
+      "настройка_api hasResource api"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_29.json"
+    ]
+  },
+  {
+    "label": "Услуги, контент, онлайн игры, онлайн сервисы",
+    "hasStatement": [
+      "услуги_контент_онлайн_игры_онлайн_сервис isPartOf оферта",
+      "услуги_контент_онлайн_игры_онлайн_сервис isResourceFor подключение_к_ветке_товаров"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_32.json"
+    ]
+  },
+  {
+    "label": "Процедура проверки клиента",
+    "hasStatement": [
+      "процедура_проверки_клиента isPartOf подключение_платежного_сервиса",
+      "процедура_проверки_клиента hasResult результат_проверки_клиента",
+      "процедура_проверки_клиента hasResult статус_проверки_клиента",
+      "процедура_проверки_клиента hasResource информация_о_клиенте",
+      "процедура_проверки_клиента hasResource паспортные_данные",
+      "процедура_проверки_клиента hasPart проверка_личных_данных",
+      "процедура_проверки_клиента hasActor клиент",
+      "процедура_проверки_клиента hasPart подключение_платежного_сервиса",
+      "процедура_проверки_клиента hasResource информационное_письмо",
+      "процедура_проверки_клиента hasPart личные_данные",
+      "процедура_проверки_клиента hasResource данные_клиента",
+      "процедура_проверки_клиента hasResource контактный_телефон"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_22.json",
+      "chunk_20.json"
+    ]
+  },
+  {
+    "label": "Процедура регистрации клиента",
+    "hasStatement": [
+      "процедура_регистрации_клиента hasPart перенос_клиента",
+      "процедура_регистрации_клиента hasPart открытие_счета",
+      "процедура_регистрации_клиента hasResource информация_о_клиенте",
+      "процедура_регистрации_клиента hasPart перенос_клиента",
+      "процедура_регистрации_клиента hasPart открытие_счета",
+      "процедура_регистрации_клиента hasResource база_данных_клиентов",
+      "процедура_регистрации_клиента hasResource информационная_система",
+      "процедура_регистрации_клиента hasResource ит_инфраструктура"
+    ],
+    "type": "Process",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_33.json"
+    ]
+  },
+  {
+    "label": "Процедура проверки клиента",
+    "hasStatement": [
+      "процедура_проверки_клиента hasPart проверка_инн",
+      "процедура_проверки_клиента hasResource информация_о_клиенте"
+    ],
+    "type": "Process",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_19.json"
+    ]
+  },
+  {
+    "label": "Шаблон отказа",
+    "hasStatement": [
+      "шаблон_отказа isResourceFor отправка_письма_клиенту"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_9.json"
+    ]
+  },
+  {
+    "label": "Сотрудник комплаенс",
+    "hasStatement": [
+      "сотрудник isActorOf проверка_данных",
+      "сотрудник_компаенс isActorOf проверка_сайта",
+      "сотрудник isActorOf проверка_инн",
+      "сотрудник isActorOf проверка_личных_данных"
+    ],
+    "type": "Agent",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_11.json",
+      "chunk_22.json",
+      "chunk_19.json",
+      "chunk_16.json"
+    ]
+  },
+  {
+    "label": "Данные клиента",
+    "hasStatement": [
+      "данные_клиента hasPart информация_об_инн",
+      "данные_клиента isPartOf информация_о_клиенте",
+      "данные_клиента isResourceFor проверка_данных"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_16.json"
+    ]
+  },
+  {
+    "label": "Платежный сервис",
+    "hasStatement": [
+      "платежный_сервис isActorOf подключение_платежного_сервиса",
+      "платежный_сервис isActorOf настройка_платежного_сервиса",
+      "платежный_сервис isActorOf согласование_проекта"
+    ],
+    "type": "Agent",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_29.json",
+      "chunk_20.json",
+      "chunk_15.json",
+      "chunk_14.json"
+    ]
+  },
+  {
+    "label": "Qiwi 6%(5%)",
+    "hasStatement": [
+      "qiwi_6_5 isPartOf оферта",
+      "qiwi_6_5 isResourceFor подключение_к_ветке_товаров"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_32.json"
+    ]
+  },
+  {
+    "label": "Клиенты",
+    "hasStatement": [
+      "клиенты isPartOf коммерческие_счета",
+      "клиенты isResourceFor подключение_к_ветке_товаров",
+      "клиенты hasPart получатели"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_32.json"
+    ]
+  },
+  {
+    "label": "Зарегистрировавшийся клиент",
+    "hasStatement": [
+      "зарегистрировавшийся_клиент isPartOf клиент",
+      "зарегистрировавшийся_клиент isResourceFor настройка_клиента"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_24.json"
+    ]
+  },
+  {
+    "label": "Информационное письмо отправлено",
+    "hasStatement": [
+      "информационное_письмо_отправлено isResultOf отправка_информационного_письма"
+    ],
+    "type": "Event",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_21.json"
+    ]
+  },
+  {
+    "label": "Статус проверки",
+    "hasStatement": [
+      "статус_проверки isPartOf процедура_проверки_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Status",
+    "definition": "",
+    "chunks": [
+      "chunk_32.json",
+      "chunk_16.json"
+    ]
+  },
+  {
+    "label": "Серия и номер паспорта",
+    "hasStatement": [
+      "серия_и_номер_паспорта hasResource проверка_паспорта",
+      "серия_и_номер_паспорта isResourceFor проверка_паспорта"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_23.json"
+    ]
+  },
+  {
+    "label": "Руководитель отдела ОБР",
+    "hasStatement": [
+      "руководитель_отдела_обр isActorOf процедура_проверки_клиента"
+    ],
+    "type": "Agent",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_10.json"
+    ]
+  },
+  {
+    "label": "Подтвержденное",
+    "hasStatement": [
+      "подтвержденное isPartOf результат_проверки_инн"
+    ],
+    "abbreviation": "",
+    "type": "Status",
+    "definition": "",
+    "chunks": [
+      "chunk_19.json"
+    ]
+  },
+  {
+    "label": "Настройка автоматического перевода остатка",
+    "hasStatement": [
+      "настройка_автоматического_перевода_остат isPartOf настройка_платежного_сервиса"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_29.json"
+    ]
+  },
+  {
+    "label": "Настройка счета",
+    "hasStatement": [
+      "настройка_счета hasPart список_готовых_модулей",
+      "настройка_счета hasPart ссылка_на_модуль",
+      "настройка_счета isPartOf процедура_подключения",
+      "настройка_счета hasResource личный_кабинет"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_27.json"
+    ]
+  },
+  {
+    "label": "Регистрация неудачна",
+    "hasStatement": [
+      "регистрация_неудачна isResultOf регистрация_клиента",
+      "регистрация_неудачна hasResult письмо_с_отказом"
+    ],
+    "abbreviation": "",
+    "type": "Event",
+    "definition": "",
+    "chunks": [
+      "chunk_3.json"
+    ]
+  },
+  {
+    "label": "Статус проверки клиента",
+    "hasStatement": [],
+    "abbreviation": "",
+    "type": "Status",
+    "definition": "",
+    "chunks": [
+      "chunk_1.json",
+      "chunk_10.json"
+    ]
+  },
+  {
+    "label": "Договор на поставку",
+    "hasStatement": [
+      "договор_на_поставку isResourceFor согласование_проекта"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_14.json"
+    ]
+  },
+  {
+    "label": "Монета",
+    "hasStatement": [
+      "монета isResourceFor прием_оплаты_с_монеты"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_29.json"
+    ]
+  },
+  {
+    "label": "ФИО",
+    "hasStatement": [
+      "фио isPartOf данные_клиента",
+      "фио isResourceFor проверка_инн"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_19.json"
+    ]
+  },
+  {
+    "label": "Открытие счета",
+    "hasStatement": [
+      "открытие_счета isPartOf процедура_регистрации_клиента",
+      "открытие_счета hasActor оператор_отдела",
+      "открытие_счета hasResource счет_клиента",
+      "открытие_счета isPartOf процедура_регистрации_клиента"
+    ],
+    "type": "Process",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_33.json"
+    ]
+  },
+  {
+    "label": "Статус неидентифицированного клиента",
+    "hasStatement": [
+      "статус_неидентифицированного_клиента isResultOf проверка_данных"
+    ],
+    "abbreviation": "",
+    "type": "Status",
+    "definition": "",
+    "chunks": [
+      "chunk_1.json",
+      "chunk_17.json"
+    ]
+  },
+  {
+    "label": "Процедура проверки клиента",
+    "hasStatement": [
+      "процедура_проверки_клиента hasPart подключение_к_ветке_товаров",
+      "процедура_проверки_клиента hasPart подключение_к_ветке_товаров"
+    ],
+    "type": "Process",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_32.json"
+    ]
+  },
+  {
+    "label": "Комментарий",
+    "hasStatement": [
+      "комментарий isResourceFor анализ_комментария"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_5.json"
+    ]
+  },
+  {
+    "label": "Отказ",
+    "hasStatement": [
+      "отказ isResultOf проверка_клиента",
+      "отказ isResultOf процедура_проверки_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Event",
+    "definition": "",
+    "chunks": [
+      "chunk_9.json",
+      "chunk_10.json"
+    ]
+  },
+  {
+    "label": "Ветка товары",
+    "hasStatement": [
+      "ветка_товары isResourceFor перенос_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_31.json"
+    ]
+  },
+  {
+    "label": "Процедура проверки клиента",
+    "hasStatement": [
+      "процедура_проверки_клиента hasPart отправка_письма_клиенту",
+      "процедура_проверки_клиента hasPart проверка_клиента",
+      "процедура_проверки_клиента hasPart проверка_клиента",
+      "процедура_проверки_клиента hasPart отправка_письма_клиенту"
+    ],
+    "type": "Process",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_9.json"
+    ]
+  },
+  {
+    "label": "Клиент",
+    "hasStatement": [
+      "клиент isActorOf открытие_счета",
+      "клиент hasActor связаться_с_клиентом",
+      "клиент hasPart настроенный_клиент",
+      "клиент isActorOf настройка_api",
+      "клиент hasPart варианты_оплат",
+      "клиент hasPart ветка_зарегистрировавшиеся_партнеры",
+      "клиент hasPart ставки",
+      "клиент isActorOf подключение",
+      "клиент isActorOf подключение_платежного_сервиса",
+      "клиент hasPart успешная_работа_с_клиентом",
+      "клиент hasPart перенесенный_клиент",
+      "клиент hasPart зарегистрировавшийся_клиент",
+      "клиент hasPart тариф",
+      "клиент isActorOf регистрация",
+      "клиент isActorOf связаться_с_клиентом",
+      "клиент isActorOf интеграция_cms",
+      "клиент isActorOf процедура_проверки_клиента",
+      "клиент hasPart блок_банковские_карты",
+      "клиент isActorOf регистрация_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Agent",
+    "definition": "",
+    "chunks": [
+      "chunk_27.json",
+      "chunk_26.json",
+      "chunk_21.json",
+      "chunk_24.json",
+      "chunk_1.json",
+      "chunk_37.json",
+      "chunk_20.json",
+      "chunk_3.json",
+      "chunk_29.json"
+    ]
+  },
+  {
+    "label": "Создание бизнес-счета",
+    "hasStatement": [
+      "создание_бизнес_счета isPartOf процедура_подключения_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_31.json"
+    ]
+  },
+  {
+    "label": "Комментарии сотрудника ОБР",
+    "hasStatement": [
+      "комментарии_сотрудника_обр isPartOf процесс_сопровождения",
+      "комментарии_сотрудника_обр isResourceFor ознакомление_с_комментариями"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_4.json"
+    ]
+  },
+  {
+    "label": "Регистрация клиента",
+    "hasStatement": [
+      "регистрация_клиента isPartOf процедура_проверки_клиента",
+      "регистрация_клиента isResultOf подключение"
+    ],
+    "type": "Event",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_1.json"
+    ]
+  },
+  {
+    "label": "com@payanyway.ru",
+    "hasStatement": [
+      "com@payanyway.ru isPartOf процедура_согласования",
+      "com@payanyway.ru isResourceFor звонок"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_35.json"
+    ]
+  },
+  {
+    "label": "Результат информирования",
+    "hasStatement": [
+      "результат_информирования isResultOf оперативное_информирование"
+    ],
+    "type": "Event",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_5.json"
+    ]
+  },
+  {
+    "label": "Настройка платежного сервиса",
+    "hasStatement": [
+      "настройка_платежного_сервиса isPartOf процедура_управления_счетом",
+      "настройка_платежного_сервиса hasPart интеграция_с_кассой",
+      "настройка_платежного_сервиса hasPart настройка_api",
+      "настройка_платежного_сервиса hasPart прием_оплаты_с_монеты",
+      "настройка_платежного_сервиса hasPart настройка_автоматического_перевода_остат",
+      "настройка_платежного_сервиса hasActor платежный_сервис"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_29.json"
+    ]
+  },
+  {
+    "label": "Проверка раоту оплаты",
+    "hasStatement": [
+      "проверка_раоту_оплаты isPartOf проверка",
+      "проверка_раоту_оплаты isResourceFor раоту_оплаты",
+      "проверка_раоту_оплаты hasResource раоту_оплаты"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_37.json"
+    ]
+  },
+  {
+    "label": "Открытие счета",
+    "hasStatement": [
+      "открытие_счета isPartOf процедура_управления_счетом",
+      "открытие_счета hasResource счет",
+      "открытие_счета hasActor клиент"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_29.json"
+    ]
+  },
+  {
+    "label": "Отдел ОБР",
+    "hasStatement": [
+      "отдел_обр isActorOf процедура_проверки_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Agent",
+    "definition": "",
+    "chunks": [
+      "chunk_10.json"
+    ]
+  },
+  {
+    "label": "Подключение платежного сервиса",
+    "hasStatement": [
+      "подключение_платежного_сервиса hasResource интеграция_платежного_сервиса",
+      "подключение_платежного_сервиса hasResource заявка_на_подключение",
+      "подключение_платежного_сервиса hasResource данные_клиента",
+      "подключение_платежного_сервиса hasResult интеграция_платежного_сервиса",
+      "подключение_платежного_сервиса isPartOf процедура_проверки_клиента",
+      "подключение_платежного_сервиса isPartOf процедура_подключения_клиента",
+      "подключение_платежного_сервиса hasResult результат_подключения_платежного_сервиса",
+      "подключение_платежного_сервиса hasResource информация_о_клиенте",
+      "подключение_платежного_сервиса hasPart процедура_проверки_клиента",
+      "подключение_платежного_сервиса hasActor платежный_сервис",
+      "подключение_платежного_сервиса hasResource паспортные_данные",
+      "подключение_платежного_сервиса hasResult подключение_платежного_сервиса_успешно",
+      "подключение_платежного_сервиса hasActor клиент"
+    ],
+    "type": "Process",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_20.json",
+      "chunk_15.json",
+      "chunk_21.json"
+    ]
+  },
+  {
+    "label": "Заявка на подключение",
+    "hasStatement": [
+      "заявка_на_подключение isPartOf процедура_регистрации",
+      "заявка_на_подключение isResourceFor согласование_проекта",
+      "заявка_на_подключение isResultOf инициация_подключения",
+      "заявка_на_подключение isResourceFor подключение",
+      "заявка_на_подключение isResourceFor подключение_платежного_сервиса"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_1.json",
+      "chunk_14.json",
+      "chunk_15.json"
+    ]
+  },
+  {
+    "label": "Отдел сопровождения",
+    "hasStatement": [
+      "отдел_сопровождения isActorOf проверка_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Agent",
+    "definition": "",
+    "chunks": [
+      "chunk_7.json"
+    ]
+  },
+  {
+    "label": "Ветка услуги",
+    "hasStatement": [
+      "ветка_услуги isResourceFor перенос_клиента"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_31.json"
+    ]
+  },
+  {
+    "label": "Статус подключения",
+    "hasStatement": [],
+    "abbreviation": "",
+    "type": "Status",
+    "definition": "",
+    "chunks": [
+      "chunk_15.json"
+    ]
+  },
+  {
+    "label": "Информационная система",
+    "hasStatement": [
+      "информационная_система hasPart база_данных_клиентов",
+      "информационная_система isPartOf ит_инфраструктура",
+      "информационная_система isResourceFor процедура_регистрации_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_33.json"
+    ]
+  },
+  {
+    "label": "Проверка клиента",
+    "hasStatement": [
+      "проверка_клиента isPartOf процедура_проверки_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_10.json"
+    ]
+  },
+  {
+    "label": "Завершение процедуры",
+    "hasStatement": [
+      "завершение_процедуры isPartOf процедура_анализа_комментария",
+      "завершение_процедуры hasResult результат_завершения"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_5.json"
+    ]
+  },
+  {
+    "label": "Интеграция платежного сервиса",
+    "hasStatement": [
+      "интеграция_платежного_сервиса isResourceFor подключение_платежного_сервиса",
+      "интеграция_платежного_сервиса isResultOf подключение_платежного_сервиса"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_15.json"
+    ]
+  },
+  {
+    "label": "Клиент уведомлен",
+    "hasStatement": [
+      "клиент_уведомлен isResultOf связь_с_клиентом"
+    ],
+    "abbreviation": "",
+    "type": "Event",
+    "definition": "",
+    "chunks": [
+      "chunk_21.json"
+    ]
+  },
+  {
+    "label": "Рекуррентные платежи",
+    "hasStatement": [
+      "рекуррентные_платежи isPartOf настройка_api",
+      "рекуррентные_платежи isResourceFor автоматизация_процессов"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_26.json"
+    ]
+  },
+  {
+    "label": "PAYANYWAY",
+    "hasStatement": [
+      "payanyway isPartOf процессинговая_система",
+      "payanyway isResourceFor проверка_личных_данных"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_22.json"
+    ]
+  },
+  {
+    "label": "Результат проверки ИНН",
+    "hasStatement": [
+      "результат_проверки_инн hasPart подтвержденное",
+      "результат_проверки_инн isResultOf проверка_инн"
+    ],
+    "type": "Event",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_19.json"
+    ]
+  },
+  {
+    "label": "Личный кабинет",
+    "hasStatement": [
+      "личный_кабинет isActorOf проверка_данных"
+    ],
+    "abbreviation": "",
+    "type": "Agent",
+    "definition": "",
+    "chunks": [
+      "chunk_17.json"
+    ]
+  },
+  {
+    "label": "Скан договора",
+    "hasStatement": [
+      "скан_договора isResourceFor согласование_проекта"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_14.json"
+    ]
+  },
+  {
+    "label": "Товары с доставкой",
+    "hasStatement": [
+      "товары_с_доставкой isPartOf оферта",
+      "товары_с_доставкой isResourceFor подключение_к_ветке_товаров"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_32.json"
+    ]
+  },
+  {
+    "label": "Дмитрий Демаков",
+    "hasStatement": [
+      "дмитрий_демаков isActorOf проверка_ответа_от_банка"
+    ],
+    "type": "Agent",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_34.json"
+    ]
+  },
+  {
+    "label": "Ответ от банка",
+    "hasStatement": [
+      "ответ_от_банка isResultOf проверка_ответа_от_банка"
+    ],
+    "type": "Event",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_34.json"
+    ]
+  },
+  {
+    "label": "Информационное письмо",
+    "hasStatement": [
+      "информационное_письмо isPartOf данные_клиента",
+      "информационное_письмо isResourceFor процедура_проверки_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_20.json"
+    ]
+  },
+  {
+    "label": "Регистрация успешна",
+    "hasStatement": [
+      "регистрация_успешна isResultOf регистрация_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Event",
+    "definition": "",
+    "chunks": [
+      "chunk_3.json"
+    ]
+  },
+  {
+    "label": "Сайт (URL)",
+    "hasStatement": [
+      "сайт_url isPartOf личные_данные",
+      "сайт_url isResourceFor проверка_личных_данные"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_22.json"
+    ]
+  },
+  {
+    "label": "Процедура проверки клиента",
+    "hasStatement": [
+      "процедура_проверки_клиента hasPart проверка_данных",
+      "процедура_проверки_клиента hasPart статус_неидентифицированного_клиента",
+      "процедура_проверки_клиента hasPart проверка_данных",
+      "процедура_проверки_клиента hasPart статус_проверки"
+    ],
+    "type": "Process",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_16.json"
+    ]
+  },
+  {
+    "label": "Согласование терминалов",
+    "hasStatement": [
+      "согласование_терминалов isPartOf проверка",
+      "согласование_терминалов isResourceFor терминал",
+      "согласование_терминалов hasResource терминал"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_37.json"
+    ]
+  },
+  {
+    "label": "Подключение клиента",
+    "hasStatement": [
+      "подключение_клиента hasResource тариф_подключения",
+      "подключение_клиента isPartOf процедура_подключения_клиента"
+    ],
+    "type": "Process",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_31.json"
+    ]
+  },
+  {
+    "label": "Статус: Сопровождение",
+    "hasStatement": [],
+    "abbreviation": "",
+    "type": "Status",
+    "definition": "",
+    "chunks": [
+      "chunk_4.json"
+    ]
+  },
+  {
+    "label": "Данные клиента",
+    "hasStatement": [
+      "данные_клиента isResourceFor перенос_клиента",
+      "данные_клиента hasPart счет_клиента",
+      "данные_клиента isResourceFor процедура_проверки_клиента",
+      "данные_клиента isResourceFor подключение_платежного_сервиса",
+      "данные_клиента isPartOf информация_о_клиенте",
+      "данные_клиента hasPart информационное_письмо",
+      "данные_клиента hasPart информация_о_клиенте",
+      "данные_клиента hasPart контактный_телефон"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_33.json",
+      "chunk_20.json",
+      "chunk_21.json"
+    ]
+  },
+  {
+    "label": "Личные данные",
+    "hasStatement": [
+      "личные_данные isPartOf процедура_проверки_клиента",
+      "личные_данные isResourceFor проверка_личных_данных",
+      "личные_данные hasPart псевдоним",
+      "личные_данные hasPart вид_деятельности",
+      "личные_данные hasPart сайт_url",
+      "личные_данные hasPart процессинговая_система"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_22.json"
+    ]
+  },
+  {
+    "label": "Государственный сервис",
+    "hasStatement": [
+      "государственный_сервис isActorOf проверка_данных"
+    ],
+    "abbreviation": "",
+    "type": "Agent",
+    "definition": "",
+    "chunks": [
+      "chunk_17.json"
+    ]
+  },
+  {
+    "label": "Рабочий кабинет",
+    "hasStatement": [
+      "рабочий_кабинет isActorOf работа_с_клиентом"
+    ],
+    "abbreviation": "",
+    "type": "Agent",
+    "definition": "",
+    "chunks": [
+      "chunk_24.json"
+    ]
+  },
+  {
+    "label": "Подключение к ветке товаров",
+    "hasStatement": [
+      "подключение_к_ветке_товаров hasActor система",
+      "подключение_к_ветке_товаров hasResource коммерческие_счета",
+      "подключение_к_ветке_товаров isPartOf процедура_проверки_клиента",
+      "подключение_к_ветке_товаров isPartOf процедура_проверки_клиента",
+      "подключение_к_ветке_товаров hasResource клиенты",
+      "подключение_к_ветке_товаров hasResource получатели",
+      "подключение_к_ветке_товаров hasActor pay_any_way",
+      "подключение_к_ветке_товаров hasResource лояльные_стандарт_рф",
+      "подключение_к_ветке_товаров hasResource лояльные_по_оферте",
+      "подключение_к_ветке_товаров hasResource оферта",
+      "подключение_к_ветке_товаров hasResource яд_4_3",
+      "подключение_к_ветке_товаров hasResource qiwi_5_4",
+      "подключение_к_ветке_товаров hasResource товары_с_доставкой",
+      "подключение_к_ветке_товаров hasResource услуги_контент_онлайн_игры_онлайн_сервис",
+      "подключение_к_ветке_товаров hasResource яд_6_5",
+      "подключение_к_ветке_товаров hasResource qiwi_6_5"
+    ],
+    "type": "Process",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_32.json"
+    ]
+  },
+  {
+    "label": "Перенесенный клиент",
+    "hasStatement": [
+      "перенесенный_клиент isPartOf клиент",
+      "перенесенный_клиент isResourceFor работа_с_клиентом"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_24.json"
+    ]
+  },
+  {
+    "label": "Замечание не устранено",
+    "hasStatement": [],
+    "type": "Event",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_11.json"
+    ]
+  },
+  {
+    "label": "Результат подключения платежного сервиса",
+    "hasStatement": [
+      "результат_подключения_платежного_сервиса isResultOf подключение_платежного_сервиса"
+    ],
+    "abbreviation": "",
+    "type": "Event",
+    "definition": "",
+    "chunks": [
+      "chunk_20.json"
+    ]
+  },
+  {
+    "label": "Отправка письма клиенту",
+    "hasStatement": [
+      "отправка_письма_клиенту isPartOf процедура_проверки_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_11.json"
+    ]
+  },
+  {
+    "label": "Оперативное информирование",
+    "hasStatement": [
+      "оперативное_информирование isPartOf процедура_анализа_комментария",
+      "оперативное_информирование hasResult результат_информирования",
+      "оперативное_информирование hasActor наблюдатель"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_5.json"
+    ]
+  },
+  {
+    "label": "Перенос клиента",
+    "hasStatement": [
+      "перенос_клиента isPartOf процедура_регистрации_клиента",
+      "перенос_клиента hasResult клиент_перенесен",
+      "перенос_клиента hasResource данные_клиента",
+      "перенос_клиента isPartOf процедура_регистрации_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_33.json"
+    ]
+  },
+  {
+    "label": "Окончание процедуры",
+    "hasStatement": [
+      "окончание_процедуры isPartOf процедура_анализа_комментария",
+      "окончание_процедуры hasResult результат_окончания"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_5.json"
+    ]
+  },
+  {
+    "label": "Результат заполнения личного кабинета",
+    "hasStatement": [
+      "результат_заполнения_личного_кабинета isResultOf заполнение_личного_кабинета"
+    ],
+    "abbreviation": "",
+    "type": "Event",
+    "definition": "",
+    "chunks": [
+      "chunk_6.json"
+    ]
+  },
+  {
+    "label": "Документы для согласования",
+    "hasStatement": [
+      "документы_для_согласования isPartOf процедура_согласования",
+      "документы_для_согласования isResourceFor звонок"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_35.json"
+    ]
+  },
+  {
+    "label": "Статус готов",
+    "hasStatement": [],
+    "type": "Status",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_11.json"
+    ]
+  },
+  {
+    "label": "Задача MRM",
+    "hasStatement": [
+      "задача_mrm isPartOf процесс_сопровождения",
+      "задача_mrm isResourceFor процедура_проверки_клиента",
+      "задача_mrm isResourceFor ознакомление_с_комментариями"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_4.json",
+      "chunk_10.json"
+    ]
+  },
+  {
+    "label": "Список готовых модулей",
+    "hasStatement": [
+      "список_готовых_модулей isPartOf настройка_счета",
+      "список_готовых_модулей isResourceFor интеграция_cms"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_27.json"
+    ]
+  },
+  {
+    "label": "Статус согласования проекта",
+    "hasStatement": [],
+    "abbreviation": "",
+    "type": "Status",
+    "definition": "",
+    "chunks": [
+      "chunk_14.json"
+    ]
+  },
+  {
+    "label": "Замечание на оформление сайта",
+    "hasStatement": [
+      "замечание_на_оформление_сайта isPartOf процедура_проверки_клиента",
+      "замечание_на_оформление_сайта isResourceFor проверка_сайта"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_11.json"
+    ]
+  },
+  {
+    "label": "Статус: Закрыт. Отказано",
+    "hasStatement": [],
+    "abbreviation": "",
+    "type": "Status",
+    "definition": "",
+    "chunks": [
+      "chunk_4.json"
+    ]
+  },
+  {
+    "label": "Электронная почта",
+    "hasStatement": [
+      "электронная_почта isResourceFor регистрация_клиента"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_3.json"
+    ]
+  },
+  {
+    "label": "Клиент перенесен",
+    "hasStatement": [
+      "клиент_перенесен isResultOf перенос_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Event",
+    "definition": "",
+    "chunks": [
+      "chunk_33.json"
+    ]
+  },
+  {
+    "label": "ИНН клиента",
+    "hasStatement": [
+      "инн_клиента isResourceFor проверка_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_7.json"
+    ]
+  },
+  {
+    "label": "Подключение платежного сервиса успешно",
+    "hasStatement": [
+      "подключение_платежного_сервиса_успешно isResultOf подключение_платежного_сервиса"
+    ],
+    "type": "Event",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_21.json"
+    ]
+  },
+  {
+    "label": "Статус подтвержденное",
+    "hasStatement": [],
+    "abbreviation": "",
+    "type": "Status",
+    "definition": "",
+    "chunks": [
+      "chunk_23.json"
+    ]
+  },
+  {
+    "label": "Тариф подключения",
+    "hasStatement": [
+      "тариф_подключения isResourceFor подключение_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_31.json"
+    ]
+  },
+  {
+    "label": "Процесс сопровождения",
+    "hasStatement": [
+      "процесс_сопровождения hasPart задача_mrm",
+      "процесс_сопровождения hasPart ознакомление_с_комментариями",
+      "процесс_сопровождения hasPart комментарии_сотрудника_обр",
+      "процесс_сопровождения hasPart ознакомление_с_комментариями"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_4.json"
+    ]
+  },
+  {
+    "label": "Отказ по причине",
+    "hasStatement": [
+      "отказ_причина isPartOf проверка_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Status",
+    "definition": "",
+    "chunks": [
+      "chunk_9.json"
+    ]
+  },
+  {
+    "label": "Псевдоним",
+    "hasStatement": [
+      "псевдоним isPartOf личные_данные",
+      "псевдоним isResourceFor проверка_личных_данных"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_22.json"
+    ]
+  },
+  {
+    "label": "Вид деятельности",
+    "hasStatement": [
+      "вид_деятельности isPartOf личные_данные",
+      "вид_деятельности isResourceFor проверка_личных_данных"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_22.json"
+    ]
+  },
+  {
+    "label": "Процедура регистрации",
+    "hasStatement": [
+      "процедура_регистрации hasPart заявка_на_подключение",
+      "процедура_регистрации hasPart подключение",
+      "процедура_регистрации isPartOf процедура_проверки_клиента",
+      "процедура_регистрации isPartOf процедура_проверки_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_1.json"
+    ]
+  },
+  {
+    "label": "Тариф",
+    "hasStatement": [
+      "тариф isPartOf клиент",
+      "тариф isResourceFor настройка_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_24.json"
+    ]
+  },
+  {
+    "label": "Подключение",
+    "hasStatement": [
+      "подключение hasActor клиент",
+      "подключение hasResource заявка_на_подключение",
+      "подключение isPartOf процедура_проверки_клиента",
+      "подключение isPartOf процедура_регистрации",
+      "подключение hasResult регистрация_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_1.json"
+    ]
+  },
+  {
+    "label": "Анализ комментария",
+    "hasStatement": [
+      "анализ_комментария hasActor отдел_комплаенс",
+      "анализ_комментария isPartOf процедура_анализа_комментария",
+      "анализ_комментария hasResult результат_анализа",
+      "анализ_комментария hasActor сотрудник",
+      "анализ_комментария hasResource комментарий"
+    ],
+    "type": "Process",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_5.json"
+    ]
+  },
+  {
+    "label": "Проверка клиента",
+    "hasStatement": [
+      "проверка_клиента hasResult отказ",
+      "проверка_клиента isPartOf процедура_проверки_клиента",
+      "проверка_клиента isPartOf процедура_проверки_клиента",
+      "проверка_клиента hasPart отказ_причина"
+    ],
+    "type": "Process",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_9.json"
+    ]
+  },
+  {
+    "label": "Автоматизация процессов",
+    "hasStatement": [
+      "автоматизация_процессов hasPart настройка_api",
+      "автоматизация_процессов hasPart документация",
+      "автоматизация_процессов hasResource выводы",
+      "автоматизация_процессов hasResource запрос_данных",
+      "автоматизация_процессов hasResource рекуррентные_платежи",
+      "автоматизация_процессов hasPart moneta_assistant",
+      "автоматизация_процессов hasResource merchantapi"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_26.json"
+    ]
+  },
+  {
+    "label": "Статус проверки личных данных",
+    "hasStatement": [
+      "статус_проверки_личных_данных isResultOf проверка_личных_данных"
+    ],
+    "abbreviation": "",
+    "type": "Status",
+    "definition": "",
+    "chunks": [
+      "chunk_22.json"
+    ]
+  },
+  {
+    "label": "Проверка ИНН",
+    "hasStatement": [
+      "проверка_инн isPartOf процедура_проверки_клиента",
+      "проверка_инн hasActor сотрудник",
+      "проверка_инн hasResource данные_клиента",
+      "проверка_инн hasActor сервис_nalog_ru",
+      "проверка_инн hasResource инн",
+      "проверка_инн hasResource фио",
+      "проверка_инн hasResource дата_рождения",
+      "проверка_инн hasResource паспортные_данные",
+      "проверка_инн hasResult результат_проверки_инн"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_19.json"
+    ]
+  },
+  {
+    "label": "Отправка информационного письма",
+    "hasStatement": [
+      "отправка_информационного_письма isPartOf процедура_проверки_клиента",
+      "отправка_информационного_письма hasResult информационное_письмо_отправлено"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_21.json"
+    ]
+  },
+  {
+    "label": "Проверка данных",
+    "hasStatement": [
+      "проверка_данных hasResource данные_клиента",
+      "проверка hasPart согласование_терминалов",
+      "проверка_данных hasResource информация_о_клиенте",
+      "проверка_данных hasResult статус_неидентифицированного_клиента",
+      "проверка_данных hasResource данные_о_клиенте",
+      "проверка_данных hasResource информация_об_инн",
+      "проверка hasPart проверка_другой_платежной_системы",
+      "проверка_данных isPartOf процедура_проверки_клиента",
+      "проверка_данных isResourceFor информация_об_инн",
+      "проверка_данных hasActor сотрудник",
+      "проверка hasPart проверка_раоту_оплаты"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_37.json",
+      "chunk_16.json"
+    ]
+  },
+  {
+    "label": "Настройка API",
+    "hasStatement": [
+      "настройка_api isPartOf автоматизация_процессов",
+      "настройка_api hasActor клиент",
+      "настройка_api hasResource документация",
+      "настройка_api hasPart выводы",
+      "настройка_api hasPart запрос_данных",
+      "настройка_api hasPart рекуррентные_платежи",
+      "настройка_api hasResource moneta_assistant",
+      "настройка_api hasPart merchantapi"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_26.json"
+    ]
+  },
+  {
+    "label": "Выводы",
+    "hasStatement": [
+      "выводы isPartOf настройка_api",
+      "выводы isResourceFor автоматизация_процессов"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_26.json"
+    ]
+  },
+  {
+    "label": "Связаться с клиентом",
+    "hasStatement": [
+      "связаться_с_клиентом isActorOf клиент",
+      "связаться_с_клиентом hasActor клиент",
+      "связаться_с_клиентом hasResource проблема"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_37.json"
+    ]
+  },
+  {
+    "label": "Письмо с отказом",
+    "hasStatement": [
+      "письмо_с_отказом isResultOf регистрация_неудачна"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_3.json"
+    ]
+  },
+  {
+    "label": "Процедура проверки клиента",
+    "hasStatement": [
+      "процедура_проверки_клиента hasPart задача_mrm",
+      "процедура_проверки_клиента hasPart проверка_заполнения_личного_кабинета",
+      "процедура_проверки_клиента hasPart отправка_письма",
+      "процедура_проверки_клиента hasPart заполнение_личного_кабинета",
+      "процедура_проверки_клиента hasPart задача_mrm",
+      "процедура_проверки_клиента hasPart проверка_заполнения_личного_кабинета",
+      "процедура_проверки_клиента hasPart отправка_письма",
+      "процедура_проверки_клиента hasPart заполнение_личного_кабинета"
+    ],
+    "type": "Process",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_6.json"
+    ]
+  },
+  {
+    "label": "Регистрация",
+    "hasStatement": [
+      "регистрация isPartOf процедура_регистрации_клиента",
+      "регистрация hasActor клиент",
+      "регистрация hasResource ветка_зарегистрировавшиеся_партнеры"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_24.json"
+    ]
+  },
+  {
+    "label": "Статус успешной интеграции",
+    "hasStatement": [
+      "статус_успешной_интеграции isPartOf процедура_интеграции"
+    ],
+    "type": "Status",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_30.json"
+    ]
+  },
+  {
+    "label": "Процедура подключения",
+    "hasStatement": [
+      "процедура_подключения hasPart настройка_счета",
+      "процедура_подключения hasPart интеграция_cms",
+      "процедура_подключения hasPart согласование_проекта",
+      "процедура_подключения hasPart личный_кабинет",
+      "процедура_подключения isPartOf процедура_подключения",
+      "процедура_подключения isPartOf процедура_подключения_к_платежному_сервису",
+      "процедура_подключения hasPart процедура_подключения",
+      "процедура_подключения isPartOf процедура_подключения_к_платежному_серви"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_27.json",
+      "chunk_14.json"
+    ]
+  },
+  {
+    "label": "Процессинговая система",
+    "hasStatement": [
+      "процессинговая_система isPartOf личные_данные",
+      "процессинговая_система isResourceFor проверка_личных_данных",
+      "процессинговая_система hasPart payanyway"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_22.json"
+    ]
+  },
+  {
+    "label": "Проверка ответа от банка",
+    "hasStatement": [
+      "проверка_ответа_от_банка hasActor дмитрий_демаков",
+      "проверка_ответа_от_банка hasResult ответ_от_банка",
+      "проверка_ответа_от_банка isPartOf процедура_проверки_клиента",
+      "проверка_ответа_от_банка isPartOf процедура_проверки_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_34.json"
+    ]
+  },
+  {
+    "label": "Счет",
+    "hasStatement": [
+      "счет isResourceFor открытие_счета"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_29.json"
+    ]
+  },
+  {
+    "label": "Перенос структуры",
+    "hasStatement": [
+      "перенос_структуры hasActor пользователь",
+      "перенос_структуры hasPart блок_действие",
+      "перенос_структуры hasResource блок_действие",
+      "перенос_структуры isPartOf процедура_переноса_структуры",
+      "перенос_структуры hasResult результат_переноса_структуры",
+      "перенос_структуры hasPart статус_успешного_переноса",
+      "перенос_структуры isPartOf процедура_переноса_структуры"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_28.json"
+    ]
+  },
+  {
+    "label": "Путь для ручного внесения",
+    "hasStatement": [
+      "путь_для_ручног_внесения isResourceFor редактирование_счета"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_38.json"
+    ]
+  },
+  {
+    "label": "Успешная интеграция",
+    "hasStatement": [
+      "успешная_интеграция isResultOf интеграция_cms"
+    ],
+    "abbreviation": "",
+    "type": "Event",
+    "definition": "",
+    "chunks": [
+      "chunk_30.json"
+    ]
+  },
+  {
+    "label": "Сотрудник отдела сопровождения",
+    "hasStatement": [
+      "сотрудник_отдела_сопровождения isActorOf ознакомление_с_комментариями"
+    ],
+    "type": "Agent",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_4.json"
+    ]
+  },
+  {
+    "label": "Статус паспорт найден",
+    "hasStatement": [],
+    "abbreviation": "",
+    "type": "Status",
+    "definition": "",
+    "chunks": [
+      "chunk_23.json"
+    ]
+  },
+  {
+    "label": "Сотрудник",
+    "hasStatement": [
+      "сотрудник isActorOf анализ_комментария",
+      "сотрудник isActorOf подтверждение_правильной_заполненности_полей_лк",
+      "сотрудник isActorOf отправка_письма_клиенту",
+      "сотрудник isActorOf проверка_заполнения_личного_кабинета",
+      "сотрудник isActorOf интеграция_cms"
+    ],
+    "type": "Agent",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_27.json",
+      "chunk_5.json",
+      "chunk_31.json",
+      "chunk_9.json",
+      "chunk_6.json"
+    ]
+  },
+  {
+    "label": "Статус: Закрыт. Согласовано",
+    "hasStatement": [],
+    "abbreviation": "",
+    "type": "Status",
+    "definition": "",
+    "chunks": [
+      "chunk_6.json"
+    ]
+  },
+  {
+    "label": "Оферта",
+    "hasStatement": [
+      "оферта isPartOf лояльные_по_оферте",
+      "оферта isResourceFor подключение_к_ветке_товаров",
+      "оферта hasPart яд_4_3",
+      "оферта hasPart qiwi_5_4",
+      "оферта hasPart товары_с_доставкой",
+      "оферта hasPart услуги_контент_онлайн_игры_онлайн_сервис",
+      "оферта hasPart яд_6_5",
+      "оферта hasPart qiwi_6_5"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_32.json"
+    ]
+  },
+  {
+    "label": "Дата рождения",
+    "hasStatement": [
+      "дата_рождения isPartOf данные_клиента",
+      "дата_рождения isResourceFor проверка_инн"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_19.json"
+    ]
+  },
+  {
+    "label": "Замечание устранено",
+    "hasStatement": [],
+    "type": "Event",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_11.json"
+    ]
+  },
+  {
+    "label": "Добрый день",
+    "hasStatement": [],
+    "type": "Status",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_14.json"
+    ]
+  },
+  {
+    "label": "Процедура регистрации клиента",
+    "hasStatement": [
+      "процедура_регистрации_клиента hasPart проверка_клиента",
+      "процедура_регистрации_клиента hasPart проверка_клиента"
+    ],
+    "type": "Process",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_7.json"
+    ]
+  },
+  {
+    "label": "Отправка письма клиенту",
+    "hasStatement": [
+      "отправка_письма_клиенту isPartOf процедура_проверки_клиента",
+      "отправка_письма_клиенту hasActor сотрудник",
+      "отправка_письма_клиенту isPartOf процедура_проверки_клиента",
+      "отправка_письма_клиенту hasResource шаблон_отказа",
+      "отправка_письма_клиенту hasResource письмо_клиенту"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_9.json"
+    ]
+  },
+  {
+    "label": "Сервис СМЭВ",
+    "hasStatement": [
+      "сервис_смэв isActorOf проверка_паспорта"
+    ],
+    "type": "Agent",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_23.json"
+    ]
+  },
+  {
+    "label": "Результат анализа",
+    "hasStatement": [
+      "результат_анализа isResultOf анализ_комментария"
+    ],
+    "abbreviation": "",
+    "type": "Event",
+    "definition": "",
+    "chunks": [
+      "chunk_5.json"
+    ]
+  },
+  {
+    "label": "Оператор отдела",
+    "hasStatement": [
+      "оператор_отдела isActorOf открытие_счета",
+      "оператор_отдела isActorOf звонок"
+    ],
+    "type": "Agent",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_33.json",
+      "chunk_35.json"
+    ]
+  },
+  {
+    "label": "Юридическое лицо",
+    "hasStatement": [
+      "юридическое_лицо isActorOf процедура_проверки_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Agent",
+    "definition": "",
+    "chunks": [
+      "chunk_10.json"
+    ]
+  },
+  {
+    "label": "Согласование проекта",
+    "hasStatement": [
+      "согласование_проекта hasResource заявка_на_подключение",
+      "согласование_проекта hasActor платежный_сервис",
+      "согласование_проекта hasResource договор_на_поставку",
+      "согласование_проекта isPartOf процедура_подключения",
+      "согласование_проекта isPartOf процедура_подключения",
+      "согласование_проекта hasActor отдел_комплаенс",
+      "согласование_проекта hasResource электронная_почта",
+      "согласование_проекта hasResource скан_договора"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_14.json"
+    ]
+  },
+  {
+    "label": "Инициация подключения",
+    "hasStatement": [
+      "инициация_подключения hasResult заявка_на_подключение"
+    ],
+    "type": "Event",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_15.json"
+    ]
+  },
+  {
+    "label": "Паспортные данные",
+    "hasStatement": [
+      "паспортные_данные isPartOf информация_о_клиенте",
+      "паспортные_данные isResourceFor процедура_проверки_клиента",
+      "паспортные_данные isResourceFor подключение_платежного_сервиса"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_20.json",
+      "chunk_21.json"
+    ]
+  },
+  {
+    "label": "Ссылка на модуль",
+    "hasStatement": [
+      "ссылка_на_модуль isPartOf настройка_счета",
+      "ссылка_на_модуль isResourceFor интеграция_cms"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_27.json"
+    ]
+  },
+  {
+    "label": "Проверка заполнения личного кабинета",
+    "hasStatement": [
+      "проверка_заполнения_личного_кабинета hasActor сотрудник",
+      "проверка_заполнения_личного_кабинета isPartOf процедура_проверки_клиента",
+      "проверка_заполнения_личного_кабинета hasResult результат_проверки_личного_кабинета",
+      "проверка_заполнения_личного_кабинета isPartOf процедура_проверки_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_6.json"
+    ]
+  },
+  {
+    "label": "Merchant API",
+    "hasStatement": [
+      "merchantapi isPartOf настройка_api",
+      "merchantapi isResourceFor автоматизация_процессов"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_26.json"
+    ]
+  },
+  {
+    "label": "Электронная почта",
+    "hasStatement": [
+      "электронная_почта isResourceFor согласование_проекта"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_14.json"
+    ]
+  },
+  {
+    "label": "Данные о клиенте",
+    "hasStatement": [
+      "данные_о_клиенте hasPart информация_о_клиенте",
+      "данные_о_клиенте isPartOf информация_о_клиенте",
+      "данные_о_клиенте isResourceFor проверка_данных"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_16.json"
+    ]
+  },
+  {
+    "label": "Результат проверки клиента",
+    "hasStatement": [
+      "результат_проверки_клиента isResultOf проверка_клиента",
+      "результат_проверки_клиента isResultOf процедура_проверки_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Event",
+    "definition": "",
+    "chunks": [
+      "chunk_7.json",
+      "chunk_20.json",
+      "chunk_10.json"
+    ]
+  },
+  {
+    "label": "Проверка данных",
+    "hasStatement": [
+      "проверка_данных hasResource паспортные_данные",
+      "проверка_данных hasActor личный_кабинет",
+      "проверка_данных isPartOf процедура_проверки_клиента",
+      "проверка_данных hasResult статус_неидентифицированного_клиента",
+      "проверка_данных isPartOf процедура_проверки_клиента",
+      "проверка_данных hasActor государственный_сервис"
+    ],
+    "type": "Process",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_17.json"
+    ]
+  },
+  {
+    "label": "Интеграция CMS",
+    "hasStatement": [
+      "интеграция_cms hasActor сотрудник",
+      "интеграция_cms hasResource ссылка_на_модуль",
+      "интеграция_cms isActorOf интеграция_cms",
+      "интеграция_cms hasActor интеграция_cms",
+      "интеграция_cms hasActor клиент",
+      "интеграция_cms hasResult вопрос_по_интеграции",
+      "интеграция_cms hasResource список_готовых_модулей",
+      "интеграция_cms isPartOf процедура_подключения",
+      "интеграция_cms hasResult успешная_интеграция",
+      "интеграция_cms isPartOf процедура_интеграции"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_27.json",
+      "chunk_30.json"
+    ]
+  },
+  {
+    "label": "ИТ инфраструктура",
+    "hasStatement": [
+      "ит_инфраструктура hasPart информационная_система",
+      "ит_инфраструктура isPartOf технологическая_база",
+      "ит_инфраструктура isResourceFor процедура_регистрации_клиента"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_33.json"
+    ]
+  },
+  {
+    "label": "Лояльные стандарт РФ",
+    "hasStatement": [
+      "лояльные_стандарт_рф isPartOf pay_any_way",
+      "лояльные_стандарт_рф isResourceFor подключение_к_ветке_товаров",
+      "лояльные_стандарт_рф hasPart лояльные_по_оферте"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_32.json"
+    ]
+  },
+  {
+    "label": "Письмо клиенту",
+    "hasStatement": [
+      "письмо_клиенту isResourceFor отправка_письма_клиенту"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_9.json"
+    ]
+  },
+  {
+    "label": "Заполнение личного кабинета",
+    "hasStatement": [
+      "заполнение_личного_кабинета isPartOf процедура_проверки_клиента",
+      "заполнение_личного_кабинета hasResult результат_заполнения_личного_кабинета",
+      "заполнение_личного_кабинета isPartOf процедура_проверки_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_6.json"
+    ]
+  },
+  {
+    "label": "Результат отправки письма",
+    "hasStatement": [
+      "результат_отправки_письма isResultOf отправка_письма"
+    ],
+    "type": "Event",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_6.json"
+    ]
+  },
+  {
+    "label": "Подтверждение правильной заполненности полей ЛК",
+    "hasStatement": [],
+    "abbreviation": "",
+    "type": "Event",
+    "definition": "",
+    "chunks": [
+      "chunk_31.json"
+    ]
+  },
+  {
+    "label": "Касса",
+    "hasStatement": [
+      "касса isResourceFor интеграция_с_кассой"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_29.json"
+    ]
+  },
+  {
+    "label": "Система",
+    "hasStatement": [
+      "система isActorOf подключение_к_ветке_товаров",
+      "система hasPart коммерческие_счета"
+    ],
+    "abbreviation": "",
+    "type": "Agent",
+    "definition": "",
+    "chunks": [
+      "chunk_32.json"
+    ]
+  },
+  {
+    "label": "Контактный телефон",
+    "hasStatement": [
+      "контактный_телефон isPartOf данные_клиента",
+      "контактный_телефон isResourceFor процедура_проверки_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_20.json"
+    ]
+  },
+  {
+    "label": "Настройка клиента",
+    "hasStatement": [
+      "настройка_клиента hasResource зарегистрировавшийся_клиент",
+      "настройка_клиента isPartOf процедура_настройки_клиента",
+      "настройка_клиента hasResource тариф"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_24.json"
+    ]
+  },
+  {
+    "label": "Регистрация клиента с измененной почтой",
+    "hasStatement": [
+      "регистрация_клиента_с_измененной_почтой isPartOf регистрация_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_3.json"
+    ]
+  },
+  {
+    "label": "Личный кабинет",
+    "hasStatement": [
+      "личный_кабинет isPartOf процедура_подключения",
+      "личный_кабинет isResourceFor настройка_счета"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_27.json"
+    ]
+  },
+  {
+    "label": "Результат переноса структуры",
+    "hasStatement": [
+      "результат_переноса_структуры isResultOf перенос_структуры"
+    ],
+    "type": "Event",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_28.json"
+    ]
+  },
+  {
+    "label": "Статус успешного переноса",
+    "hasStatement": [
+      "статус_успешного_переноса isPartOf перенос_структуры"
+    ],
+    "type": "Status",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_28.json"
+    ]
+  },
+  {
+    "label": "Результат добавления",
+    "hasStatement": [
+      "результат_добавления isResultOf добавление_наблюдателя"
+    ],
+    "abbreviation": "",
+    "type": "Event",
+    "definition": "",
+    "chunks": [
+      "chunk_5.json"
+    ]
+  },
+  {
+    "label": "Напоминание установлено",
+    "hasStatement": [],
+    "abbreviation": "",
+    "type": "Event",
+    "definition": "",
+    "chunks": [
+      "chunk_11.json"
+    ]
+  },
+  {
+    "label": "Лояльные по ОФЕРТЕ",
+    "hasStatement": [
+      "лояльные_по_оферте isPartOf лояльные_стандарт_рф",
+      "лояльные_по_оферте isResourceFor подключение_к_ветке_товаров",
+      "лояльные_по_оферте hasPart оферта"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_32.json"
+    ]
+  },
+  {
+    "label": "Показать дополнительные поля",
+    "hasStatement": [
+      "показать_дополнительные_поля isPartOf редактирование_счета",
+      "показать_дополнительные_поля isPartOf редактирование_счета"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_38.json"
+    ]
+  },
+  {
+    "label": "Процедура проверки клиента",
+    "hasStatement": [
+      "процедура_проверки_клиента hasResult результат_проверки_клиента",
+      "процедура_проверки_клиента hasResource проект",
+      "процедура_проверки_клиента hasPart процедура_регистрации",
+      "процедура_проверки_клиента hasResult отказ",
+      "процедура_проверки_клиента isPartOf процесс_управления_клиентами",
+      "процедура_проверки_клиента hasPart подключение",
+      "процедура_проверки_клиента hasResource задача_mrm",
+      "процедура_проверки_клиента hasActor юридическое_лицо",
+      "процедура_проверки_клиента hasActor отдел_обр",
+      "процедура_проверки_клиента hasPart проверка_клиента",
+      "процедура_проверки_клиента hasActor руководитель_отдела_обр",
+      "процедура_проверки_клиента hasPart регистрация_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_1.json",
+      "chunk_10.json"
+    ]
+  },
+  {
+    "label": "Процедура переноса структуры",
+    "hasStatement": [
+      "процедура_переноса_структуры hasPart перенос_структуры",
+      "процедура_переноса_структуры hasPart перенос_структуры",
+      "процедура_переноса_структуры isPartOf управление_структурами",
+      "процедура_переноса_структуры isPartOf управление_структурами"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_28.json"
+    ]
+  },
+  {
+    "label": "Счет клиента",
+    "hasStatement": [
+      "счет_клиента isPartOf данные_клиента",
+      "счет_клиента isResourceFor открытие_счета"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_33.json"
+    ]
+  },
+  {
+    "label": "Пользователь",
+    "hasStatement": [
+      "пользователь isActorOf перенос_структуры"
+    ],
+    "type": "Agent",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_28.json"
+    ]
+  },
+  {
+    "label": "Настроенный клиент",
+    "hasStatement": [
+      "настроенный_клиент isPartOf клиент",
+      "настроенный_клиент isResourceFor работа_с_клиентом"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_24.json"
+    ]
+  },
+  {
+    "label": "Данные клиента",
+    "hasStatement": [
+      "данные_клиента isPartOf информация_о_клиенте",
+      "данные_клиента isResourceFor проверка_инн",
+      "данные_клиента hasPart инн",
+      "данные_клиента hasPart фио",
+      "данные_клиента hasPart дата_рождения",
+      "данные_клиента hasPart паспортные_данные"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_19.json"
+    ]
+  },
+  {
+    "label": "Проверка личных данных",
+    "hasStatement": [
+      "проверка_личных_данных hasActor сотрудник",
+      "проверка_личных_данных hasResource личные_данные",
+      "проверка_личных_данных isPartOf процедура_проверки_клиента",
+      "проверка_личных_данных hasResult статус_проверки_личных_данных",
+      "проверка_личных_данных isPartOf процедура_проверки_клиента",
+      "проверка_личных_данных hasResource псевдоним",
+      "проверка_личных_данных hasResource вид_деятельности",
+      "проверка_личных_данных hasResource процессинговая_система",
+      "проверка_личных_данных hasResource payanyway"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_22.json"
+    ]
+  },
+  {
+    "label": "Паспортные данные",
+    "hasStatement": [
+      "паспортные_данные isPartOf данные_клиента",
+      "паспортные_данные isResourceFor проверка_инн"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_19.json"
+    ]
+  },
+  {
+    "label": "API",
+    "hasStatement": [
+      "api isResourceFor настройка_api"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_29.json"
+    ]
+  },
+  {
+    "label": "Документация",
+    "hasStatement": [
+      "документация isPartOf автоматизация_процессов",
+      "документация isResourceFor настройка_api"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_26.json"
+    ]
+  },
+  {
+    "label": "Связь с клиентом",
+    "hasStatement": [
+      "связь_с_клиентом isPartOf процедура_проверки_клиента",
+      "связь_с_клиентом hasResult клиент_уведомлен"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_11.json",
+      "chunk_21.json"
+    ]
+  },
+  {
+    "label": "Задача MRM",
+    "hasStatement": [
+      "задача_mrm isPartOf процедура_проверки_клиента",
+      "задача_mrm isPartOf процедура_анализа_комментария"
+    ],
+    "type": "Process",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_5.json",
+      "chunk_6.json"
+    ]
+  },
+  {
+    "label": "Pay Any Way",
+    "hasStatement": [
+      "pay_any_way isActorOf подключение_к_ветке_товаров",
+      "pay_any_way hasPart лояльные_стандарт_рф"
+    ],
+    "abbreviation": "",
+    "type": "Agent",
+    "definition": "",
+    "chunks": [
+      "chunk_32.json"
+    ]
+  },
+  {
+    "label": "Процедура подключения к платежному сервису",
+    "hasStatement": [
+      "процедура_подключения_к_платежному_серви hasPart процедура_подключения"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_14.json"
+    ]
+  },
+  {
+    "label": "Статус: Открытый. Нет решения",
+    "hasStatement": [],
+    "type": "Status",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_5.json"
+    ]
+  },
+  {
+    "label": "Статус ожидания ответа",
+    "hasStatement": [
+      "статус_ожидания_ответа isPartOf процедура_согласования"
+    ],
+    "abbreviation": "",
+    "type": "Status",
+    "definition": "",
+    "chunks": [
+      "chunk_35.json"
+    ]
+  },
+  {
+    "label": "Дополнительные параметры интерфейса",
+    "hasStatement": [
+      "дополнительные_параметры_интерфейса isResourceFor редактирование_счета"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_38.json"
+    ]
+  },
+  {
+    "label": "Сервис nalog.ru",
+    "hasStatement": [
+      "сервис_nalog_ru isActorOf проверка_инн"
+    ],
+    "type": "Agent",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_19.json"
+    ]
+  },
+  {
+    "label": "Звонок",
+    "hasStatement": [
+      "звонок hasActor оператор_отдела",
+      "звонок hasResource документы_для_согласования",
+      "звонок hasResource com@payanyway.ru"
+    ],
+    "type": "Process",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_35.json"
+    ]
+  },
+  {
+    "label": "Управление счетами",
+    "hasStatement": [
+      "управление_счетами hasPart редактирование_счета",
+      "управление_счетами hasPart редактирование_счета"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_38.json"
+    ]
+  },
+  {
+    "label": "База данных клиентов",
+    "hasStatement": [
+      "база_данных_клиентов hasPart информация_о_клиенте",
+      "база_данных_клиентов isPartOf информационная_система",
+      "база_данных_клиентов isResourceFor процедура_регистрации_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_33.json"
+    ]
+  },
+  {
+    "label": "Паспортные данные",
+    "hasStatement": [
+      "паспортные_данные isPartOf процедура_проверки_клиента",
+      "паспортные_данные isResourceFor проверка_данных"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_17.json"
+    ]
+  },
+  {
+    "label": "Добавление наблюдателя",
+    "hasStatement": [
+      "добавление_наблюдателя isPartOf процедура_анализа_комментария",
+      "добавление_наблюдателя hasResult результат_добавления"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_5.json"
+    ]
+  },
+  {
+    "label": "Результат окончания",
+    "hasStatement": [
+      "результат_окончания isResultOf окончание_процедуры"
+    ],
+    "type": "Event",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_5.json"
+    ]
+  },
+  {
+    "label": "Получатели",
+    "hasStatement": [
+      "получатели isPartOf клиенты",
+      "получатели isResourceFor подключение_к_ветке_товаров"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_32.json"
+    ]
+  },
+  {
+    "label": "Интеграция с кассой",
+    "hasStatement": [
+      "интеграция_с_кассой isPartOf настройка_платежного_сервиса",
+      "интеграция_с_кассой hasResource касса"
+    ],
+    "type": "Process",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_29.json"
+    ]
+  },
+  {
+    "label": "Наблюдатель",
+    "hasStatement": [
+      "наблюдатель isActorOf оперативное_информирование"
+    ],
+    "type": "Agent",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_5.json"
+    ]
+  },
+  {
+    "label": "Список готовых модулей",
+    "hasStatement": [
+      "список_готовых_модулей isPartOf процедура_интеграции",
+      "список_готовых_модулей isResourceFor интеграция_cms"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_30.json"
+    ]
+  },
+  {
+    "label": "Qiwi 5%(4%)",
+    "hasStatement": [
+      "qiwi_5_4 isPartOf оферта",
+      "qiwi_5_4 isResourceFor подключение_к_ветке_товаров"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_32.json"
+    ]
+  },
+  {
+    "label": "Проверка паспорта",
+    "hasStatement": [
+      "проверка_паспорта hasActor сервис_смэв",
+      "проверка_паспорта isPartOf процедура_проверки_клиента",
+      "проверка_паспорта isResourceFor серия_и_номер_паспорта",
+      "проверка_паспорта hasResource серия_и_номер_паспорта",
+      "проверка_паспорта isPartOf процедура_проверки_клиента"
+    ],
+    "type": "Process",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_23.json"
+    ]
+  },
+  {
+    "label": "Статус создания бизнес-счета",
+    "hasStatement": [],
+    "type": "Status",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_31.json"
+    ]
+  },
+  {
+    "label": "Ознакомление с комментариями",
+    "hasStatement": [
+      "ознакомление_с_комментариями hasResource задача_mrm",
+      "ознакомление_с_комментариями hasActor сотрудник_отдела_сопровождения",
+      "ознакомление_с_комментариями isPartOf процесс_сопровождения",
+      "ознакомление_с_комментариями hasResource комментарии_сотрудника_обр",
+      "ознакомление_с_комментариями isPartOf процесс_сопровождения"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_4.json"
+    ]
+  },
+  {
+    "label": "Moneta Assistant",
+    "hasStatement": [
+      "moneta_assistant isPartOf автоматизация_процессов",
+      "moneta_assistant isResourceFor настройка_api"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_26.json"
+    ]
+  },
+  {
+    "label": "Отдел комплаенс",
+    "hasStatement": [
+      "отдел_комплаенс isActorOf согласование_проекта"
+    ],
+    "abbreviation": "",
+    "type": "Agent",
+    "definition": "",
+    "chunks": [
+      "chunk_14.json"
+    ]
+  },
+  {
+    "label": "Раота с клиентом",
+    "hasStatement": [
+      "работа_с_клиентом hasResource настроенный_клиент",
+      "работа_с_клиентом isPartOf процедура_работы_с_клиентом",
+      "работа_с_клиентом hasResource перенесенный_клиент",
+      "работа_с_клиентом hasActor рабочий_кабинет",
+      "работа_с_клиентом hasResource блок_банковские_карты",
+      "работа_с_клиентом hasResource варианты_оплат",
+      "работа_с_клиентом hasResource ставки"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_24.json"
+    ]
+  },
+  {
+    "label": "Прием оплаты с Монеты",
+    "hasStatement": [
+      "прием_оплаты_с_монеты isPartOf настройка_платежного_сервиса",
+      "прием_оплаты_с_монеты hasResource монета"
+    ],
+    "type": "Process",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_29.json"
+    ]
+  },
+  {
+    "label": "Проект",
+    "hasStatement": [
+      "проект isResourceFor процедура_проверки_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_10.json"
+    ]
+  },
+  {
+    "label": "Проблема",
+    "hasStatement": [
+      "проблема isResourceFor связаться_с_клиентом"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_37.json"
+    ]
+  },
+  {
+    "label": "Блок банковские карты",
+    "hasStatement": [
+      "блок_банковские_карты isPartOf клиент",
+      "блок_банковские_карты isResourceFor работа_с_клиентом"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_24.json"
+    ]
+  },
+  {
+    "label": "Раоту оплаты",
+    "hasStatement": [
+      "раоту_оплаты hasResource проверка_раоту_оплаты",
+      "раоту_оплаты isResourceFor проверка_раоту_оплаты"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_37.json"
+    ]
+  },
+  {
+    "label": "Управление структурами",
+    "hasStatement": [
+      "управление_структурами hasPart процедура_переноса_структуры",
+      "управление_структурами hasPart процедура_переноса_структуры",
+      "управление_структурами isPartOf система_управления"
+    ],
+    "type": "Process",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_28.json"
+    ]
+  },
+  {
+    "label": "Шаблон письма",
+    "hasStatement": [
+      "шаблон_письма isResourceFor проверка_клиента"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_7.json"
+    ]
+  },
+  {
+    "label": "Процедура проверки клиента",
+    "hasStatement": [
+      "процедура_проверки_клиента hasPart паспортные_данные",
+      "процедура_проверки_клиента hasPart проверка_данных",
+      "процедура_проверки_клиента hasPart проверка_данных"
+    ],
+    "type": "Process",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_17.json"
+    ]
+  },
+  {
+    "label": "Успешная работа с клиентом",
+    "hasStatement": [
+      "успешная_работа_с_клиентом isPartOf клиент",
+      "успешная_работа_с_клиентом isResourceFor поддержка_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_24.json"
+    ]
+  },
+  {
+    "label": "Проверка сайта",
+    "hasStatement": [
+      "проверка_сайта hasResource замечание_на_оформление_сайта",
+      "проверка_сайта hasActor сотрудник_компаенс",
+      "проверка_сайта isPartOf процедура_проверки_клиента"
+    ],
+    "type": "Process",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_11.json"
+    ]
+  },
+  {
+    "label": "Я.Д. 6%(5%)",
+    "hasStatement": [
+      "яд_6_5 isPartOf оферта",
+      "яд_6_5 isResourceFor подключение_к_ветке_товаров"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_32.json"
+    ]
+  },
+  {
+    "label": "Коммерческие счета",
+    "hasStatement": [
+      "коммерческие_счета isPartOf система",
+      "коммерческие_счета isResourceFor подключение_к_ветке_товаров",
+      "коммерческие_счета hasPart клиенты"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_32.json"
+    ]
+  },
+  {
+    "label": "Другая платежная система",
+    "hasStatement": [
+      "другая_платежная_система hasResource проверка_другой_платежной_системы",
+      "другая_платежная_система isResourceFor проверка_другой_платежной_системы"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_37.json"
+    ]
+  },
+  {
+    "label": "Регистрация клиента",
+    "hasStatement": [
+      "регистрация_клиента hasActor клиент",
+      "регистрация_клиента isPartOf процедура_проверки_клиента",
+      "регистрация_клиента hasResult регистрация_неудачна",
+      "регистрация_клиента hasResult регистрация_успешна",
+      "регистрация_клиента hasResource инн",
+      "регистрация_клиента hasResource электронная_почта",
+      "регистрация_клиента hasPart регистрация_клиента_с_измененной_почтой"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_3.json"
+    ]
+  },
+  {
+    "label": "Запрос данных",
+    "hasStatement": [
+      "запрос_данных isPartOf настройка_api",
+      "запрос_данных isResourceFor автоматизация_процессов"
+    ],
+    "type": "Resource",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_26.json"
+    ]
+  },
+  {
+    "label": "Статус отказа",
+    "hasStatement": [],
+    "abbreviation": "",
+    "type": "Status",
+    "definition": "",
+    "chunks": [
+      "chunk_10.json"
+    ]
+  },
+  {
+    "label": "Статус не готов",
+    "hasStatement": [],
+    "type": "Status",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_11.json"
+    ]
+  },
+  {
+    "label": "Процедура согласования",
+    "hasStatement": [
+      "процедура_согласования hasPart документы_для_согласования",
+      "процедура_согласования hasPart статус_ожидания_ответа",
+      "процедура_согласования hasPart статус_на_согласовании",
+      "процедура_согласования hasPart com@payanyway.ru"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_35.json"
+    ]
+  },
+  {
+    "label": "Информация об ИНН",
+    "hasStatement": [
+      "инн isResourceFor проверка_инн",
+      "инн isResourceFor регистрация_клиента",
+      "информация_об_инн isResourceFor проверка_данных",
+      "инн isPartOf данные_клиента",
+      "информация_об_инн hasResource проверка_данных",
+      "информация_об_инн isPartOf данные_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_3.json",
+      "chunk_19.json",
+      "chunk_16.json"
+    ]
+  },
+  {
+    "label": "Процедура проверки клиента",
+    "hasStatement": [
+      "процедура_проверки_клиента hasPart пунк_руководитель",
+      "процедура_проверки_клиента hasPart проверка_паспорта",
+      "процедура_проверки_клиента hasPart пунк_руководитель",
+      "процедура_проверки_клиента hasPart проверка_паспорта"
+    ],
+    "type": "Process",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_23.json"
+    ]
+  },
+  {
+    "label": "Пункт руководитель",
+    "hasStatement": [
+      "пунк_руководитель isPartOf процедура_проверки_клиента",
+      "пунк_руководитель isPartOf процедура_проверки_клиента"
+    ],
+    "abbreviation": "",
+    "type": "Process",
+    "definition": "",
+    "chunks": [
+      "chunk_23.json"
+    ]
+  },
+  {
+    "label": "Данные терминала",
+    "hasStatement": [
+      "данные_терминала isResourceFor редактирование_счета"
+    ],
+    "abbreviation": "",
+    "type": "Resource",
+    "definition": "",
+    "chunks": [
+      "chunk_38.json"
+    ]
+  },
+  {
+    "label": "Редактирование счета",
+    "hasStatement": [
+      "редактирование_счета hasResource путь_для_ручног_внесения",
+      "редактирование_счета hasPart показать_дополнительные_поля",
+      "редактирование_счета isPartOf управление_счетами",
+      "редактирование_счета isPartOf управление_счетами",
+      "редактирование_счета hasPart показать_дополнительные_поля",
+      "редактирование_счета hasResource дополнительные_параметры_интерфейса",
+      "редактирование_счета hasResource данные_терминала"
+    ],
+    "type": "Process",
+    "abbreviation": "",
+    "definition": "",
+    "chunks": [
+      "chunk_38.json"
+    ]
+  }
+]

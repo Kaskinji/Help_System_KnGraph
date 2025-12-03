@@ -1,0 +1,40 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:Клиент rdf:type comcore:Agent , comcore:Resource ;
+    rdfs:label "Клиент"@ru ;
+    comcore:isPartOf :Зарегистрировавшиеся_партнеры .
+
+:Зарегистрировавшиеся_партнеры rdf:type comcore:Resource ;
+    rdfs:label "Зарегистрировавшиеся партнеры"@ru .
+
+:Регистрация rdf:type comcore:Process ;
+    rdfs:label "Регистрация"@ru ;
+    comcore:hasResult :Расположение_клиента_в_ветке .
+
+:Расположение_клиента_в_ветке rdf:type comcore:Event ;
+    rdfs:label "Расположение клиента в ветке"@ru .
+
+:Перенос_Клиента_в_ветку rdf:type comcore:Process ;
+    rdfs:label "Перенос Клиента в нужную ветку"@ru ;
+    comcore:hasResult :Расположение_клиента_в_ветке .
+
+:Тариф rdf:type comcore:Resource ;
+    rdfs:label "Тариф"@ru .
+
+:Стандартные_ветки rdf:type comcore:Resource ;
+    rdfs:label "Стандартные ветки"@ru ;
+    comcore:hasPart :Товары , :Услуги .
+
+:Товары rdf:type comcore:Resource ;
+    rdfs:label "Товары"@ru .
+
+:Услуги rdf:type comcore:Resource ;
+    rdfs:label "Услуги"@ru .

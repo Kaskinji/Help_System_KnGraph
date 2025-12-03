@@ -1,0 +1,93 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:регистрация_заявки_на_подключение rdf:type comcore:Process ;
+    rdfs:label "Регистрация заявки на подключение"@ru ;
+    comcore:hasSubProcess :подтягивание_из_ЕГРЮЛ ;
+    comcore:hasResult :заявка_Клиента_на_подключение .
+
+:подтягивание_из_ЕГРЮЛ rdf:type comcore:Process ;
+    rdfs:label "Подтягивание из ЕГРЮЛ"@ru ;
+    comcore:isPartOf :регистрация_заявки_на_подключение .
+
+:анализ_заявки rdf:type comcore:Process ;
+    rdfs:label "Анализ заявки Клиента"@ru ;
+    comcore:hasResult :регистрация_успешна , :регистрация_неуспешна ;
+    comcore:isPartOf :регистрация_заявки_на_подключение .
+
+:Клиент rdf:type comcore:Agent ;
+    rdfs:label "Клиент"@ru ;
+    comcore:isActorOf :регистрация_заявки_на_подключение ;
+    comcore:Initiates :регистрация_заявки_на_подключение .
+
+:ПО_АС_МОНЕТА rdf:type comcore:Agent ;
+    rdfs:label "ПО АС МОНЕТА"@ru ;
+    comcore:isActorOf :анализ_заявки ;
+    comcore:isResponsibleFor :анализ_заявки ;
+    comcore:Initiates :анализ_заявки .
+
+:форма rdf:type comcore:Resource ;
+    rdfs:label "Форма"@ru ;
+    comcore:isResourceOf :регистрация_заявки_на_подключение .
+
+:вкладка_Резидент rdf:type comcore:Resource ;
+    rdfs:label "Вкладка «Резидент»"@ru ;
+    comcore:isPartOf :форма ;
+    comcore:isResourceOf :регистрация_заявки_на_подключение .
+
+:инн_организации rdf:type comcore:Resource ;
+    rdfs:label "ИНН организации"@ru ;
+    comcore:isResourceOf :регистрация_заявки_на_подключение ;
+    comcore:canBeResourceFor :анализ_заявки .
+
+:адрес_сайта rdf:type comcore:Resource ;
+    rdfs:label "Адрес сайта"@ru ;
+    comcore:isResourceOf :регистрация_заявки_на_подключение .
+
+:электронная_почта rdf:type comcore:Resource ;
+    rdfs:label "Электронная почта"@ru ;
+    comcore:isResourceOf :регистрация_заявки_на_подключение .
+
+:номер_телефона rdf:type comcore:Resource ;
+    rdfs:label "Номер телефона"@ru ;
+    comcore:isResourceOf :регистрация_заявки_на_подключение .
+
+:наименование rdf:type comcore:Resource ;
+    rdfs:label "Наименование"@ru ;
+    comcore:isResourceOf :регистрация_заявки_на_подключение ;
+    comcore:isResultOf :подтягивание_из_ЕГРЮЛ .
+
+:местонахождение rdf:type comcore:Resource ;
+    rdfs:label "Местонахождение"@ru ;
+    comcore:isResourceOf :регистрация_заявки_на_подключение ;
+    comcore:isResultOf :подтягивание_из_ЕГРЮЛ .
+
+:сайт_PAW rdf:type comcore:Resource ;
+    rdfs:label "Сайт PAW"@ru ;
+    comcore:isResourceOf :регистрация_заявки_на_подключение .
+
+:кнопка_Зарегистрироваться rdf:type comcore:Resource ;
+    rdfs:label "Кнопка «Зарегистрироваться»"@ru ;
+    comcore:isResourceOf :регистрация_заявки_на_подключение .
+
+:заявка_Клиента_на_подключение rdf:type comcore:Resource ;
+    rdfs:label "Заявка Клиента на подключение"@ru ;
+    comcore:isResourceOf :анализ_заявки ;
+    comcore:canBeResourceFor :анализ_заявки .
+
+:ЕГРЮЛ rdf:type comcore:Resource ;
+    rdfs:label "ЕГРЮЛ"@ru ;
+    comcore:isResourceOf :подтягивание_из_ЕГРЮЛ .
+
+:регистрация_успешна rdf:type comcore:Event ;
+    rdfs:label "Регистрация признана успешной"@ru .
+
+:регистрация_неуспешна rdf:type comcore:Event ;
+    rdfs:label "Регистрация признана неуспешной"@ru .

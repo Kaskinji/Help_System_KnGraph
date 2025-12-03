@@ -1,0 +1,101 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:сотрудник rdf:type comcore:Agent ;
+    rdfs:label "сотрудник"@ru ;
+    comcore:isActorOf :проверка_паспорта , :проверка_паспорта_в_СМЭВ ;
+    comcore:Initiates :отправить_запрос , :проверка_паспорта_в_СМЭВ , :направить_информацию_Клиенту ;
+    comcore:isResponsibleFor :проверка_паспорта .
+
+:Клиент rdf:type comcore:Agent ;
+    rdfs:label "Клиент"@ru .
+
+:СМЭВ rdf:type comcore:Agent ;
+    rdfs:label "СМЭВ"@ru ;
+    comcore:isActorOf :проверка_паспорта_в_СМЭВ .
+
+:пункт_Руководитель rdf:type comcore:Resource ;
+    rdfs:label "пункт «Руководитель»"@ru ;
+    comcore:canBeResourceFor :проверка_паспорта ;
+    comcore:hasPart :чекбоксы_Подтвержденное .
+
+:поле_Серия rdf:type comcore:Resource ;
+    rdfs:label "поле Серия *"@ru ;
+    comcore:isPartOf :паспорт ;
+    comcore:isResourceOf :проверка_паспорта .
+
+:поле_Номер rdf:type comcore:Resource ;
+    rdfs:label "поле Номер *"@ru ;
+    comcore:isPartOf :паспорт ;
+    comcore:isResourceOf :проверка_паспорта .
+
+:паспорт rdf:type comcore:Resource ;
+    rdfs:label "паспорт"@ru ;
+    comcore:canBeResourceFor :проверка_паспорта ;
+    comcore:isPartOf :пункт_Руководитель .
+
+:чекбоксы_Подтвержденное rdf:type comcore:Resource ;
+    rdfs:label "чекбоксы «Подтвержденное»"@ru ;
+    comcore:isPartOf :пункт_Руководитель ;
+    comcore:isResourceOf :проверка_паспорта .
+
+:галочки rdf:type comcore:Resource ;
+    rdfs:label "галочки"@ru ;
+    comcore:isPartOf :чекбоксы_Подтвержденное ;
+    comcore:canBeResourceFor :поставить_галочки_в_чекбоксах .
+
+:код_с_картинки rdf:type comcore:Resource ;
+    rdfs:label "код с картинки"@ru ;
+    comcore:isResourceOf :отправить_запрос .
+
+:список_недействительных_паспортов rdf:type comcore:Resource ;
+    rdfs:label "список недействительных паспортов"@ru ;
+    comcore:canBeResourceFor :проверка_паспорта_в_СМЭВ ;
+    comcore:canBeResourceFor :проверка_паспорта .
+
+:данная_информация rdf:type comcore:Resource ;
+    rdfs:label "данная информация"@ru ;
+    comcore:isResourceOf :направить_информацию_Клиенту ;
+    comcore:isPartOf :список_недействительных_паспортов .
+
+:проверка_паспорта rdf:type comcore:Process ;
+    rdfs:label "проверка паспорта"@ru ;
+    comcore:hasResult :статус_Подтвержденное ;
+    comcore:isPartOf :проверка_паспорта_в_СМЭВ .
+
+:проверка_паспорта_в_СМЭВ rdf:type comcore:Process ;
+    rdfs:label "проверка паспорта в СМЭВ"@ru ;
+    comcore:hasResult :паспорт_не_найден_в_списке_недействительных , :паспорт_находится_в_списке_недействительных ;
+    comcore:isPartOf :проверка_паспорта .
+
+:отправить_запрос rdf:type comcore:Process ;
+    rdfs:label "отправить запрос"@ru ;
+    comcore:isPartOf :проверка_паспорта_в_СМЭВ ;
+    comcore:isResponsibleFor :СМЭВ .
+
+:поставить_галочки_в_чекбоксах rdf:type comcore:Process ;
+    rdfs:label "поставить галочки в чекбоксах"@ru ;
+    comcore:isPartOf :проверка_паспорта ;
+    comcore:hasResult :галочки .
+
+:направить_информацию_Клиенту rdf:type comcore:Process ;
+    rdfs:label "направить данную информацию Клиенту"@ru ;
+    comcore:isResourceOf :направить_информацию_Клиенту ;
+    comcore:isPartOf :проверка_паспорта_в_СМЭВ ;
+    comcore:hasResult :паспорт_находится_в_списке_недействительных .
+
+:статус_Подтвержденное rdf:type comcore:Event ;
+    rdfs:label "Подтвержденное"@ru .
+
+:паспорт_не_найден_в_списке_недействительных rdf:type comcore:Event ;
+    rdfs:label "паспорт не найден в списке недействительных"@ru .
+
+:паспорт_находится_в_списке_недействительных rdf:type comcore:Event ;
+    rdfs:label "паспорт найден в списке недействительных паспортов"@ru .

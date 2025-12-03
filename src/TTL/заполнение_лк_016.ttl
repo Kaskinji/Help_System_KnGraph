@@ -1,0 +1,199 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:Клиент rdf:type comcore:Agent ;
+    rdfs:label "Клиент"@ru ;
+    comcore:Initiates :вход_в_личный_кабинет , :заполнение_профиля , :нажатие_кнопки_Отправить_на_проверку ;
+    comcore:isActorOf :вход_в_личный_кабинет , :заполнение_профиля , :нажатие_кнопки_Отправить_на_проверку .
+
+:Система rdf:type comcore:Agent ;
+    rdfs:label "Система"@ru ;
+    comcore:Initiates :установка_нового_пароля , :повторный_вход_с_новыми_данными , :предложение_заполнить_профиль ;
+    comcore:isActorOf :установка_нового_пароля , :повторный_вход_с_новыми_данными , :предложение_заполнить_профиль .
+
+:Сотрудник_отдела_сопровождения rdf:type comcore:Agent ;
+    rdfs:label "Сотрудник отдела сопровождения"@ru ;
+    comcore:isActorOf :проверка_данных ;
+    comcore:isResponsibleFor :проверка_данных .
+
+:успешная_регистрация rdf:type comcore:Event ;
+    rdfs:label "Успешная регистрация"@ru .
+
+:успешный_ввод_логина_и_пароля rdf:type comcore:Event ;
+    rdfs:label "Успешный ввод логина и пароля"@ru .
+
+:лк_заполнен rdf:type comcore:Event ;
+    rdfs:label "ЛК заполнен"@ru .
+
+:подтверждение_факта_проверки rdf:type comcore:Event ;
+    rdfs:label "Подтверждение факта проверки"@ru .
+
+:вход_в_личный_кабинет rdf:type comcore:Process ;
+    rdfs:label "Вход в личный кабинет"@ru ;
+    comcore:hasResult :успешный_ввод_логина_и_пароля .
+
+:установка_нового_пароля rdf:type comcore:Process ;
+    rdfs:label "Установка нового пароля"@ru .
+
+:повторный_вход_с_новыми_данными rdf:type comcore:Process ;
+    rdfs:label "Повторный вход с новыми данными"@ru .
+
+:предложение_заполнить_профиль rdf:type comcore:Process ;
+    rdfs:label "Предложение заполнить профиль"@ru ;
+    comcore:Initiates :заполнение_профиля .
+
+:заполнение_профиля rdf:type comcore:Process ;
+    rdfs:label "Заполнение профиля в личном кабинете"@ru ;
+    comcore:hasSubProcess :нажатие_кнопки_Отправить_на_проверку .
+
+:нажатие_кнопки_Отправить_на_проверку rdf:type comcore:Process ;
+    rdfs:label "Нажатие кнопки Отправить на проверку"@ru ;
+    comcore:hasResult :лк_заполнен .
+
+:проверка_данных rdf:type comcore:Process ;
+    rdfs:label "Проверка данных"@ru ;
+    comcore:hasResult :подтверждение_факта_проверки .
+
+:письмо_об_успешной_регистрации rdf:type comcore:Resource ;
+    rdfs:label "Письмо об успешной регистрации"@ru ;
+    comcore:isResourceOf :успешная_регистрация .
+
+:ссылка_на_ЛК rdf:type comcore:Resource ;
+    rdfs:label "Ссылка на созданный ЛК"@ru ;
+    comcore:isPartOf :письмо_об_успешной_регистрации ;
+    comcore:isResourceOf :вход_в_личный_кабинет .
+
+:Войти_в_кабинет_ссылка rdf:type comcore:Resource ;
+    rdfs:label "Войти в кабинет (ссылка в письме)"@ru ;
+    comcore:isPartOf :письмо_об_успешной_регистрации ;
+    comcore:isResourceOf :вход_в_личный_кабинет .
+
+:Логин rdf:type comcore:Resource ;
+    rdfs:label "Логин"@ru ;
+    comcore:isPartOf :письмо_об_успешной_регистрации ;
+    comcore:isResourceOf :вход_в_личный_кабинет .
+
+:Пароль rdf:type comcore:Resource ;
+    rdfs:label "Пароль"@ru ;
+    comcore:isPartOf :письмо_об_успешной_регистрации ;
+    comcore:isResourceOf :вход_в_личный_кабинет ;
+    comcore:isResourceOf :установка_нового_пароля .
+
+:контрольный_вопрос rdf:type comcore:Resource ;
+    rdfs:label "Контрольный вопрос"@ru ;
+    comcore:isResourceOf :установка_нового_пароля .
+
+:ответ_на_контрольный_вопрос rdf:type comcore:Resource ;
+    rdfs:label "Ответ на контрольный вопрос"@ru ;
+    comcore:isResourceOf :установка_нового_пароля .
+
+:Личный_кабинет rdf:type comcore:Resource ;
+    rdfs:label "Личный кабинет"@ru .
+
+:свои_реквизиты rdf:type comcore:Resource ;
+    rdfs:label "Свои реквизиты"@ru ;
+    comcore:isResourceOf :заполнение_профиля .
+
+:ФИО rdf:type comcore:Resource ;
+    rdfs:label "ФИО"@ru ;
+    comcore:isPartOf :свои_реквизиты .
+
+:паспортные_данные rdf:type comcore:Resource ;
+    rdfs:label "Паспортные данные"@ru ;
+    comcore:isPartOf :свои_реквизиты .
+
+:адрес rdf:type comcore:Resource ;
+    rdfs:label "Адрес"@ru ;
+    comcore:isPartOf :свои_реквизиты .
+
+:ИНН rdf:type comcore:Resource ;
+    rdfs:label "ИНН"@ru ;
+    comcore:isPartOf :свои_реквизиты .
+
+:банковские_реквизиты rdf:type comcore:Resource ;
+    rdfs:label "Банковские реквизиты"@ru ;
+    comcore:isResourceOf :заполнение_профиля .
+
+:реквизиты_банка rdf:type comcore:Resource ;
+    rdfs:label "Реквизиты банка"@ru ;
+    comcore:isPartOf :банковские_реквизиты .
+
+:БИК rdf:type comcore:Resource ;
+    rdfs:label "БИК"@ru ;
+    comcore:isPartOf :банковские_реквизиты .
+
+:номер_счета rdf:type comcore:Resource ;
+    rdfs:label "Номер счета"@ru ;
+    comcore:isPartOf :банковские_реквизиты .
+
+:название_счета rdf:type comcore:Resource ;
+    rdfs:label "Название счета"@ru ;
+    comcore:isPartOf :банковские_реквизиты .
+
+:контакты rdf:type comcore:Resource ;
+    rdfs:label "Контакты"@ru ;
+    comcore:isResourceOf :заполнение_профиля .
+
+:контакты_владельца rdf:type comcore:Resource ;
+    rdfs:label "Контакты владельца"@ru ;
+    comcore:isPartOf :контакты .
+
+:контакты_финансового_специалиста rdf:type comcore:Resource ;
+    rdfs:label "Контакты финансового специалиста"@ru ;
+    comcore:isPartOf :контакты .
+
+:контакты_технического_специалиста rdf:type comcore:Resource ;
+    rdfs:label "Контакты технического специалиста"@ru ;
+    comcore:isPartOf :контакты .
+
+:телефон_для_SMS_паролей rdf:type comcore:Resource ;
+    rdfs:label "Телефон для СМС-паролей"@ru ;
+    comcore:isResourceOf :заполнение_профиля .
+
+:информация_о_сайте rdf:type comcore:Resource ;
+    rdfs:label "Информация о сайте"@ru ;
+    comcore:isResourceOf :заполнение_профиля .
+
+:веб_адрес rdf:type comcore:Resource ;
+    rdfs:label "Веб-адрес"@ru ;
+    comcore:isPartOf :информация_о_сайте .
+
+:телефон_сайта rdf:type comcore:Resource ;
+    rdfs:label "Телефон сайта"@ru ;
+    comcore:isPartOf :информация_о_сайте .
+
+:электронная_почта_сайта rdf:type comcore:Resource ;
+    rdfs:label "Эл.почта сайта"@ru ;
+    comcore:isPartOf :информация_о_сайте .
+
+:контактные_лица_сайта rdf:type comcore:Resource ;
+    rdfs:label "Контактные лица сайта"@ru ;
+    comcore:isPartOf :информация_о_сайте .
+
+:что_будет_продаваться_через_сайт rdf:type comcore:Resource ;
+    rdfs:label "Что будет продаваться через сайт"@ru ;
+    comcore:isPartOf :информация_о_сайте .
+
+:кнопка_Отправить_на_проверку rdf:type comcore:Resource ;
+    rdfs:label "Кнопка Отправить на проверку"@ru ;
+    comcore:isResourceOf :нажатие_кнопки_Отправить_на_проверку .
+
+:письмо_сотруднику_отдела_сопровождения rdf:type comcore:Resource ;
+    rdfs:label "Письмо сотруднику отдела сопровождения"@ru ;
+    comcore:isResourceOf :нажатие_кнопки_Отправить_на_проверку ;
+    comcore:isPartOf :нажатие_кнопки_Отправить_на_проверку .
+
+:письмо_информирует_о_лк_заполнен rdf:type comcore:Resource ;
+    rdfs:label "Письмо (информирует о том, что ЛК заполнен)"@ru ;
+    comcore:isPartOf :письмо_сотруднику_отдела_сопровождения .
+
+:нажатие_кнопки_Отправить_на_проверку comcore:isPartOf :заполнение_профиля .
+
+:письмо_об_успешной_регистрации comcore:isResourceOf :успешная_регистрация .

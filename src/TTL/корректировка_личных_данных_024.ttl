@@ -1,0 +1,108 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:Сотрудник_отдела_сопровождения rdf:type comcore:Agent ;
+    rdfs:label "Сотрудник отдела сопровождения"@ru ;
+    comcore:isActorOf :проверка_скорректированных_данных , :связаться_с_клиентом_по_контактному_телефону ;
+    comcore:isResponsibleFor :проверка_скорректированных_данных .
+
+:клиент rdf:type comcore:Agent ;
+    rdfs:label "Клиент"@ru ;
+    comcore:isResponsibleFor :внесение_корректировок , :полная_корректная_информация .
+
+:PayAnyWay_НКО_Монета rdf:type comcore:Agent ;
+    rdfs:label "PayAnyWay НКО Монета"@ru ;
+    comcore:isActorOf :связаться_с_клиентом_по_контактному_телефону .
+
+:ООО_______ rdf:type comcore:Agent ;
+    rdfs:label "ООО _______"@ru .
+
+:проверка_скорректированных_данных rdf:type comcore:Process ;
+    rdfs:label "Проверка скорректированных данных"@ru ;
+    comcore:isPartOf :процесс_сопровождения .
+
+:проверка_паспортных_данных_ФИО rdf:type comcore:Process ;
+    rdfs:label "Проверка паспортных данных ФИО"@ru ;
+    comcore:isPartOf :проверка_скорректированных_данных ;
+    comcore:hasResult :несоответствие_данных ;
+    comcore:isActorOf :Сотрудник_отдела_сопровождения .
+
+:отправка_информационного_письма rdf:type comcore:Process ;
+    rdfs:label "Отправка информационного письма"@ru ;
+    comcore:hasResult :клиент_не_внес_необходимые_корректировки ;
+    comcore:isResourceOf :информационное_письмо .
+
+:связаться_с_клиентом_по_контактному_телефону rdf:type comcore:Process ;
+    rdfs:label "Связаться с клиентом по контактному телефону"@ru ;
+    comcore:isActorOf :Сотрудник_отдела_сопровождения , :PayAnyWay_НКО_Монета ;
+    comcore:Initiates :связаться_с_клиентом_по_контактному_телефону .
+
+:перепроверка_данных rdf:type comcore:Process ;
+    rdfs:label "Перепроверка данных"@ru .
+
+:внесение_корректировок rdf:type comcore:Process ;
+    rdfs:label "Внесение корректировок"@ru ;
+    comcore:isPartOf :перепроверка_данных .
+
+:подключение_платежного_сервиса rdf:type comcore:Process ;
+    rdfs:label "Подключение платежного сервиса"@ru ;
+    comcore:isResourceOf :полная_корректная_информация .
+
+:представиться rdf:type comcore:Process ;
+    rdfs:label "Представиться"@ru ;
+    comcore:isActorOf :Сотрудник_отдела_сопровождения , :PayAnyWay_НКО_Монета .
+
+:процесс_сопровождения rdf:type comcore:Process ;
+    rdfs:label "Процесс сопровождения"@ru .
+
+:скорректированные_данные rdf:type comcore:Resource ;
+    rdfs:label "Скорректированные данные"@ru ;
+    comcore:isResourceOf :проверка_скорректированных_данных .
+
+:информационное_письмо rdf:type comcore:Resource ;
+    rdfs:label "Информационное письмо"@ru ;
+    comcore:isResourceOf :отправка_информационного_письма .
+
+:контактный_телефон rdf:type comcore:Resource ;
+    rdfs:label "Контактный телефон"@ru ;
+    comcore:isResourceOf :связаться_с_клиентом_по_контактному_телефону .
+
+:паспортные_данные_ФИО rdf:type comcore:Resource ;
+    rdfs:label "Паспортные данные ФИО"@ru ;
+    comcore:isResourceOf :проверка_паспортных_данных_ФИО ;
+    comcore:isPartOf :личный_кабинет_ООО_______ .
+
+:личный_кабинет_ООО_______ rdf:type comcore:Resource ;
+    rdfs:label "Личный кабинет ООО _______"@ru .
+
+:полная_корректная_информация rdf:type comcore:Resource ;
+    rdfs:label "Полная корректная информация"@ru ;
+    comcore:isResourceOf :подключение_платежного_сервиса .
+
+:актуальные_паспортные_данные_ФИО rdf:type comcore:Resource ;
+    rdfs:label "Актуальные паспортные данные ФИО"@ru ;
+    comcore:isPartOf :паспортные_данные_ФИО ;
+    comcore:isResourceOf :подключение_платежного_сервиса .
+
+:шаблон_разговора rdf:type comcore:Resource ;
+    rdfs:label "Шаблон такого разговора"@ru ;
+    comcore:canBeResourceFor :связаться_с_клиентом_по_контактному_телефону .
+
+:имя_отчество rdf:type comcore:Resource ;
+    rdfs:label "Имя отчество"@ru .
+
+:клиент_не_внес_необходимые_корректировки rdf:type comcore:Event ;
+    rdfs:label "Клиент не внес необходимые корректировки"@ru ;
+    comcore:isResultOf :отправка_информационного_письма ;
+    comcore:Initiates :связаться_с_клиентом_по_контактному_телефону .
+
+:несоответствие_данных rdf:type comcore:Event ;
+    rdfs:label "Несоответствие данных"@ru ;
+    comcore:isResultOf :проверка_паспортных_данных_ФИО .

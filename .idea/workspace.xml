@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c61cf25-c880-4c9b-a0e9-ece05a7ea9e9" name="Changes" comment="add tests of ontology">
-      <change afterPath="$PROJECT_DIR$/FrameWork/ChunksToJson.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrameWork/Extract_Entities_GB.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrameWork/LM_Studio_Access.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrameWork/QuestionForTesting/CQ_ИльяВолицкий.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ontologies/Simply_E_Ontology.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ontologies/Simply_R_Ontology.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Prompts/Prompt2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Testing_Ontology/test1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrameWork/Extract_Entities_Querry.py" beforeDir="false" afterPath="$PROJECT_DIR$/FrameWork/Extract_Entities_Querry.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PromptTest/Connection_Ontology.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ontologies/Relation_Ontology.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PromptTest/Context.py" beforeDir="false" afterPath="$PROJECT_DIR$/PromptTest/Context.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PromptTest/Entities_Ontology.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ontologies/Entities_Ontology.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuestionForTesting/CQ_AlexandrSerebryakov.txt" beforeDir="false" afterPath="$PROJECT_DIR$/FrameWork/QuestionForTesting/CQ_AlexandrSerebryakov.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuestionForTesting/CQ_АндрейСажнев.txt" beforeDir="false" afterPath="$PROJECT_DIR$/FrameWork/QuestionForTesting/CQ_АндрейСажнев.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuestionForTesting/CQ_ДмитрийМельников.md" beforeDir="false" afterPath="$PROJECT_DIR$/FrameWork/QuestionForTesting/CQ_ДмитрийМельников.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuestionForTesting/CQ_ЕгорКарпычев.txt" beforeDir="false" afterPath="$PROJECT_DIR$/FrameWork/QuestionForTesting/CQ_ЕгорКарпычев.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuestionForTesting/CQ_ИльяВолицкий.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuestionForTesting/CQ_НикитаКасаткин.txt" beforeDir="false" afterPath="$PROJECT_DIR$/FrameWork/QuestionForTesting/CQ_НикитаКасаткин.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prompts/Prompt.py" beforeDir="false" afterPath="$PROJECT_DIR$/prompts/Prompt.py" afterDir="false" />
-    </list>
+    <list default="true" id="431a291c-821b-467f-ae7a-828c0ee3be7a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,80 +17,83 @@
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Kaskinji&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Kaskinji/Help_System_KnGraph&quot;,
-    &quot;accountId&quot;: &quot;8520ac3a-43a8-433d-aed2-85059fbda3b9&quot;
-  }
-}</component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
+  &quot;associatedIndex&quot;: 7
 }</component>
-  <component name="ProjectId" id="34QrvrSN5SR75SktXufK1I5UtjR" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="352DsVCtZSczDWo9oYMjXop6bj1" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.ChunksToJson.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Context.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Extract_Entities_GB.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Extract_Entities_Querry.executor&quot;: &quot;Run&quot;,
-    &quot;Python.LM_Studio_Access.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Prompt.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;LLM-Testing&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/MSI/PycharmProjects/Sup_System_Knowledge_Graph/FrameWork/json_output_test&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.GraphDB.executor": "Run",
+    "Python.ParseQuestion.executor": "Run",
+    "Python.SameAsSearch.executor": "Run",
+    "Python.config.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.neo4j_client.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "last_opened_file_path": "C:/Users/andri/OneDrive/Документы/GitHub/knowledge-graph/src/prompt/Ontology",
+    "settings.editor.selected.configurable": "preferences.fileTypes"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\MSI\PycharmProjects\Sup_System_Knowledge_Graph\FrameWork\json_output_test" />
-      <recent name="C:\Users\MSI\PycharmProjects\Sup_System_Knowledge_Graph\FrameWork" />
-      <recent name="C:\Users\MSI\PycharmProjects\Sup_System_Knowledge_Graph\FrameWork\Completed_ttl" />
-      <recent name="C:\Users\MSI\PycharmProjects\Sup_System_Knowledge_Graph" />
+      <recent name="C:\Users\andri\OneDrive\Документы\GitHub\knowledge-graph\src\prompt\Ontology" />
+      <recent name="C:\Users\andri\OneDrive\Документы\GitHub\knowledge-graph\src\prompt" />
+      <recent name="C:\Users\andri\OneDrive\Документы\GitHub\knowledge-graph\src\ingestion" />
+      <recent name="C:\Users\andri\OneDrive\Документы\GitHub\knowledge-graph\test" />
+      <recent name="C:\Users\andri\OneDrive\Документы\GitHub\knowledge-graph\src\vector" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\MSI\PycharmProjects\Sup_System_Knowledge_Graph\FrameWork\json_output" />
-      <recent name="C:\Users\MSI\PycharmProjects\Sup_System_Knowledge_Graph\FrameWork" />
-      <recent name="C:\Users\MSI\PycharmProjects\Sup_System_Knowledge_Graph\Ontologies" />
-      <recent name="C:\Users\andri\OneDrive\Документы\GitHub\Help_System_KnGraph\Prompts" />
-      <recent name="C:\Users\andri\OneDrive\Документы\GitHub\Help_System_KnGraph\PromptTest" />
+      <recent name="C:\Users\andri\OneDrive\Документы\GitHub\knowledge-graph\src\Vector" />
+      <recent name="C:\Users\andri\OneDrive\Документы\GitHub\knowledge-graph\src\Parsing" />
+      <recent name="C:\Users\andri\OneDrive\Документы\GitHub\knowledge-graph\src" />
+      <recent name="C:\Users\andri\OneDrive\Документы\GitHub\knowledge-graph\src\ingestion\Parsing" />
+      <recent name="C:\Users\andri\OneDrive\Документы\GitHub\knowledge-graph\src\ingestion" />
     </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-41e8cd69c857-64d779b69b7a-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.26927.90" />
+        <option value="bundled-python-sdk-164cda30dcd9-0af03a5fa574-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.26830.99" />
       </set>
     </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3c61cf25-c880-4c9b-a0e9-ece05a7ea9e9" name="Changes" comment="" />
-      <created>1761156873170</created>
+      <changelist id="431a291c-821b-467f-ae7a-828c0ee3be7a" name="Changes" comment="" />
+      <created>1762299479959</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1761156873170</updated>
+      <updated>1762299479959</updated>
     </task>
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.ttl" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test/search/ChatRequest.py</url>
+          <line>5</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test/search/ChatRequest.py</url>
+          <line>35</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test/vector/ChunkCollection.py</url>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

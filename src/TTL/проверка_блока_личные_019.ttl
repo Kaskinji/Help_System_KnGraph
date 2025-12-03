@@ -1,0 +1,73 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:assistantpriority rdf:type comcore:Resource ;
+    rdfs:label "assistantpriority"@ru ;
+    comcore:isPartOf :второй_столбец ;
+    comcore:canBeResourceFor :вставить_в_поле .
+
+:второй_столбец rdf:type comcore:Resource ;
+    rdfs:label "второй столбец"@ru ;
+    comcore:isPartOf :таблица_соответствия_деятельности_MCC .
+
+:таблица_соответствия_деятельности_MCC rdf:type comcore:Resource ;
+    rdfs:label "таблица соответствия деятельности MCC"@ru ;
+    comcore:hasPart :второй_столбец ;
+    comcore:hasPart :MCC .
+
+:MCC rdf:type comcore:Resource ;
+    rdfs:label "MCC"@ru ;
+    comcore:isPartOf :таблица_соответствия_деятельности_MCC .
+
+:выделить rdf:type comcore:Process ;
+    rdfs:label "Выделить"@ru .
+
+:скопировать rdf:type comcore:Process ;
+    rdfs:label "Скопировать"@ru .
+
+:вставить_в_поле rdf:type comcore:Process ;
+    rdfs:label "Вставить в поле 'Дополнительные параметры интерфейса'"@ru ;
+    comcore:isResourceOf :assistantpriority ;
+    comcore:isResourceOf :Дополнительные_параметры_интерфейса .
+
+:Дополнительные_параметры_интерфейса rdf:type comcore:Resource ;
+    rdfs:label "Дополнительные параметры интерфейса"@ru ;
+    comcore:isResourceOf :вставить_в_поле ;
+    comcore:hasPart :psbankmerchname .
+
+:psbankmerchname rdf:type comcore:Resource ;
+    rdfs:label "psbankmerchname"@ru ;
+    comcore:isPartOf :Дополнительные_параметры_интерфейса ;
+    comcore:canBeResourceFor :добавить_psbankmerchname .
+
+:название_сайта rdf:type comcore:Resource ;
+    rdfs:label "название сайта"@ru ;
+    comcore:isPartOf :psbankmerchname .
+
+:добавить_psbankmerchname rdf:type comcore:Process ;
+    rdfs:label "Добавить psbankmerchname"@ru ;
+    comcore:hasResult :psbankmerchname .
+
+:кнопка_Сохранить rdf:type comcore:Resource ;
+    rdfs:label "кнопка \"Сохранить\""@ru ;
+    comcore:isResourceOf :нажать_кнопку_Сохранить .
+
+:нажать_кнопку_Сохранить rdf:type comcore:Process ;
+    rdfs:label "Нажать кнопку Сохранить"@ru ;
+    comcore:hasResult :сохранение .
+
+:сохранение rdf:type comcore:Event ;
+    rdfs:label "Сохранение"@ru ;
+    comcore:isResultOf :нажать_кнопку_Сохранить .
+
+:настройка_assistantpriority rdf:type comcore:Process ;
+    rdfs:label "Настройка assistantpriority"@ru ;
+    comcore:hasSubProcess :выделить , :скопировать , :вставить_в_поле , :добавить_psbankmerchname , :нажать_кнопку_Сохранить ;
+    comcore:hasResult :сохранение .

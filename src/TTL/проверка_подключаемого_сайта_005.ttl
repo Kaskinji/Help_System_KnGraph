@@ -1,0 +1,84 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:Отдел_ОБР rdf:type comcore:Agent ;
+    rdfs:label "Отдел ОБР"@ru ;
+    comcore:isActorOf :анализ_юридического_лица_и_подключаемого_сайта ;
+    comcore:Initiates :анализ_юридического_лица_и_подключаемого_сайта .
+
+:анализ_юридического_лица_и_подключаемого_сайта rdf:type comcore:Process ;
+    rdfs:label "Анализ юридического лица и подключаемого сайта"@ru ;
+    comcore:hasResult :результат_проверки .
+
+:юридическое_лицо rdf:type comcore:Resource ;
+    rdfs:label "Юридическое лицо"@ru ;
+    comcore:isResourceOf :анализ_юридического_лица_и_подключаемого_сайта .
+
+:подключаемый_сайт rdf:type comcore:Resource ;
+    rdfs:label "Подключаемый сайт"@ru ;
+    comcore:isResourceOf :анализ_юридического_лица_и_подключаемого_сайта .
+
+:заявка rdf:type comcore:Resource ;
+    rdfs:label "Заявка"@ru ;
+    comcore:isResourceOf :анализ_юридического_лица_и_подключаемого_сайта .
+
+:результат_проверки rdf:type comcore:Event ;
+    rdfs:label "Результат проверки"@ru ;
+    comcore:isResultOf :анализ_юридического_лица_и_подключаемого_сайта .
+
+:Статус_задачи_MRM rdf:type comcore:Event ;
+    rdfs:label "Статус задачи MRM в Jira"@ru ;
+    comcore:isResultOf :анализ_юридического_лица_и_подключаемого_сайта .
+
+:статус_MRM_Закрыт_Согласовано rdf:type comcore:Event ;
+    rdfs:label "Статус задачи MRM – Закрыт. Согласовано"@ru ;
+    comcore:isResultOf :анализ_юридического_лица_и_подключаемого_сайта ;
+    comcore:Initiates :регистрация_ИМ .
+
+:статус_MRM_Закрыт_Отказано rdf:type comcore:Event ;
+    rdfs:label "Статус задачи MRM – Закрыт. Отказано"@ru ;
+    comcore:isResultOf :анализ_юридического_лица_и_подключаемого_сайта ;
+    comcore:Initiates :отказ_регистрации_ИМ .
+
+:статус_MRM_Открытый_Нет_решения rdf:type comcore:Event ;
+    rdfs:label "Статус задачи MRM – Открытый. Нет решения"@ru ;
+    comcore:isResultOf :анализ_юридического_лица_и_подключаемого_сайта ;
+    comcore:Initiates :запрос_дополнительной_информации .
+
+:регистрация_ИМ rdf:type comcore:Process ;
+    rdfs:label "Регистрация ИМ"@ru .
+
+:отказ_регистрации_ИМ rdf:type comcore:Process ;
+    rdfs:label "Отказ по регистрации ИМ"@ru .
+
+:запрос_дополнительной_информации rdf:type comcore:Process ;
+    rdfs:label "Запрос дополнительной информации"@ru .
+
+:ИМ rdf:type comcore:Resource ;
+    rdfs:label "ИМ"@ru .
+
+:MRM rdf:type comcore:Resource ;
+    rdfs:label "MRM"@ru .
+
+:Jira rdf:type comcore:Resource ;
+    rdfs:label "Jira"@ru .
+
+:отдел_сопровождения_интернет-магазинов rdf:type comcore:Agent ;
+    rdfs:label "Отдел сопровождения интернет-магазинов"@ru ;
+    comcore:isActorOf :отслеживание_изменения_статуса_задачи_MRM ;
+    comcore:isResponsibleFor :отслеживание_изменения_статуса_задачи_MRM .
+
+:отслеживание_изменения_статуса_задачи_MRM rdf:type comcore:Process ;
+    rdfs:label "Отслеживание изменения статуса задачи MRM"@ru ;
+    comcore:hasResult :изменение_статуса_задачи_MRM .
+
+:изменение_статуса_задачи_MRM rdf:type comcore:Event ;
+    rdfs:label "Изменение статуса задачи MRM"@ru ;
+    comcore:isResultOf :отслеживание_изменения_статуса_задачи_MRM .

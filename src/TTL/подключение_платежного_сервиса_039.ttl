@@ -1,0 +1,104 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:Сотрудник_отдела_сопровождения rdf:type comcore:Agent ;
+    rdfs:label "Сотрудник отдела сопровождения"@ru ;
+    comcore:isActorOf :проверка_открытия_счета ,
+                      :отправка_повторного_письма ,
+                      :связаться_по_телефону ;
+    comcore:isResponsibleFor :проверка_открытия_счета ,
+                              :отправка_повторного_письма ,
+                              :связаться_по_телефону .
+
+:Клиент rdf:type comcore:Agent ;
+    rdfs:label "Клиент"@ru ;
+    comcore:isActorOf :открытие_бизнес_счета .
+
+:система rdf:type comcore:Agent ;
+    rdfs:label "Система"@ru ;
+    comcore:isActorOf :направление_инф_письма_OTRS ;
+    comcore:isResponsibleFor :направление_инф_письма_OTRS .
+
+:проверка_открытия_счета rdf:type comcore:Process ;
+    rdfs:label "Проверка открытия счета"@ru .
+
+:автоматическое_уведомление rdf:type comcore:Event ;
+    rdfs:label "Автоматическое уведомление"@ru .
+
+:отправка_повторного_письма rdf:type comcore:Process ;
+    rdfs:label "Отправка повторного письма"@ru ;
+    comcore:isPartOf :проверка_открытия_счета .
+
+:повторное_письмо rdf:type comcore:Resource ;
+    rdfs:label "Повторное письмо"@ru ;
+    comcore:isResourceOf :отправка_повторного_письма .
+
+:OTRS rdf:type comcore:Resource ;
+    rdfs:label "OTRS"@ru ;
+    comcore:isResourceOf :отправка_повторного_письма ,
+                         :направление_инф_письма_OTRS .
+
+:шаблон_КО-Включил rdf:type comcore:Resource ;
+    rdfs:label "шаблон «КО-Включил»"@ru ;
+    comcore:isResourceOf :отправка_повторного_письма .
+
+:связаться_по_телефону rdf:type comcore:Process ;
+    rdfs:label "Связаться по контактному телефону"@ru .
+
+:контактный_телефон rdf:type comcore:Resource ;
+    rdfs:label "Контактный телефон"@ru ;
+    comcore:isResourceOf :связаться_по_телефону .
+
+:ЛК rdf:type comcore:Resource ;
+    rdfs:label "Личный кабинет"@ru ;
+    comcore:isResourceOf :связаться_по_телефону ,
+                         :открытие_бизнес_счета ;
+    comcore:canBeResourceFor :открытие_бизнес_счета .
+
+:интеграция_с_платежной_системой rdf:type comcore:Process ;
+    rdfs:label "Интеграция с платежной системой"@ru .
+
+:платежный_сервис_PayAnyWay_НКО_Монета rdf:type comcore:Agent ;
+    rdfs:label "платежный сервис PayAnyWay НКО Монета"@ru .
+
+:подключение_платежного_сервиса rdf:type comcore:Process ;
+    rdfs:label "Подключение платежного сервиса"@ru ;
+    comcore:hasResult :список_доступных_способов_оплаты .
+
+:список_доступных_способов_оплаты rdf:type comcore:Resource ;
+    rdfs:label "Все доступные способы оплаты"@ru ;
+    comcore:isResourceOf :подключение_платежного_сервиса .
+
+:открытие_бизнес_счета rdf:type comcore:Process ;
+    rdfs:label "Открытие бизнес-счета"@ru ;
+    comcore:isActorOf :Клиент ;
+    comcore:hasResult :бизнес_счет ,
+                      :направление_инф_письма_OTRS ;
+    comcore:isPartOf :подключение_платежного_сервиса .
+
+:бизнес_счет rdf:type comcore:Resource ;
+    rdfs:label "Бизнес-счет"@ru ;
+    comcore:isResourceOf :интеграция_с_платежной_системой ,
+                         :подключение_платежного_сервиса ;
+    comcore:canBeResourceFor :интеграция_с_платежной_системой ,
+                             :подключение_платежного_сервиса .
+
+:кнопка_Открыть_бизнес-счет rdf:type comcore:Resource ;
+    rdfs:label "Кнопка «Открыть бизнес-счет»"@ru ;
+    comcore:isResourceOf :открытие_бизнес_счета .
+
+:информационное_письмо_OTRS rdf:type comcore:Resource ;
+    rdfs:label "Информационное письмо в OTRS"@ru ;
+    comcore:isResourceOf :направление_инф_письма_OTRS .
+
+:направление_инф_письма_OTRS rdf:type comcore:Process ;
+    rdfs:label "Направление информационного письма в OTRS"@ru ;
+    comcore:isResourceOf :OTRS ;
+    comcore:isPartOf :открытие_бизнес_счета .

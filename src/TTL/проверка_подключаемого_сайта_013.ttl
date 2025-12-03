@@ -1,0 +1,143 @@
+@prefix comcore: <https://kb.moneta.ru/terms/common/coreontology#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmtype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://kb.moneta.ru/terms/TurnOnSup/offer/> .
+
+:сотрудник rdf:type comcore:Agent ;
+    rdfs:label "Сотрудник"@ru ;
+    comcore:isActorOf :процесс_проверки_сайта , :процесс_отправки_письма_в_OTRS , :процесс_связи_с_клиентом_по_телефону .
+
+:сотрудник_комплаенс rdf:type comcore:Agent ;
+    rdfs:label "Сотрудник комплаенс"@ru ;
+    comcore:isActorOf :процесс_проверки_сайта .
+
+:PayAnyWay_НКО_Монета rdf:type comcore:Agent ;
+    rdfs:label "PayAnyWay НКО Монета"@ru ;
+    comcore:isResponsibleFor :подключение_платежного_сервиса ;
+    comcore:isActorOf :процесс_возобновления_согласования_проекта .
+
+:клиент rdf:type comcore:Agent ;
+    rdfs:label "Клиент"@ru ;
+    comcore:isActorOf :доработка_сайта .
+
+:ООО____ rdf:type comcore:Agent ;
+    rdfs:label "ООО ____"@ru ;
+    comcore:isActorOf :подключение_платежного_сервиса .
+
+:комментарий rdf:type comcore:Resource ;
+    rdfs:label "Комментарий"@ru ;
+    comcore:canBeResourceFor :процесс_проверки_сайта .
+
+:замечание_на_оформление_сайта rdf:type comcore:Resource ;
+    rdfs:label "Замечание на оформление сайта"@ru ;
+    comcore:isResourceOf :процесс_проверки_сайта .
+
+:сайт_указанный_в_заявке rdf:type comcore:Resource ;
+    rdfs:label "Сайт, указанный в заявке"@ru ;
+    comcore:isResourceOf :процесс_проверки_сайта ;
+    comcore:isPartOf :заявка .
+
+:заявка rdf:type comcore:Resource ;
+    rdfs:label "Заявка"@ru ;
+    comcore:canBeResourceFor :подключение_платежного_сервиса .
+
+:требования_к_сайтам rdf:type comcore:Resource ;
+    rdfs:label "Требования к сайтам"@ru ;
+    comcore:isPartOf :электронная_почта ;
+    comcore:isResourceOf :доработка_сайта .
+
+:требования_по_оформлению_сайта rdf:type comcore:Resource ;
+    rdfs:label "Требования по оформлению сайта"@ru ;
+    comcore:isPartOf :электронная_почта ;
+    comcore:isResourceOf :доработка_сайта .
+
+:письмо_клиенту rdf:type comcore:Resource ;
+    rdfs:label "Письмо клиенту"@ru ;
+    comcore:isResourceOf :процесс_отправки_письма_в_OTRS .
+
+:OTRS rdf:type comcore:Resource ;
+    rdfs:label "OTRS"@ru ;
+    comcore:isResourceOf :процесс_отправки_письма_в_OTRS .
+
+:шаблон_КО-Не_готов rdf:type comcore:Resource ;
+    rdfs:label "Шаблон «КО-Не готов»"@ru ;
+    comcore:isResourceOf :процесс_отправки_письма_в_OTRS .
+
+:шаблон_разговора rdf:type comcore:Resource ;
+    rdfs:label "Шаблон разговора"@ru ;
+    comcore:isResourceOf :процесс_связи_с_клиентом_по_телефону .
+
+:электронная_почта rdf:type comcore:Resource ;
+    rdfs:label "Электронная почта"@ru ;
+    comcore:canBeResourceFor :процесс_передачи_требований .
+
+:ответное_письмо rdf:type comcore:Resource ;
+    rdfs:label "Ответным письмом"@ru ;
+    comcore:isResourceOf :процесс_возобновления_согласования_проекта .
+
+:личный_кабинет rdf:type comcore:Resource ;
+    rdfs:label "Личный кабинет"@ru ;
+    comcore:isResourceOf :процесс_связи_с_клиентом_по_телефону .
+
+:телефон_7_495_646_58_48 rdf:type comcore:Resource ;
+    rdfs:label "Телефон +7 495 646-58-48"@ru ;
+    comcore:isPartOf :личный_кабинет ;
+    comcore:isResourceOf :процесс_связи_с_клиентом_по_телефону .
+
+:наличие_указанных_замечаний rdf:type comcore:Event ;
+    rdfs:label "Удостоверение в наличии указанных замечаний"@ru ;
+    comcore:Initiates :процесс_отправки_письма_в_OTRS .
+
+:напоминание_3_дня rdf:type comcore:Event ;
+    rdfs:label "Напоминание сроком через 3 дня"@ru ;
+    comcore:Initiates :процесс_возврата_к_задаче .
+
+:замечание_не_устранено_2_3_дня rdf:type comcore:Event ;
+    rdfs:label "Замечание не устранено в течение 2-3 дней"@ru ;
+    comcore:Initiates :процесс_связи_с_клиентом_по_телефону .
+
+:получение_информации_от_клиента rdf:type comcore:Event ;
+    rdfs:label "Получение информации от клиента"@ru ;
+    comcore:Initiates :процесс_возобновления_согласования_проекта .
+
+:процесс_проверки_сайта rdf:type comcore:Process ;
+    rdfs:label "Проверка соблюдения требований к сайтам"@ru ;
+    comcore:hasSubProcess :доработка_сайта ;
+    comcore:hasSubProcess :процесс_отправки_письма_в_OTRS .
+
+:процесс_отправки_письма_в_OTRS rdf:type comcore:Process ;
+    rdfs:label "Отправка письма клиенту в OTRS"@ru ;
+    comcore:isPartOf :процесс_согласования_проекта ;
+    comcore:hasSubProcess :процесс_возврата_к_задаче .
+
+:процесс_связи_с_клиентом_по_телефону rdf:type comcore:Process ;
+    rdfs:label "Связь с клиентом по телефону"@ru ;
+    comcore:isPartOf :процесс_согласования_проекта .
+
+:процесс_возврата_к_задаче rdf:type comcore:Process ;
+    rdfs:label "Возврат к данной задаче"@ru .
+
+:процесс_возобновления_согласования_проекта rdf:type comcore:Process ;
+    rdfs:label "Возобновление процесса согласования проекта"@ru ;
+    comcore:isResponsibleFor :процесс_согласования_проекта .
+
+:процесс_согласования_проекта rdf:type comcore:Process ;
+    rdfs:label "Процесс согласования проекта"@ru .
+
+:подключение_платежного_сервиса rdf:type comcore:Process ;
+    rdfs:label "Подключение платежного сервиса"@ru ;
+    comcore:isPartOf :процесс_согласования_проекта .
+
+:доработка_сайта rdf:type comcore:Process ;
+    rdfs:label "Доработка сайта"@ru ;
+    comcore:isActorOf :ООО____ ;
+    comcore:isResourceOf :подключение_платежного_сервиса .
+
+:процесс_передачи_требований rdf:type comcore:Process ;
+    rdfs:label "Передача требований по оформлению сайта"@ru ;
+    comcore:isResourceOf :требования_по_оформлению_сайта .
