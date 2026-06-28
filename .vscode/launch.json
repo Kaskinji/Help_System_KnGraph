@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Chunk extraction",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/chunk_extraction/chunk_extractor.py",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
